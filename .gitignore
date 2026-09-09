@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and virtual environments
+.venv/
+env/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Mô hình nặng (~1.4 GB weight - tải lại qua: python load_models.py)
+models/
+
+# File PDF báo cáo gốc (copy thủ công vào report pdfs/)
+report pdfs/
+
+# Embeddings ma trận vector lớn
+data/embeddings/*.npy
+data/embeddings/*.pkl
+
+# File câu thô dung lượng lớn (tạo lại qua: python process_data.py)
+data/processed/sentences.*
+data/processed/_ocr_tmp/
+
+# Kết quả chi tiết từng câu (tạo lại qua: python run_pipeline.py)
+data/results/result_both.*
+data/results/result_scaled.*
+data/results/result_similarity.*
+data/results/sentiment_checkpoint.*
+
+# Dữ liệu cào web tạm thời
+_tmp_scrape/
+
+# OS artifacts
+.DS_Store
+Thumbs.db

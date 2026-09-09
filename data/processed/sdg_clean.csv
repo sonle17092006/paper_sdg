@@ -1,0 +1,1033 @@
+gpnum,gpname,goalnum,sentence,lang,source
+gp01,Life,goal01,End poverty in all its forms everywhere,en,paper_sdg.xlsx
+gp01,Life,goal01,"Despite progress under the MDGs, approximately 17% of the world s population more than 1 billion people still lives at or below $1.25 per day.",en,paper_sdg.xlsx
+gp01,Life,goal01,"Over the past decade, markets in developing countries have expanded dramatically, and the volume of funds flowing from the private sector to these countries now dwarfs that of foreign aid, making the private sector one of the most significant influencers of global poverty.",en,paper_sdg.xlsx
+gp01,Life,goal01,"Certain groups are disproportionately represented among the poor, and face additional constraints such as limited access to productive resources and markets in escaping poverty.",en,paper_sdg.xlsx
+gp01,Life,goal01,"These include women, persons with disabilities, children, and indigenous peoples.",en,paper_sdg.xlsx
+gp01,Life,goal01,"Businesses should ensure that they meet their responsibility to respect human rights, including the rights of these groups.",en,paper_sdg.xlsx
+gp01,Life,goal01,"Businesses also have the opportunity to proactively take measures to address constraints faced by these groups, such as through inclusive business models, innovative products and/or services that better meet the needs of such groups, and by leveraging the unique perspectives of these groups as consumers, employees, suppliers and distributors in the value-chain, and community-members.",en,paper_sdg.xlsx
+gp01,Life,goal01,"Beyond income, business can influence other dimensions of poverty, such as limited opportunities and capabilities.",en,paper_sdg.xlsx
+gp01,Life,goal01,"These inter-linked dimensions include food/nutrition insecurity, lack of access to basic, quality services such as health care, education and sanitation, and low empowerment and personal security.",en,paper_sdg.xlsx
+gp01,Life,goal01,"Several of these dimensions, especially for the poor, are closely related to the environment for example health is directly affected by declining environmental quality in ways that the poor may find harder to address individually.",en,paper_sdg.xlsx
+gp01,Life,goal01,These multiple dimensions of poverty when suitably measured convey a more complete picture than provided by the income indicator alone.,en,paper_sdg.xlsx
+gp01,Life,goal01,"Business role in poverty eradication also should address framework conditions of poverty, for example, by engaging in policy dialogue for the provision of basic goods and services where they operate.",en,paper_sdg.xlsx
+gp01,Life,goal01,Availability of products and services for those on low incomes,en,paper_sdg.xlsx
+gp01,Life,goal01,"Earning, wages and benefits",en,paper_sdg.xlsx
+gp01,Life,goal01,Economic development in areas of high priority,en,paper_sdg.xlsx
+gp01,Life,goal01,Access to quality essential health care services,en,paper_sdg.xlsx
+gp01,Life,goal01,Access to WASH,en,paper_sdg.xlsx
+gp01,Life,goal01,Electricity availability and reliability,en,paper_sdg.xlsx
+gp01,Life,goal01,Non-discrimination,en,paper_sdg.xlsx
+gp01,Life,goal01,The below examples are non-exhaustive and some may be more relevant to certain industries than to others.,en,paper_sdg.xlsx
+gp01,Life,goal01,Develop products and services tailored for poor customers (e.g. mobile based money transfer services for unbanked consumers).,en,paper_sdg.xlsx
+gp01,Life,goal01,"Improve access to basic goods and services for people living in poverty (e.g. through core business, policy dialogue, social investment).",en,paper_sdg.xlsx
+gp01,Life,goal01,"Recruit, train and employ local community members, including those living in poverty, and integrate them in your value chain (as producers, suppliers, distributors, vendors).",en,paper_sdg.xlsx
+gp01,Life,goal01,Invest in business-driven poverty eradication activities (e.g. develop living wage policy).,en,paper_sdg.xlsx
+gp01,Life,goal01,Partner with civil society networks to provide education and entrepreneurial skills training.,en,paper_sdg.xlsx
+gp01,Life,goal01,"Average wage of workers (disaggregate data by gender, type of contract, e.g., permanent, contractual or piece-rate, and report difference between low and high season for temporary workers)",en,paper_sdg.xlsx
+gp01,Life,goal01,Do major employers along the value chain and the wider company system negotiate wage and benefits standards through collective agreement?,en,paper_sdg.xlsx
+gp01,Life,goal01,"Report the measures taken to develop and enhance the highest governance body s collective knowledge of economic, environmental and social topics",en,paper_sdg.xlsx
+gp01,Life,goal01,Describe policies and practices used to promote economic inclusion when selecting suppliers,en,paper_sdg.xlsx
+gp01,Life,goal01,Does the company take into consideration needs-based affordability when making pricing decisions for relevant products targeted at the poorest population segments in relevant countries?,en,paper_sdg.xlsx
+gp01,Life,goal01,UN Global Compact-Oxfam Poverty Footprint Tool,en,paper_sdg.xlsx
+gp01,Life,goal01,UN Guiding Principles of Business and Human Rights Reporting Framework,en,paper_sdg.xlsx
+gp01,Life,goal01,Women s Empowerment Principles,en,paper_sdg.xlsx
+gp01,Life,goal01,Inclusive business primer,en,paper_sdg.xlsx
+gp01,Life,goal01,"1.1 By 2030, eradicate extreme poverty for all people everywhere, currently measured as people living on less than $1.25 a day 1.2 By 2030, reduce at least by half the proportion of men, women and children of all ages living in poverty in all its dimensions according to national definitions",en,paper_sdg.xlsx
+gp01,Life,goal01,"1.3 Implement nationally appropriate social protection systems and measures for all, including floors, and by 2030 achieve substantial coverage of the poor and the vulnerable",en,paper_sdg.xlsx
+gp01,Life,goal01,"1.4 By 2030, ensure that all men and women, in particular the poor and the vulnerable, have equal rights to economic resources, as well as access to basic services, ownership and control over land and other forms of property, inheritance, natural resources, appropriate new technology and financial services, including microfinance",en,paper_sdg.xlsx
+gp01,Life,goal01,"1.5 By 2030, build the resilience of the poor and those in vulnerable situations and reduce their exposure and vulnerability to climaterelated extreme events and other economic, social and environmental shocks and disasters",en,paper_sdg.xlsx
+gp01,Life,goal01,"1.a Ensure significant mobilization of resources from a variety of sources, including through enhanced development cooperation, in order to provide adequate and predictable means for developing countries, in particular least developed countries, to implement programs and policies to end poverty in all its dimensions",en,paper_sdg.xlsx
+gp01,Life,goal01,"1.b Create sound policy frameworks at the national, regional and international levels, based on pro-poor and gender-sensitive development strategies, to support accelerated investment in poverty eradication actions",en,paper_sdg.xlsx
+gp01,Life,goal02,"End hunger, achieve food security and improved nutrition and promote sustainable agriculture",en,paper_sdg.xlsx
+gp01,Life,goal02,Food and agriculture are at the heart of civilization and prosperity.,en,paper_sdg.xlsx
+gp01,Life,goal02,"Yet, agriculture faces multiple challenges: a world population expected to grow to 9 billion by 2050, smaller rural labor force, soil quality degradation, climate change, food wastage, water scarcity, biofuel production and changing lifestyles leading to urbanization and more protein-intensive diets.",en,paper_sdg.xlsx
+gp01,Life,goal02,"Furthermore, agricultural productivity increases would ensure food security for everyone only if access to safe, nutritious and sufficient food is secured.",en,paper_sdg.xlsx
+gp01,Life,goal02,"The growing pressure on global food systems constitutes a critical development challenge and creates an increasing risk for businesses, governments, communities and the environment.",en,paper_sdg.xlsx
+gp01,Life,goal02,"In this context, business has become a critical partner for governments and other stakeholders to design and deliver effective, scalable and practical solutions for secure and sustainable food and agriculture system.",en,paper_sdg.xlsx
+gp01,Life,goal02,"Business can contribute to solving these challenges, eradicating hunger and improving food and agriculture systems.",en,paper_sdg.xlsx
+gp01,Life,goal02,"Implementing sustainable practices and working in partnership with other actors throughout the agricultural value chain (including input, production, distribution and retail) will be key to the implementation of SDG2.",en,paper_sdg.xlsx
+gp01,Life,goal02,"In particular, empowering small farmers, increasing agricultural productivity and farmers livelihoods, rising consumers awareness and increasing agricultural investment as well as knowledge sharing will be necessary elements of better functioning food and agriculture systems.",en,paper_sdg.xlsx
+gp01,Life,goal02,Healthy and affordable food,en,paper_sdg.xlsx
+gp01,Life,goal02,"Food labeling, safety and prices",en,paper_sdg.xlsx
+gp01,Life,goal02,Sustainable sourcing,en,paper_sdg.xlsx
+gp01,Life,goal02,Genetic diversity of farmed and domesticated animals,en,paper_sdg.xlsx
+gp01,Life,goal02,Labor practices in the supply chain,en,paper_sdg.xlsx
+gp01,Life,goal02,"Supporting, encouraging and demonstrating the continued viability of small scale farming, sustaining grower communities by developing partnerships with cooperatives and producer organizations supporting many small farmers.",en,paper_sdg.xlsx
+gp01,Life,goal02,"For larger businesses, establishing long-term business relationships that support small scale producers.",en,paper_sdg.xlsx
+gp01,Life,goal02,"Investing in sustainable agricultural technology, intensifying collaboration with academic as well as scientific institutions.",en,paper_sdg.xlsx
+gp01,Life,goal02,"Demonstrating support to genetic diversity of seeds, plants and animals and report on company s contribution to biodiversity.",en,paper_sdg.xlsx
+gp01,Life,goal02,"Fostering knowledge, experience and data sharing among businesses and other actors, contributing to global data platforms collecting and sharing agricultural information and statistics with all actors along the agricultural value chain including farmers.",en,paper_sdg.xlsx
+gp01,Life,goal02,"Upholding highest standards of sustainably in sourcing practices, enhancing traceability of commodities and demonstrating transparency in agricultural supply chain.",en,paper_sdg.xlsx
+gp01,Life,goal02,"Percentage of purchased volume which is verified as being in accordance with credible, internationally recognized responsible production standards, broken down by standard",en,paper_sdg.xlsx
+gp01,Life,goal02,Percentage of production volume manufactured in sites certified by an independent third party according to internationally recognized food safety management system standards,en,paper_sdg.xlsx
+gp01,Life,goal02,"Nature, scope and effectiveness of any programs and practices (inkind contributions, volunteer initiatives, knowledge transfer, partnerships and product development) that promote access to healthy lifestyles; the prevention of chronic disease; access to healthy, nutritious and affordable food; and improved welfare for communities in need",en,paper_sdg.xlsx
+gp01,Life,goal02,"Approximate percentage of rural farming households (headed by men/ by women) with sustained access to land, including commons where relevant",en,paper_sdg.xlsx
+gp01,Life,goal02,"Trend in recent years (increasing, decreasing, stable)",en,paper_sdg.xlsx
+gp01,Life,goal02,Approximate proportions of smallholders (m/w) in value chain which has secured legal title to land,en,paper_sdg.xlsx
+gp01,Life,goal02,IGD Impact Measurement Framework,en,paper_sdg.xlsx
+gp01,Life,goal02,Human Rights Impact Assessment and Management (HRIAM),en,paper_sdg.xlsx
+gp01,Life,goal02,Human Rights Compliance Assessment (HRCA),en,paper_sdg.xlsx
+gp01,Life,goal02,Human Rights and Business Country Guide,en,paper_sdg.xlsx
+gp01,Life,goal02,"2.1 By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations including infants, to safe, nutritious and sufficient food all year round",en,paper_sdg.xlsx
+gp01,Life,goal02,"2.2 By 2030, end all forms of malnutrition, including achieving by 2025 the internationally agreed targets on stunting and wasting in children under five years of age, and address the nutritional needs of adolescent girls, pregnant and lactating women, and older persons",en,paper_sdg.xlsx
+gp01,Life,goal02,"2.3 By 2030, double the agricultural productivity and the incomes of small-scale food producers, particularly women, indigenous peoples, family farmers, pastoralists and fishers, including through secure and equal access to land, other productive resources and inputs, knowledge, financial services, markets, and opportunities for value addition and non-farm employment",en,paper_sdg.xlsx
+gp01,Life,goal02,"2.4 By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters, and that progressively improve land and soil quality",en,paper_sdg.xlsx
+gp01,Life,goal02,"2.5 By 2020, maintain genetic diversity of seeds, cultivated plants, farmed and domesticated animals and their related wild species, including through soundly managed and diversified seed and plant banks at national, regional and international levels, and ensure access to and fair and equitable sharing of benefits arising from the utilization of genetic resources and associated traditional knowledge as internationally agreed",en,paper_sdg.xlsx
+gp01,Life,goal02,"2.a. Increase investment, including through enhanced international cooperation, in rural infrastructure, agricultural research and extension services, technology development, and plant and livestock gene banks to enhance agricultural productive capacity in developing countries, in particular in least developed countries",en,paper_sdg.xlsx
+gp01,Life,goal02,"2.b. Correct and prevent trade restrictions and distortions in world agricultural markets including by the parallel elimination of all forms of agricultural export subsidies and all export measures with equivalent effect, in accordance with the mandate of the Doha Development Round",en,paper_sdg.xlsx
+gp01,Life,goal02,"2.c. Adopt measures to ensure the proper functioning of food commodity markets and their derivatives, and facilitate timely access to market information, including on food reserves, in order to help limit extreme food price volatility",en,paper_sdg.xlsx
+gp01,Life,goal03,Ensure healthy lives and promote well-being for all at all ages,en,paper_sdg.xlsx
+gp01,Life,goal03,Health is a fundamental human right and a key indicator of sustainable development.,en,paper_sdg.xlsx
+gp01,Life,goal03,"Poor health threatens the rights of children to education, limits economic opportunities for men and women and increases poverty within communities and countries around the world.",en,paper_sdg.xlsx
+gp01,Life,goal03,"In addition to being a cause of poverty, health is impacted by poverty and strongly connected to other aspects of sustainable development, including water and sanitation, gender equality, climate change and peace and stability.",en,paper_sdg.xlsx
+gp01,Life,goal03,"In recent years, notable progress has been made, but significant challenges remain.",en,paper_sdg.xlsx
+gp01,Life,goal03,"Women around the world continue to lack access to sexual and reproductive health care; thousands of new cases of HIV/AIDS continue to occur each day, billions of people are left without access to essential medicines, millions of adults and children will suffer from undernourishment this year, and the global amount of waste is estimated to triple in the coming year, with severe effects on health Further, with an increase in economic integration, mobility and political instability new health challenges and risks are emerging, threatening livelihoods in both the global North and South.",en,paper_sdg.xlsx
+gp01,Life,goal03,"In order to accelerate progress and address new health challenges, all actors, including the private sector need to partner to develop health care solutions that work for people, families, communities and nations.",en,paper_sdg.xlsx
+gp01,Life,goal03,"At minimum business has a responsibility to respect all human rights, including the right to health. Small, medium and large companies can both benefit from and contribute to achieving healthy societies.",en,paper_sdg.xlsx
+gp01,Life,goal03,"The SDGs provide a new opportunity for the private sector to support the delivery of health needs around the world through their products, services and business activities including value chains and distribution networks, communication activities, occupational health and safety practices and provision of employee benefits. By ensuring that workers have safe working conditions and access to health services, companies establish healthier staff and better relationships which in many cases has positive effects on productivity.",en,paper_sdg.xlsx
+gp01,Life,goal03,Occupational health and safety,en,paper_sdg.xlsx
+gp01,Life,goal03,Access to medicines,en,paper_sdg.xlsx
+gp01,Life,goal03,Access to quality essential health care services,en,paper_sdg.xlsx
+gp01,Life,goal03,Air quality,en,paper_sdg.xlsx
+gp01,Life,goal03,Water quality,en,paper_sdg.xlsx
+gp01,Life,goal03,"Align human resources policies with principles of human rights, including policies for HIV/AIDS.",en,paper_sdg.xlsx
+gp01,Life,goal03,"Use already existing resources for guidance (e.g. from the ILO, WHO, etc.).",en,paper_sdg.xlsx
+gp01,Life,goal03,Partner with health care NGOs and public clinics to raise awareness and increase access to targeted health services for women and men workers and their families.,en,paper_sdg.xlsx
+gp01,Life,goal03,Make investments in health a priority in business operations.,en,paper_sdg.xlsx
+gp01,Life,goal03,Facilitate and invest in affordable medicine and health care for low-income populations.,en,paper_sdg.xlsx
+gp01,Life,goal03,"Leverage corporate resources (e.g. R&D, distribution, cold chains) to support health care delivery by public and international organizations.",en,paper_sdg.xlsx
+gp01,Life,goal03,Portion of financial R&D investments dedicated to Index Diseases out of the company s total R&D expenditures,en,paper_sdg.xlsx
+gp01,Life,goal03,% of facilities adhering to relevant water quality standard(s),en,paper_sdg.xlsx
+gp01,Life,goal03,"Type of injury and rates of injury, occupational diseases, lost days, and absenteeism, and total number of work-related fatalities, by region and by gender",en,paper_sdg.xlsx
+gp01,Life,goal03,"Where the Company has set up health services for workers, does it make the service available to the family and community members?",en,paper_sdg.xlsx
+gp01,Life,goal03,"If yes, how many people have benefited from this service?",en,paper_sdg.xlsx
+gp01,Life,goal03,Social Hotspots Database/Portal (SHDB),en,paper_sdg.xlsx
+gp01,Life,goal03,UN Global Compact-Oxfam Poverty Footprint Tool,en,paper_sdg.xlsx
+gp01,Life,goal03,Corporate Human Rights Benchmark (CHRB),en,paper_sdg.xlsx
+gp01,Life,goal03,"3.1 By 2030, reduce the global maternal mortality ratio to less than 70 per 100,000 live births",en,paper_sdg.xlsx
+gp01,Life,goal03,"3.2 By 2030, end preventable deaths of newborns and under-five children",en,paper_sdg.xlsx
+gp01,Life,goal03,"3.3 By 2030, end the epidemics of AIDS, tuberculosis, malaria, and neglected tropical diseases and combat hepatitis, water-borne diseases, and other communicable diseases",en,paper_sdg.xlsx
+gp01,Life,goal03,"3.4 By 2030, reduce by one-third pre-mature mortality from non-communicable diseases (NCDs) through prevention and treatment, and promote mental health and wellbeing",en,paper_sdg.xlsx
+gp01,Life,goal03,"3.5 Strengthen prevention and treatment of substance abuse, including narcotic drug abuse and harmful use of alcohol",en,paper_sdg.xlsx
+gp01,Life,goal03,"3.6 By 2020, halve global deaths and injuries from road traffic accidents",en,paper_sdg.xlsx
+gp01,Life,goal03,"3.7 By 2030, ensure universal access to sexual and reproductive health care services, including for family planning, information and education, and the integration of reproductive health into national strategies and programs",en,paper_sdg.xlsx
+gp01,Life,goal03,"3.8 Achieve universal health coverage (UHC), including financial risk protection, access to quality essential health care services, and access to safe, effective, quality, and affordable essential medicines and vaccines for all",en,paper_sdg.xlsx
+gp01,Life,goal03,"3.9 By 2030 substantially reduce the number of deaths and illnesses from hazardous chemicals and air, water, and soil pollution and contamination",en,paper_sdg.xlsx
+gp01,Life,goal03,3.a. Strengthen implementation of the Framework Convention on Tobacco Control in all countries as appropriate,en,paper_sdg.xlsx
+gp01,Life,goal03,"3.b. Support research and development of vaccines and medicines for the communicable and non-communicable diseases that primarily affect developing countries, provide access to affordable essential medicines and vaccines, in accordance with the Doha Declaration which affirms the right of developing countries to use to the full the provisions in the TRIPS agreement regarding flexibilities to protect public health and, in particular, provide access to medicines for all",en,paper_sdg.xlsx
+gp01,Life,goal03,"3.b. Support research and development of vaccines and medicines for the communicable and non-communicable diseases that primarily affect developing countries, provide access to affordable essential medicines and vaccines, in accordance with the Doha Declaration which affirms the right of developing countries to use to the full the provisions in the TRIPS agreement regarding flexibilities to protect public health and, in particular, provide access to medicines for all",en,paper_sdg.xlsx
+gp01,Life,goal03,"3.b. Support research and development of vaccines and medicines for the communicable and non-communicable diseases that primarily affect developing countries, provide access to affordable essential medicines and vaccines, in accordance with the Doha Declaration which affirms the right of developing countries to use to the full the provisions in the TRIPS agreement regarding flexibilities to protect public health and, in particular, provide access to medicines for all",en,paper_sdg.xlsx
+gp01,Life,goal03,"3.c. Increase substantially health financing and the recruitment, development and training and retention of the health workforce in developing countries, especially in LDCs and SIDS",en,paper_sdg.xlsx
+gp01,Life,goal03,"3.d. Strengthen the capacity of all countries, particularly developing countries, for early warning, risk reduction, and management of national and global health risks",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"economic growth, full and productive employment and decent work for all",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Roughly half the world s population still lives on the equivalent of about US$2 a day.,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"And in too many places, having a job doesn t guarantee the ability to escape from poverty.",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"Substandard working conditions are often related to poverty, inequality and discrimination. In many contexts, certain groups such as workers with disabilities, women workers, youth, and migrants, among others face particular obstacles in accessing decent work and may be especially vulnerable to abuses.",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"Employment growth since 2008 has averaged only 0.1% annually, compared with 0.9% between 2000 and 2007",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Over 60 per cent of all workers lack any kind of employment contract,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"Fewer than 45 per cent of wage and salaried workers are employed on a full-time, permanent basis, and even that share is declining.",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"By 2019, more than 212 million people will be out of work, up from the current 201 million",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"600 million new jobs need to be created by 2030, just to keep pace with the growth of the working age population",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Businesses are engines for job creation and economic growth and foster economic activity through their value chain.,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Decent work opportunities are good for business and society.,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"Companies that uphold labor standards across their own operations and value chains face lower risk of reputational damage and legal liability. Instituting non-discriminatory practices and embracing diversity and inclusion will also lead to greater access to skilled, productive talent.",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Employment,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Economic inclusion,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Non-discrimination,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Capacity Building,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Availability of a skilled workforce,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Elimination of forced or compulsory labor,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Offer apprenticeship opportunities.,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Foster entrepreneurial culture and invest in or mentor young entrepreneurs.,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Initiate skills development programs moving down company supply chains.,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"Put in place mechanisms to identify child labor and forced labor throughout global supply chains, and implement remediation when abuses are discovered.",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"Install a firm policy against unfair hiring and recruitment practices, particularly of vulnerable groups such as migrant workers.",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Report the percentage of total employees covered by collective bargaining agreements,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"Benefits provided to full-time employees that are not provided to temporary or part-time employees, by significant locations of operation",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"Average hours of training per year per employee by gender, and by employee category",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"Average working hours per week, including overtime",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Women s World Banking Gender Performance Indicators,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,WBCSD Measuring Socio-Economic Impact,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Corporate Human Rights Benchmark (CHRB),en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,Human Rights Compliance Assessment (HRCA) UN Global Compact - Oxfam Poverty Footprint,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"8.1 Sustain per capita economic growth in accordance with national circumstances, and in particular at least 7% per annum GDP growth in the least-developed countries",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"8.2 Achieve higher levels of productivity of economies through diversification, technological upgrading and innovation, including through a focus on high value added and labor-intensive sectors",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"8.3 Promote development-oriented policies that support productive activities, decent job creation, entrepreneurship, creativity and innovation, and encourage formalization and growth of micro-, small- and medium-sized enterprises including through access to financial services",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"8.4 Improve progressively through 2030 global resource efficiency in consumption and production, and endeavor to decouple economic growth from environmental degradation in accordance with the 10-year framework of programs on sustainable consumption and production with developed countries taking the lead",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"8.5 By 2030, achieve full and productive employment and decent work for all women and men, including for young people and persons with disabilities, and equal pay for work of equal value",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"8.6 By 2020, substantially reduce the proportion of youth not in employment, education or training",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"8.7 Take immediate and effective measures to secure the prohibition and elimination of the worst forms of child labor, eradicate forced labor, and by 2025 end child labor in all its forms including recruitment and use of child soldiers",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"8.8 Protect labor rights and promote safe and secure working environments of all workers, including migrant workers, particularly women migrants, and those in precarious employment",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"8.9 By 2030, devise and implement policies to promote sustainable tourism which creates jobs, promotes local culture and products 8.10 strengthen the capacity of domestic financial institutions to encourage and to expand access to banking, insurance and financial services for all",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"8.a. Increase Aid for Trade support for developing countries, particularly LDCs, including through the Enhanced Integrated Framework for LDCs",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal08,"8.b. By 2020, develop and operationalize a global strategy for youth employment and implement the ILO Global Jobs Pact",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"Aging, degraded or non-existent infrastructure makes conducting good business challenging.",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"Business relies on materials, resources, labor and service support from all corners of the world and the ability to access them efficiently is key to establishing new markets.",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"Computing and technology-based skills are of significant value to most businesses today, and consumers of common goods and services live on every continent. However, basic infrastructure supporting technologies, communications, transportation, and sanitation that business relies on is not universally available, hindering economic growth and societal progress.",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"This presents an opportunity for business. By committing to sustainable industrialization and promoting innovation across company operations, businesses can contribute to development efforts in the regions in which they operate through upgrading local infrastructure, investing in resilient energy and communications technologies, and making these technologies available to all people, including marginalized groups, who might not have access otherwise.",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,Global companies can also promote inclusive infrastructure development by bringing valuable financial services and employment opportunities to smaller and/or minority-owned businesses.,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,Infrastructure investments,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,Access to financial services,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,Environmental investments,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,Research and development,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,Technological legacies,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"Invest in new, resilient infrastructure in developing countries or retrofit existing infrastructure to make it more sustainable.",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"Expand the geographic reach of research and development facilities, bringing R&D capabilities to developing countries.",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,Promote innovation by giving all stakeholders the opportunity to offer creative solutions to sustainability challenges. Further scope out the good ideas and offer awards to the best.,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"Consult and engage a wide range of stakeholders, including minority groups, to ensure that infrastructure development benefits and creates opportunities for all.",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,Establish standards and promote regulation that ensure company projects and initiatives are sustainably managed.,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,Collaborate with NGOs and the public sector to help promote sustainable growth within developing countries.,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,Is there evidence that the company participants in local partnerships with public sector research institutes or universities in the Index countries with the aim of increasing local capacity for health research (including clinical trials capacity and product development),en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,Development and impact of infrastructure investments and services supported,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,Monetary value of products and services designed to deliver a specific social benefit for each business line broken down by purpose,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,Research and development activity and expenditure aimed at providing reliable electricity and promoting sustainable development,en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"9.1 Develop quality, reliable, sustainable and resilient infrastructure, including regional and trans-border infrastructure, to support economic development and human well-being, with a focus on affordable and equitable access for all",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"9.2 Promote inclusive and sustainable industrialization, and by 2030 raise significantly industry s share of employment and GDP in line with national circumstances, and double its share in LDCs",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"9.3 Increase the access of small-scale industrial and other enterprises, particularly in developing countries, to financial services including affordable credit and their integration into value chains and markets",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"9.4 By 2030, upgrade infrastructure and retrofit industries to make them sustainable, with increased resource use efficiency and greater adoption of clean and environmentally sound technologies and industrial processes, all countries taking action in accordance with their respective capabilities",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"9.5 Enhance scientific research, upgrade the technological capabilities of industrial sectors in all countries, particularly developing countries, including by 2030 encouraging innovation and increasing the number of R&D workers per one million people by x% and public and private R&D spending",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"9.a Facilitate sustainable and resilient infrastructure development in developing countries through enhanced financial, technological and technical support to African countries, LDCs, LLDCs and SIDS",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,"9.b Support domestic technology development, research and innovation in developing countries including by ensuring a conducive policy environment for inter alia industrial diversification and value addition to commodities",en,paper_sdg.xlsx
+gp02,Economic and Technological Development,goal09,9.c Significantly increase access to ICT and strive to provide universal and affordable access to internet in LDCs by 2020,en,paper_sdg.xlsx
+gp03,Equity,goal04,Ensure inclusive and equitable quality education and promote life-long learning opportunities for all,en,paper_sdg.xlsx
+gp03,Equity,goal04,Education is a fundamental human right and is indispensable for the achievement of sustainable development.,en,paper_sdg.xlsx
+gp03,Equity,goal04,"We are only able to empower girls, combat climate change, fight inequality and end extreme poverty if all stakeholders, including business, commit themselves to advancing the education goal. While education needs globally are immense, companies can leverage their resources and core competencies to support governments in delivering on their promise of education for all.",en,paper_sdg.xlsx
+gp03,Equity,goal04,Strong leadership by business can help unlock the necessary investments to ensure quality learning opportunities for all children and adults.,en,paper_sdg.xlsx
+gp03,Equity,goal04,The business case to invest in education can range from improving brand leadership to developing the capacity of future employees and building a more diverse employee pipeline.,en,paper_sdg.xlsx
+gp03,Equity,goal04,"Education can help address the mismatch between skills of the available workforce and job vacancies, which is a key problem in many markets.",en,paper_sdg.xlsx
+gp03,Equity,goal04,"Business can make long-term strategic investments in education that will lead to a larger, more talented pool of future employees. Investing in education can be a source of innovation and facilitate access to new markets.",en,paper_sdg.xlsx
+gp03,Equity,goal04,"Education is often a local issue, which will require businesses to work within local education systems and in communities to determine the best utilization of resources.",en,paper_sdg.xlsx
+gp03,Equity,goal04,"Business should apply best practices to engage responsibly in education, including promoting sustainable development topics in higher education, and support the public sector s ability to provide inclusive and equitable quality learning opportunities for all.",en,paper_sdg.xlsx
+gp03,Equity,goal04,Education for sustainable development,en,paper_sdg.xlsx
+gp03,Equity,goal04,Availability of a skilled workforce,en,paper_sdg.xlsx
+gp03,Equity,goal04,Capacity Building,en,paper_sdg.xlsx
+gp03,Equity,goal04,Indirect Impact on Job Creation,en,paper_sdg.xlsx
+gp03,Equity,goal04,Youth Employment,en,paper_sdg.xlsx
+gp03,Equity,goal04,Establish relationships with government entities and higher education institutions to improve education curricula to better align with business needs including responsible management.,en,paper_sdg.xlsx
+gp03,Equity,goal04,"Create programs (e.g., internships, work-study programs, traineeships, etc.) that give students earlier access to the corporate environment.",en,paper_sdg.xlsx
+gp03,Equity,goal04,Provide employees with continuous opportunities to improve their (job) skills for their current and future employment.,en,paper_sdg.xlsx
+gp03,Equity,goal04,"Develop cost-effective education products and services that eliminate barriers to access and improve the quality of learning (e.g., ICT solutions to improve the delivery of education, innovative measurement tools, etc.).",en,paper_sdg.xlsx
+gp03,Equity,goal04,"Ensure learning environments are clean and safe for children by mitigating business-related environmental hazards, like pollution and limited water access.",en,paper_sdg.xlsx
+gp03,Equity,goal04,"The Women s Empowerment Principles: What is the business policy and provision of childcare facilities and how many employees, if any, use this facility?",en,paper_sdg.xlsx
+gp03,Equity,goal04,"Type and number of sustainability certification, rating and labeling schemes for new construction, management, occupation and redevelopment",en,paper_sdg.xlsx
+gp03,Equity,goal04,i) Approximate proportion of workers (m/w) along the value chain who receive training per year. ii) Average number of hours (or days) of training(s) provided to workers (m/w). iii) Provide details on the type(s) of training(s) provided,en,paper_sdg.xlsx
+gp03,Equity,goal04,"Average hours of training per year per employee by gender, and by employee category",en,paper_sdg.xlsx
+gp03,Equity,goal04,Report the measures taken to develop and enhance the highest,en,paper_sdg.xlsx
+gp03,Equity,goal04,"vernance body s collective knowledge of economic, environmental and social topics",en,paper_sdg.xlsx
+gp03,Equity,goal04,Corporate Human Rights Benchmark (CHRB),en,paper_sdg.xlsx
+gp03,Equity,goal04,Impact Reporting & Investment Standards (IRIS),en,paper_sdg.xlsx
+gp03,Equity,goal04,UN Global Compact- Oxfam Poverty Footprint,en,paper_sdg.xlsx
+gp03,Equity,goal04,"4.1 By 2030, ensure that all girls and boys complete free, equitable and quality primary and secondary education leading to relevant and effective learning outcomes",en,paper_sdg.xlsx
+gp03,Equity,goal04,"4.2 By 2030, ensure that all girls and boys have access to quality early childhood development, care and pre-primary education so that they are ready for primary education",en,paper_sdg.xlsx
+gp03,Equity,goal04,"4.3 By 2030, ensure equal access for all women and men to affordable quality technical, vocational and tertiary education, including university",en,paper_sdg.xlsx
+gp03,Equity,goal04,"4.4 By 2030, substantially increase the number of youth and adults who have relevant skills, including technical and vocational skills, for employment, decent jobs and entrepreneurship",en,paper_sdg.xlsx
+gp03,Equity,goal04,"4.5 By 2030, eliminate gender disparities in education and ensure equal access to all levels of education and vocational training for the vulnerable, including persons with disabilities, indigenous peoples, and children in vulnerable situations",en,paper_sdg.xlsx
+gp03,Equity,goal04,"4.6 By 2030, ensure that all youth and a substantial proportion of adults, both men and men, achieve literacy and numeracy",en,paper_sdg.xlsx
+gp03,Equity,goal04,"4.7 By 2030, ensure all learners acquire knowledge and skills needed to promote sustainable development, including among others through education for sustainable development and sustainable lifestyles, human rights, gender equality, promotion of a culture of peace and non-violence, global citizenship, and appreciation of cultural diversity and of cultures contribution to sustainable development",en,paper_sdg.xlsx
+gp03,Equity,goal04,"4.a Build and upgrade education facilities that are child, disability and gender sensitive and provide safe, non-violent, inclusive and effective learning environments for all",en,paper_sdg.xlsx
+gp03,Equity,goal04,"4.b By 2020, substantially expand globally the number of scholarships for developing countries in particular least developed countries, small island developing States and African countries for enrolment in higher education, including vocational training, and communications technology, technical, engineering and scientific programs in developed countries and other developing countries 4.c By 2030, substantially increase the supply of qualified teachers, including through international cooperation for teacher training in developing countries, especially least developed countries, small island developing States",en,paper_sdg.xlsx
+gp03,Equity,goal05,Achieve gender equality and empower all women and girls,en,paper_sdg.xlsx
+gp03,Equity,goal05,"Gender equality is a fundamental and inviolable human right and women s and girls empowerment is essential to expand economic growth, promote social development and enhance business performance.",en,paper_sdg.xlsx
+gp03,Equity,goal05,"The full incorporation of women s capacities into labor forces would add percentage points to most national growth rates double digits in many cases. Further, investing in women s empowerment produces the double dividend of benefiting women and children, and is pivotal to the health and social development of families, communities and nations.",en,paper_sdg.xlsx
+gp03,Equity,goal05,"Empowering women and girls and achieving gender equality requires the concerted efforts of all stakeholders, including business.",en,paper_sdg.xlsx
+gp03,Equity,goal05,"All companies have baseline responsibilities to respect human rights, including the rights of women and girls.",en,paper_sdg.xlsx
+gp03,Equity,goal05,"Beyond these baseline responsibilities, companies also have the opportunity to support the empowerment of women and girls through core business, social investment, public policy engagement and partnerships. As the engine for 90 percent of jobs in developing countries, technological innovation, capital creation and investment, responsible business is critical to the advancement of women s and girls empowerment around the world.",en,paper_sdg.xlsx
+gp03,Equity,goal05,"With a growing business case, private sector leaders are increasingly developing and adapting policies and practices, and implementing cutting edge initiatives, to advance women s empowerment within their workplaces, marketplaces and communities.",en,paper_sdg.xlsx
+gp03,Equity,goal05,The launch of the SDGs in September provides a tremendous opportunity for companies to further align their strategies and operations with global priorities by mainstreaming gender equality into all areas of corporate sustainability and systematically and strategically scaling up actions which support the development and livelihoods of women and girls.,en,paper_sdg.xlsx
+gp03,Equity,goal05,Equal remuneration for women and men,en,paper_sdg.xlsx
+gp03,Equity,goal05,Diversity and equal opportunity,en,paper_sdg.xlsx
+gp03,Equity,goal05,Access to sexual and reproductive health-care services,en,paper_sdg.xlsx
+gp03,Equity,goal05,Workplace violence and harassment,en,paper_sdg.xlsx
+gp03,Equity,goal05,Women in leadership,en,paper_sdg.xlsx
+gp03,Equity,goal05,Childcare services and benefits,en,paper_sdg.xlsx
+gp03,Equity,goal05,Assure sufficient participation of women 30% or greater in decision-making and governance at all levels and across all business areas.,en,paper_sdg.xlsx
+gp03,Equity,goal05,"Pay equal remuneration, including benefits, for work of equal value and strive to pay a living wage to all women and men.",en,paper_sdg.xlsx
+gp03,Equity,goal05,"Support access to child and dependent care by providing services, resources and information to both women and men.",en,paper_sdg.xlsx
+gp03,Equity,goal05,"Establish a zero-tolerance policy towards all forms of violence at work, including verbal/ and/ or physical abuse and prevent sexual harassment.",en,paper_sdg.xlsx
+gp03,Equity,goal05,"Expand business relationships with women-owned enterprises, including small businesses and women entrepreneurs.",en,paper_sdg.xlsx
+gp03,Equity,goal05,"What is the business policy on maternity, paternity and family leave length and entitlements and to what extent does this go above the statutory provisions in the regulatory regime where the business is operating?",en,paper_sdg.xlsx
+gp03,Equity,goal05,Do these policies apply throughout the operations in each country?,en,paper_sdg.xlsx
+gp03,Equity,goal05,Are sex-disaggregated statistics kept and tracked?,en,paper_sdg.xlsx
+gp03,Equity,goal05,"Does the business have an explicit, well-publicized policy of zero tolerance towards gender-based violence and harassment? Is there a confidential complaint procedure?",en,paper_sdg.xlsx
+gp03,Equity,goal05,"Total number and rates of new employee hires and employee turnover by age group, gender, and region",en,paper_sdg.xlsx
+gp03,Equity,goal05,"Composition of governance bodies and breakdown of employees per employee category according to gender, age group, minority group membership, and other indicators of diversity",en,paper_sdg.xlsx
+gp03,Equity,goal05,"Ratio of basic salary and remuneration of women to men by employee category, by significant locations of operation",en,paper_sdg.xlsx
+gp03,Equity,goal05,"Describe policies and practices used to promote economic inclusion when selecting suppliers. Forms of economic inclusion may include: suppliers owned by women; suppliers owned or staffed by members of vulnerable, marginalized or underrepresented social groups; and small and medium sized suppliers",en,paper_sdg.xlsx
+gp03,Equity,goal05,Corporate Human Rights Benchmark (CHRB),en,paper_sdg.xlsx
+gp03,Equity,goal05,Gender Equality Principles self-assessment,en,paper_sdg.xlsx
+gp03,Equity,goal05,Impact Reporting & Investment Standards (IRIS),en,paper_sdg.xlsx
+gp03,Equity,goal05,Social Hotspots Database/ Portal (SHDB),en,paper_sdg.xlsx
+gp03,Equity,goal05,UN Global Compact- Oxfam Poverty Footprint,en,paper_sdg.xlsx
+gp03,Equity,goal05,Understand and Measuring Women s Economic Empowerment,en,paper_sdg.xlsx
+gp03,Equity,goal05,5.1 End all forms of discrimination against all women and girls everywhere,en,paper_sdg.xlsx
+gp03,Equity,goal05,"5.2 Eliminate all forms of violence against all women and girls in public and private spheres, including trafficking and sexual and other types of exploitation",en,paper_sdg.xlsx
+gp03,Equity,goal05,"5.3 Eliminate all harmful practices, such as child, early and forced marriage and female genital mutilations",en,paper_sdg.xlsx
+gp03,Equity,goal05,"5.4 Recognize and value unpaid care and domestic work through the provision of public services, infrastructure and social protection policies, and the promotion of shared responsibility within the household and the family as nationally appropriate",en,paper_sdg.xlsx
+gp03,Equity,goal05,"5.5 Ensure women s full and effective participation and equal opportunities for leadership at all levels of decision-making in political, economic, and public life",en,paper_sdg.xlsx
+gp03,Equity,goal05,5.6 Ensure universal access to sexual and reproductive health and reproductive rights as agreed in accordance with the Program of,en,paper_sdg.xlsx
+gp03,Equity,goal05,Action of the ICPD and the Beijing Platform for Action and the outcome documents of their review conferences,en,paper_sdg.xlsx
+gp03,Equity,goal05,"5.a. Undertake reforms to give women equal rights to economic resources, as well as access to ownership and control over land and other forms of property, financial services, inheritance, and natural resources in accordance with national laws",en,paper_sdg.xlsx
+gp03,Equity,goal05,"5.b. Enhance the use of enabling technologies, in particular ICT, to promote women s empowerment",en,paper_sdg.xlsx
+gp03,Equity,goal05,5.c. Adopt and strengthen sound policies and enforceable legislation for the promotion of gender equality and the empowerment of all women and girls at all levels,en,paper_sdg.xlsx
+gp03,Equity,goal10,Reduce inequality within and among countries,en,paper_sdg.xlsx
+gp03,Equity,goal10,Inequalities in income and wealth are severe and have been widening globally.,en,paper_sdg.xlsx
+gp03,Equity,goal10,"The richest 1% of the world s population now control up to 40% of global assets, while the poorest half owns just one per cent. Income equality between countries is higher than that within a large majority of countries, such that individual incomes are still largely associated with a person s citizenship and location.",en,paper_sdg.xlsx
+gp03,Equity,goal10,"Wide and often mutually reinforcing disparities are also evident within countries, including disparity in terms of: rural/urban disparities, household wealth, gender, ethnic minorities and indigenous people, migrant status, and disability.",en,paper_sdg.xlsx
+gp03,Equity,goal10,"Businesses are engines for economic growth, having the potential to create jobs, foster economic activity through their value chain, and contribute tax revenues for public services and infrastructure.",en,paper_sdg.xlsx
+gp03,Equity,goal10,"However, business can also exacerbate inequality, and its structural drivers, including by being complicit in perpetuating biases and discrimination.",en,paper_sdg.xlsx
+gp03,Equity,goal10,All businesses have the responsibility to respect human rights.,en,paper_sdg.xlsx
+gp03,Equity,goal10,"This includes adopting and implementing policies on respect for human rights including worker s rights (collective bargaining, decent work conditions, etc.).",en,paper_sdg.xlsx
+gp03,Equity,goal10,"In supply chains, one area to pay particular attention to is when third parties, such as recruitment agencies, are used to source labor.",en,paper_sdg.xlsx
+gp03,Equity,goal10,"Such activity may place migrant workers at risk of exploitation such as forced labor and human trafficking, including where recruitment fees are charged to workers and where identity documents are retained.",en,paper_sdg.xlsx
+gp03,Equity,goal10,"Thus, in addition to addressing their own impacts, businesses should use leverage to try to address adverse impacts with which they may be involved through third parties such as suppliers.",en,paper_sdg.xlsx
+gp03,Equity,goal10,"Such leverage can also be used to encourage changes in policies and practices that may exclude workers based on factors such as age, gender, religious beliefs, national origin, or ethnicity.",en,paper_sdg.xlsx
+gp03,Equity,goal10,"Companies should engage governments in a transparent and accountable way, and disclose payments to governments.",en,paper_sdg.xlsx
+gp03,Equity,goal10,"Whether through public policy dialogue or tax revenue, relationships between companies and governments are increasingly recognized as having a significant impact on human rights, which may exacerbate or improve inequality outcomes.",en,paper_sdg.xlsx
+gp03,Equity,goal10,"In addition to avoiding contributing to inequality, companies can also have a positive impact on addressing inequality through inclusive business models that provide empowerment for marginalized groups in the workplace, marketplace and community.",en,paper_sdg.xlsx
+gp03,Equity,goal10,Availability of products and services for those on low incomes,en,paper_sdg.xlsx
+gp03,Equity,goal10,Access to financial services,en,paper_sdg.xlsx
+gp03,Equity,goal10,Equal remuneration for women and men,en,paper_sdg.xlsx
+gp03,Equity,goal10,Capacity Building,en,paper_sdg.xlsx
+gp03,Equity,goal10,Diversity and equal opportunity,en,paper_sdg.xlsx
+gp03,Equity,goal10,Economic inclusion,en,paper_sdg.xlsx
+gp03,Equity,goal10,Develop products and services tailored for poor customers (e.g. mobile based money transfer services for unbanked consumers).,en,paper_sdg.xlsx
+gp03,Equity,goal10,"Improve access to basic goods and services for people living in poverty (e.g. through core business, policy dialogue, social investment).",en,paper_sdg.xlsx
+gp03,Equity,goal10,"Recruit, train and employ local community members, including those living in poverty, and integrate them in your value chain (as producers, suppliers, distributors, vendors).",en,paper_sdg.xlsx
+gp03,Equity,goal10,Invest in business-driven poverty eradication activities (e.g. develop living wage policy).,en,paper_sdg.xlsx
+gp03,Equity,goal10,Partner with civil society networks to provide education and entrepreneurial skills training.,en,paper_sdg.xlsx
+gp03,Equity,goal10,Does the Company system have policies/programs promoting equal opportunities (regardless of gender and other diversities) that explicitly extends to the entire value chain?,en,paper_sdg.xlsx
+gp03,Equity,goal10,"Ratio of basic salary and remuneration of women to men by employee category, by significant locations of operation",en,paper_sdg.xlsx
+gp03,Equity,goal10,"Significant indirect economic impacts, including the extent of impacts",en,paper_sdg.xlsx
+gp03,Equity,goal10,"Ratio of basic salary and remuneration of women to men by employee category, by significant locations of operation",en,paper_sdg.xlsx
+gp03,Equity,goal10,Percent of women clients accessing two or more distinct types of voluntary financial products,en,paper_sdg.xlsx
+gp03,Equity,goal10,UN Global Compact-Oxfam Poverty Footprint Tool,en,paper_sdg.xlsx
+gp03,Equity,goal10,Progress out of Poverty Index,en,paper_sdg.xlsx
+gp03,Equity,goal10,Corporate Human Rights Benchmark (CHRB),en,paper_sdg.xlsx
+gp03,Equity,goal10,"10.1 By 2030, progressively achieve and sustain income growth of the bottom 40% of the population at a rate higher than the national average",en,paper_sdg.xlsx
+gp03,Equity,goal10,"10.2 By 2030, empower and promote the social, economic and political inclusion of all irrespective of age, sex, disability, race, ethnicity, origin, religion or economic or other status",en,paper_sdg.xlsx
+gp03,Equity,goal10,"10.3 Ensure equal opportunity and reduce inequalities of outcome, including through eliminating discriminatory laws, policies and practices and promoting appropriate legislation, policies and actions in this regard",en,paper_sdg.xlsx
+gp03,Equity,goal10,"10.4 Adopt policies especially fiscal, wage, and social protection policies and progressively achieve greater equality",en,paper_sdg.xlsx
+gp03,Equity,goal10,"10.5 Improve regulation and monitoring of global financial markets and institutions and strengthen implementation of such regulations 10.6 Ensure enhanced representation and voice of developing countries in decision making in global international economic and financial institutions in order to deliver more effective, credible, accountable and legitimate institutions",en,paper_sdg.xlsx
+gp03,Equity,goal10,"10.7 Facilitate orderly, safe, regular and responsible migration and mobility of people, including through implementation of planned and well-managed migration policies",en,paper_sdg.xlsx
+gp03,Equity,goal10,"10.a. Implement the principle of special and differential treatment for developing countries, in particular least developed countries, in accordance with WTO agreements",en,paper_sdg.xlsx
+gp03,Equity,goal10,"10.b. Encourage ODA and financial flows, including foreign direct investment, to states where the need is greatest, in particular LDCs,",en,paper_sdg.xlsx
+gp03,Equity,goal10,"African countries, SIDS, and LLDCs, in accordance with their national plans and programs",en,paper_sdg.xlsx
+gp03,Equity,goal10,"10.c. By 2030, reduce to less than 3% the transaction costs of migrant remittances and eliminate remittance corridors with costs higher than 5%",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"Make cities and human settlements inclusive, safe, resilient and sustainable",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"By 2050, 70 % of the world s population will live in cities, making cities critical in achieving a sustainable future for the world.",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"Businesses, together with Governments at various levels, and civil society organizations and citizens are collectively engaged in pursuing ambitious objectives to make cities more competitive, safe, resource-efficient, resilient and inclusive. Key areas of need in achieving progress on Goal 11 are;",en,paper_sdg.xlsx
+gp04,Social Development,goal11,1) identifying and agreeing the most sustainable ways to achieve the targets- what activities should be ceased and which ones accelerated;,en,paper_sdg.xlsx
+gp04,Social Development,goal11,2) building appropriate capacity and skills across these stakeholder groups to deliver;,en,paper_sdg.xlsx
+gp04,Social Development,goal11,"3) attracting/securing finance, innovative designs and delivery models and projects for integrated city infrastructure including buildings, energy, mobility, telecommunications, water, sanitation and waste management services, and;",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"4) ensuring practical processes for multistakeholder engagement in all stages of urban development that build consensus, inclusion, resilience and sustainability.",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"Businesses can help cities navigate these challenges and turn a high-level vision into practical and implementable action plans. Business can play a vital role not only in providing specific infrastructure, technology, services and financing solutions, but also in contributing to the strategy that will support the overall optimization of urban systems to create inclusive, safe, sustainable and disaster resilient cities.",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"Cities seeking to realize their sustainability objectives can benefit from engaging with business early in the planning and strategy development process, leveraging the capability of business to identify innovative and cost-effective solutions to complex, cross-cutting urban sustainability challenges.",en,paper_sdg.xlsx
+gp04,Social Development,goal11,Access to affordable housing,en,paper_sdg.xlsx
+gp04,Social Development,goal11,Infrastructure investments,en,paper_sdg.xlsx
+gp04,Social Development,goal11,Sustainable transportation,en,paper_sdg.xlsx
+gp04,Social Development,goal11,Access to public spaces,en,paper_sdg.xlsx
+gp04,Social Development,goal11,Sustainable buildings,en,paper_sdg.xlsx
+gp04,Social Development,goal11,"Jointly develop and/or participate in a sustainable community that brings together relevant stakeholders through a common and neutral platform to jointly analyze, discuss and act on urban functionality, resilience and sustainable development.",en,paper_sdg.xlsx
+gp04,Social Development,goal11,Use technological expertise to help build capacity of building owners to deliver solutions to improve energy efficiency in buildings and enable sound building management practices using good data about a building s performance.,en,paper_sdg.xlsx
+gp04,Social Development,goal11,Collaborate with cities and governments to find solutions to future mobility needs that minimize environmental impact while making transportation safer and more affordable for all.,en,paper_sdg.xlsx
+gp04,Social Development,goal11,"Reform private sector finance investment strategies to support integrated and sustainable urban development like sustainable urban transport, low-carbon buildings, and resilient infrastructure.",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"Invest in safe and sustainable infrastructure in the community and or city of operation, including lighting, transportation, alarm systems etc.",en,paper_sdg.xlsx
+gp04,Social Development,goal11,Development and impact of infrastructure investments and services supported,en,paper_sdg.xlsx
+gp04,Social Development,goal11,"Modes of transport taken by attendees as a percentage of total transportation, and initiatives to encourage the use of sustainable transport options",en,paper_sdg.xlsx
+gp04,Social Development,goal11,Number and percentage change of people residing in areas affected by noise,en,paper_sdg.xlsx
+gp04,Social Development,goal11,"Operations where involuntary resettlement took place, the number of households resettled in each and how their livelihoods were affected in the process",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"Type and number of sustainability certification, rating and labeling schemes for new construction, management, occupation and redevelopment",en,paper_sdg.xlsx
+gp04,Social Development,goal11,Impact Reporting & Investment Standards (IRIS),en,paper_sdg.xlsx
+gp04,Social Development,goal11,Corporate Human Rights Benchmark (CHRB),en,paper_sdg.xlsx
+gp04,Social Development,goal11,"11.1 By 2030, ensure access for all to adequate, safe and affordable housing and basic services, and upgrade slums",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"11.2 By 2030, provide access to safe, affordable, accessible and sustainable transport systems for all, improving road safety, notably by expanding public transport, with special attention to the needs of those in vulnerable situations, women, children, persons with disabilities and older persons",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"11.3 By 2030 enhance inclusive and sustainable urbanization and capacities for participatory, integrated and sustainable human settlement planning and management in all countries 11.4 Strengthen efforts to protect and safeguard the world s cultural and natural heritage",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"11.5 By 2030, significantly reduce the number of deaths and the number of affected people and decrease by y% the economic losses relative to GDP caused by disasters, including water-related disasters, with the focus on protecting the poor and people in vulnerable situations",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"11.6 By 2030, reduce the adverse per capita environmental impact of cities, including by paying special attention to air quality, municipal and other waste management",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"11.7 By 2030, provide universal access to safe, inclusive and accessible, green and public spaces, particularly for women and children, older persons and persons with disabilities",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"11.a Support positive economic, social and environmental links between urban, peri-urban and rural areas by strengthening national and regional development planning",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"11.b By 2020, increase by x% the number of cities and human settlements adopting and implementing integrated policies and plans towards inclusion, resource efficiency, mitigation and adaptation to climate change, resilience to disasters, develop and implement in line with the forthcoming Hyogo Framework holistic disaster risk management at all levels",en,paper_sdg.xlsx
+gp04,Social Development,goal11,"11.c Support least developed countries, including through financial and technical assistance, for sustainable and resilient buildings utilizing local materials",en,paper_sdg.xlsx
+gp04,Social Development,goal16,"Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels",en,paper_sdg.xlsx
+gp04,Social Development,goal16,Business thrives in peaceful environments with effective institutions where operating costs are predictable and working environments are stable.,en,paper_sdg.xlsx
+gp04,Social Development,goal16,"Failure to implement responsible business practices can result in additional costs and risks (financial, legal, reputational) to the business itself, and, can exacerbate tensions and instability in society and undermine the rule of law.",en,paper_sdg.xlsx
+gp04,Social Development,goal16,"Corruption causes inefficiencies in markets because it renders transaction costs uncertain, is anti-competitive, and hampers businesses ability to comply with human rights and other obligations.",en,paper_sdg.xlsx
+gp04,Social Development,goal16,"By contrast, a responsible business can through its core business, strategic social investment, public policy engagement and collective action make meaningful contributions to lasting peace, development and prosperity while ensuring long-term business success.",en,paper_sdg.xlsx
+gp04,Social Development,goal16,"Among other things, businesses can commit to working with governments and civil society to eliminate corruption in all its forms and to support strengthening of the rule of law.",en,paper_sdg.xlsx
+gp04,Social Development,goal16,"By focusing on the ways responsible business contributes to advancing these three dimensions of sustainable development; conducting business responsibly in high-risk areas, fighting corruption, and respect and support for the rule of law- business can contribute to more peaceful and inclusive societies, and support effective and accountable institutions.",en,paper_sdg.xlsx
+gp04,Social Development,goal16,"Effective, accountable and transparent governance",en,paper_sdg.xlsx
+gp04,Social Development,goal16,Compliance with laws and regulations,en,paper_sdg.xlsx
+gp04,Social Development,goal16,Anti-corruption,en,paper_sdg.xlsx
+gp04,Social Development,goal16,Public access to information,en,paper_sdg.xlsx
+gp04,Social Development,goal16,Physical and economic displacement,en,paper_sdg.xlsx
+gp04,Social Development,goal16,Inclusive decision making,en,paper_sdg.xlsx
+gp04,Social Development,goal16,Comply with laws and seek to meet international standards; require and support business partners to do the same.,en,paper_sdg.xlsx
+gp04,Social Development,goal16,"Commit to and implement conflict-sensitive, lawful and transparent operational policies and practices, including on human resources, public and corporate procurement, and in the value chain more generally.",en,paper_sdg.xlsx
+gp04,Social Development,goal16,"Conduct risk and impact assessments to identify and mitigate risks of contributing to corruption, violence and conflict, and weakening of the rule of law and identify opportunities for positive impacts.",en,paper_sdg.xlsx
+gp04,Social Development,goal16,"Measure and report on implementation progress, including on operations in high-risk areas.",en,paper_sdg.xlsx
+gp04,Social Development,goal16,"Engage in public-private dialogues, partnerships and collective action in conflict prevention, peacekeeping, peacebuilding, anti-corruption and the rule of law.",en,paper_sdg.xlsx
+gp04,Social Development,goal16,"Does the company publically state it will work against corruption in all its forms, including bribery and extortion?",en,paper_sdg.xlsx
+gp04,Social Development,goal16,The company has a system in place to incorporate external and local (market) perspectives on access to medicine needs in the development and implementation of access strategies,en,paper_sdg.xlsx
+gp04,Social Development,goal16,"Does the business have an explicit, well-publicized policy of zero tolerance towards gender-based violence and harassment? Is there a confidential complaint procedure?",en,paper_sdg.xlsx
+gp04,Social Development,goal16,"Describe the organization s values, principles, standards and norms of behavior such as codes of conduct and codes of ethics",en,paper_sdg.xlsx
+gp04,Social Development,goal16,UN Global Compact-Oxfam Poverty Footprint,en,paper_sdg.xlsx
+gp04,Social Development,goal16,The Bribe Payers Index,en,paper_sdg.xlsx
+gp04,Social Development,goal16,The Anti-Bribery Checklist,en,paper_sdg.xlsx
+gp04,Social Development,goal16,Social Hotspots Database/Portal (SHDB),en,paper_sdg.xlsx
+gp04,Social Development,goal16,Impact Reporting & Investment Standards (IRIS),en,paper_sdg.xlsx
+gp04,Social Development,goal16,Human Rights Compliance Assessment,en,paper_sdg.xlsx
+gp04,Social Development,goal16,16.1 Significantly reduce all forms of violence and related death rates everywhere,en,paper_sdg.xlsx
+gp04,Social Development,goal16,"16.2 End abuse, exploitation, trafficking and all forms of violence against and torture of children",en,paper_sdg.xlsx
+gp04,Social Development,goal16,16.3 Promote the rule of law at the national and international levels and ensure equal access to justice for all,en,paper_sdg.xlsx
+gp04,Social Development,goal16,"16.4 By 2030, significantly reduce illicit financial and arms flows, strengthen the recovery and return of stolen assets and combat all forms of organized crime",en,paper_sdg.xlsx
+gp04,Social Development,goal16,16.5 Substantially reduce corruption and bribery in all their forms,en,paper_sdg.xlsx
+gp04,Social Development,goal16,"16.6 Develop effective, accountable and transparent institutions at all levels",en,paper_sdg.xlsx
+gp04,Social Development,goal16,"16.7 Ensure responsive, inclusive, participatory and representative decision-making at all levels",en,paper_sdg.xlsx
+gp04,Social Development,goal16,16.8 Broaden and strengthen the participation of developing countries in the institutions of global governance,en,paper_sdg.xlsx
+gp04,Social Development,goal16,"16.9 By 2030, provide legal identity for all, including birth registration",en,paper_sdg.xlsx
+gp04,Social Development,goal16,"16.10 Ensure public access to information and protect fundamental freedoms, in accordance with national legislation and international agreements",en,paper_sdg.xlsx
+gp04,Social Development,goal16,"16.a Strengthen relevant national institutions, including through international cooperation, for building capacity at all levels, in particular in developing countries, to prevent violence and combat terrorism and crime",en,paper_sdg.xlsx
+gp04,Social Development,goal16,16.b Promote and enforce non-discriminatory laws and policies for sustainable development,en,paper_sdg.xlsx
+gp04,Social Development,goal17,Strengthen the means of implementation and revitalize the global partnership for sustainable development,en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.1 Strengthen domestic resource mobilization, including through international support to developing countries, to improve domestic capacity for tax and other revenue collection",en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.2 Developed countries to implement fully their official development assistance commitments, including the commitment by many developed countries to achieve the target of 0.7 per cent of ODA/GNI to developing countries and 0.15 to 0.20 per cent of ODA/GNI to least developed countries; ODA providers are encouraged to consider setting a target to provide at least 0.20 per cent of ODA/GNI to least developed countries",en,paper_sdg.xlsx
+gp04,Social Development,goal17,17.3 Mobilize additional financial resources for developing countries from multiple sources,en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.4 Assist developing countries in attaining long-term debt sustainability through coordinated policies aimed at fostering debt financing, debt relief and debt restructuring, as appropriate, and address the external debt of highly indebted poor countries to reduce debt distress",en,paper_sdg.xlsx
+gp04,Social Development,goal17,17.5 Adopt and implement investment promotion regimes for least developed countries Technology,en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.6 Enhance North-South, South-South and triangular regional and international cooperation on and access to science, technology and innovation and enhance knowledge sharing on mutually agreed terms, including through improved coordination among existing mechanisms, in particular at the United Nations level, and through a global technology facilitation mechanism",en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.7 Promote the development, transfer, dissemination and diffusion of environmentally sound technologies to developing countries on favourable terms, including on concessional and preferential terms, as mutually agreed",en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.8 Fully operationalize the technology bank and science, technology and innovation capacitybuilding mechanism for least developed countries by 2017 and enhance the use of enabling technology, in particular information and communications technology Capacity-Building",en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.9 Enhance international support for implementing effective and targeted capacity-building in developing countries to support national plans to implement all the sustainable development goals, including through North-South, South-South and triangular cooperation Trade",en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.10 Promote a universal, rules-based, open, non-discriminatory and equitable multilateral trading system under the World Trade Organization, including through the conclusion of negotiations under its Doha Development Agenda",en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.11 Significantly increase the exports of developing countries, in particular with a view to doubling the least developed countries share of global exports by 2020",en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.12 Realize timely implementation of duty-free and quota-free market access on a lasting basis for all least developed countries, consistent with World Trade Organization decisions, including by ensuring that preferential rules of origin applicable to imports from least developed countries are transparent and simple, and contribute to facilitating market access",en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.13 Enhance global macroeconomic stability, including through policy coordination and policy coherence",en,paper_sdg.xlsx
+gp04,Social Development,goal17,17.14 Enhance policy coherence for sustainable development,en,paper_sdg.xlsx
+gp04,Social Development,goal17,17.15 Respect each country s policy space and leadership to establish and implement policies for poverty eradication and sustainable development Multi-stakeholder partnerships,en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.16 Enhance the global partnership for sustainable development, complemented by multistakeholder partnerships that mobilize and share knowledge, expertise, technology and financial resources, to support the achievement of the sustainable development goals in all countries, in particular developing countries",en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.17 Encourage and promote effective public, public-private and civil society partnerships, building on the experience and resourcing strategies of partnerships",en,paper_sdg.xlsx
+gp04,Social Development,goal17,"Data, monitoring and accountability",en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.18 By 2020, enhance capacity-building support to developing countries, including for least developed countries and small island developing States, to increase significantly the availability of high-quality, timely and reliable data disaggregated by income, gender, age, race, ethnicity, migratory status, disability, geographic location and other characteristics relevant in national contexts",en,paper_sdg.xlsx
+gp04,Social Development,goal17,"17.19 By 2030, build on existing initiatives to develop measurements of progress on sustainable development that complement gross domestic product, and support statistical capacity-building in developing countries",en,paper_sdg.xlsx
+gp05,Resources,goal06,Ensure availability and sustainable management of water and sanitation for all,en,paper_sdg.xlsx
+gp05,Resources,goal06,Access to water and sanitation are basic human rights and are critical sustainable development challenges.,en,paper_sdg.xlsx
+gp05,Resources,goal06,"These challenges will only worsen and the impacts on people will only increase as competing demands for clean fresh water (agriculture, households, energy generation, industrial use, ecosystems) are exacerbated by the effects of climate change putting more pressure on water quality and availability.",en,paper_sdg.xlsx
+gp05,Resources,goal06,"These conditions will create increasing risk for businesses, governments, communities and the environment.",en,paper_sdg.xlsx
+gp05,Resources,goal06,"Business can contribute to the alleviation of these water challenges by adopting a water stewardship strategy that addresses the economic, environment, and social dimensions of water.",en,paper_sdg.xlsx
+gp05,Resources,goal06,"By adopting stewardship, companies are able to make a positive contribution to improved water and sanitation management and governance that addresses their risks while contributing to sustainable development.",en,paper_sdg.xlsx
+gp05,Resources,goal06,This means adopting values and practices that aim to safeguard long-term availability of clean water and the provision of sanitation for all stakeholders in a watershed.,en,paper_sdg.xlsx
+gp05,Resources,goal06,Sustainable water withdrawals,en,paper_sdg.xlsx
+gp05,Resources,goal06,Improved water quality through effluent treatment,en,paper_sdg.xlsx
+gp05,Resources,goal06,"Improved water efficiency through application of 5R principles: reduce, reuse, recover, recycle, replenish",en,paper_sdg.xlsx
+gp05,Resources,goal06,"Equal, affordable, and safe, access to water access, sanitation, and hygiene for employees and communities",en,paper_sdg.xlsx
+gp05,Resources,goal06,Protection of water-related ecosystems and biodiversity,en,paper_sdg.xlsx
+gp05,Resources,goal06,"Prioritize water efficiency across operations by installing best practice technologies for water conservation, in particular in water scarce areas.",en,paper_sdg.xlsx
+gp05,Resources,goal06,"Educating employees about the importance of water efficiency, including tying performance bonuses or operations-based incentives to efficient practices.",en,paper_sdg.xlsx
+gp05,Resources,goal06,Mitigating against water pollution with state-of-the-art wastewater treatment processes for effluent discharge.,en,paper_sdg.xlsx
+gp05,Resources,goal06,Development of innovative manufacturing processes such that substances with high water contamination potential are eliminated and substituted with materials that are easier to remove from water systems.,en,paper_sdg.xlsx
+gp05,Resources,goal06,Invest in water treatment so that municipal treatment facilities are not overburdened by industrial waste-water.,en,paper_sdg.xlsx
+gp05,Resources,goal06,Collect and treat agricultural run-off and use as fresh water source.,en,paper_sdg.xlsx
+gp05,Resources,goal06,"Integrate gray water back into building operations, reducing the amount of potable water needed to flush toilets.",en,paper_sdg.xlsx
+gp05,Resources,goal06,"Reduce the likelihood of groundwater contamination by treating and processing all waste with exceptional precaution, according to local and federal guidelines.",en,paper_sdg.xlsx
+gp05,Resources,goal06,"Invest in clean-up when necessary, restoring sites to pre-spill quality levels.",en,paper_sdg.xlsx
+gp05,Resources,goal06,"Educate consumers about appropriate water behaviors, explaining global water quality and scarcity issues, thus attempting to shift the negative implications of the use phase associated with many consumer products.",en,paper_sdg.xlsx
+gp05,Resources,goal06,Invest in water and sanitation projects or infrastructure in under-served regions.,en,paper_sdg.xlsx
+gp05,Resources,goal06,"Ensure that all employees and their families have ample access to safe drinking water and adequate sanitation, and raise awareness about hygiene practices.",en,paper_sdg.xlsx
+gp05,Resources,goal06,Invest in clean-ups and restoration of water ecosystems to ensure sustainable water withdrawals.,en,paper_sdg.xlsx
+gp05,Resources,goal06,Prohibit the use of chemicals and materials that can be particularly detrimental to water quality if improperly disposed.,en,paper_sdg.xlsx
+gp05,Resources,goal06,"Working with other groups such as governments, community groups, peer companies to improve local water governance or on water projects to address identified challenges.",en,paper_sdg.xlsx
+gp05,Resources,goal06,"Ensure that the voices of women and girls, who are disproportionately impacted by inadequate WASH facilities, are included in water and sanitation management strategies.",en,paper_sdg.xlsx
+gp05,Resources,goal06,Average water intensity in water-stressed or water-scarce areas,en,paper_sdg.xlsx
+gp05,Resources,goal06,Total water withdrawal by source,en,paper_sdg.xlsx
+gp05,Resources,goal06,Water sources significantly affected by withdrawal of water,en,paper_sdg.xlsx
+gp05,Resources,goal06,Percentage and total volume of water recycled and reused,en,paper_sdg.xlsx
+gp05,Resources,goal06,Total water discharge by quality and destination,en,paper_sdg.xlsx
+gp05,Resources,goal06,"Identity, size, protected status, and biodiversity value of water bodies and related habitats significantly affected by the organization s discharges of water and runoff",en,paper_sdg.xlsx
+gp05,Resources,goal06,Number of employees receiving hygiene training and awareness raising,en,paper_sdg.xlsx
+gp05,Resources,goal06,WBCSD Global Water Tool,en,paper_sdg.xlsx
+gp05,Resources,goal06,Water Footprint Network (WFN) Assessment Tool,en,paper_sdg.xlsx
+gp05,Resources,goal06,Water use assessment within LCA,en,paper_sdg.xlsx
+gp05,Resources,goal06,"6.1 By 2030, achieve universal and equitable access to safe and affordable drinking water for all",en,paper_sdg.xlsx
+gp05,Resources,goal06,"6.2 By 2030, achieve access to adequate and equitable sanitation and hygiene for all, and end open defecation, paying special attention to the needs of women and girls and those in vulnerable situations",en,paper_sdg.xlsx
+gp05,Resources,goal06,"6.3 By 2030, improve water quality by reducing pollution, eliminating dumping and minimizing release of hazardous chemicals and materials, halving the proportion of untreated wastewater and substantially increasing recycling and safe reuse globally",en,paper_sdg.xlsx
+gp05,Resources,goal06,"6.4 By 2030, substantially increase water-use efficiency across all sectors and ensure sustainable withdrawals and supply of freshwater to address water scarcity, and substantially reduce the number of people suffering from water scarcity",en,paper_sdg.xlsx
+gp05,Resources,goal06,"6.5 By 2030, implement integrated water resources management at all levels, including through transboundary cooperation as appropriate 6.6 By 2020, protect and restore water-related ecosystems, including mountains, forests, wetlands, rivers, aquifers and lakes",en,paper_sdg.xlsx
+gp05,Resources,goal06,"6.a By 2030, expand international cooperation and capacity-building support to developing countries in water and sanitation related activities and programs, including water harvesting, desalination, water efficiency, wastewater treatment, recycling and reuse technologies",en,paper_sdg.xlsx
+gp05,Resources,goal06,6.b Support and strengthen the participation of local communities in improving water and sanitation management,en,paper_sdg.xlsx
+gp05,Resources,goal07,"Ensure access to affordable, reliable, sustainable, and modern energy for all",en,paper_sdg.xlsx
+gp05,Resources,goal07,Modern society depends on reliable and affordable energy services to function smoothly and to develop equitably.,en,paper_sdg.xlsx
+gp05,Resources,goal07,"A well-established energy system supports all sectors from medicine and education to agriculture, infrastructure, communications and high-technology.",en,paper_sdg.xlsx
+gp05,Resources,goal07,"Intensive development patterns have historically relied on inexpensive and energy-dense fossil fuels, which also happen to be the primary source of greenhouse gas emissions contributing to climate change. However, new, clean technologies are available that can reorient development along a more sustainable trajectory.",en,paper_sdg.xlsx
+gp05,Resources,goal07,"Business can accelerate the transition to an affordable, reliable and sustainable energy system by investing in renewable energy resources, prioritizing energy efficient practices, and adopting clean energy technologies and infrastructure.",en,paper_sdg.xlsx
+gp05,Resources,goal07,"Also, with investment in R&D, businesses can innovate and pioneer new technologies that change the status quo of the global energy system, becoming the center of climate change solutions.",en,paper_sdg.xlsx
+gp05,Resources,goal07,Electricity access,en,paper_sdg.xlsx
+gp05,Resources,goal07,Electricity availability and reliability,en,paper_sdg.xlsx
+gp05,Resources,goal07,Renewable energy,en,paper_sdg.xlsx
+gp05,Resources,goal07,Energy efficiency,en,paper_sdg.xlsx
+gp05,Resources,goal07,Infrastructure investments,en,paper_sdg.xlsx
+gp05,Resources,goal07,Environmental investments,en,paper_sdg.xlsx
+gp05,Resources,goal07,Ensure that all employees and their families have access to a reliable and affordable source of energy by investing in local infrastructure to establish accessible energy services.,en,paper_sdg.xlsx
+gp05,Resources,goal07,Commit to sourcing 100% of operational electricity needs from renewable sources.,en,paper_sdg.xlsx
+gp05,Resources,goal07,Reduce the internal demand for transport by prioritizing telecommunications and incentivize less energy intensive modes such as train travel over auto and air travel.,en,paper_sdg.xlsx
+gp05,Resources,goal07,"Invest in R&D related to sustainable energy services, bringing new technologies to the market quickly.",en,paper_sdg.xlsx
+gp05,Resources,goal07,"Integrate renewable energy into employee benefits packages, subsidizing the capital expenditures associated with residential solar or electric vehicle investments.",en,paper_sdg.xlsx
+gp05,Resources,goal07,"As women typically drive much of the energy consumption at the household level, companies have an opportunity to invest and train women to become renewable energy entrepreneurs.",en,paper_sdg.xlsx
+gp05,Resources,goal07,Prioritize energy efficiency across operations through tools such as the use of an internal carbon price and science-based target setting to reduce overall demand for energy.,en,paper_sdg.xlsx
+gp05,Resources,goal07,"Planned capacity against project electricity demand over the long term, broken down by energy source and regulatory regime",en,paper_sdg.xlsx
+gp05,Resources,goal07,Percentage of population unserved in licensed distribution or service areas,en,paper_sdg.xlsx
+gp05,Resources,goal07,"How much fuel, electricity, heat, steam and cooling in MWh your organization has purchased and consumed during the reporting year",en,paper_sdg.xlsx
+gp05,Resources,goal07,Energy consumption within the organization,en,paper_sdg.xlsx
+gp05,Resources,goal07,Energy consumption outside of the organization,en,paper_sdg.xlsx
+gp05,Resources,goal07,"7.1 By 2030, ensure universal access to affordable, reliable, and modern energy services",en,paper_sdg.xlsx
+gp05,Resources,goal07,7.2 Increase substantially the share of renewable energy in the global energy mix by 2030,en,paper_sdg.xlsx
+gp05,Resources,goal07,7.3 double the global rate of improvement in energy efficiency by 2030,en,paper_sdg.xlsx
+gp05,Resources,goal07,"7.a By 2030, enhance international cooperation to facilitate access to clean energy research and technologies, including renewable energy, energy efficiency, and advanced and cleaner fossil fuel technologies, and promote investment in energy infrastructure and clean energy technologies",en,paper_sdg.xlsx
+gp05,Resources,goal07,"7.b By 2030, expand infrastructure and upgrade technology for supplying modern and sustainable energy services for all in developing countries, particularly LDCs and SIDS",en,paper_sdg.xlsx
+gp05,Resources,goal12,Ensure sustainable consumption and production patterns,en,paper_sdg.xlsx
+gp05,Resources,goal12,More people globally are expected to join the middle class over the next two decades.,en,paper_sdg.xlsx
+gp05,Resources,goal12,These socioeconomic and demographic changes are good for individual prosperity but will increase demand for already constrained natural resources.,en,paper_sdg.xlsx
+gp05,Resources,goal12,"Societies need to find just and equitable ways to meet individual needs and aspirations within the ecological limits of the planet. Sustainable practices in the production phase of products and services will not provide sufficient responses to meet science-based emissions reduction targets, natural resource constraints or the growing demand for basic needs such as food, water and sanitation, and access to energy.",en,paper_sdg.xlsx
+gp05,Resources,goal12,"Furthermore, demand for materials will likely outpace efficiency gains in supply chains as well as overwhelm already stretched ecosystem services. Consumption patterns need to be made sustainable, particularly lifestyles in industrialized societies, and reduce their ecological footprint to allow for the regeneration of natural resources on which human life and biodiversity depend.",en,paper_sdg.xlsx
+gp05,Resources,goal12,It is in the interest of business to find new solutions that enable sustainable consumption and production patterns.,en,paper_sdg.xlsx
+gp05,Resources,goal12,"A better understanding of environmental and social impacts of products and services is needed, both of product life cycles and how these are affected by use within lifestyles. Identifying hot spots within the value chain where interventions have the greatest potential to improve the environmental and social impact of the system as a whole is a crucial first step.",en,paper_sdg.xlsx
+gp05,Resources,goal12,"Business can use its innovative power to then design appropriate solutions that can both enable and inspire individuals to lead more sustainable lifestyles, reducing impacts and improving well-being.",en,paper_sdg.xlsx
+gp05,Resources,goal12,Sustainable sourcing,en,paper_sdg.xlsx
+gp05,Resources,goal12,Resource efficiency of products and services,en,paper_sdg.xlsx
+gp05,Resources,goal12,Materials recycling,en,paper_sdg.xlsx
+gp05,Resources,goal12,Procurement practices,en,paper_sdg.xlsx
+gp05,Resources,goal12,Product and service information and labeling,en,paper_sdg.xlsx
+gp05,Resources,goal12,Implement product portfolio analysis tools to understand environmental and social footprint of products within lifestyles as well as production. Innovation must align products and applications to appropriately address sustainability megatrends.,en,paper_sdg.xlsx
+gp05,Resources,goal12,"Develop innovative business models such as moving from selling products to selling services, to retain ownership of the products and help close the materials loop.",en,paper_sdg.xlsx
+gp05,Resources,goal12,Enable sustainable consumption by developing innovative solutions can reduce energy need in usage and educate consumers about these benefits.,en,paper_sdg.xlsx
+gp05,Resources,goal12,Reduce manufacturing impacts by substituting virgin raw materials in products with post-consumer materials through recycling and upcycling.,en,paper_sdg.xlsx
+gp05,Resources,goal12,"Apply modular design, so products constituent parts will be easily separated and either re-used without further processing, or easily recycled near the point of disposal.",en,paper_sdg.xlsx
+gp05,Resources,goal12,Significantly reduce waste and ensure that any unavoidable waste is utilized to the fullest degree (e.g. organic waste as fuel or fertilizer).,en,paper_sdg.xlsx
+gp05,Resources,goal12,"Water consumption: for the reporting year, please provide total water consumption data, across your operations",en,paper_sdg.xlsx
+gp05,Resources,goal12,Water performance in the value chain,en,paper_sdg.xlsx
+gp05,Resources,goal12,Percentage of materials used that are recycled input materials,en,paper_sdg.xlsx
+gp05,Resources,goal12,Extent of impact mitigation of environmental impacts of products and services,en,paper_sdg.xlsx
+gp05,Resources,goal12,Percentage of products sold and their packaging materials that are reclaimed by category,en,paper_sdg.xlsx
+gp05,Resources,goal12,Think.Eat.Save Guidance version 1.0,en,paper_sdg.xlsx
+gp05,Resources,goal12,Impact Reporting & Investment Standards (IRIS),en,paper_sdg.xlsx
+gp05,Resources,goal12,Global Protocol on Packaging Sustainability 2.0,en,paper_sdg.xlsx
+gp05,Resources,goal12,Food Loss and Waste Protocol,en,paper_sdg.xlsx
+gp05,Resources,goal12,Eco-Synergy,en,paper_sdg.xlsx
+gp05,Resources,goal12,Corporate Ecosystem Services Review,en,paper_sdg.xlsx
+gp05,Resources,goal12,"12.1 Implement the 10-Year Framework of Programs on sustainable consumption and production (10YFP), all countries taking action, with developed countries taking the lead, taking into account the development and capabilities of developing countries",en,paper_sdg.xlsx
+gp05,Resources,goal12,"12.2 By 2030, achieve sustainable management and efficient use of natural resources",en,paper_sdg.xlsx
+gp05,Resources,goal12,"12.3 By 2030, halve per capita global food waste at the retail and consumer level, and reduce food losses along production and supply chains including post-harvest losses",en,paper_sdg.xlsx
+gp05,Resources,goal12,"12.4 By 2020, achieve environmentally sound management of chemicals and all wastes throughout their life cycle in accordance with agreed international frameworks and significantly reduce their release to air, water and soil to minimize their adverse impacts on human health and the environment",en,paper_sdg.xlsx
+gp05,Resources,goal12,"12.5 By 2030, substantially reduce waste generation through prevention, reduction, recycling, and reuse",en,paper_sdg.xlsx
+gp05,Resources,goal12,"12.6 Encourage companies, especially large and trans-national companies, to adopt sustainable practices and to integrate sustainability information into their reporting cycle",en,paper_sdg.xlsx
+gp05,Resources,goal12,12.7 Promote public procurement practices that are sustainable in accordance with national policies and priorities,en,paper_sdg.xlsx
+gp05,Resources,goal12,"12.8 By 2030, ensure that people everywhere have the relevant information and awareness for sustainable development and lifestyles in harmony with nature",en,paper_sdg.xlsx
+gp05,Resources,goal12,12.a Support developing countries to strengthen their scientific and technological capacities to move towards more sustainable patterns of consumption and production,en,paper_sdg.xlsx
+gp05,Resources,goal12,"12.b Develop and implement tools to monitor sustainable development impacts for sustainable tourism which creates jobs, promotes local culture and products",en,paper_sdg.xlsx
+gp05,Resources,goal12,"12.c Rationalize inefficient fossil fuel subsidies that encourage wasteful consumption by removing market distortions, in accordance with national circumstances, including by restructuring taxation and phasing out those harmful subsidies, where they exist, to reflect their environmental impacts, taking fully into account the specific needs and conditions of developing countries and minimizing the possible adverse impacts on their development in a manner that protects the poor and the affected communities",en,paper_sdg.xlsx
+gp05,Resources,goal14,"Conserve and sustainably use the oceans, seas and marine resources for sustainable development",en,paper_sdg.xlsx
+gp05,Resources,goal14,"Oceans face the threats of marine and nutrient pollution, resource depletion and climate change, all of which are caused primarily by human actions.",en,paper_sdg.xlsx
+gp05,Resources,goal14,"These threats place further pressure on environmental systems, like biodiversity and natural infrastructure, while creating global socio-economic problems, including health, safety and financial risks. In order to combat these issues and promote ocean sustainability, innovative solutions that prevent and mitigate detrimental impacts to marine environments are essential.",en,paper_sdg.xlsx
+gp05,Resources,goal14,"World leaders must also work to protect marine species and support the people who depend on oceans, whether it be for employment, resources, or leisure.",en,paper_sdg.xlsx
+gp05,Resources,goal14,Businesses have a role to play in the area of ocean management as their practices and operations can greatly affect marine life and resources as well as generate waste and pollution.,en,paper_sdg.xlsx
+gp05,Resources,goal14,"Beyond those industries that directly depend on marine ecosystem services and its biodiversity (e.g. aquaculture, food and beverage, tourism and hospitality, extractives and energy), all businesses share some responsibility for the conservation and sustainable use of ocean and marine resources.",en,paper_sdg.xlsx
+gp05,Resources,goal14,"At the same time, oceans greatly contribute to the global economy. As estimated recently by the World Wildlife Fund, the total value of the oceans as an asset is at least 24 trillion USD, which includes direct outputs such as fishing, services such as tourism, trade and transport, as well as other ecosystem services such as carbon sequestering.",en,paper_sdg.xlsx
+gp05,Resources,goal14,Marine biodiversity,en,paper_sdg.xlsx
+gp05,Resources,goal14,Ocean acidification,en,paper_sdg.xlsx
+gp05,Resources,goal14,Environmental investments,en,paper_sdg.xlsx
+gp05,Resources,goal14,Spills,en,paper_sdg.xlsx
+gp05,Resources,goal14,Sustainable sourcing,en,paper_sdg.xlsx
+gp05,Resources,goal14,Water discharge to oceans,en,paper_sdg.xlsx
+gp05,Resources,goal14,Track the life cycle of products and materials in order to understand how they are disposed and which products could likely find their way into marine environments.,en,paper_sdg.xlsx
+gp05,Resources,goal14,"Record and disclose information on the chemical and material usage within products, packaging, and processing systems to facilitate closing the loop.",en,paper_sdg.xlsx
+gp05,Resources,goal14,"Improve resource efficiency by altering the design, manufacture, or use of products and packaging to reduce the amount of waste that could potentially enter the environment.",en,paper_sdg.xlsx
+gp05,Resources,goal14,Improve resource efficiency by generating value from waste.,en,paper_sdg.xlsx
+gp05,Resources,goal14,"Replace, limit or prohibit the use of certain chemicals, additives, or materials that could prevent closing the loop or lead to nutrient pollution or chemical and physical hazards if they happen to reach marine ecosystems.",en,paper_sdg.xlsx
+gp05,Resources,goal14,Prevent waste mismanagement or littering that could pollute the marine environment.,en,paper_sdg.xlsx
+gp05,Resources,goal14,Raise consumer awareness on effective ways to properly dispose of their waste to discourage littering and promote responsible behavior.,en,paper_sdg.xlsx
+gp05,Resources,goal14,"Prohibit practices that put marine species and resources at further risk of harm, exploitation or depletion.",en,paper_sdg.xlsx
+gp05,Resources,goal14,Contribute to the development of waste management technologies that minimize the use of clean water.,en,paper_sdg.xlsx
+gp05,Resources,goal14,"Utilize a value-chain approach to create connections between the design, packaging, marketing and recycling of materials with the goals of reducing their environmental impact at the end of their lifecycle.",en,paper_sdg.xlsx
+gp05,Resources,goal14,Total water discharge by quality and destination,en,paper_sdg.xlsx
+gp05,Resources,goal14,"Identity, size, protected status, and biodiversity value of water bodies and related habitats significantly affected by the organization s discharge of water and runoff",en,paper_sdg.xlsx
+gp05,Resources,goal14,"Amount of land (owned or leased, and managed for production activities or extractive use distributed or rehabilitated)",en,paper_sdg.xlsx
+gp05,Resources,goal14,Biodiversity of offset habitats compared to the biodiversity of affected areas,en,paper_sdg.xlsx
+gp05,Resources,goal14,"Total number of projects at each stage of development, and for those in the implementation stages, the estimated CO2e savings",en,paper_sdg.xlsx
+gp05,Resources,goal14,"Water discharges for the reporting year, total water discharge data by destination, across your operations",en,paper_sdg.xlsx
+gp05,Resources,goal14,Integrated Biodiversity Assessment Tool (IBAT for Business),en,paper_sdg.xlsx
+gp05,Resources,goal14,Impact Reporting & Investment Standards (IRIS),en,paper_sdg.xlsx
+gp05,Resources,goal14,"14.1 By 2025, prevent and significantly reduce marine pollution of all kinds, particularly from land-based activities, including marine debris and nutrient pollution",en,paper_sdg.xlsx
+gp05,Resources,goal14,"14.2 By 2020, sustainably manage and protect marine and coastal ecosystems to avoid significant adverse impacts, including by strengthening their resilience, and take action for their restoration, to achieve healthy and productive oceans",en,paper_sdg.xlsx
+gp05,Resources,goal14,"14.3 Minimize and address the impacts of ocean acidification, including through enhanced scientific cooperation at all levels",en,paper_sdg.xlsx
+gp05,Resources,goal14,"14.4 By 2020, effectively regulate harvesting, and end overfishing, illegal, unreported and unregulated (IUU) fishing and destructive fishing practices and implement science-based management plans, to restore fish stocks in the shortest time feasible at least to levels that can produce maximum sustainable yield as determined by their biological characteristics",en,paper_sdg.xlsx
+gp05,Resources,goal14,"14.5 By 2020, conserve at least 10 per cent of coastal and marine areas, consistent with national and international law and based on best available scientific information",en,paper_sdg.xlsx
+gp05,Resources,goal14,"14.6 By 2020, prohibit certain forms of fisheries subsidies which contribute to overcapacity and overfishing, and eliminate subsidies that contribute to IUU fishing, and refrain from introducing new such subsidies, recognizing that appropriate and effective special and differential treatment for developing and least developed countries should be an integral part of the WTO fisheries subsidies negotiation 14.7 By 2030, increase the economic benefits to SIDS and LDCs from the sustainable use of marine resources, including through sustainable management of fisheries, aquaculture and tourism",en,paper_sdg.xlsx
+gp05,Resources,goal14,"14.a Increase scientific knowledge, develop research capacities and transfer marine technology taking into account the Intergovernmental Oceanographic Commission Criteria and Guidelines on the Transfer of Marine Technology, in order to improve ocean health and to enhance the contribution of marine biodiversity to the development of developing countries, in particular SIDS and LDCs",en,paper_sdg.xlsx
+gp05,Resources,goal14,14.b Provide access of small-scale artisanal fishers to marine resources and markets,en,paper_sdg.xlsx
+gp05,Resources,goal14,"14.c Ensure the full implementation of international law, as reflected in UNCLOS for states parties to it, including, where applicable, existing regional and international regimes for the conservation and sustainable use of oceans and their resources by their parties",en,paper_sdg.xlsx
+gp06,Environments,goal13,Take urgent action to combat climate change and its impacts,en,paper_sdg.xlsx
+gp06,Environments,goal13,"Climate change is caused by anthropogenic emissions of CO2 and other greenhouse gasses. Climate change impacts natural and human systems globally through the increase globally averaged surface temperature, extreme weather events, changing precipitation patterns, rising sea levels and ocean acidification.",en,paper_sdg.xlsx
+gp06,Environments,goal13,"These risks will ultimately impact people s livelihoods, particularly marginalized groups such as women, children, and the elderly, as resources, food and water become more scarce.",en,paper_sdg.xlsx
+gp06,Environments,goal13,Those effects impact the other SDGs and often make it more difficult to achieve them.,en,paper_sdg.xlsx
+gp06,Environments,goal13,"To achieve the UNFCCC goal of limiting global temperature rise to well below 2 C above pre-industrial levels and to pursue efforts to limit the temperature increase to 1.5 C above pre-industrial levels, the world must transform its energy, industry, transport, food, agriculture and forestry systems to ensure that cumulative net emissions do not exceed one trillion tonnes of cumulative carbon, which implies global net zero emissions by the second half of the century.",en,paper_sdg.xlsx
+gp06,Environments,goal13,"Simultaneously the world needs to anticipate, adapt and become resilient to the current and expected future impacts of climate change.",en,paper_sdg.xlsx
+gp06,Environments,goal13,"Companies can contribute to this SDG by decarbonizing their operations and supply chains through continuously improving energy efficiency, reducing the carbon footprint of their products, services and processes, and setting ambitious emissions reductions targets in line with climate science, as well as scaling up investment in the development of innovative low-carbon products and services.",en,paper_sdg.xlsx
+gp06,Environments,goal13,"In addition, companies should build resilience in their operations, supply chains and the communities in which they operate.",en,paper_sdg.xlsx
+gp06,Environments,goal13,Energy efficiency,en,paper_sdg.xlsx
+gp06,Environments,goal13,Environmental investments,en,paper_sdg.xlsx
+gp06,Environments,goal13,GHG emissions,en,paper_sdg.xlsx
+gp06,Environments,goal13,Risks and opportunities due to climate change,en,paper_sdg.xlsx
+gp06,Environments,goal13,"Source all electricity the company consumes at its facilities from renewable sources such as wind, solar or hydro or install renewable energy generation capacity on-site.",en,paper_sdg.xlsx
+gp06,Environments,goal13,Retrofit the lighting systems of the company s facilities to energy efficient LED lighting.,en,paper_sdg.xlsx
+gp06,Environments,goal13,"Increase investment in innovation to improve the efficiency of the company s product portfolio, thereby enabling customers to reduce their GHG emissions.",en,paper_sdg.xlsx
+gp06,Environments,goal13,"Invest in CCS (carbon capture & storage) technology to capture emissions produced from the use of fossil fuels in electricity generation and industrial processes, preventing the carbon dioxide from entering the atmosphere.",en,paper_sdg.xlsx
+gp06,Environments,goal13,"Reduce GHG emission from transport operations with abatement levers such as reducing the carbon footprint through greater fuel efficiency, local sourcing, modal shift to lower carbon modalities (e.g. air to sea freight), modular transport, improving container utilization, warehouse optimization, etc.",en,paper_sdg.xlsx
+gp06,Environments,goal13,Understand climate risk and build resilience into the company s assets and supply chain.,en,paper_sdg.xlsx
+gp06,Environments,goal13,Expand sustainable forest management through responsible sourcing practices and product substitution.,en,paper_sdg.xlsx
+gp06,Environments,goal13,Director greenhouse gas (GHG) emissions (Scope 1),en,paper_sdg.xlsx
+gp06,Environments,goal13,Energy indirect greenhouse gas (GHG) emissions (Scope 2),en,paper_sdg.xlsx
+gp06,Environments,goal13,Other indirect greenhouse gas (GHG) emissions (Scope 3),en,paper_sdg.xlsx
+gp06,Environments,goal13,Engagement in initiatives that promote resilient practices and/or upgrade value chain procedures in order to address climate change,en,paper_sdg.xlsx
+gp06,Environments,goal13,The Greenhouse Gas Protocol,en,paper_sdg.xlsx
+gp06,Environments,goal13,Impact Reporting & Investment Standards (IRIS),en,paper_sdg.xlsx
+gp06,Environments,goal13,Building a Resilient in Power Sector,en,paper_sdg.xlsx
+gp06,Environments,goal13,13.1 Strengthen resilience and adaptive capacity to climate related hazards and natural disasters in all countries,en,paper_sdg.xlsx
+gp06,Environments,goal13,"13.2 Integrate climate change measures into national policies, strategies, and planning",en,paper_sdg.xlsx
+gp06,Environments,goal13,"13.3 Improve education, awareness raising and human and institutional capacity on climate change mitigation, adaptation, impact reduction, and early warning",en,paper_sdg.xlsx
+gp06,Environments,goal13,"13.a Implement the commitment undertaken by developed country Parties to the UNFCCC to a goal of mobilizing jointly USD100 billion annually by 2020 from all sources to address the needs of developing countries in the context of meaningful mitigation actions and transparency on implementation and fully operationalize the Green Climate Fund through its capitalization as soon as possible 13.b Promote mechanisms for raising capacities for effective climate change-related planning and management, in LDCs, including focusing on women, youth, local and marginalized communities",en,paper_sdg.xlsx
+gp06,Environments,goal15,"Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss",en,paper_sdg.xlsx
+gp06,Environments,goal15,"Business and ecosystems are linked. Companies affect ecosystems because they rely on the provisioning services (e.g. freshwater, fiber, food) and regulatory services (e.g. climate regulation, flood control, water purification) ecosystems provide.",en,paper_sdg.xlsx
+gp06,Environments,goal15,60% of the world s ecosystem services have been degraded over the past 50 years and we continue devaluing our natural resources at an alarming rate.,en,paper_sdg.xlsx
+gp06,Environments,goal15,"Estimates indicate that 2-5 trillion USD of ecosystem services are lost each year from deforestation alone. While many of the effects are felt locally first, the long-term consequences are global and the scale is highly relevant to business, presenting risks and opportunities.",en,paper_sdg.xlsx
+gp06,Environments,goal15,"To retain the integrity and vitality of natural resources today and for future generations and to ensure long-term socio-economic growth and prosperity, sustainable management of land is key.",en,paper_sdg.xlsx
+gp06,Environments,goal15,"Business can directly contribute to this SDG by measuring, managing and mitigating its impact and dependence on land and ecosystems.",en,paper_sdg.xlsx
+gp06,Environments,goal15,"Companies can implement strategies to incentivize sustainable land use, responsible forest management and environmental stewardship.",en,paper_sdg.xlsx
+gp06,Environments,goal15,"To secure supply of natural resources and raw material in the future, companies will also have to increase efforts to restore degraded land.",en,paper_sdg.xlsx
+gp06,Environments,goal15,"By scaling up research and development in innovation, investing in natural infrastructure and implementing responsible sourcing policies, companies play an integral part in preserving and restoring vital ecosystems, promoting the sustainable use of land and forests, while retaining consumer confidence in their product offerings.",en,paper_sdg.xlsx
+gp06,Environments,goal15,Deforestation and forest degradation,en,paper_sdg.xlsx
+gp06,Environments,goal15,Genetic diversity of farms and domesticated animals,en,paper_sdg.xlsx
+gp06,Environments,goal15,Land remediation,en,paper_sdg.xlsx
+gp06,Environments,goal15,Landscapes forest management and fiber sourcing,en,paper_sdg.xlsx
+gp06,Environments,goal15,Mountain ecosystems,en,paper_sdg.xlsx
+gp06,Environments,goal15,Natural habit degradation,en,paper_sdg.xlsx
+gp06,Environments,goal15,Terrestrial and inland freshwater ecosystems,en,paper_sdg.xlsx
+gp06,Environments,goal15,"Measure, manage and mitigate impacts on ecosystems and natural resources.",en,paper_sdg.xlsx
+gp06,Environments,goal15,Scale up best practices for land use planning and management.,en,paper_sdg.xlsx
+gp06,Environments,goal15,Invest in natural infrastructure as a cost-competitive alternative to grey infrastructure.,en,paper_sdg.xlsx
+gp06,Environments,goal15,Finance the restoration of degraded land for production and/or conservation purposes.,en,paper_sdg.xlsx
+gp06,Environments,goal15,"Support and apply landscape approaches, based on multi-stakeholder dialogue and collaborative action, to overcome social and environmental fracture lines in landscapes facing deforestation, land and ecosystem degradation.",en,paper_sdg.xlsx
+gp06,Environments,goal15,Commit to and implement responsible sourcing practices beyond compliance - applying environmental and social safeguards - for all raw materials and commodities.,en,paper_sdg.xlsx
+gp06,Environments,goal15,Expand markets for responsible forest products and thereby support sustainable forest management.,en,paper_sdg.xlsx
+gp06,Environments,goal15,"Foster product and technology innovation to optimize resource efficiency, reduce impacts on ecosystems and lower carbon emissions.",en,paper_sdg.xlsx
+gp06,Environments,goal15,Scale up industrial reuse of water and support watershed protection programs.,en,paper_sdg.xlsx
+gp06,Environments,goal15,Habitats protected or restored,en,paper_sdg.xlsx
+gp06,Environments,goal15,Commitment to reduce or remove deforestation and forest degradation from direct operations and/or supply chain,en,paper_sdg.xlsx
+gp06,Environments,goal15,% of total volume of wood/fiber/products intake certified,en,paper_sdg.xlsx
+gp06,Environments,goal15,"Description of significant impacts of activities, products, and services on biodiversity in protected areas and areas of high biodiversity value outside protected areas",en,paper_sdg.xlsx
+gp06,Environments,goal15,Eco4Biz,en,paper_sdg.xlsx
+gp06,Environments,goal15,Sustainable Procurement Guide for Wood and Paper-based Products,en,paper_sdg.xlsx
+gp06,Environments,goal15,WBCSD Global Water Tool,en,paper_sdg.xlsx
+gp06,Environments,goal15,Guide to Investing in Locally Controlled Forestry,en,paper_sdg.xlsx
+gp06,Environments,goal15,"15.1 By 2020, ensure conservation, restoration and sustainable use of terrestrial and inland freshwater ecosystems and their services, in particular forests, wetlands, mountains and drylands, in line with obligations under international agreements",en,paper_sdg.xlsx
+gp06,Environments,goal15,"15.2 By 2020, promote the implementation of sustainable management of all types of forests, halt deforestation, restore degraded forests, and increase afforestation and reforestation by x% globally",en,paper_sdg.xlsx
+gp06,Environments,goal15,"15.3 By 2020, combat desertification, and restore degraded land and soil, including land affected by desertification, drought and floods, and strive to achieve a land-degradation neutral world",en,paper_sdg.xlsx
+gp06,Environments,goal15,"15.4 By 2030, ensure the conservation of mountain ecosystems, including their biodiversity, to enhance their capacity to provide benefits which are essential for sustainable development",en,paper_sdg.xlsx
+gp06,Environments,goal15,"15.5 Take urgent and significant action to reduce degradation of natural habitat, halt the loss of biodiversity, and by 2020 protect and prevent the extinction of threatened species",en,paper_sdg.xlsx
+gp06,Environments,goal15,"15.6 Ensure fair and equitable sharing of the benefits arising from the utilization of genetic resources, and promote appropriate access to genetic resources",en,paper_sdg.xlsx
+gp06,Environments,goal15,"15.7 Take urgent action to end poaching and trafficking of protected species of flora and fauna, and address both demand and supply of illegal wildlife products",en,paper_sdg.xlsx
+gp06,Environments,goal15,"15.8 By 2020, introduce measures to prevent the introduction and significantly reduce the impact of invasive alien species on land and water ecosystems, and control or eradicate the priority species",en,paper_sdg.xlsx
+gp06,Environments,goal15,"15.9 By 2020, integrate ecosystems and biodiversity values into national and local planning, development processes and poverty reduction strategies, and accounts",en,paper_sdg.xlsx
+gp06,Environments,goal15,"15.a Mobilize and significantly increase from all sources financial resources to conserve and sustainably use biodiversity and ecosystems 15.b Mobilize significantly resources from all sources and at all levels to finance sustainable forest management, and provide adequate incentives to developing countries to advance sustainable forest management, including for conservation and reforestation",en,paper_sdg.xlsx
+gp06,Environments,goal15,"15.c Enhance global support to efforts to combat poaching and trafficking of protected species, including by increasing the capacity of local communities to pursue sustainable livelihood opportunities",en,paper_sdg.xlsx
+gp01,Life,goal01,Chấm dứt mọi hình thức nghèo ở mọi nơi.,vi,sdg_vi_corpus
+gp01,Life,goal01,"Đến năm 2030, xóa bỏ tình trạng nghèo cùng cực cho tất cả mọi người ở mọi nơi, hiện được đo bằng số người sống dưới 1,25 đô la Mỹ một ngày.",vi,sdg_vi_corpus
+gp01,Life,goal01,"Đến năm 2030, giảm ít nhất một nửa tỷ lệ nam giới, nữ giới và trẻ em ở mọi lứa tuổi sống trong nghèo đói dưới mọi hình thức theo định nghĩa quốc gia.",vi,sdg_vi_corpus
+gp01,Life,goal01,"Thực hiện các hệ thống và biện pháp an sinh xã hội phù hợp với quốc gia cho tất cả mọi người, bao gồm sàn an sinh, và đến năm 2030 đạt mức bao phủ đáng kể cho người nghèo và người dễ bị tổn thương.",vi,sdg_vi_corpus
+gp01,Life,goal01,"Đến năm 2030, bảo đảm tất cả nam giới và nữ giới, đặc biệt người nghèo và người dễ bị tổn thương, có quyền bình đẳng đối với nguồn lực kinh tế, tiếp cận dịch vụ cơ bản, quyền sở hữu và kiểm soát đất đai cùng các hình thức tài sản khác, thừa kế, tài nguyên thiên nhiên, công nghệ phù hợp và dịch vụ tài chính, kể cả tài chính vi mô.",vi,sdg_vi_corpus
+gp01,Life,goal01,"Đến năm 2030, xây dựng khả năng chống chịu của người nghèo và người dễ bị tổn thương, giảm sự tiếp xúc và tổn thương của họ trước hiện tượng cực đoan liên quan khí hậu và các cú sốc, thảm họa kinh tế, xã hội, môi trường khác.",vi,sdg_vi_corpus
+gp01,Life,goal01,"Bảo đảm huy động đáng kể nguồn lực từ nhiều nguồn, kể cả qua hợp tác phát triển tăng cường, để cung cấp phương tiện đầy đủ và dự đoán được cho các nước đang phát triển thực hiện chương trình xóa nghèo.",vi,sdg_vi_corpus
+gp01,Life,goal01,"Tạo khung chính sách vững chắc ở cấp quốc gia, khu vực và quốc tế, dựa trên chiến lược phát triển vì người nghèo và nhạy cảm giới, để hỗ trợ đầu tư tăng tốc vào hành động xóa nghèo.",vi,sdg_vi_corpus
+gp01,Life,goal01,"Dù đã có tiến bộ theo các Mục tiêu Phát triển Thiên niên kỷ, khoảng 17% dân số thế giới — hơn 1 tỷ người — vẫn sống ở hoặc dưới 1,25 đô la Mỹ mỗi ngày.",vi,sdg_vi_corpus
+gp01,Life,goal01,"Một số nhóm bị đại diện quá mức trong người nghèo và gặp thêm ràng buộc như hạn chế tiếp cận nguồn lực sản xuất và thị trường: phụ nữ, người khuyết tật, trẻ em và người bản địa.",vi,sdg_vi_corpus
+gp01,Life,goal01,"Doanh nghiệp phải tôn trọng quyền con người, kể cả quyền của các nhóm dễ bị tổn thương.",vi,sdg_vi_corpus
+gp01,Life,goal01,"Doanh nghiệp có thể chủ động tháo gỡ rào cản thông qua mô hình kinh doanh bao trùm, sản phẩm và dịch vụ đổi mới phục vụ nhóm yếu thế, và tận dụng góc nhìn của họ với tư cách khách hàng, người lao động, nhà cung cấp, nhà phân phối và thành viên cộng đồng.",vi,sdg_vi_corpus
+gp01,Life,goal01,"Ngoài thu nhập, doanh nghiệp ảnh hưởng các chiều cạnh khác của nghèo: cơ hội hạn chế, năng lực hạn chế, mất an ninh lương thực, thiếu dịch vụ y tế, giáo dục, vệ sinh chất lượng, và mức trao quyền thấp.",vi,sdg_vi_corpus
+gp01,Life,goal01,"Nhiều chiều cạnh nghèo, đặc biệt với người nghèo, gắn với môi trường — sức khỏe bị ảnh hưởng trực tiếp bởi suy giảm chất lượng môi trường.",vi,sdg_vi_corpus
+gp01,Life,goal01,"Vai trò của doanh nghiệp trong xóa nghèo cũng gồm điều kiện khung, ví dụ đối thoại chính sách để cung cấp hàng hóa và dịch vụ cơ bản nơi doanh nghiệp hoạt động.",vi,sdg_vi_corpus
+gp01,Life,goal01,Sẵn có sản phẩm và dịch vụ cho người có thu nhập thấp.,vi,sdg_vi_corpus
+gp01,Life,goal01,"Thu nhập, tiền lương và phúc lợi.",vi,sdg_vi_corpus
+gp01,Life,goal01,Phát triển kinh tế tại các khu vực ưu tiên cao.,vi,sdg_vi_corpus
+gp01,Life,goal01,Tiếp cận dịch vụ chăm sóc sức khỏe thiết yếu chất lượng.,vi,sdg_vi_corpus
+gp01,Life,goal01,"Tiếp cận nước, vệ sinh và vệ sinh cá nhân (WASH).",vi,sdg_vi_corpus
+gp01,Life,goal01,Sẵn có và độ tin cậy của điện.,vi,sdg_vi_corpus
+gp01,Life,goal01,Không phân biệt đối xử.,vi,sdg_vi_corpus
+gp01,Life,goal01,"Đầu tư vào hoạt động xóa nghèo do doanh nghiệp dẫn dắt, ví dụ xây dựng chính sách lương đủ sống.",vi,sdg_vi_corpus
+gp01,Life,goal01,"Mô hình kinh doanh bao trùm giúp người nghèo tham gia chuỗi giá trị với tư cách nhà sản xuất, nhà phân phối hoặc khách hàng.",vi,sdg_vi_corpus
+gp01,Life,goal02,"Xóa đói, bảo đảm an ninh lương thực, cải thiện dinh dưỡng và thúc đẩy nông nghiệp bền vững.",vi,sdg_vi_corpus
+gp01,Life,goal02,"Đến năm 2030, chấm dứt nạn đói và bảo đảm mọi người, đặc biệt người nghèo và người dễ bị tổn thương kể cả trẻ sơ sinh, được tiếp cận thực phẩm an toàn, bổ dưỡng và đủ quanh năm.",vi,sdg_vi_corpus
+gp01,Life,goal02,"Đến năm 2030, chấm dứt mọi hình thức suy dinh dưỡng, kể cả đạt được đến năm 2025 các mục tiêu đã thỏa thuận về thấp còi và gầy mòn ở trẻ dưới 5 tuổi, và đáp ứng nhu cầu dinh dưỡng của nữ vị thành niên, phụ nữ mang thai và cho con bú, người cao tuổi.",vi,sdg_vi_corpus
+gp01,Life,goal02,"Đến năm 2030, tăng gấp đôi năng suất nông nghiệp và thu nhập của hộ sản xuất nhỏ, đặc biệt phụ nữ, người bản địa, nông dân gia đình, người chăn nuôi và ngư dân, thông qua tiếp cận bình đẳng đất đai, nguồn lực, tri thức, dịch vụ tài chính, thị trường và cơ hội tạo giá trị gia tăng.",vi,sdg_vi_corpus
+gp01,Life,goal02,"Đến năm 2030, bảo đảm hệ thống sản xuất lương thực bền vững và thực hiện các thực hành nông nghiệp có khả năng chống chịu, tăng năng suất, giúp duy trì hệ sinh thái, tăng cường thích ứng với biến đổi khí hậu, hạn hán, lũ lụt và cải thiện dần chất lượng đất.",vi,sdg_vi_corpus
+gp01,Life,goal02,"Đến năm 2020, duy trì đa dạng di truyền của hạt giống, cây trồng, vật nuôi và các loài hoang dã liên quan, kể cả thông qua ngân hàng hạt giống đa dạng và quản lý tốt ở cấp quốc gia, khu vực, quốc tế.",vi,sdg_vi_corpus
+gp01,Life,goal02,"Tăng đầu tư, kể cả hợp tác quốc tế, vào hạ tầng nông thôn, nghiên cứu nông nghiệp, dịch vụ khuyến nông, phát triển công nghệ và ngân hàng gen cây trồng, vật nuôi.",vi,sdg_vi_corpus
+gp01,Life,goal02,"Sửa các hạn chế và méo mó thương mại trên thị trường nông sản thế giới, kể cả loại bỏ song song mọi hình thức trợ cấp xuất khẩu nông nghiệp.",vi,sdg_vi_corpus
+gp01,Life,goal02,"Áp dụng biện pháp bảo đảm hoạt động thị trường hàng hóa lương thực và phái sinh, tạo tiếp cận kịp thời thông tin thị trường, kể cả dự trữ, để hạn chế biến động giá quá mức.",vi,sdg_vi_corpus
+gp01,Life,goal02,Lương thực và nông nghiệp nằm ở trung tâm của văn minh và thịnh vượng.,vi,sdg_vi_corpus
+gp01,Life,goal02,"Doanh nghiệp có thể góp phần xóa đói và cải thiện hệ thống lương thực, nông nghiệp.",vi,sdg_vi_corpus
+gp01,Life,goal02,Thực phẩm lành mạnh với giá phải chăng.,vi,sdg_vi_corpus
+gp01,Life,goal02,"Ghi nhãn thực phẩm, an toàn thực phẩm và giá cả.",vi,sdg_vi_corpus
+gp01,Life,goal02,Thu mua bền vững.,vi,sdg_vi_corpus
+gp01,Life,goal02,Đa dạng di truyền của vật nuôi được nuôi trồng và thuần hóa.,vi,sdg_vi_corpus
+gp01,Life,goal02,Thực hành lao động trong chuỗi cung ứng nông sản.,vi,sdg_vi_corpus
+gp01,Life,goal02,Doanh nghiệp lớn thiết lập quan hệ kinh doanh dài hạn hỗ trợ hộ sản xuất nhỏ.,vi,sdg_vi_corpus
+gp01,Life,goal02,Giảm tổn thất và lãng phí thực phẩm dọc chuỗi giá trị.,vi,sdg_vi_corpus
+gp01,Life,goal02,"Hỗ trợ nông dân tiếp cận tín dụng, bảo hiểm, giống, phân bón và thị trường.",vi,sdg_vi_corpus
+gp01,Life,goal02,Không chuyển đổi đất nông nghiệp màu mỡ sang mục đích làm suy giảm an ninh lương thực.,vi,sdg_vi_corpus
+gp01,Life,goal02,"Thúc đẩy nông nghiệp hữu cơ, nông nghiệp thông minh với khí hậu và truy xuất nguồn gốc.",vi,sdg_vi_corpus
+gp01,Life,goal03,Bảo đảm cuộc sống khỏe mạnh và tăng cường phúc lợi cho mọi người ở mọi lứa tuổi.,vi,sdg_vi_corpus
+gp01,Life,goal03,"Đến năm 2030, giảm tỷ số tử vong mẹ toàn cầu xuống dưới 70 trên 100.000 trẻ đẻ sống.",vi,sdg_vi_corpus
+gp01,Life,goal03,"Đến năm 2030, chấm dứt các trường hợp tử vong có thể phòng ngừa ở trẻ sơ sinh và trẻ dưới 5 tuổi; mọi quốc gia hướng tới giảm tử vong sơ sinh xuống ít nhất 12 trên 1.000 trẻ đẻ sống và tử vong dưới 5 tuổi xuống ít nhất 25 trên 1.000 trẻ đẻ sống.",vi,sdg_vi_corpus
+gp01,Life,goal03,"Đến năm 2030, chấm dứt dịch AIDS, lao, sốt rét, các bệnh nhiệt đới bị lãng quên, và chống viêm gan, các bệnh lây truyền qua nước và bệnh truyền nhiễm khác.",vi,sdg_vi_corpus
+gp01,Life,goal03,"Đến năm 2030, giảm một phần ba tử vong sớm do bệnh không lây nhiễm thông qua phòng ngừa, điều trị và thúc đẩy sức khỏe tâm thần và phúc lợi.",vi,sdg_vi_corpus
+gp01,Life,goal03,"Tăng cường phòng ngừa và điều trị lạm dụng chất, kể cả lạm dụng ma túy và sử dụng rượu có hại.",vi,sdg_vi_corpus
+gp01,Life,goal03,"Đến năm 2020, giảm một nửa số ca tử vong và thương tích toàn cầu do tai nạn giao thông.",vi,sdg_vi_corpus
+gp01,Life,goal03,"Đến năm 2030, bảo đảm tiếp cận phổ quát dịch vụ chăm sóc sức khỏe sinh sản và tình dục, kể cả kế hoạch hóa gia đình, thông tin, giáo dục và lồng ghép sức khỏe sinh sản vào chiến lược quốc gia.",vi,sdg_vi_corpus
+gp01,Life,goal03,"Đạt bao phủ y tế toàn dân, gồm bảo vệ rủi ro tài chính, tiếp cận dịch vụ y tế thiết yếu chất lượng, và tiếp cận thuốc, vắc-xin thiết yếu an toàn, hiệu quả, chất lượng, giá phải chăng.",vi,sdg_vi_corpus
+gp01,Life,goal03,"Đến năm 2030, giảm đáng kể số ca tử vong và bệnh tật do hóa chất độc hại, ô nhiễm không khí, nước, đất.",vi,sdg_vi_corpus
+gp01,Life,goal03,Tăng cường thực thi Công ước khung của WHO về kiểm soát thuốc lá.,vi,sdg_vi_corpus
+gp01,Life,goal03,"Hỗ trợ nghiên cứu, phát triển vắc-xin và thuốc cho bệnh truyền nhiễm và không lây nhiễm chủ yếu ảnh hưởng nước đang phát triển; cung cấp tiếp cận thuốc, vắc-xin giá phải chăng.",vi,sdg_vi_corpus
+gp01,Life,goal03,"Tăng đáng kể tài chính y tế và tuyển dụng, phát triển, đào tạo, giữ chân nhân lực y tế ở các nước đang phát triển.",vi,sdg_vi_corpus
+gp01,Life,goal03,"Tăng cường năng lực mọi quốc gia, đặc biệt nước đang phát triển, về cảnh báo sớm, giảm rủi ro, quản lý rủi ro sức khỏe quốc gia và toàn cầu.",vi,sdg_vi_corpus
+gp01,Life,goal03,Sức khỏe là quyền con người cơ bản và chỉ số then chốt của phát triển bền vững.,vi,sdg_vi_corpus
+gp01,Life,goal03,An toàn và sức khỏe nghề nghiệp.,vi,sdg_vi_corpus
+gp01,Life,goal03,Tiếp cận thuốc men.,vi,sdg_vi_corpus
+gp01,Life,goal03,Tiếp cận dịch vụ chăm sóc sức khỏe thiết yếu chất lượng.,vi,sdg_vi_corpus
+gp01,Life,goal03,Chất lượng không khí.,vi,sdg_vi_corpus
+gp01,Life,goal03,Chất lượng nước.,vi,sdg_vi_corpus
+gp01,Life,goal03,"Hài hòa chính sách nhân sự với nguyên tắc quyền con người, kể cả chính sách HIV/AIDS.",vi,sdg_vi_corpus
+gp01,Life,goal03,Đầu tư sức khỏe là ưu tiên trong hoạt động kinh doanh.,vi,sdg_vi_corpus
+gp01,Life,goal03,"Tạo điều kiện và đầu tư thuốc, chăm sóc sức khỏe giá phải chăng cho nhóm thu nhập thấp.",vi,sdg_vi_corpus
+gp01,Life,goal03,"Chương trình sức khỏe người lao động, khám sức khỏe định kỳ, bảo hiểm y tế.",vi,sdg_vi_corpus
+gp01,Life,goal03,"Giảm tai nạn lao động, bệnh nghề nghiệp và căng thẳng tại nơi làm việc.",vi,sdg_vi_corpus
+gp03,Equity,goal04,"Bảo đảm giáo dục có chất lượng, công bằng, toàn diện và thúc đẩy cơ hội học tập suốt đời cho tất cả mọi người.",vi,sdg_vi_corpus
+gp03,Equity,goal04,"Đến năm 2030, bảo đảm tất cả trẻ em gái và trai hoàn thành giáo dục tiểu học và trung học cơ sở miễn phí, công bằng, chất lượng, dẫn tới kết quả học tập phù hợp và hiệu quả.",vi,sdg_vi_corpus
+gp03,Equity,goal04,"Đến năm 2030, bảo đảm tất cả trẻ em gái và trai được tiếp cận phát triển, chăm sóc và giáo dục mầm non chất lượng để sẵn sàng vào tiểu học.",vi,sdg_vi_corpus
+gp03,Equity,goal04,"Đến năm 2030, bảo đảm tất cả nam nữ được tiếp cận bình đẳng giáo dục kỹ thuật, dạy nghề và đại học chất lượng, giá phải chăng, kể cả đại học.",vi,sdg_vi_corpus
+gp03,Equity,goal04,"Đến năm 2030, tăng đáng kể số thanh niên và người lớn có kỹ năng phù hợp, kể cả kỹ năng kỹ thuật và nghề nghiệp, để việc làm, việc làm tử tế và khởi nghiệp.",vi,sdg_vi_corpus
+gp03,Equity,goal04,"Đến năm 2030, xóa bỏ chênh lệch giới trong giáo dục và bảo đảm tiếp cận bình đẳng mọi cấp giáo dục và đào tạo nghề cho người dễ bị tổn thương, kể cả người khuyết tật, người bản địa và trẻ em hoàn cảnh khó khăn.",vi,sdg_vi_corpus
+gp03,Equity,goal04,"Đến năm 2030, bảo đảm tất cả thanh niên và tỷ lệ đáng kể người lớn, cả nam và nữ, đạt xóa mù chữ và tính toán.",vi,sdg_vi_corpus
+gp03,Equity,goal04,"Đến năm 2030, bảo đảm tất cả người học có kiến thức và kỹ năng cần thiết để thúc đẩy phát triển bền vững, kể cả giáo dục vì phát triển bền vững, lối sống bền vững, quyền con người, bình đẳng giới, văn hóa hòa bình, công dân toàn cầu và đa dạng văn hóa.",vi,sdg_vi_corpus
+gp03,Equity,goal04,"Xây dựng và nâng cấp cơ sở giáo dục thân thiện trẻ em, người khuyết tật và giới, cung cấp môi trường học tập an toàn, không bạo lực, hòa nhập, hiệu quả cho tất cả.",vi,sdg_vi_corpus
+gp03,Equity,goal04,"Đến năm 2020, tăng đáng kể số học bổng toàn cầu cho các nước đang phát triển để học đại học, kể cả đào tạo nghề, ICT, kỹ thuật, khoa học, kỹ thuật, toán.",vi,sdg_vi_corpus
+gp03,Equity,goal04,"Đến năm 2030, tăng đáng kể cung cấp giáo viên đủ chất lượng, kể cả qua hợp tác quốc tế về đào tạo giáo viên ở các nước đang phát triển.",vi,sdg_vi_corpus
+gp03,Equity,goal04,Giáo dục là quyền con người cơ bản và không thể thiếu để đạt phát triển bền vững.,vi,sdg_vi_corpus
+gp03,Equity,goal04,Giáo dục vì phát triển bền vững.,vi,sdg_vi_corpus
+gp03,Equity,goal04,Sẵn có lực lượng lao động có kỹ năng.,vi,sdg_vi_corpus
+gp03,Equity,goal04,Nâng cao năng lực.,vi,sdg_vi_corpus
+gp03,Equity,goal04,Tác động gián tiếp tới tạo việc làm.,vi,sdg_vi_corpus
+gp03,Equity,goal04,Việc làm cho thanh niên.,vi,sdg_vi_corpus
+gp03,Equity,goal04,Cung cấp cho người lao động cơ hội liên tục nâng cao kỹ năng cho việc làm hiện tại và tương lai.,vi,sdg_vi_corpus
+gp03,Equity,goal04,"Số giờ đào tạo trung bình mỗi năm trên mỗi lao động, theo giới và theo nhóm lao động.",vi,sdg_vi_corpus
+gp03,Equity,goal04,"Biện pháp nâng cao kiến thức tập thể của cơ quan quản trị về chủ đề kinh tế, môi trường, xã hội.",vi,sdg_vi_corpus
+gp03,Equity,goal04,"Học bổng, thực tập, hợp tác nhà trường – doanh nghiệp.",vi,sdg_vi_corpus
+gp03,Equity,goal04,"Đào tạo kỹ năng số, an toàn lao động và đạo đức nghề nghiệp.",vi,sdg_vi_corpus
+gp03,Equity,goal05,Đạt được bình đẳng giới và trao quyền cho tất cả phụ nữ và trẻ em gái.,vi,sdg_vi_corpus
+gp03,Equity,goal05,Chấm dứt mọi hình thức phân biệt đối xử đối với phụ nữ và trẻ em gái ở mọi nơi.,vi,sdg_vi_corpus
+gp03,Equity,goal05,"Loại bỏ mọi hình thức bạo lực đối với phụ nữ và trẻ em gái trên phạm vi công và tư, kể cả buôn người, bóc lột tình dục và các hình thức bóc lột khác.",vi,sdg_vi_corpus
+gp03,Equity,goal05,"Loại bỏ mọi thực hành có hại như tảo hôn, hôn nhân trẻ em, hôn nhân cưỡng bức và cắt bỏ bộ phận sinh dục nữ.",vi,sdg_vi_corpus
+gp03,Equity,goal05,"Thừa nhận và định giá công việc chăm sóc và công việc gia đình không lương thông qua cung cấp dịch vụ công, hạ tầng, chính sách bảo trợ xã hội, và thúc đẩy chia sẻ trách nhiệm trong hộ gia đình.",vi,sdg_vi_corpus
+gp03,Equity,goal05,"Bảo đảm sự tham gia đầy đủ, hiệu quả và cơ hội lãnh đạo bình đẳng cho phụ nữ ở mọi cấp ra quyết định trong đời sống chính trị, kinh tế, công cộng.",vi,sdg_vi_corpus
+gp03,Equity,goal05,Bảo đảm tiếp cận phổ quát sức khỏe sinh sản và tình dục và quyền sinh sản.,vi,sdg_vi_corpus
+gp03,Equity,goal05,"Tiến hành cải cách để phụ nữ có quyền bình đẳng đối với nguồn lực kinh tế, quyền sở hữu, kiểm soát đất đai và tài sản khác, dịch vụ tài chính, thừa kế, tài nguyên thiên nhiên.",vi,sdg_vi_corpus
+gp03,Equity,goal05,"Tăng cường sử dụng công nghệ hỗ trợ, đặc biệt ICT, để thúc đẩy trao quyền cho phụ nữ.",vi,sdg_vi_corpus
+gp03,Equity,goal05,Thông qua và tăng cường chính sách vững chắc và pháp luật có thể thực thi để thúc đẩy bình đẳng giới và trao quyền cho mọi phụ nữ và trẻ em gái.,vi,sdg_vi_corpus
+gp03,Equity,goal05,"Bình đẳng giới là quyền con người cơ bản, bất khả xâm phạm; trao quyền phụ nữ và trẻ em gái thiết yếu cho tăng trưởng kinh tế, phát triển xã hội và hiệu quả kinh doanh.",vi,sdg_vi_corpus
+gp03,Equity,goal05,"Mọi doanh nghiệp có trách nhiệm nền tảng tôn trọng quyền con người, kể cả quyền của phụ nữ và trẻ em gái.",vi,sdg_vi_corpus
+gp03,Equity,goal05,Thù lao bình đẳng cho phụ nữ và nam giới.,vi,sdg_vi_corpus
+gp03,Equity,goal05,Đa dạng và cơ hội bình đẳng.,vi,sdg_vi_corpus
+gp03,Equity,goal05,Tiếp cận dịch vụ chăm sóc sức khỏe sinh sản và tình dục.,vi,sdg_vi_corpus
+gp03,Equity,goal05,Bạo lực và quấy rối tại nơi làm việc.,vi,sdg_vi_corpus
+gp03,Equity,goal05,Phụ nữ trong vị trí lãnh đạo.,vi,sdg_vi_corpus
+gp03,Equity,goal05,Dịch vụ và phúc lợi chăm sóc trẻ.,vi,sdg_vi_corpus
+gp03,Equity,goal05,Hỗ trợ tiếp cận dịch vụ chăm sóc trẻ và người phụ thuộc cho cả nữ và nam.,vi,sdg_vi_corpus
+gp03,Equity,goal05,"Mở rộng quan hệ kinh doanh với doanh nghiệp do phụ nữ làm chủ, kể cả DNNVV và nữ doanh nhân.",vi,sdg_vi_corpus
+gp03,Equity,goal05,"Theo dõi số liệu tách theo giới trong tuyển dụng, lương, thăng tiến, đào tạo.",vi,sdg_vi_corpus
+gp03,Equity,goal05,Chính sách không dung thứ quấy rối tình dục và phân biệt đối xử.,vi,sdg_vi_corpus
+gp03,Equity,goal05,"Cân bằng cuộc sống – công việc, nghỉ thai sản/thai sản của nam, làm việc linh hoạt.",vi,sdg_vi_corpus
+gp05,Resources,goal06,Bảo đảm sẵn có và quản lý bền vững nước và vệ sinh cho tất cả mọi người.,vi,sdg_vi_corpus
+gp05,Resources,goal06,"Đến năm 2030, đạt tiếp cận phổ quát và công bằng nước uống an toàn, giá phải chăng cho tất cả.",vi,sdg_vi_corpus
+gp05,Resources,goal06,"Đến năm 2030, đạt tiếp cận đầy đủ và công bằng vệ sinh và vệ sinh cá nhân cho tất cả, đặc biệt chú ý nhu cầu của phụ nữ, trẻ em gái và người dễ bị tổn thương.",vi,sdg_vi_corpus
+gp05,Resources,goal06,"Đến năm 2030, cải thiện chất lượng nước bằng cách giảm ô nhiễm, loại bỏ đổ thải, giảm thiểu phát thải hóa chất và vật liệu độc hại, giảm một nửa tỷ lệ nước thải chưa xử lý, tăng đáng kể tái sử dụng và tái chế an toàn trên toàn cầu.",vi,sdg_vi_corpus
+gp05,Resources,goal06,"Đến năm 2030, tăng đáng kể hiệu quả sử dụng nước trên mọi ngành, bảo đảm khai thác và cung cấp nước ngọt bền vững để giải quyết khan hiếm nước, giảm đáng kể số người chịu khan hiếm nước.",vi,sdg_vi_corpus
+gp05,Resources,goal06,"Đến năm 2030, thực hiện quản lý tài nguyên nước tổng hợp ở mọi cấp, kể cả qua hợp tác xuyên biên giới khi phù hợp.",vi,sdg_vi_corpus
+gp05,Resources,goal06,"Đến năm 2020, bảo vệ và phục hồi các hệ sinh thái liên quan đến nước, kể cả núi, rừng, vùng đất ngập nước, sông, tầng chứa nước và hồ.",vi,sdg_vi_corpus
+gp05,Resources,goal06,"Đến năm 2030, mở rộng hợp tác và hỗ trợ năng lực quốc tế cho các nước đang phát triển về nước và vệ sinh, kể cả thu gom nước, khử muối, hiệu quả nước, xử lý nước thải, công nghệ tái sử dụng.",vi,sdg_vi_corpus
+gp05,Resources,goal06,Hỗ trợ và tăng cường sự tham gia của cộng đồng địa phương trong cải thiện quản lý nước và vệ sinh.,vi,sdg_vi_corpus
+gp05,Resources,goal06,Tiếp cận nước và vệ sinh là quyền con người cơ bản và thách thức then chốt của phát triển bền vững.,vi,sdg_vi_corpus
+gp05,Resources,goal06,Khai thác nước bền vững.,vi,sdg_vi_corpus
+gp05,Resources,goal06,Cải thiện chất lượng nước thông qua xử lý nước thải.,vi,sdg_vi_corpus
+gp05,Resources,goal06,"Cải thiện hiệu quả nước theo nguyên tắc 5R: giảm, tái sử dụng, thu hồi, tái chế, bổ sung.",vi,sdg_vi_corpus
+gp05,Resources,goal06,"Tiếp cận nước, vệ sinh, vệ sinh cá nhân bình đẳng, giá phải chăng, an toàn cho người lao động và cộng đồng.",vi,sdg_vi_corpus
+gp05,Resources,goal06,Bảo vệ hệ sinh thái và đa dạng sinh học liên quan đến nước.,vi,sdg_vi_corpus
+gp05,Resources,goal06,Giảm ô nhiễm nước bằng quy trình xử lý nước thải hiện đại trước khi xả.,vi,sdg_vi_corpus
+gp05,Resources,goal06,Đầu tư xử lý nước để không làm quá tải hệ thống xử lý đô thị bởi nước thải công nghiệp.,vi,sdg_vi_corpus
+gp05,Resources,goal06,"Thu gom và xử lý nước chảy tràn nông nghiệp, dùng lại như nguồn nước ngọt.",vi,sdg_vi_corpus
+gp05,Resources,goal06,"Tái sử dụng nước xám trong vận hành tòa nhà, giảm nước sạch dùng xả toilet.",vi,sdg_vi_corpus
+gp05,Resources,goal06,"Đo lường, công bố lượng nước tiêu thụ, cường độ nước và rủi ro nước trong chuỗi cung ứng.",vi,sdg_vi_corpus
+gp05,Resources,goal06,"Không xả nước thải chưa xử lý ra sông, hồ, biển.",vi,sdg_vi_corpus
+gp05,Resources,goal07,"Bảo đảm tiếp cận năng lượng hiện đại, bền vững, đáng tin cậy, giá phải chăng cho tất cả mọi người.",vi,sdg_vi_corpus
+gp05,Resources,goal07,"Đến năm 2030, bảo đảm tiếp cận phổ quát dịch vụ năng lượng giá phải chăng, đáng tin cậy, hiện đại.",vi,sdg_vi_corpus
+gp05,Resources,goal07,"Đến năm 2030, tăng đáng kể tỷ lệ năng lượng tái tạo trong cơ cấu năng lượng toàn cầu.",vi,sdg_vi_corpus
+gp05,Resources,goal07,"Đến năm 2030, tăng gấp đôi tốc độ cải thiện hiệu quả năng lượng toàn cầu.",vi,sdg_vi_corpus
+gp05,Resources,goal07,"Đến năm 2030, tăng hợp tác quốc tế để tạo điều kiện tiếp cận nghiên cứu và công nghệ năng lượng sạch, kể cả năng lượng tái tạo, hiệu quả năng lượng, nhiên liệu hóa thạch tiên tiến sạch hơn, và thúc đẩy đầu tư vào hạ tầng và công nghệ năng lượng sạch.",vi,sdg_vi_corpus
+gp05,Resources,goal07,"Đến năm 2030, mở rộng hạ tầng và nâng cấp công nghệ cung cấp dịch vụ năng lượng hiện đại, bền vững cho tất cả ở các nước đang phát triển.",vi,sdg_vi_corpus
+gp05,Resources,goal07,"Xã hội hiện đại phụ thuộc vào dịch vụ năng lượng đáng tin cậy, giá phải chăng để vận hành trơn tru và phát triển công bằng.",vi,sdg_vi_corpus
+gp05,Resources,goal07,Tiếp cận điện.,vi,sdg_vi_corpus
+gp05,Resources,goal07,Sẵn có và độ tin cậy của điện.,vi,sdg_vi_corpus
+gp05,Resources,goal07,Năng lượng tái tạo.,vi,sdg_vi_corpus
+gp05,Resources,goal07,Hiệu quả năng lượng.,vi,sdg_vi_corpus
+gp05,Resources,goal07,Đầu tư hạ tầng.,vi,sdg_vi_corpus
+gp05,Resources,goal07,Đầu tư môi trường.,vi,sdg_vi_corpus
+gp05,Resources,goal07,Cam kết cung cấp 100% nhu cầu điện vận hành từ nguồn tái tạo.,vi,sdg_vi_corpus
+gp05,Resources,goal07,"Đầu tư R&D dịch vụ năng lượng bền vững, đưa công nghệ mới ra thị trường nhanh.",vi,sdg_vi_corpus
+gp05,Resources,goal07,Mức tiêu thụ năng lượng trong tổ chức.,vi,sdg_vi_corpus
+gp05,Resources,goal07,Giảm cường độ năng lượng trên đơn vị sản phẩm.,vi,sdg_vi_corpus
+gp05,Resources,goal07,"Điện mặt trời mái, điện gió, sinh khối, và mua chứng chỉ năng lượng tái tạo.",vi,sdg_vi_corpus
+gp05,Resources,goal07,Tuyên bố rủi ro năng lượng và lộ trình chuyển dịch năng lượng.,vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Thúc đẩy tăng trưởng kinh tế bền vững, bao trùm, liên tục, việc làm đầy đủ, năng suất và việc làm tử tế cho tất cả mọi người.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Duy trì tăng trưởng kinh tế đầu người phù hợp với điều kiện quốc gia, và tăng trưởng GDP ít nhất 7% mỗi năm ở các nước kém phát triển.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Đạt mức năng suất kinh tế cao hơn thông qua đa dạng hóa, nâng cấp công nghệ, đổi mới, kể cả tập trung vào ngành thâm dụng lao động và giá trị gia tăng cao.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Thúc đẩy chính sách lấy phát triển làm trung tâm, hỗ trợ hoạt động sản xuất, tạo việc làm tử tế, khởi nghiệp, sáng tạo, đổi mới, và khuyến khích chính thức hóa, tăng trưởng DNNVV, kể cả tiếp cận dịch vụ tài chính.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Đến năm 2030, cải thiện dần hiệu quả tài nguyên toàn cầu trong tiêu dùng và sản xuất, và nỗ lực tách tăng trưởng kinh tế khỏi suy thoái môi trường.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Đến năm 2030, đạt việc làm đầy đủ, năng suất và việc làm tử tế cho tất cả phụ nữ, nam giới, kể cả thanh niên và người khuyết tật, và thù lao bình đẳng cho công việc có giá trị ngang nhau.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Đến năm 2020, giảm đáng kể tỷ lệ thanh niên không có việc làm, học tập hoặc đào tạo.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Áp dụng biện pháp ngay lập tức, hiệu quả để xóa lao động cưỡng bức, chấm dứt chế độ nô lệ hiện đại và buôn người, cấm và loại bỏ các hình thức lao động trẻ em tồi tệ nhất, kể cả tuyển dụng và sử dụng trẻ em lính, và đến năm 2025 chấm dứt lao động trẻ em dưới mọi hình thức.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Bảo vệ quyền lao động và thúc đẩy môi trường làm việc an toàn, an ninh cho tất cả người lao động, kể cả lao động di cư, đặc biệt nữ di cư, và người làm việc bấp bênh.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Đến năm 2030, xây dựng và thực hiện chính sách thúc đẩy du lịch bền vững tạo việc làm, thúc đẩy văn hóa, sản phẩm địa phương.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Tăng cường năng lực thể chế tài chính trong nước để khuyến khích, mở rộng tiếp cận dịch vụ ngân hàng, bảo hiểm, tài chính cho tất cả.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Khoảng một nửa dân số thế giới vẫn sống với mức tương đương khoảng 2 đô la Mỹ một ngày, và ở nhiều nơi có việc làm vẫn không bảo đảm thoát nghèo.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Doanh nghiệp là động cơ tạo việc làm và tăng trưởng kinh tế, thúc đẩy hoạt động kinh tế qua chuỗi giá trị.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,Cơ hội việc làm tử tế có lợi cho cả doanh nghiệp và xã hội.,vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,Việc làm.,vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,Hòa nhập kinh tế.,vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,Không phân biệt đối xử.,vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Hợp đồng lao động, bảo hiểm xã hội, lương đủ sống, đối thoại với người lao động.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Không sử dụng lao động trẻ em, lao động cưỡng bức trong hoạt động và chuỗi cung ứng.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"An toàn lao động, giờ làm việc hợp lý, chống quấy rối.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Tạo việc làm cho thanh niên, người khuyết tật, lao động địa phương.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal08,"Năng suất lao động, đổi mới quy trình, chuyển đổi số có trách nhiệm.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,"Xây dựng hạ tầng có khả năng chống chịu, thúc đẩy công nghiệp hóa bao trùm, bền vững, và tăng cường đổi mới.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,"Phát triển hạ tầng chất lượng, đáng tin cậy, bền vững, có khả năng chống chịu, kể cả hạ tầng khu vực và xuyên biên giới, để hỗ trợ phát triển kinh tế và phúc lợi con người, tập trung tiếp cận giá phải chăng, công bằng cho tất cả.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,"Thúc đẩy công nghiệp hóa bao trùm, bền vững, và đến năm 2030 tăng đáng kể tỷ lệ việc làm và GDP của ngành công nghiệp, phù hợp điều kiện quốc gia, và tăng gấp đôi tỷ lệ này ở các nước kém phát triển.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,"Tăng tiếp cận dịch vụ tài chính cho DNNVV công nghiệp và khác, kể cả tín dụng giá phải chăng, và hòa nhập vào chuỗi giá trị, thị trường.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,"Đến năm 2030, nâng cấp hạ tầng và cải tạo ngành công nghiệp để bền vững, tăng hiệu quả tài nguyên, áp dụng công nghệ, quy trình công nghiệp sạch, thân thiện môi trường.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,"Tăng cường nghiên cứu khoa học, nâng cao năng lực công nghệ của ngành công nghiệp ở mọi quốc gia, đặc biệt nước đang phát triển, kể cả đến năm 2030 khuyến khích đổi mới, tăng đáng kể số lao động nghiên cứu trên 1 triệu dân, chi R&D công và tư.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,"Tạo điều kiện phát triển hạ tầng bền vững, có khả năng chống chịu ở các nước đang phát triển qua hỗ trợ tài chính, công nghệ, kỹ thuật.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,"Hỗ trợ phát triển công nghệ trong nước, nghiên cứu, đổi mới ở các nước đang phát triển, kể cả bảo đảm môi trường chính sách thuận lợi cho đa dạng hóa công nghiệp và giá trị gia tăng hàng hóa.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,"Tăng đáng kể tiếp cận ICT, nỗ lực cung cấp tiếp cận Internet phổ quát, giá phải chăng ở các nước kém phát triển.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,"Hạ tầng già cỗi, xuống cấp hoặc không tồn tại khiến việc kinh doanh tốt trở nên khó khăn.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,Đầu tư hạ tầng.,vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,Tiếp cận dịch vụ tài chính.,vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,Đầu tư môi trường.,vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,Nghiên cứu và phát triển.,vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,Di sản công nghệ.,vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,"Mở rộng địa bàn cơ sở R&D, đưa năng lực nghiên cứu tới nước đang phát triển.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,"Thiết lập tiêu chuẩn và thúc đẩy quy định bảo đảm dự án, sáng kiến của công ty được quản lý bền vững.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,Hợp tác với NGO và khu vực công để thúc đẩy tăng trưởng bền vững tại nước đang phát triển.,vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,Phát triển và tác động của đầu tư hạ tầng và dịch vụ được hỗ trợ.,vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,"Chuyển đổi số, công nghiệp 4.0, đổi mới xanh, bằng sáng chế sạch.",vi,sdg_vi_corpus
+gp02,Economic and Technological Development,goal09,"Hạ tầng chống chịu khí hậu, logistics xanh, khu công nghiệp sinh thái.",vi,sdg_vi_corpus
+gp03,Equity,goal10,Giảm bất bình đẳng trong và giữa các quốc gia.,vi,sdg_vi_corpus
+gp03,Equity,goal10,"Đến năm 2030, đạt và duy trì tăng trưởng thu nhập của 40% dân số nghèo nhất ở mức cao hơn mức trung bình quốc gia.",vi,sdg_vi_corpus
+gp03,Equity,goal10,"Đến năm 2030, trao quyền và thúc đẩy hòa nhập xã hội, kinh tế, chính trị cho tất cả, không phân biệt tuổi, giới, khuyết tật, chủng tộc, dân tộc, nguồn gốc, tôn giáo, điều kiện kinh tế hay khác.",vi,sdg_vi_corpus
+gp03,Equity,goal10,"Bảo đảm cơ hội bình đẳng, giảm bất bình đẳng kết quả, kể cả bằng xóa bỏ luật, chính sách, thực hành phân biệt đối xử, và thúc đẩy pháp luật, chính sách, hành động phù hợp.",vi,sdg_vi_corpus
+gp03,Equity,goal10,"Áp dụng chính sách, đặc biệt chính sách tài khóa, tiền lương, bảo trợ xã hội, và đạt dần bình đẳng lớn hơn.",vi,sdg_vi_corpus
+gp03,Equity,goal10,"Cải thiện điều tiết và giám sát thị trường, thể chế tài chính toàn cầu, tăng cường thực thi các điều tiết đó.",vi,sdg_vi_corpus
+gp03,Equity,goal10,"Bảo đảm đại diện, tiếng nói tăng lên của các nước đang phát triển trong quá trình ra quyết định tại các thể chế kinh tế, tài chính quốc tế.",vi,sdg_vi_corpus
+gp03,Equity,goal10,"Tạo điều kiện di cư, di chuyển có trật tự, an toàn, có quy củ, có trách nhiệm của người dân, kể cả qua thực hiện chính sách di cư có kế hoạch, quản lý tốt.",vi,sdg_vi_corpus
+gp03,Equity,goal10,"Thực hiện nguyên tắc đối xử đặc biệt và khác biệt cho các nước đang phát triển, đặc biệt nước kém phát triển, phù hợp với các thỏa thuận WTO.",vi,sdg_vi_corpus
+gp03,Equity,goal10,"Khuyến khích hỗ trợ ODA và dòng tài chính, kể cả đầu tư trực tiếp nước ngoài, tới các quốc gia cần nhất.",vi,sdg_vi_corpus
+gp03,Equity,goal10,"Đến năm 2030, giảm chi phí giao dịch kiều hối người di cư xuống dưới 3%, loại bỏ hành lang kiều hối có chi phí trên 5%.",vi,sdg_vi_corpus
+gp03,Equity,goal10,Bất bình đẳng thu nhập và của cải đang nghiêm trọng và ngày càng nới rộng trên toàn cầu.,vi,sdg_vi_corpus
+gp03,Equity,goal10,Mọi doanh nghiệp có trách nhiệm tôn trọng quyền con người.,vi,sdg_vi_corpus
+gp03,Equity,goal10,"Doanh nghiệp nên tương tác với chính phủ một cách minh bạch, chịu trách nhiệm, và công bố khoản thanh toán cho chính phủ.",vi,sdg_vi_corpus
+gp03,Equity,goal10,"Sẵn có sản phẩm, dịch vụ cho người thu nhập thấp.",vi,sdg_vi_corpus
+gp03,Equity,goal10,Tiếp cận dịch vụ tài chính.,vi,sdg_vi_corpus
+gp03,Equity,goal10,Thù lao bình đẳng cho phụ nữ và nam giới.,vi,sdg_vi_corpus
+gp03,Equity,goal10,Nâng cao năng lực.,vi,sdg_vi_corpus
+gp03,Equity,goal10,Đa dạng và cơ hội bình đẳng.,vi,sdg_vi_corpus
+gp03,Equity,goal10,Hòa nhập kinh tế.,vi,sdg_vi_corpus
+gp03,Equity,goal10,"Đầu tư hoạt động xóa nghèo do doanh nghiệp dẫn dắt, ví dụ chính sách lương đủ sống.",vi,sdg_vi_corpus
+gp03,Equity,goal10,Hợp tác với mạng lưới xã hội dân sự để đào tạo kỹ năng giáo dục và khởi nghiệp.,vi,sdg_vi_corpus
+gp03,Equity,goal10,"Không phân biệt đối xử vì dân tộc, tôn giáo, khuyết tật, xu hướng tình dục, xuất thân.",vi,sdg_vi_corpus
+gp03,Equity,goal10,"Thu hẹp khoảng cách lương, tăng việc làm cho nhóm yếu thế, tài chính bao trùm.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,"Làm cho đô thị và khu định cư của con người trở nên bao trùm, an toàn, có khả năng chống chịu và bền vững.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,"Đến năm 2030, bảo đảm tiếp cận nhà ở đầy đủ, an toàn, giá phải chăng và dịch vụ cơ bản cho tất cả, nâng cấp khu ổ chuột.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,"Đến năm 2030, cung cấp tiếp cận hệ thống giao thông an toàn, giá phải chăng, dễ tiếp cận, bền vững cho tất cả, cải thiện an toàn giao thông, đặc biệt mở rộng giao thông công cộng, chú ý nhóm dễ bị tổn thương, phụ nữ, trẻ em, người khuyết tật, người cao tuổi.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,"Đến năm 2030, tăng cường đô thị hóa bao trùm, bền vững và năng lực tham gia, quy hoạch, quản lý định cư tổng hợp ở mọi quốc gia.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,"Tăng cường nỗ lực bảo vệ, gìn giữ di sản văn hóa, thiên nhiên thế giới.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,"Đến năm 2030, giảm đáng kể số người chết, số người bị ảnh hưởng, tổn thất kinh tế tương đối so với GDP toàn cầu do thảm họa, kể cả thảm họa liên quan nước, tập trung bảo vệ người nghèo và người dễ bị tổn thương.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,"Đến năm 2030, giảm tác động môi trường bất lợi bình quân đầu người của đô thị, kể cả chú ý đặc biệt chất lượng không khí, quản lý chất thải đô thị và chất thải khác.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,"Đến năm 2030, cung cấp tiếp cận phổ quát không gian xanh, công cộng an toàn, bao trùm, dễ tiếp cận, đặc biệt cho phụ nữ, trẻ em, người cao tuổi, người khuyết tật.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,"Hỗ trợ mối liên kết kinh tế, xã hội, môi trường tích cực giữa đô thị, ngoại ô, nông thôn bằng tăng cường quy hoạch phát triển quốc gia, vùng.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,"Đến năm 2020, tăng đáng kể số thành phố, định cư áp dụng, thực hiện chính sách, kế hoạch tổng hợp hướng tới bao trùm, hiệu quả tài nguyên, thích ứng, giảm nhẹ biến đổi khí hậu, chống chịu thảm họa.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,"Hỗ trợ các nước kém phát triển, kể cả qua hỗ trợ tài chính, kỹ thuật, xây dựng tòa nhà bền vững, có khả năng chống chịu sử dụng vật liệu địa phương.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,"Đến năm 2050, 70% dân số thế giới sống ở đô thị, khiến đô thị then chốt để đạt tương lai bền vững.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,Tiếp cận nhà ở giá phải chăng.,vi,sdg_vi_corpus
+gp04,Social Development,goal11,Đầu tư hạ tầng.,vi,sdg_vi_corpus
+gp04,Social Development,goal11,Giao thông bền vững.,vi,sdg_vi_corpus
+gp04,Social Development,goal11,Tiếp cận không gian công cộng.,vi,sdg_vi_corpus
+gp04,Social Development,goal11,Tòa nhà bền vững.,vi,sdg_vi_corpus
+gp04,Social Development,goal11,Phát triển và tác động của đầu tư hạ tầng và dịch vụ được hỗ trợ.,vi,sdg_vi_corpus
+gp04,Social Development,goal11,Số lượng và biến động phần trăm người sống ở khu vực bị ảnh hưởng bởi tiếng ồn.,vi,sdg_vi_corpus
+gp04,Social Development,goal11,"Quy hoạch đô thị, nông thôn bền vững, phân bổ dân cư, lao động hợp lý theo vùng.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,"An toàn cháy nổ, PCCC, phòng chống thiên tai tại cơ sở.",vi,sdg_vi_corpus
+gp04,Social Development,goal11,"Giảm ùn tắc, khuyến khích xe điện, đi bộ, xe đạp, giao thông công cộng.",vi,sdg_vi_corpus
+gp05,Resources,goal12,Bảo đảm mô hình sản xuất và tiêu dùng bền vững.,vi,sdg_vi_corpus
+gp05,Resources,goal12,"Thực hiện Khung chương trình 10 năm về sản xuất và tiêu dùng bền vững, mọi quốc gia hành động, các nước phát triển đi đầu, tính đến năng lực phát triển của nước đang phát triển.",vi,sdg_vi_corpus
+gp05,Resources,goal12,"Đến năm 2030, đạt quản lý bền vững và sử dụng hiệu quả tài nguyên thiên nhiên.",vi,sdg_vi_corpus
+gp05,Resources,goal12,"Đến năm 2030, giảm một nửa lãng phí thực phẩm bình quân đầu người ở cấp bán lẻ, tiêu dùng, và giảm tổn thất lương thực dọc chuỗi sản xuất, cung ứng, kể cả tổn thất sau thu hoạch.",vi,sdg_vi_corpus
+gp05,Resources,goal12,"Đến năm 2020, đạt quản lý thân thiện môi trường đối với hóa chất và chất thải suốt vòng đời, theo khung quốc tế đã thỏa thuận, giảm đáng kể phát thải ra không khí, nước, đất để giảm thiểu tác động bất lợi lên sức khỏe con người và môi trường.",vi,sdg_vi_corpus
+gp05,Resources,goal12,"Đến năm 2030, giảm đáng kể phát sinh chất thải thông qua phòng ngừa, giảm thiểu, tái chế, tái sử dụng.",vi,sdg_vi_corpus
+gp05,Resources,goal12,"Khuyến khích công ty, đặc biệt công ty lớn, xuyên quốc gia, áp dụng thực hành bền vững, lồng ghép thông tin bền vững vào chu kỳ báo cáo.",vi,sdg_vi_corpus
+gp05,Resources,goal12,"Thúc đẩy thực hành mua sắm công bền vững, phù hợp chính sách, ưu tiên quốc gia.",vi,sdg_vi_corpus
+gp05,Resources,goal12,"Đến năm 2030, bảo đảm mọi người ở mọi nơi có thông tin, nhận thức phù hợp cho phát triển bền vững và lối sống hài hòa với thiên nhiên.",vi,sdg_vi_corpus
+gp05,Resources,goal12,"Hỗ trợ nước đang phát triển tăng cường năng lực khoa học, công nghệ hướng tới mô hình sản xuất, tiêu dùng bền vững.",vi,sdg_vi_corpus
+gp05,Resources,goal12,"Xây dựng, thực hiện công cụ giám sát tác động phát triển bền vững của du lịch bền vững tạo việc làm, thúc đẩy văn hóa, sản phẩm địa phương.",vi,sdg_vi_corpus
+gp05,Resources,goal12,"Hợp lý hóa trợ cấp nhiên liệu hóa thạch không hiệu quả, khuyến khích tiêu dùng lãng phí, bằng cách loại bỏ méo mó thị trường.",vi,sdg_vi_corpus
+gp05,Resources,goal12,Ngày càng nhiều người gia nhập tầng lớp trung lưu trong hai thập kỷ tới.,vi,sdg_vi_corpus
+gp05,Resources,goal12,Doanh nghiệp có lợi ích tìm giải pháp mới cho sản xuất và tiêu dùng bền vững.,vi,sdg_vi_corpus
+gp05,Resources,goal12,Thu mua bền vững.,vi,sdg_vi_corpus
+gp05,Resources,goal12,Hiệu quả tài nguyên của sản phẩm và dịch vụ.,vi,sdg_vi_corpus
+gp05,Resources,goal12,Tái chế vật liệu.,vi,sdg_vi_corpus
+gp05,Resources,goal12,Thực hành mua sắm.,vi,sdg_vi_corpus
+gp05,Resources,goal12,"Thông tin và ghi nhãn sản phẩm, dịch vụ.",vi,sdg_vi_corpus
+gp05,Resources,goal12,Tổng lượng nước tiêu thụ trong năm báo cáo trên toàn bộ hoạt động.,vi,sdg_vi_corpus
+gp05,Resources,goal12,Hiệu quả nước trong chuỗi giá trị.,vi,sdg_vi_corpus
+gp05,Resources,goal12,Tỷ lệ vật liệu sử dụng là đầu vào tái chế.,vi,sdg_vi_corpus
+gp05,Resources,goal12,Mức độ giảm thiểu tác động môi trường của sản phẩm và dịch vụ.,vi,sdg_vi_corpus
+gp05,Resources,goal12,"Kinh tế tuần hoàn, thiết kế sinh thái, trách nhiệm mở rộng của nhà sản xuất.",vi,sdg_vi_corpus
+gp05,Resources,goal12,"Giảm nhựa dùng một lần, bao bì xanh, vòng đời sản phẩm.",vi,sdg_vi_corpus
+gp06,Environments,goal13,Hành động khẩn cấp để chống biến đổi khí hậu và tác động của nó.,vi,sdg_vi_corpus
+gp06,Environments,goal13,Tăng cường khả năng chống chịu và thích ứng với rủi ro liên quan khí hậu và thiên tai ở mọi quốc gia.,vi,sdg_vi_corpus
+gp06,Environments,goal13,"Lồng ghép biện pháp biến đổi khí hậu vào chính sách, chiến lược, quy hoạch quốc gia.",vi,sdg_vi_corpus
+gp06,Environments,goal13,"Cải thiện giáo dục, nâng cao nhận thức, năng lực con người, thể chế về giảm nhẹ, thích ứng, giảm tác động, cảnh báo sớm biến đổi khí hậu.",vi,sdg_vi_corpus
+gp06,Environments,goal13,"Thực hiện cam kết của các nước phát triển đối với Công ước khung của LHQ về biến đổi khí hậu, huy động 100 tỷ đô la Mỹ mỗi năm vào năm 2020 từ mọi nguồn để đáp ứng nhu cầu nước đang phát triển, vận hành Quỹ Khí hậu Xanh.",vi,sdg_vi_corpus
+gp06,Environments,goal13,"Thúc đẩy cơ chế tăng năng lực hoạch định, quản lý liên quan biến đổi khí hậu ở các nước kém phát triển, quốc đảo nhỏ đang phát triển, tập trung phụ nữ, thanh niên, cộng đồng địa phương, nhóm bị gạt ra ngoài.",vi,sdg_vi_corpus
+gp06,Environments,goal13,"Biến đổi khí hậu do phát thải nhân tạo CO2 và khí nhà kính khác. Tác động gồm tăng nhiệt độ bề mặt trung bình toàn cầu, thời tiết cực đoan, thay đổi mưa, nước biển dâng, axit hóa đại dương.",vi,sdg_vi_corpus
+gp06,Environments,goal13,Những tác động đó ảnh hưởng các SDG khác và thường khiến việc đạt chúng khó hơn.,vi,sdg_vi_corpus
+gp06,Environments,goal13,Hiệu quả năng lượng.,vi,sdg_vi_corpus
+gp06,Environments,goal13,Đầu tư môi trường.,vi,sdg_vi_corpus
+gp06,Environments,goal13,Phát thải khí nhà kính.,vi,sdg_vi_corpus
+gp06,Environments,goal13,Rủi ro và cơ hội do biến đổi khí hậu.,vi,sdg_vi_corpus
+gp06,Environments,goal13,Cải tạo hệ thống chiếu sáng cơ sở sang đèn LED tiết kiệm năng lượng.,vi,sdg_vi_corpus
+gp06,Environments,goal13,"Hiểu rủi ro khí hậu và xây dựng khả năng chống chịu vào tài sản, chuỗi cung ứng của công ty.",vi,sdg_vi_corpus
+gp06,Environments,goal13,Mở rộng quản lý rừng bền vững qua thu mua có trách nhiệm và thay thế sản phẩm.,vi,sdg_vi_corpus
+gp06,Environments,goal13,Phát thải khí nhà kính trực tiếp (Phạm vi 1).,vi,sdg_vi_corpus
+gp06,Environments,goal13,Phát thải khí nhà kính gián tiếp từ năng lượng (Phạm vi 2).,vi,sdg_vi_corpus
+gp06,Environments,goal13,Phát thải khí nhà kính gián tiếp khác (Phạm vi 3).,vi,sdg_vi_corpus
+gp06,Environments,goal13,"Cam kết Net Zero, khoa học dựa trên SBTi, định giá carbon nội bộ.",vi,sdg_vi_corpus
+gp06,Environments,goal13,"Thích ứng khí hậu, bảo hiểm rủi ro thiên tai, kế hoạch liên tục hoạt động.",vi,sdg_vi_corpus
+gp06,Environments,goal13,"Trồng rừng, tín chỉ carbon, năng lượng tái tạo, logistics thấp carbon.",vi,sdg_vi_corpus
+gp05,Resources,goal14,"Bảo tồn và sử dụng bền vững đại dương, biển và tài nguyên biển cho phát triển bền vững.",vi,sdg_vi_corpus
+gp05,Resources,goal14,"Đến năm 2025, ngăn chặn và giảm đáng kể mọi dạng ô nhiễm biển, đặc biệt từ hoạt động trên đất liền, kể cả rác thải biển và ô nhiễm dinh dưỡng.",vi,sdg_vi_corpus
+gp05,Resources,goal14,"Đến năm 2020, quản lý, bảo vệ bền vững hệ sinh thái biển, ven biển để tránh tác động bất lợi đáng kể, kể cả tăng cường chống chịu, hành động phục hồi để đạt đại dương khỏe mạnh, năng suất.",vi,sdg_vi_corpus
+gp05,Resources,goal14,"Giảm thiểu, giải quyết tác động axit hóa đại dương, kể cả qua hợp tác khoa học ở mọi cấp.",vi,sdg_vi_corpus
+gp05,Resources,goal14,"Đến năm 2020, điều tiết hiệu quả việc khai thác, chấm dứt đánh bắt quá mức, đánh bắt bất hợp pháp, không báo cáo, không theo quy định, và thực hành đánh bắt hủy diệt; thực hiện kế hoạch quản lý dựa khoa học để phục hồi đàn cá trong thời gian ngắn nhất khả thi.",vi,sdg_vi_corpus
+gp05,Resources,goal14,"Đến năm 2020, bảo tồn ít nhất 10% vùng ven biển, biển, phù hợp luật quốc gia, quốc tế, dựa trên thông tin khoa học tốt nhất.",vi,sdg_vi_corpus
+gp05,Resources,goal14,"Đến năm 2020, cấm một số hình thức trợ cấp nghề cá góp phần dư thừa công suất, đánh bắt quá mức, loại bỏ trợ cấp góp phần đánh bắt IUU.",vi,sdg_vi_corpus
+gp05,Resources,goal14,"Đến năm 2030, tăng lợi ích kinh tế cho các quốc đảo nhỏ đang phát triển, nước kém phát triển từ sử dụng bền vững tài nguyên biển, kể cả quản lý bền vững nghề cá, nuôi trồng, du lịch.",vi,sdg_vi_corpus
+gp05,Resources,goal14,"Tăng kiến thức khoa học, phát triển năng lực nghiên cứu, chuyển giao công nghệ biển để cải thiện sức khỏe đại dương, tăng đóng góp đa dạng sinh học biển cho phát triển nước đang phát triển.",vi,sdg_vi_corpus
+gp05,Resources,goal14,"Cung cấp tiếp cận cho ngư dân thủ công nhỏ đối với tài nguyên biển, thị trường.",vi,sdg_vi_corpus
+gp05,Resources,goal14,"Tăng cường bảo tồn, sử dụng bền vững đại dương, tài nguyên biển bằng thực thi luật quốc tế như phản ánh trong UNCLOS.",vi,sdg_vi_corpus
+gp05,Resources,goal14,"Đại dương đối mặt ô nhiễm biển, ô nhiễm dinh dưỡng, cạn kiệt tài nguyên và biến đổi khí hậu, chủ yếu do hành động của con người.",vi,sdg_vi_corpus
+gp05,Resources,goal14,Đa dạng sinh học biển.,vi,sdg_vi_corpus
+gp05,Resources,goal14,Axit hóa đại dương.,vi,sdg_vi_corpus
+gp05,Resources,goal14,Đầu tư môi trường.,vi,sdg_vi_corpus
+gp05,Resources,goal14,"Sự cố tràn dầu, hóa chất.",vi,sdg_vi_corpus
+gp05,Resources,goal14,Thu mua bền vững.,vi,sdg_vi_corpus
+gp05,Resources,goal14,Xả nước ra đại dương.,vi,sdg_vi_corpus
+gp05,Resources,goal14,Cải thiện hiệu quả tài nguyên bằng tạo giá trị từ chất thải.,vi,sdg_vi_corpus
+gp05,Resources,goal14,Ngăn chặn quản lý chất thải kém hoặc xả rác có thể gây ô nhiễm môi trường biển.,vi,sdg_vi_corpus
+gp05,Resources,goal14,"Cấm thực hành đặt loài, tài nguyên biển vào rủi ro tổn hại, khai thác, cạn kiệt thêm.",vi,sdg_vi_corpus
+gp05,Resources,goal14,Đóng góp phát triển công nghệ quản lý chất thải giảm sử dụng nước sạch.,vi,sdg_vi_corpus
+gp05,Resources,goal14,Tổng lượng nước xả theo chất lượng và nơi đến.,vi,sdg_vi_corpus
+gp05,Resources,goal14,"Không dùng nhựa dễ phát tán ra biển, thu gom rác bờ biển, truy xuất thủy sản.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Bảo vệ, phục hồi, thúc đẩy sử dụng bền vững hệ sinh thái trên cạn, quản lý rừng bền vững, chống sa mạc hóa, ngăn chặn, đảo ngược suy thoái đất, ngăn chặn mất đa dạng sinh học.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Đến năm 2020, bảo đảm bảo tồn, phục hồi, sử dụng bền vững hệ sinh thái trên cạn, nước ngọt nội địa và dịch vụ của chúng, đặc biệt rừng, đất ngập nước, núi, vùng khô hạn.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Đến năm 2020, thúc đẩy thực hiện quản lý bền vững mọi loại rừng, chấm dứt phá rừng, phục hồi rừng đã suy thoái, tăng đáng kể trồng rừng, tái trồng rừng toàn cầu.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Đến năm 2030, chống sa mạc hóa, phục hồi đất, đất bị suy thoái, kể cả đất bị ảnh hưởng sa mạc hóa, hạn hán, lũ, nỗ lực đạt thế giới không suy thoái đất.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Đến năm 2030, bảo đảm bảo tồn hệ sinh thái núi, kể cả đa dạng sinh học, để tăng cường khả năng cung cấp lợi ích thiết yếu cho phát triển bền vững.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Hành động khẩn cấp, đáng kể để giảm suy thoái môi trường sống tự nhiên, ngăn chặn mất đa dạng sinh học, đến năm 2020 bảo vệ, ngăn chặn tuyệt chủng các loài bị đe dọa.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Thúc đẩy chia sẻ công bằng, bình đẳng lợi ích từ sử dụng nguồn gen, thúc đẩy tiếp cận phù hợp nguồn gen.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Hành động khẩn cấp chấm dứt săn bắt, buôn bán trái phép loài động thực vật được bảo vệ, giải quyết cả cung và cầu sản phẩm bất hợp pháp.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Đến năm 2020, đưa ra biện pháp ngăn chặn đưa vào, kiểm soát, xóa bỏ các loài ngoại lai xâm hại trên hệ sinh thái đất, nước, kiểm soát hoặc xóa bỏ loài ưu tiên.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Đến năm 2020, lồng ghép giá trị hệ sinh thái, đa dạng sinh học vào quy hoạch quốc gia, địa phương, quy trình phát triển, chiến lược, báo cáo giảm nghèo.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Huy động, tăng đáng kể nguồn lực tài chính từ mọi nguồn để bảo tồn, sử dụng bền vững đa dạng sinh học, hệ sinh thái.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Huy động nguồn lực đáng kể từ mọi nguồn, mọi cấp để tài trợ quản lý rừng bền vững, cung cấp động lực phù hợp cho nước đang phát triển để quản lý rừng bền vững, kể cả bảo tồn, tái trồng rừng.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Tăng hỗ trợ toàn cầu cho nỗ lực chống săn bắt, buôn bán trái phép loài được bảo vệ, kể cả tăng năng lực cộng đồng địa phương theo đuổi cơ hội sinh kế bền vững.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Doanh nghiệp và hệ sinh thái gắn liền. Công ty ảnh hưởng hệ sinh thái vì dựa vào dịch vụ cung cấp như nước ngọt, sợi, lương thực và dịch vụ điều tiết như khí hậu, kiểm soát lũ, lọc nước.",vi,sdg_vi_corpus
+gp06,Environments,goal15,Phá rừng và suy thoái rừng.,vi,sdg_vi_corpus
+gp06,Environments,goal15,Đa dạng di truyền nông trại và vật nuôi thuần hóa.,vi,sdg_vi_corpus
+gp06,Environments,goal15,Phục hồi đất.,vi,sdg_vi_corpus
+gp06,Environments,goal15,Quản lý cảnh quan rừng và thu mua sợi.,vi,sdg_vi_corpus
+gp06,Environments,goal15,Hệ sinh thái núi.,vi,sdg_vi_corpus
+gp06,Environments,goal15,Suy thoái môi trường sống tự nhiên.,vi,sdg_vi_corpus
+gp06,Environments,goal15,Hệ sinh thái trên cạn và nước ngọt nội địa.,vi,sdg_vi_corpus
+gp06,Environments,goal15,"Đo lường, quản lý, giảm thiểu tác động lên hệ sinh thái và tài nguyên thiên nhiên.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Mở rộng thực hành tốt về quy hoạch, quản lý sử dụng đất.",vi,sdg_vi_corpus
+gp06,Environments,goal15,Đầu tư hạ tầng tự nhiên như lựa chọn cạnh tranh chi phí so với hạ tầng xám.,vi,sdg_vi_corpus
+gp06,Environments,goal15,Tài trợ phục hồi đất suy thoái cho mục đích sản xuất hoặc bảo tồn.,vi,sdg_vi_corpus
+gp06,Environments,goal15,"Mở rộng thị trường sản phẩm rừng có trách nhiệm, hỗ trợ quản lý rừng bền vững.",vi,sdg_vi_corpus
+gp06,Environments,goal15,"Không phá rừng, chứng chỉ FSC/PEFC, bảo tồn đa dạng sinh học tại dự án.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Thúc đẩy xã hội hòa bình, bao trùm vì phát triển bền vững, cung cấp tiếp cận công lý cho tất cả, xây dựng thể chế hiệu quả, chịu trách nhiệm, bao trùm ở mọi cấp.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,Giảm đáng kể mọi hình thức bạo lực và tỷ lệ tử vong liên quan ở mọi nơi.,vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Chấm dứt lạm dụng, bóc lột, buôn bán, mọi hình thức bạo lực, tra tấn đối với trẻ em.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Thúc đẩy nhà nước pháp quyền ở cấp quốc gia, quốc tế, bảo đảm tiếp cận công lý bình đẳng cho tất cả.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Đến năm 2030, giảm đáng kể dòng chảy bất hợp pháp tài chính, vũ khí, tăng cường thu hồi, trả lại tài sản bị đánh cắp, chống mọi hình thức tội phạm có tổ chức.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Giảm đáng kể tham nhũng, hối lộ dưới mọi hình thức.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Phát triển thể chế hiệu quả, chịu trách nhiệm, minh bạch ở mọi cấp.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Bảo đảm ra quyết định đáp ứng, bao trùm, có sự tham gia, đại diện ở mọi cấp.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Mở rộng, tăng cường sự tham gia của các nước đang phát triển vào các thể chế quản trị toàn cầu.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Đến năm 2030, cung cấp danh tính pháp lý cho tất cả, kể cả khai sinh.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Bảo đảm tiếp cận công chúng đối với thông tin, bảo vệ quyền tự do cơ bản, phù hợp pháp luật quốc gia, thỏa thuận quốc tế.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Tăng cường thể chế quốc gia liên quan, kể cả qua hợp tác quốc tế, để xây dựng năng lực ở mọi cấp, đặc biệt nước đang phát triển, nhằm ngăn chặn bạo lực, chống khủng bố, tội phạm.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Thúc đẩy, thực thi luật, chính sách không phân biệt đối xử vì phát triển bền vững.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Doanh nghiệp thịnh vượng trong môi trường hòa bình với thể chế hiệu quả, chi phí vận hành dự đoán được, môi trường làm việc ổn định.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Quản trị hiệu quả, chịu trách nhiệm, minh bạch.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,Tuân thủ pháp luật và quy định.,vi,sdg_vi_corpus
+gp04,Social Development,goal16,Chống tham nhũng.,vi,sdg_vi_corpus
+gp04,Social Development,goal16,Tiếp cận thông tin của công chúng.,vi,sdg_vi_corpus
+gp04,Social Development,goal16,Di dời vật lý và kinh tế.,vi,sdg_vi_corpus
+gp04,Social Development,goal16,Ra quyết định bao trùm.,vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Tuân thủ luật, hướng tới chuẩn mực quốc tế; yêu cầu và hỗ trợ đối tác kinh doanh làm tương tự.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Đo lường, báo cáo tiến độ thực hiện, kể cả hoạt động tại khu vực rủi ro cao.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Công ty có tuyên bố công khai sẽ chống tham nhũng dưới mọi hình thức, kể cả hối lộ và tống tiền hay không?",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Đạo đức kinh doanh, kênh tố giác, phòng chống rửa tiền, xung đột lợi ích.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Bảo vệ người tố cáo, minh bạch thuế, chống hối lộ trong chuỗi cung ứng.",vi,sdg_vi_corpus
+gp04,Social Development,goal16,"Quyền con người, an ninh, đối thoại với cộng đồng, khiếu nại, đền bù.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,Tăng cường phương thức thực hiện và làm sống lại đối tác toàn cầu vì phát triển bền vững.,vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Tăng cường huy động nguồn lực trong nước, kể cả qua hỗ trợ quốc tế cho nước đang phát triển, để cải thiện năng lực thu thuế và nguồn thu khác.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Các nước phát triển thực hiện đầy đủ cam kết hỗ trợ phát triển chính thức, kể cả cam kết 0,7% ODA/GNI cho nước đang phát triển và 0,15–0,20% ODA/GNI cho nước kém phát triển.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,Huy động thêm nguồn lực tài chính cho nước đang phát triển từ nhiều nguồn.,vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Hỗ trợ nước đang phát triển đạt bền vững nợ dài hạn qua chính sách phối hợp nhằm tài trợ, giảm, tái cơ cấu nợ, xử lý nợ bên ngoài của nước nghèo Heavily Indebted Poor Countries.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Áp dụng, thực hiện chế độ thúc đẩy đầu tư cho các nước kém phát triển.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Tăng cường hợp tác Bắc–Nam, Nam–Nam, tam giác khu vực, quốc tế về tiếp cận khoa học, công nghệ, đổi mới, tăng chia sẻ tri thức.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Thúc đẩy phát triển, chuyển giao, phổ biến công nghệ thân thiện môi trường cho nước đang phát triển với điều khoản thuận lợi.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Vận hành đầy đủ ngân hàng công nghệ, cơ chế xây dựng năng lực khoa học, công nghệ, đổi mới cho nước kém phát triển.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Tăng cường hỗ trợ quốc tế cho thực hiện xây dựng năng lực hiệu quả, có mục tiêu ở nước đang phát triển để hỗ trợ kế hoạch quốc gia thực hiện mọi SDG.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Thúc đẩy hệ thống thương mại đa phương phổ quát, dựa luật, mở, không phân biệt, công bằng dưới WTO, kể cả kết thúc vòng đàm phán Doha.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Tăng đáng kể xuất khẩu của nước đang phát triển, nhằm tăng gấp đôi tỷ trọng xuất khẩu toàn cầu của nước kém phát triển đến năm 2020.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Thực hiện kịp thời tiếp cận thị trường không hạn ngạch, không thuế quan trên cơ sở lâu dài cho mọi nước kém phát triển, phù hợp quyết định WTO.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Tăng cường ổn định kinh tế vĩ mô toàn cầu, kể cả qua phối hợp chính sách, nhất quán chính sách.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,Tăng cường nhất quán chính sách vì phát triển bền vững.,vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Tôn trọng không gian chính sách, lãnh đạo của mỗi quốc gia để thiết lập, thực hiện chính sách xóa nghèo, phát triển bền vững.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Tăng cường đối tác toàn cầu vì phát triển bền vững, bổ sung bởi đối tác đa bên huy động, chia sẻ tri thức, chuyên môn, công nghệ, nguồn lực tài chính.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Khuyến khích, thúc đẩy đối tác công, công–tư, xã hội dân sự hiệu quả, xây trên kinh nghiệm, chiến lược nguồn lực của đối tác.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Đến năm 2020, tăng hỗ trợ xây dựng năng lực cho nước đang phát triển nhằm tăng đáng kể sẵn có dữ liệu chất lượng cao, kịp thời, tin cậy, tách theo thu nhập, giới, tuổi, chủng tộc, dân tộc, tình trạng di cư, khuyết tật, vị trí địa lý.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Đến năm 2030, dựa trên sáng kiến hiện có, xây đo lường tiến bộ phát triển bền vững bổ sung GDP, hỗ trợ xây dựng năng lực thống kê ở nước đang phát triển.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Dữ liệu, giám sát và trách nhiệm giải trình.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Hợp tác với nhà cung cấp, khách hàng, cộng đồng, nhà nước, tổ chức quốc tế để thực hiện SDG.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Công bố báo cáo bền vững, đối tác đa bên, chuyển giao công nghệ, chuỗi cung ứng có trách nhiệm.",vi,sdg_vi_corpus
+gp04,Social Development,goal17,"Tham gia hiệp hội ngành, sáng kiến UN Global Compact, GRI, hỗ trợ nhà cung cấp nhỏ nâng năng lực ESG.",vi,sdg_vi_corpus

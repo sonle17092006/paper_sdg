@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-09-07T14:04:27+07:00",
+  "steps": {
+    "process_data_sdg": {
+      "status": "done",
+      "at": "2026-09-07T14:04:27+07:00",
+      "n_sdg": 1032
+    },
+    "process_data": {
+      "status": "done",
+      "at": "2026-09-09T15:14:28+07:00",
+      "n_sentences": 46912,
+      "n_files": 29,
+      "by_company": {
+        "PAN": 10578,
+        "PLX": 9926,
+        "PNJ": 8403,
+        "VNM": 18005
+      },
+      "by_lang": {
+        "vi": 46912
+      },
+      "n_sdg": 1032
+    },
+    "load_models": {
+      "status": "done",
+      "at": "2026-09-07T14:12:44+07:00",
+      "models": {
+        "en_sbert": true,
+        "en_sentiment": true,
+        "vi_sbert": true,
+        "vi_sentiment": true
+      },
+      "note": "Models cached under models/. Subsequent runs load from disk."
+    },
+    "encode_similarity": {
+      "status": "done",
+      "at": "2026-09-08T19:06:18+07:00",
+      "n_rows": 17047,
+      "langs": [
+        "vi"
+      ],
+      "embed_dir": "C:\\Code\\paper_sdg\\data\\embeddings"
+    },
+    "sentiment": {
+      "status": "done",
+      "at": "2026-09-08T21:37:08+07:00",
+      "n_rows": 17047,
+      "labels": {
+        "Positive": 11891,
+        "Neutral": 3126,
+        "Negative": 2030
+      }
+    }
+  },
+  "updated_at": "2026-09-09T15:14:28+07:00"
+}

@@ -1,0 +1,25 @@
+{
+  "lang": "vi",
+  "n_sdg": 391,
+  "n_report": 17047,
+  "dim": 768,
+  "sdg_by_goal": {
+    "goal01": 24,
+    "goal02": 21,
+    "goal03": 25,
+    "goal04": 22,
+    "goal05": 23,
+    "goal06": 21,
+    "goal07": 19,
+    "goal08": 22,
+    "goal09": 21,
+    "goal10": 24,
+    "goal11": 22,
+    "goal12": 25,
+    "goal13": 21,
+    "goal14": 24,
+    "goal15": 27,
+    "goal16": 26,
+    "goal17": 24
+  }
+}

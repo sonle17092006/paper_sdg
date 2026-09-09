@@ -1,0 +1,38 @@
+# ==============================================================================
+# Requirements for Paper SDG (Kang & Kim 2022 adaptation for Vietnamese reports)
+# ==============================================================================
+# Hướng dẫn cài đặt:
+#   python -m pip install -r requirements.txt
+#
+# Lưu ý về OCR (Tesseract):
+#   Tesseract OCR là phần mềm hệ thống (không cài qua pip):
+#   - Windows: winget install --id UB-Mannheim.TesseractOCR
+#   - Model dữ liệu tiếng Việt (vie.traineddata) tự động tải vào models/tessdata/ khi chạy --ocr
+# ==============================================================================
+
+# --- Xử lý dữ liệu & Báo cáo PDF ---
+pandas>=2.0.0
+numpy>=1.24.0
+openpyxl>=3.1.0                # Đọc/ghi dữ liệu SDG corpus Excel (.xlsx)
+PyMuPDF>=1.24.0                # Trích xuất văn bản từ file PDF (import fitz)
+pyarrow>=14.0.0                # Lưu trữ bảng parquet tối ưu tốc độ và dung lượng
+
+# --- Mô hình ngôn ngữ & Học sâu (Embedding & Sentiment) ---
+torch>=2.0.0
+transformers>=4.40.0
+sentence-transformers>=2.2.0
+huggingface_hub>=0.20.0
+pyvi>=0.1.1                    # Tách từ tiếng Việt cho PhoBERT Sentiment
+
+# --- OCR cho PDF scan (Sử dụng khi chạy: process_data.py --ocr) ---
+Pillow>=10.0.0                 # Xử lý ảnh trang PDF
+pytesseract>=0.3.10            # Python wrapper cho Tesseract OCR engine
+rapidocr-onnxruntime>=1.2.0    # Engine OCR dự phòng chạy ONNX
+
+# --- Trực quan hóa & Tiện ích ---
+matplotlib>=3.8.0
+seaborn>=0.13.0
+tqdm>=4.66.0
+
+# --- Môi trường Notebook (Sử dụng với notebook.ipynb) ---
+ipykernel>=6.25.0
