@@ -120,8 +120,69 @@ def main() -> None:
         # 1. Vẽ cơ cấu Sentiment chi tiết từng công ty
         plot_sentiment_by_company(counts)
 
-        monthly, _annual, corr = build_stock_sentiment_view(counts, use_live=True)
+        monthly, annual, corr = build_stock_sentiment_view(counts, use_live=True)
         plot_stock_vs_sentiment_greenwashing(monthly, corr)
+
+        # Tính điểm tẩy xanh (Greenwashing Score) & xếp hạng
+        gw = annual.copy()
+        gw["n_cau"] = (
+            gw[["Positive", "Negative", "Neutral"]].sum(axis=1)
+            if set(["Positive", "Negative", "Neutral"]).issubset(gw.columns)
+            else np.nan
+        )
+        d_p = pd.to_numeric(gw["price_change_pct"], errors="coerce")
+        d_r = pd.to_numeric(gw["sentiment_ratio_change_pct"], errors="coerce")
+        gw["gw_score"] = (np.maximum(0, -d_p) * np.maximum(0, d_r) / 100.0).round(2)
+        gw["mau_mong"] = gw["n_cau"] < 80
+
+        def _muc(x: float) -> str:
+            if pd.isna(x) or x <= 0:
+                return "Không"
+            if x <= 2:
+                return "Nhẹ"
+            if x <= 8:
+                return "Trung bình"
+            return "Mạnh"
+
+        gw["muc_do"] = gw["gw_score"].map(_muc)
+        gw.loc[(d_p < -10) & (d_r < 0), "muc_do"] = "Trung thực"
+
+        rows = []
+        for comp, g in gw.groupby("company"):
+            g2 = g.dropna(subset=["price_change_pct"])
+            rows.append(
+                {
+                    "company": comp,
+                    "n_nam": int(len(g2)),
+                    "n_nam_gia_tut": int((g2["price_change_pct"] < 0).sum()),
+                    "n_nam_GW>0": int((g2["gw_score"] > 0).sum()),
+                    "GW_trung_binh": round(float(g2["gw_score"].mean()), 2),
+                    "GW_max": round(float(g2["gw_score"].max()), 2),
+                    "nam_GW_max": (
+                        str(g2.loc[g2["gw_score"].idxmax(), "year"])
+                        if float(g2["gw_score"].max()) > 0
+                        else "-"
+                    ),
+                    "n_nam_trung_thuc": int((g2["muc_do"] == "Trung thực").sum()),
+                }
+            )
+        rank = pd.DataFrame(rows).sort_values(["GW_trung_binh", "GW_max"], ascending=False)
+
+        heat = gw.pivot(index="company", columns="year", values="gw_score").fillna(0)
+        fig, axes = plt.subplots(1, 2, figsize=(14, 4.2))
+        sns.heatmap(heat, annot=True, fmt=".2f", cmap="Reds", ax=axes[0], linewidths=0.4)
+        axes[0].set_title("Điểm tẩy xanh GW theo công ty–năm")
+        axes[0].set_xlabel("")
+        axes[1].bar(rank["company"], rank["GW_trung_binh"], color="#d95f02", alpha=0.85)
+        axes[1].set_title("GW trung bình (cao = thiên tẩy xanh hơn)")
+        axes[1].set_ylabel("GW trung bình")
+        axes[1].grid(True, axis="y", linestyle="--", alpha=0.4)
+        fig.tight_layout()
+        fig.savefig(FIGURE_DIR / "greenwashing_score.png", dpi=150, bbox_inches="tight")
+        plt.close(fig)
+
+        gw.to_csv(RESULT_DIR / "table_greenwashing_score.csv", index=False, encoding="utf-8-sig")
+        rank.to_csv(RESULT_DIR / "table_greenwashing_rank.csv", index=False, encoding="utf-8-sig")
 
     print("tables ->", RESULT_DIR)
     print("figures ->", FIGURE_DIR)
