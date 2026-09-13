@@ -493,80 +493,89 @@ def load_all_tables():
         ],
     ]
 
-    # Table 2: 42 reports statistics
+    # Table 2: Mapping of 17 SDGs into 6 Categories (Kang & Kim, 2022)
+    t2_headers_vi = ["Nhóm nhu cầu (Category)", "Mục tiêu thành phần (SDGs)", "Định nghĩa và Nội hàm trọng tâm"]
+    t2_data_vi = [
+        ["Đời sống (Life)", "SDG 1, 2, 3", "Xóa nghèo, Không còn nạn đói, Sức khỏe và có cuộc sống tốt"],
+        ["Kinh tế (Economic)", "SDG 8, 9", "Việc làm tốt và tăng trưởng kinh tế, Công nghiệp sáng tạo và hạ tầng"],
+        ["Công bằng (Equity)", "SDG 4, 5, 10", "Giáo dục chất lượng, Bình đẳng giới, Giảm bất bình đẳng trong xã hội"],
+        ["Xã hội (Social)", "SDG 11, 16, 17", "Đô thị bền vững, Thể chế và công lý vững mạnh, Quan hệ đối tác toàn cầu"],
+        ["Tài nguyên (Resources)", "SDG 6, 7, 12", "Nước sạch vệ sinh, Năng lượng sạch khả chi, Tiêu dùng và sản xuất trách nhiệm"],
+        ["Môi trường (Environments)", "SDG 13, 14, 15", "Hành động khí hậu, Bảo tồn tài nguyên biển, Bảo tồn hệ sinh thái trên cạn"],
+    ]
+
+    t2_headers_en = ["Human-Needs Category", "Constituent SDGs", "Core Focus and Thematic Definition"]
+    t2_data_en = [
+        ["Life", "SDG 1, 2, 3", "No Poverty, Zero Hunger, Good Health and Well-being"],
+        ["Economic", "SDG 8, 9", "Decent Work and Economic Growth, Industry, Innovation, and Infrastructure"],
+        ["Equity", "SDG 4, 5, 10", "Quality Education, Gender Equality, Reduced Inequalities"],
+        ["Social", "SDG 11, 16, 17", "Sustainable Cities, Peace, Justice and Strong Institutions, Partnerships for the Goals"],
+        ["Resources", "SDG 6, 7, 12", "Clean Water and Sanitation, Affordable and Clean Energy, Responsible Consumption"],
+        ["Environments", "SDG 13, 14, 15", "Climate Action, Life Below Water, Life on Land"],
+    ]
+
+    # Table 3: 42 reports statistics
     df_stats = pd.read_csv(DATA_DIR / "table_report_sentence_stats.csv")
-    t2_headers_vi = ["Công ty", "Năm", "Tên tệp báo cáo PDF", "Số câu", "Số trang", "Mật độ (câu/trang)"]
-    t2_data_vi = []
-    for _, r in df_stats.iterrows():
-        t2_data_vi.append([
-            str(r["Công ty"]),
-            str(r["Năm"]),
-            str(r["Tên file"]),
-            f"{int(r['Số câu']):,}",
-            str(r["Số trang"]),
-            f"{float(r['Số câu / trang']):.2f}",
-        ])
-
-    t2_headers_en = ["Company", "Year", "Report PDF Filename", "Sentences", "Pages", "Density (sent/page)"]
-    t2_data_en = []
-    for _, r in df_stats.iterrows():
-        t2_data_en.append([
-            str(r["Công ty"]),
-            str(r["Năm"]),
-            str(r["Tên file"]),
-            f"{int(r['Số câu']):,}",
-            str(r["Số trang"]),
-            f"{float(r['Số câu / trang']):.2f}",
-        ])
-
-    # Table 3: 6 Category Means
-    df_cat = pd.read_csv(DATA_DIR / "table_company_year_6cat.csv")
-    t3_headers_vi = ["Công ty", "Năm", "Đời sống", "Kinh tế", "Công bằng", "Xã hội", "Tài nguyên", "Môi trường"]
+    t3_headers_vi = ["Công ty", "Năm", "Tên tệp báo cáo PDF", "Số câu", "Số trang", "Mật độ (câu/trang)"]
     t3_data_vi = []
-    for _, r in df_cat.iterrows():
+    for _, r in df_stats.iterrows():
         t3_data_vi.append([
-            str(r["company"]),
-            str(r["year"]),
-            f"{float(r['Life']):.2f}",
-            f"{float(r['Economic']):.2f}",
-            f"{float(r['Equity']):.2f}",
-            f"{float(r['Social']):.2f}",
-            f"{float(r['Resources']):.2f}",
-            f"{float(r['Environments']):.2f}",
+            str(r["Công ty"]),
+            str(r["Năm"]),
+            str(r["Tên file"]),
+            f"{int(r['Số câu']):,}",
+            str(r["Số trang"]),
+            f"{float(r['Số câu / trang']):.2f}",
         ])
 
-    t3_headers_en = ["Company", "Year", "Life", "Economic", "Equity", "Social", "Resources", "Environments"]
+    t3_headers_en = ["Company", "Year", "Report PDF Filename", "Sentences", "Pages", "Density (sent/page)"]
     t3_data_en = []
-    for _, r in df_cat.iterrows():
+    for _, r in df_stats.iterrows():
         t3_data_en.append([
-            str(r["company"]),
-            str(r["year"]),
-            f"{float(r['Life']):.2f}",
-            f"{float(r['Economic']):.2f}",
-            f"{float(r['Equity']):.2f}",
-            f"{float(r['Social']):.2f}",
-            f"{float(r['Resources']):.2f}",
-            f"{float(r['Environments']):.2f}",
+            str(r["Công ty"]),
+            str(r["Năm"]),
+            str(r["Tên file"]),
+            f"{int(r['Số câu']):,}",
+            str(r["Số trang"]),
+            f"{float(r['Số câu / trang']):.2f}",
         ])
 
-    # Table 4: Sentiment Counts
-    df_senti = pd.read_csv(DATA_DIR / "table_sentiment_counts.csv")
-    t4_headers_vi = ["Công ty", "Năm", "Tiêu cực (Neg)", "Trung tính (Neu)", "Tích cực (Pos)", "Tỷ số Pos/Neg"]
+    # Table 4: 6 Category Means
+    df_cat = pd.read_csv(DATA_DIR / "table_company_year_6cat.csv")
+    t4_headers_vi = ["Công ty", "Năm", "Đời sống", "Kinh tế", "Công bằng", "Xã hội", "Tài nguyên", "Môi trường"]
     t4_data_vi = []
-    for _, r in df_senti.iterrows():
+    for _, r in df_cat.iterrows():
         t4_data_vi.append([
             str(r["company"]),
             str(r["year"]),
-            f"{int(r['Negative']):,}",
-            f"{int(r['Neutral']):,}",
-            f"{int(r['Positive']):,}",
-            f"{float(r['Ratio']):.2f}",
+            f"{float(r['Life']):.2f}",
+            f"{float(r['Economic']):.2f}",
+            f"{float(r['Equity']):.2f}",
+            f"{float(r['Social']):.2f}",
+            f"{float(r['Resources']):.2f}",
+            f"{float(r['Environments']):.2f}",
         ])
 
-    t4_headers_en = ["Company", "Year", "Negative (Neg)", "Neutral (Neu)", "Positive (Pos)", "Pos/Neg Ratio"]
+    t4_headers_en = ["Company", "Year", "Life", "Economic", "Equity", "Social", "Resources", "Environments"]
     t4_data_en = []
-    for _, r in df_senti.iterrows():
+    for _, r in df_cat.iterrows():
         t4_data_en.append([
+            str(r["company"]),
+            str(r["year"]),
+            f"{float(r['Life']):.2f}",
+            f"{float(r['Economic']):.2f}",
+            f"{float(r['Equity']):.2f}",
+            f"{float(r['Social']):.2f}",
+            f"{float(r['Resources']):.2f}",
+            f"{float(r['Environments']):.2f}",
+        ])
+
+    # Table 5: Sentiment Counts
+    df_senti = pd.read_csv(DATA_DIR / "table_sentiment_counts.csv")
+    t5_headers_vi = ["Công ty", "Năm", "Tiêu cực (Neg)", "Trung tính (Neu)", "Tích cực (Pos)", "Tỷ số Pos/Neg"]
+    t5_data_vi = []
+    for _, r in df_senti.iterrows():
+        t5_data_vi.append([
             str(r["company"]),
             str(r["year"]),
             f"{int(r['Negative']):,}",
@@ -575,122 +584,16 @@ def load_all_tables():
             f"{float(r['Ratio']):.2f}",
         ])
 
-    # Table 5: Correlation
-    df_corr = pd.read_csv(DATA_DIR / "table_stock_sentiment_correlation.csv")
-    t5_headers_vi = [
-        "Doanh nghiệp",
-        "Cỡ mẫu (n)",
-        "Pearson r",
-        "p-value (Pearson)",
-        "Spearman ρ",
-        "p-value (Spearman)",
-        "Kết luận thống kê",
-    ]
-    t5_data_vi = []
-    for _, r in df_corr.iterrows():
-        comp_name = str(r["company"])
-        if comp_name == "Tổng (pool)":
-            c_label = "Mẫu gộp toàn bộ (Pooled Sample)"
-            interp = "Không có tương quan thống kê (p = 0,79)"
-        else:
-            c_label = comp_name
-            p_val = float(r["p_pearson"])
-            interp = "Mẫu nhỏ (n=5), p ≥ 0,10 (Không suy diễn)" if p_val >= 0.10 else "Tương quan có ý nghĩa (p < 0,10)"
-
-        t5_data_vi.append([
-            c_label,
-            str(r["n"]),
-            f"{float(r['r_pearson']):+.3f}" if pd.notna(r["r_pearson"]) else "N/A",
-            f"{float(r['p_pearson']):.3f}" if pd.notna(r["p_pearson"]) else "N/A",
-            f"{float(r['r_spearman']):+.3f}" if pd.notna(r["r_spearman"]) else "N/A",
-            f"{float(r['p_spearman']):.3f}" if pd.notna(r["p_spearman"]) else "N/A",
-            interp,
-        ])
-
-    t5_headers_en = [
-        "Company",
-        "Sample (n)",
-        "Pearson r",
-        "p-value (Pearson)",
-        "Spearman ρ",
-        "p-value (Spearman)",
-        "Statistical Interpretation",
-    ]
+    t5_headers_en = ["Company", "Year", "Negative (Neg)", "Neutral (Neu)", "Positive (Pos)", "Pos/Neg Ratio"]
     t5_data_en = []
-    for _, r in df_corr.iterrows():
-        comp_name = str(r["company"])
-        if comp_name == "Tổng (pool)":
-            c_label = "Pooled Sample (All Firms)"
-            interp = "Statistically independent (p = 0.79)"
-        else:
-            c_label = comp_name
-            p_val = float(r["p_pearson"])
-            interp = (
-                "Small sample (n=5), p ≥ 0.10 (Inconclusive)"
-                if p_val >= 0.10
-                else "Statistically significant (p < 0.10)"
-            )
-
+    for _, r in df_senti.iterrows():
         t5_data_en.append([
-            c_label,
-            str(r["n"]),
-            f"{float(r['r_pearson']):+.3f}" if pd.notna(r["r_pearson"]) else "N/A",
-            f"{float(r['p_pearson']):.3f}" if pd.notna(r["p_pearson"]) else "N/A",
-            f"{float(r['r_spearman']):+.3f}" if pd.notna(r["r_spearman"]) else "N/A",
-            f"{float(r['p_spearman']):.3f}" if pd.notna(r["p_spearman"]) else "N/A",
-            interp,
-        ])
-
-    # Table 6: Greenwashing Rank
-    df_rank = pd.read_csv(DATA_DIR / "table_greenwashing_rank.csv")
-    t6_headers_vi = [
-        "Hạng",
-        "Doanh nghiệp",
-        "Số năm khảo sát",
-        "Số năm giá giảm",
-        "Số năm GW > 0",
-        "Điểm GW trung bình",
-        "Điểm GW cực đại",
-        "Năm GW cực đại",
-        "Số năm trung thực",
-    ]
-    t6_data_vi = []
-    for idx, r in df_rank.iterrows():
-        t6_data_vi.append([
-            str(idx + 1),
             str(r["company"]),
-            str(r["n_nam"]),
-            str(r["n_nam_gia_tut"]),
-            str(r["n_nam_GW>0"]),
-            f"{float(r['GW_trung_binh']):.2f}",
-            f"{float(r['GW_max']):.2f}",
-            str(r["nam_GW_max"]),
-            str(r["n_nam_trung_thuc"]),
-        ])
-
-    t6_headers_en = [
-        "Rank",
-        "Company",
-        "Years Examined",
-        "Price Drop Years",
-        "GW > 0 Years",
-        "Mean GW Score",
-        "Peak GW Score",
-        "Peak GW Year",
-        "Honest Tone Years",
-    ]
-    t6_data_en = []
-    for idx, r in df_rank.iterrows():
-        t6_data_en.append([
-            str(idx + 1),
-            str(r["company"]),
-            str(r["n_nam"]),
-            str(r["n_nam_gia_tut"]),
-            str(r["n_nam_GW>0"]),
-            f"{float(r['GW_trung_binh']):.2f}",
-            f"{float(r['GW_max']):.2f}",
-            str(r["nam_GW_max"]),
-            str(r["n_nam_trung_thuc"]),
+            str(r["year"]),
+            f"{int(r['Negative']):,}",
+            f"{int(r['Neutral']):,}",
+            f"{int(r['Positive']):,}",
+            f"{float(r['Ratio']):.2f}",
         ])
 
     return {
@@ -704,6 +607,4 @@ def load_all_tables():
         "t4_en": (t4_headers_en, t4_data_en),
         "t5_vi": (t5_headers_vi, t5_data_vi),
         "t5_en": (t5_headers_en, t5_data_en),
-        "t6_vi": (t6_headers_vi, t6_data_vi),
-        "t6_en": (t6_headers_en, t6_data_en),
     }
