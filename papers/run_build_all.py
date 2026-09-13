@@ -197,6 +197,14 @@ def main():
     doc_en_enw.save(str(file_en_enw))
     print(f"Saved EndNote-ready EN paper: {file_en_enw.name} ({file_en_enw.stat().st_size / 1024:.1f} KB)")
 
+    # 5. Sync to papers/ and duplicate to standard paper_sdg_vietnam_vi.docx
+    import shutil
+    papers_dir = ROOT / "papers"
+    shutil.copy2(file_vi, ROOT / "paper_sdg_vietnam_vi.docx")
+    for f in [file_vi, file_en, file_vi_enw, file_en_enw, ROOT / "paper_sdg_vietnam_vi.docx"]:
+        shutil.copy2(f, papers_dir / f.name)
+    print("Synced all DOCX papers to both root directory and papers/ directory.")
+
     print("=" * 60)
     print("ALL PAPERS SUCCESSFULLY GENERATED AND VERIFIED!")
     print("=" * 60)

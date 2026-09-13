@@ -32,15 +32,16 @@ def build_vietnamese_paper(doc: Document, tables_data: dict, is_endnote_ready: b
         return f"{author} ({year})"
 
     # =========================================================================
-    # TIÊU ĐỀ BÀI BÁO VÀ THÔNG TIN HỌC THUẬT
+    # TIÊU ĐỀ BÀI BÁO VÀ THÔNG TIN TÁC GIẢ
     # =========================================================================
     tp = doc.add_paragraph()
     tp.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    tp.paragraph_format.space_before = Pt(12)
+    tp.paragraph_format.space_before = Pt(14)
     tp.paragraph_format.space_after = Pt(6)
     run = tp.add_run(
-        "PHÂN TÍCH VÀ TRỰC QUAN HÓA THÔNG TIN VĂN BẢN TRONG BÁO CÁO PHÁT TRIỂN BỀN VỮNG CỦA DOANH NGHIỆP "
-        "BẰNG PHƯƠNG PHÁP XỬ LÝ NGÔN NGỮ TỰ NHIÊN: BẰNG CHỨNG THỰC NGHIỆM TẠI VIỆT NAM"
+        "XỬ LÝ NGÔN NGỮ TỰ NHIÊN ĐA NGỮ TRONG PHÂN TÍCH SDG VÀ CẢM XÚC "
+        "BÁO CÁO PHÁT TRIỂN BỀN VỮNG CỦA DOANH NGHIỆP: "
+        "BẰNG CHỨNG THỰC NGHIỆM TỪ CÁC DOANH NGHIỆP VIỆT NAM"
     )
     run.font.name = "Times New Roman"
     run.font.size = Pt(15)
@@ -49,10 +50,10 @@ def build_vietnamese_paper(doc: Document, tables_data: dict, is_endnote_ready: b
 
     tep = doc.add_paragraph()
     tep.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    tep.paragraph_format.space_after = Pt(14)
+    tep.paragraph_format.space_after = Pt(12)
     erun = tep.add_run(
-        "Analyzing and Visualizing Text Information in Corporate Sustainability Reports "
-        "Using Natural Language Processing Methods: Empirical Evidence from Vietnam"
+        "Multilingual NLP for SDG and Sentiment Analysis of Corporate Sustainability Reports: "
+        "Evidence from Vietnamese Enterprises"
     )
     erun.font.name = "Times New Roman"
     erun.font.size = Pt(12)
@@ -61,23 +62,12 @@ def build_vietnamese_paper(doc: Document, tables_data: dict, is_endnote_ready: b
 
     ap = doc.add_paragraph()
     ap.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    ap.paragraph_format.space_after = Pt(2)
-    arun = ap.add_run("Nhóm Nghiên cứu Trí tuệ Nhân tạo và Tài chính Bền vững")
+    ap.paragraph_format.space_after = Pt(16)
+    arun = ap.add_run("Lê Đan Sơn, Dương Thị Hoàn")
     arun.font.name = "Times New Roman"
-    arun.font.size = Pt(11.5)
+    arun.font.size = Pt(12)
     arun.bold = True
     arun.font.color.rgb = pb.COLOR_BLACK
-
-    aff_p = doc.add_paragraph()
-    aff_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    aff_p.paragraph_format.space_after = Pt(14)
-    aff_run = aff_p.add_run(
-        "Khoa Tài chính - Ngân hàng, Trường Đại học Kinh tế\n"
-        "Email liên hệ: research.esg@vietnam-analytics.edu.vn"
-    )
-    aff_run.font.name = "Times New Roman"
-    aff_run.font.size = Pt(10.5)
-    aff_run.font.color.rgb = pb.COLOR_BLACK
 
     # =========================================================================
     # TÓM TẮT & ABSTRACT

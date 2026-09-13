@@ -36,10 +36,10 @@ def build_english_paper(doc: Document, tables_data: dict, is_endnote_ready: bool
     tp = doc.add_paragraph()
     tp.alignment = WD_ALIGN_PARAGRAPH.CENTER
     tp.paragraph_format.space_before = Pt(14)
-    tp.paragraph_format.space_after = Pt(8)
+    tp.paragraph_format.space_after = Pt(12)
     run = tp.add_run(
-        "ANALYZING AND VISUALIZING TEXT INFORMATION IN CORPORATE SUSTAINABILITY REPORTS "
-        "USING NATURAL LANGUAGE PROCESSING METHODS: EMPIRICAL EVIDENCE FROM VIETNAM"
+        "MULTILINGUAL NLP FOR SDG AND SENTIMENT ANALYSIS OF CORPORATE SUSTAINABILITY REPORTS: "
+        "EVIDENCE FROM VIETNAMESE ENTERPRISES"
     )
     run.font.name = "Times New Roman"
     run.font.size = Pt(15)
@@ -48,23 +48,12 @@ def build_english_paper(doc: Document, tables_data: dict, is_endnote_ready: bool
 
     ap = doc.add_paragraph()
     ap.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    ap.paragraph_format.space_after = Pt(2)
-    arun = ap.add_run("Artificial Intelligence and Sustainable Finance Research Group")
+    ap.paragraph_format.space_after = Pt(18)
+    arun = ap.add_run("Le Dan Son, Duong Thi Hoan")
     arun.font.name = "Times New Roman"
-    arun.font.size = Pt(11.5)
+    arun.font.size = Pt(12)
     arun.bold = True
     arun.font.color.rgb = pb.COLOR_BLACK
-
-    aff_p = doc.add_paragraph()
-    aff_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    aff_p.paragraph_format.space_after = Pt(14)
-    aff_run = aff_p.add_run(
-        "Department of Finance and Banking, University of Economics\n"
-        "Correspondence: research.esg@vietnam-analytics.edu.vn"
-    )
-    aff_run.font.name = "Times New Roman"
-    aff_run.font.size = Pt(10.5)
-    aff_run.font.color.rgb = pb.COLOR_BLACK
 
     # =========================================================================
     # ABSTRACT & KEYWORDS
