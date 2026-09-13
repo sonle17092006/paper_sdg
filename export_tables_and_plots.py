@@ -20,11 +20,16 @@ ROOT = Path(__file__).resolve().parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 from config import CATEGORY_ORDER, EMBED_DIR, FIGURE_DIR, GOAL_COLS, GOAL_TITLE_VI, RESULT_DIR
 from src.aggregate import category_means, company_year_means, minmax_scale_goals, sentiment_ratio
 from src.encode import cosine_from_normalized, mean_similarity_by_goal
 from src.plots import plot_sentiment_by_company, plot_stock_vs_sentiment_greenwashing
-from src.stock import fetch_annual_stock_prices, merge_stock_and_esg
+from src.stock import build_stock_sentiment_view
 
 
 def load_parts() -> pd.DataFrame:
@@ -115,10 +120,8 @@ def main() -> None:
         # 1. Vẽ cơ cấu Sentiment chi tiết từng công ty
         plot_sentiment_by_company(counts)
 
-        # 2. Tải giá cổ phiếu và vẽ biểu đồ lồng ghép đối chiếu Greenwashing
-        stock_df = fetch_annual_stock_prices(use_live=True)
-        df_merged = merge_stock_and_esg(counts, df_cat, stock_df)
-        plot_stock_vs_sentiment_greenwashing(df_merged)
+        monthly, _annual, corr = build_stock_sentiment_view(counts, use_live=True)
+        plot_stock_vs_sentiment_greenwashing(monthly, corr)
 
     print("tables ->", RESULT_DIR)
     print("figures ->", FIGURE_DIR)

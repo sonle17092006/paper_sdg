@@ -1,15 +1,70 @@
 {
   "files": {
-    "PAN/PAN_SR_2019.pdf": {
-      "path": "C:\\Code\\paper_sdg\\report pdfs\\PAN\\PAN_SR_2019.pdf",
-      "rel": "report pdfs\\PAN\\PAN_SR_2019.pdf",
-      "mtime_ns": 1788764717548597300,
-      "size": 17419216,
-      "sha1_key": "da38a7fe87119e02",
-      "n_sentences": 1227,
+    "BVH/BVH_SR_2020.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\BVH\\BVH_SR_2020.pdf",
+      "rel": "report pdfs\\BVH\\BVH_SR_2020.pdf",
+      "mtime_ns": 1789229070943835600,
+      "size": 31298787,
+      "sha1_key": "706b1808b5f620be",
+      "n_sentences": 5627,
       "doc_lang": "vi",
-      "company": "PAN",
-      "year": "2019"
+      "company": "BVH",
+      "year": "2020"
+    },
+    "BVH/BVH_SR_2021.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\BVH\\BVH_SR_2021.pdf",
+      "rel": "report pdfs\\BVH\\BVH_SR_2021.pdf",
+      "mtime_ns": 1789228920481466100,
+      "size": 46230230,
+      "sha1_key": "1f314328c548e1b7",
+      "n_sentences": 6388,
+      "doc_lang": "vi",
+      "company": "BVH",
+      "year": "2021"
+    },
+    "BVH/BVH_SR_2022.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\BVH\\BVH_SR_2022.pdf",
+      "rel": "report pdfs\\BVH\\BVH_SR_2022.pdf",
+      "mtime_ns": 1789228927487255800,
+      "size": 80583215,
+      "sha1_key": "38ac02c316f843d2",
+      "n_sentences": 6419,
+      "doc_lang": "vi",
+      "company": "BVH",
+      "year": "2022"
+    },
+    "BVH/BVH_SR_2023.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\BVH\\BVH_SR_2023.pdf",
+      "rel": "report pdfs\\BVH\\BVH_SR_2023.pdf",
+      "mtime_ns": 1789228932765786200,
+      "size": 47894007,
+      "sha1_key": "76dc9bb9af6db965",
+      "n_sentences": 3691,
+      "doc_lang": "vi",
+      "company": "BVH",
+      "year": "2023"
+    },
+    "BVH/BVH_SR_2024.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\BVH\\BVH_SR_2024.pdf",
+      "rel": "report pdfs\\BVH\\BVH_SR_2024.pdf",
+      "mtime_ns": 1789228938989274900,
+      "size": 55359772,
+      "sha1_key": "4120f90dbf482fe3",
+      "n_sentences": 4037,
+      "doc_lang": "vi",
+      "company": "BVH",
+      "year": "2024"
+    },
+    "BVH/BVH_SR_2025.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\BVH\\BVH_SR_2025.pdf",
+      "rel": "report pdfs\\BVH\\BVH_SR_2025.pdf",
+      "mtime_ns": 1789228951299643700,
+      "size": 127737434,
+      "sha1_key": "e5b8328bb8e6fe56",
+      "n_sentences": 4515,
+      "doc_lang": "vi",
+      "company": "BVH",
+      "year": "2025"
     },
     "PAN/PAN_SR_2020.pdf": {
       "path": "C:\\Code\\paper_sdg\\report pdfs\\PAN\\PAN_SR_2020.pdf",
@@ -77,28 +132,6 @@
       "company": "PAN",
       "year": "2025"
     },
-    "PLX/PLX_SR_2018.pdf": {
-      "path": "C:\\Code\\paper_sdg\\report pdfs\\PLX\\PLX_SR_2018.pdf",
-      "rel": "report pdfs\\PLX\\PLX_SR_2018.pdf",
-      "mtime_ns": 1788762874789693100,
-      "size": 8715720,
-      "sha1_key": "bce62ad01daaa7e8",
-      "n_sentences": 1149,
-      "doc_lang": "vi",
-      "company": "PLX",
-      "year": "2018"
-    },
-    "PLX/PLX_SR_2019.pdf": {
-      "path": "C:\\Code\\paper_sdg\\report pdfs\\PLX\\PLX_SR_2019.pdf",
-      "rel": "report pdfs\\PLX\\PLX_SR_2019.pdf",
-      "mtime_ns": 1788763217846417900,
-      "size": 35251754,
-      "sha1_key": "b60cf7954a552783",
-      "n_sentences": 2127,
-      "doc_lang": "vi",
-      "company": "PLX",
-      "year": "2019"
-    },
     "PLX/PLX_SR_2020.pdf": {
       "path": "C:\\Code\\paper_sdg\\report pdfs\\PLX\\PLX_SR_2020.pdf",
       "rel": "report pdfs\\PLX\\PLX_SR_2020.pdf",
@@ -138,7 +171,7 @@
       "mtime_ns": 1788762805227970800,
       "size": 77534081,
       "sha1_key": "428235fd0db7823a",
-      "n_sentences": 971,
+      "n_sentences": 969,
       "doc_lang": "vi",
       "company": "PLX",
       "year": "2023"
@@ -164,17 +197,6 @@
       "doc_lang": "vi",
       "company": "PLX",
       "year": "2025"
-    },
-    "PNJ/PNJ_SR_2019.pdf": {
-      "path": "C:\\Code\\paper_sdg\\report pdfs\\PNJ\\PNJ_SR_2019.pdf",
-      "rel": "report pdfs\\PNJ\\PNJ_SR_2019.pdf",
-      "mtime_ns": 1788762779122869500,
-      "size": 8384514,
-      "sha1_key": "48a3101f977c31d1",
-      "n_sentences": 1512,
-      "doc_lang": "vi",
-      "company": "PNJ",
-      "year": "2019"
     },
     "PNJ/PNJ_SR_2020.pdf": {
       "path": "C:\\Code\\paper_sdg\\report pdfs\\PNJ\\PNJ_SR_2020.pdf",
@@ -204,7 +226,7 @@
       "mtime_ns": 1788762634156953700,
       "size": 13906945,
       "sha1_key": "93c0c42dd60e4623",
-      "n_sentences": 12,
+      "n_sentences": 669,
       "doc_lang": "vi",
       "company": "PNJ",
       "year": "2022"
@@ -242,16 +264,137 @@
       "company": "PNJ",
       "year": "2025"
     },
-    "VNM/VNM_SR_2019.pdf": {
-      "path": "C:\\Code\\paper_sdg\\report pdfs\\VNM\\VNM_SR_2019.pdf",
-      "rel": "report pdfs\\VNM\\VNM_SR_2019.pdf",
-      "mtime_ns": 1788762915134797100,
-      "size": 35754188,
-      "sha1_key": "47bf94abfe0792dc",
-      "n_sentences": 1941,
+    "SSI/SSI_SR_2020.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\SSI\\SSI_SR_2020.pdf",
+      "rel": "report pdfs\\SSI\\SSI_SR_2020.pdf",
+      "mtime_ns": 1789233534559290100,
+      "size": 12262239,
+      "sha1_key": "0ff3d4ce904b8541",
+      "n_sentences": 1246,
       "doc_lang": "vi",
-      "company": "VNM",
-      "year": "2019"
+      "company": "SSI",
+      "year": "2020"
+    },
+    "SSI/SSI_SR_2021.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\SSI\\SSI_SR_2021.pdf",
+      "rel": "report pdfs\\SSI\\SSI_SR_2021.pdf",
+      "mtime_ns": 1789233537297137500,
+      "size": 5363343,
+      "sha1_key": "f7da3919fb5dfd78",
+      "n_sentences": 1213,
+      "doc_lang": "vi",
+      "company": "SSI",
+      "year": "2021"
+    },
+    "SSI/SSI_SR_2022.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\SSI\\SSI_SR_2022.pdf",
+      "rel": "report pdfs\\SSI\\SSI_SR_2022.pdf",
+      "mtime_ns": 1789233537663657500,
+      "size": 9368933,
+      "sha1_key": "9a365a81fce0053a",
+      "n_sentences": 1190,
+      "doc_lang": "vi",
+      "company": "SSI",
+      "year": "2022"
+    },
+    "SSI/SSI_SR_2023.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\SSI\\SSI_SR_2023.pdf",
+      "rel": "report pdfs\\SSI\\SSI_SR_2023.pdf",
+      "mtime_ns": 1789234549169945900,
+      "size": 62142267,
+      "sha1_key": "17bbbaacc7919270",
+      "n_sentences": 1203,
+      "doc_lang": "vi",
+      "company": "SSI",
+      "year": "2023"
+    },
+    "SSI/SSI_SR_2024.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\SSI\\SSI_SR_2024.pdf",
+      "rel": "report pdfs\\SSI\\SSI_SR_2024.pdf",
+      "mtime_ns": 1789233538567247100,
+      "size": 6556066,
+      "sha1_key": "ce3090154a0a572a",
+      "n_sentences": 1669,
+      "doc_lang": "vi",
+      "company": "SSI",
+      "year": "2024"
+    },
+    "SSI/SSI_SR_2025.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\SSI\\SSI_SR_2025.pdf",
+      "rel": "report pdfs\\SSI\\SSI_SR_2025.pdf",
+      "mtime_ns": 1789233248267803500,
+      "size": 111291968,
+      "sha1_key": "500527075ec6b72f",
+      "n_sentences": 1938,
+      "doc_lang": "vi",
+      "company": "SSI",
+      "year": "2025"
+    },
+    "VCS/VCS_SR_2020.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\VCS\\VCS_SR_2020.pdf",
+      "rel": "report pdfs\\VCS\\VCS_SR_2020.pdf",
+      "mtime_ns": 1789228898559361900,
+      "size": 15905413,
+      "sha1_key": "f5e80b4a96adfbf7",
+      "n_sentences": 2174,
+      "doc_lang": "vi",
+      "company": "VCS",
+      "year": "2020"
+    },
+    "VCS/VCS_SR_2021.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\VCS\\VCS_SR_2021.pdf",
+      "rel": "report pdfs\\VCS\\VCS_SR_2021.pdf",
+      "mtime_ns": 1789228902463364500,
+      "size": 19080009,
+      "sha1_key": "06223c81411a8607",
+      "n_sentences": 2139,
+      "doc_lang": "vi",
+      "company": "VCS",
+      "year": "2021"
+    },
+    "VCS/VCS_SR_2022.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\VCS\\VCS_SR_2022.pdf",
+      "rel": "report pdfs\\VCS\\VCS_SR_2022.pdf",
+      "mtime_ns": 1789228905938291500,
+      "size": 22689689,
+      "sha1_key": "7335793f3d82e544",
+      "n_sentences": 2455,
+      "doc_lang": "vi",
+      "company": "VCS",
+      "year": "2022"
+    },
+    "VCS/VCS_SR_2023.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\VCS\\VCS_SR_2023.pdf",
+      "rel": "report pdfs\\VCS\\VCS_SR_2023.pdf",
+      "mtime_ns": 1789228907031217400,
+      "size": 14797721,
+      "sha1_key": "587a6b05dfacfbcc",
+      "n_sentences": 2454,
+      "doc_lang": "vi",
+      "company": "VCS",
+      "year": "2023"
+    },
+    "VCS/VCS_SR_2024.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\VCS\\VCS_SR_2024.pdf",
+      "rel": "report pdfs\\VCS\\VCS_SR_2024.pdf",
+      "mtime_ns": 1789228911722496400,
+      "size": 21239666,
+      "sha1_key": "d01a8cf63c611bc1",
+      "n_sentences": 2516,
+      "doc_lang": "vi",
+      "company": "VCS",
+      "year": "2024"
+    },
+    "VCS/VCS_SR_2025.pdf": {
+      "path": "C:\\Code\\paper_sdg\\report pdfs\\VCS\\VCS_SR_2025.pdf",
+      "rel": "report pdfs\\VCS\\VCS_SR_2025.pdf",
+      "mtime_ns": 1789228912893145400,
+      "size": 16871385,
+      "sha1_key": "c8244e1f2ee0563d",
+      "n_sentences": 5974,
+      "doc_lang": "vi",
+      "company": "VCS",
+      "year": "2025"
     },
     "VNM/VNM_SR_2020.pdf": {
       "path": "C:\\Code\\paper_sdg\\report pdfs\\VNM\\VNM_SR_2020.pdf",
@@ -320,5 +463,5 @@
       "year": "2025"
     }
   },
-  "updated_at": "2026-09-09T15:14:28+07:00"
+  "updated_at": "2026-09-13T20:37:47+07:00"
 }

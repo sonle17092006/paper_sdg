@@ -1,0 +1,9 @@
+﻿company,n,r_pearson,p_pearson,r_spearman,p_spearman,doc
+BVH,5,-0.355,0.558,0.0,1.0,None
+PAN,5,0.134,0.83,-0.1,0.873,None
+PLX,5,0.434,0.465,0.6,0.285,None
+PNJ,5,-0.692,0.195,-0.9,0.037,None
+SSI,5,0.237,0.701,0.5,0.391,None
+VCS,5,0.125,0.842,-0.2,0.747,None
+VNM,5,0.717,0.173,0.1,0.873,None
+Tổng (pool),35,-0.046,0.791,-0.098,0.575,None

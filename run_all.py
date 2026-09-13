@@ -1,8 +1,8 @@
 """Kịch bản chạy tự động toàn bộ Pipeline (End-to-End Master Script).
 
 Quy trình:
-1. load_models.py           -> Kiểm tra/tải 4 model vào models/ (nếu chưa có)
-2. process_data.py          -> Bóc tách câu từ PDF với bộ lọc thông minh mới (bỏ qua PLX 2018)
+1. load_models.py           -> Kiểm tra/tải các model vào models/ (nếu chưa có)
+2. process_data.py          -> Bóc tách câu từ 42 báo cáo PDF độc lập (7 công ty: BVH, PAN, PLX, PNJ, SSI, VCS, VNM giai đoạn 2020-2025)
 3. run_pipeline.py (encode) -> Mã hóa vector SBERT & tính Cosine Similarity với 17 SDG
 4. run_pipeline.py (senti)  -> Phân tích cảm xúc PhoBERT Sentiment
 5. export_tables_and_plots  -> Tải giá cổ phiếu, xuất bảng và các biểu đồ phân tích Greenwashing
@@ -10,7 +10,7 @@ Quy trình:
 
 Cách dùng:
     python run_all.py                  # Chạy toàn bộ từ đầu đến cuối
-    python run_all.py --skip-extract   # Bỏ qua bước trích xuất PDF nếu đã có sentences.pkl
+    python run_all.py --skip-extract   # Bỏ qua bước trích xuất PDF nếu đã có sentences.parquet
     python run_all.py --skip-sentiment # Bỏ qua bước sentiment nếu chỉ muốn xem SDG similarity
     python run_all.py --notebook-only  # Chỉ chạy lại notebook và xuất bảng/biểu đồ
 """
@@ -187,7 +187,7 @@ def main() -> None:
 
     # 2. Extract PDF
     if not args.skip_extract:
-        run_step("Trích xuất câu sạch từ 28 báo cáo PDF (bỏ PLX 2018)", [py, "process_data.py", "--rebuild"])
+        run_step("Trích xuất câu sạch từ 42 báo cáo PTBV (7 công ty: BVH, PAN, PLX, PNJ, SSI, VCS, VNM giai đoạn 2020-2025)", [py, "process_data.py", "--rebuild"])
 
     # 3. Encode SBERT
     if not args.skip_encode:

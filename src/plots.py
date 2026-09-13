@@ -4,10 +4,12 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+from matplotlib.patches import Patch
 
 from config import CATEGORY_ORDER, FIGURE_DIR, GOAL_COLS
 
@@ -113,69 +115,118 @@ def plot_sentiment_by_company(df_counts: pd.DataFrame, name: str = "sentiment_by
     fig.tight_layout()
     return _save(fig, name)
 
+def _yearly_sentiment_peaks(sub: pd.DataFrame) -> pd.DataFrame:
+    """Một đỉnh Pos/Neg giữa mỗi năm — nối lại thành ziczac/ngọn núi."""
+    s = sub.dropna(subset=["ratio_idx"]).copy()
+    if s.empty:
+        return s
+    years = s.groupby(s["date"].dt.year, sort=True)["ratio_idx"].first()
+    return pd.DataFrame(
+        {
+            "date": [pd.Timestamp(year=int(y), month=7, day=1) for y in years.index],
+            "ratio_idx": years.to_numpy(),
+        }
+    )
+
 
 def plot_stock_vs_sentiment_greenwashing(
-    df_merged: pd.DataFrame, name: str = "stock_vs_sentiment_greenwashing.png"
+    df_monthly: pd.DataFrame,
+    corr_df: pd.DataFrame | None = None,
+    name: str = "stock_vs_sentiment_greenwashing.png",
 ) -> Path:
-    """Lồng ghép Giá cổ phiếu (VND) và Sentiment Ratio / SDG Score để đối chiếu dấu hiệu Tẩy xanh (Greenwashing)."""
-    companies = sorted(df_merged["company"].unique())
+    """Giá tháng (đường) + Pos/Neg (ziczac đỉnh năm, tô như núi). Cùng index 100."""
+    companies = sorted(df_monthly["company"].unique())
     n = len(companies)
-    fig, axes = plt.subplots(n, 1, figsize=(13, 5 * max(n, 1)), squeeze=False)
+    fig, axes = plt.subplots(n, 1, figsize=(14, 4.4 * max(n, 1)), squeeze=False)
+    corr_map = {}
+    if corr_df is not None and "company" in corr_df.columns:
+        corr_map = corr_df.set_index("company").to_dict(orient="index")
+
+    color_stock = "#1f77b4"
+    color_senti = "#d95f02"
+    band = {"Tẩy xanh": "#d62728", "Trung thực": "#2ca02c"}
 
     for ax, comp in zip(axes.ravel(), companies):
-        sub = df_merged[df_merged["company"] == comp].sort_values("year").copy()
-        years = sub["year"].astype(str).tolist()
-        x = np.arange(len(years))
+        sub = df_monthly[df_monthly["company"] == comp].sort_values("date").copy()
+        sub["date"] = pd.to_datetime(sub["date"])
+        peaks = _yearly_sentiment_peaks(sub)
 
-        # Trục Y1 (Trái): Giá cổ phiếu
-        color_stock = "#1f77b4"
-        line1 = ax.plot(
-            x, sub["close_yearend"], color=color_stock, marker="s", linewidth=2.5, label="Giá cổ phiếu cuối năm (VND)"
-        )
-        ax.set_ylabel("Giá cổ phiếu (VND)", color=color_stock, fontsize=11, fontweight="bold")
-        ax.tick_params(axis="y", labelcolor=color_stock)
-        ax.set_xticks(x)
-        ax.set_xticklabels(years)
-        ax.grid(True, linestyle="--", alpha=0.5)
+        if "phan_ung" in sub.columns:
+            for year, g in sub.groupby("year"):
+                lab = str(g["phan_ung"].dropna().iloc[0]) if g["phan_ung"].notna().any() else "None"
+                if lab in band:
+                    ax.axvspan(
+                        g["date"].min(),
+                        g["date"].max() + pd.offsets.MonthBegin(1),
+                        color=band[lab],
+                        alpha=0.13,
+                        zorder=0,
+                    )
 
-        # Trục Y2 (Phải): Sentiment Ratio & Environments SDG
-        ax2 = ax.twinx()
-        color_senti = "#d95f02"
-        color_env = "#2ca02c"
-        line2 = ax2.plot(
-            x, sub["Ratio"], color=color_senti, marker="o", linestyle="--", linewidth=2.0, label="Tỷ lệ Sentiment (Pos/Neg)"
-        )
+        both_parts = [sub["price_idx"]]
+        if not peaks.empty:
+            both_parts.append(peaks["ratio_idx"])
+        both = pd.concat(both_parts, ignore_index=True).dropna()
+        if not both.empty:
+            lo, hi = float(both.min()), float(both.max())
+            pad = max((hi - lo) * 0.12, 8.0)
+            ax.set_ylim(lo - pad, hi + pad)
+        ylo = ax.get_ylim()[0]
 
-        lines = line1 + line2
-        if "Environments" in sub.columns:
-            line3 = ax2.plot(
-                x,
-                sub["Environments"],
-                color=color_env,
-                marker="^",
-                linestyle=":",
-                linewidth=2.0,
-                label="Điểm SDG Môi trường (0-100)",
+        if not peaks.empty:
+            ax.fill_between(
+                peaks["date"],
+                ylo,
+                peaks["ratio_idx"],
+                color=color_senti,
+                alpha=0.28,
+                zorder=1,
             )
-            lines += line3
+            ax.plot(
+                peaks["date"],
+                peaks["ratio_idx"],
+                color=color_senti,
+                marker="^",
+                markersize=8,
+                linewidth=2.4,
+                label="Pos/Neg (đỉnh năm, index 100)",
+                zorder=4,
+            )
 
-        ax2.set_ylabel("Sentiment Ratio / Điểm SDG", color=color_senti, fontsize=11, fontweight="bold")
-        ax2.tick_params(axis="y", labelcolor=color_senti)
-        ax2.grid(False)
-
-        # Đánh dấu cờ cảnh báo Greenwashing nếu có
-        if "greenwashing_flag" in sub.columns and sub["greenwashing_flag"].any():
-            for idx_f in sub[sub["greenwashing_flag"] == True].index:
-                pos_x = list(sub.index).index(idx_f)
-                ax.axvspan(pos_x - 0.25, pos_x + 0.25, color="red", alpha=0.15)
-
-        labels = [l.get_label() for l in lines]
-        ax.legend(lines, labels, loc="upper left", fontsize=8.5)
-        ax.set_title(
-            f"Đối chiếu Cổ phiếu & Báo cáo PTBV - {comp} (Dấu hiệu Phân kỳ / Tẩy xanh)",
-            fontsize=13,
-            fontweight="bold",
+        ax.plot(
+            sub["date"],
+            sub["price_idx"],
+            color=color_stock,
+            linewidth=2.0,
+            label="Giá tháng (index 100)",
+            zorder=5,
         )
+        ax.axhline(100, color="0.5", linewidth=0.8, linestyle=":")
+
+        ax.set_ylabel("Chỉ số (tháng đầu = 100)", fontsize=10, fontweight="bold")
+        ax.grid(True, linestyle="--", alpha=0.4)
+        ax.xaxis.set_major_locator(mdates.YearLocator())
+        ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
+        ax.xaxis.set_minor_locator(mdates.MonthLocator(bymonth=[7]))
+
+        info = corr_map.get(comp, {})
+        r = info.get("r_pearson")
+        p = info.get("p_pearson")
+        nn = info.get("n")
+        doc = info.get("doc", "")
+        rtxt = f"r(Δgiá, ΔPos/Neg) = {r:.2f}" if isinstance(r, (int, float)) and np.isfinite(r) else "r = n/a"
+        ptxt = f", p = {p:.2f}" if isinstance(p, (int, float)) and np.isfinite(p) else ""
+        ntxt = f", n = {nn}" if nn is not None else ""
+        ax.set_title(f"{comp}:  {rtxt}{ptxt}{ntxt}   → {doc or 'None'}", fontsize=12, fontweight="bold")
+
+        handles = [
+            plt.Line2D([0], [0], color=color_stock, lw=2, label="Giá tháng (index 100)"),
+            plt.Line2D([0], [0], color=color_senti, marker="^", lw=2.4, label="Pos/Neg (ziczac đỉnh năm)"),
+            Patch(facecolor=color_senti, alpha=0.28, label="Nền Pos/Neg (ngọn núi)"),
+            Patch(facecolor=band["Tẩy xanh"], alpha=0.25, label="Năm giá tụt: Tẩy xanh"),
+            Patch(facecolor=band["Trung thực"], alpha=0.25, label="Năm giá tụt: Trung thực"),
+        ]
+        ax.legend(handles=handles, loc="upper left", fontsize=8, ncol=2)
 
     fig.tight_layout()
     return _save(fig, name)

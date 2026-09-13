@@ -3,28 +3,31 @@
   "steps": {
     "process_data_sdg": {
       "status": "done",
-      "at": "2026-09-07T14:04:27+07:00",
+      "at": "2026-09-13T00:28:24+07:00",
       "n_sdg": 1032
     },
     "process_data": {
       "status": "done",
-      "at": "2026-09-09T15:14:28+07:00",
-      "n_sentences": 46912,
-      "n_files": 29,
+      "at": "2026-09-13T20:37:47+07:00",
+      "n_sentences": 96461,
+      "n_files": 42,
       "by_company": {
-        "PAN": 10578,
-        "PLX": 9926,
-        "PNJ": 8403,
-        "VNM": 18005
+        "BVH": 30677,
+        "PAN": 9351,
+        "PLX": 6650,
+        "PNJ": 7548,
+        "SSI": 8459,
+        "VCS": 17712,
+        "VNM": 16064
       },
       "by_lang": {
-        "vi": 46912
+        "vi": 96461
       },
       "n_sdg": 1032
     },
     "load_models": {
       "status": "done",
-      "at": "2026-09-07T14:12:44+07:00",
+      "at": "2026-09-13T00:49:23+07:00",
       "models": {
         "en_sbert": true,
         "en_sentiment": true,
@@ -35,8 +38,8 @@
     },
     "encode_similarity": {
       "status": "done",
-      "at": "2026-09-08T19:06:18+07:00",
-      "n_rows": 17047,
+      "at": "2026-09-13T14:10:56+07:00",
+      "n_rows": 95804,
       "langs": [
         "vi"
       ],
@@ -44,14 +47,14 @@
     },
     "sentiment": {
       "status": "done",
-      "at": "2026-09-08T21:37:08+07:00",
-      "n_rows": 17047,
+      "at": "2026-09-13T17:13:10+07:00",
+      "n_rows": 95804,
       "labels": {
-        "Positive": 11891,
-        "Neutral": 3126,
-        "Negative": 2030
+        "Positive": 51652,
+        "Neutral": 31615,
+        "Negative": 12537
       }
     }
   },
-  "updated_at": "2026-09-09T15:14:28+07:00"
+  "updated_at": "2026-09-13T20:37:47+07:00"
 }

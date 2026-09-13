@@ -1,38 +1,84 @@
+# ==============================================================================
 # Byte-compiled / optimized / DLL files
+# ==============================================================================
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+*.dll
+*.dylib
 
-# Caches and virtual environments
+# ==============================================================================
+# Virtual environments & dependencies
+# ==============================================================================
 .venv/
 env/
 venv/
+ENV/
+env.bak/
+venv.bak/
 .pytest_cache/
 .ipynb_checkpoints/
 
-# Mô hình nặng (~1.4 GB weight - tải lại qua: python load_models.py)
+# ==============================================================================
+# Model weights & large ML assets (~1.4 GB weight - tải qua: python load_models.py)
+# ==============================================================================
 models/
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.onnx
 
-# File PDF báo cáo gốc (copy thủ công vào report pdfs/)
+# ==============================================================================
+# Raw input PDF reports (tải/sao chép vào report pdfs/)
+# ==============================================================================
 report pdfs/
+*.pdf
 
-# Embeddings ma trận vector lớn
+# ==============================================================================
+# Large vector embeddings & sentence matrices (tạo qua: python run_pipeline.py)
+# ==============================================================================
 data/embeddings/*.npy
 data/embeddings/*.pkl
 
-# File câu thô dung lượng lớn (tạo lại qua: python process_data.py)
+# ==============================================================================
+# Raw extracted sentences & intermediate caches (tạo qua: python process_data.py)
+# ==============================================================================
 data/processed/sentences.*
 data/processed/_ocr_tmp/
 
-# Kết quả chi tiết từng câu (tạo lại qua: python run_pipeline.py)
+# ==============================================================================
+# Detailed per-sentence outputs & checkpoints (tạo qua: python run_pipeline.py)
+# ==============================================================================
 data/results/result_both.*
 data/results/result_scaled.*
 data/results/result_similarity.*
 data/results/sentiment_checkpoint.*
 
-# Dữ liệu cào web tạm thời
+# ==============================================================================
+# Temporary scraping & backups
+# ==============================================================================
 _tmp_scrape/
+*.tmp
+*.bak
+*.swp
+*~
+c:/Code/paper_sdg_backup/
+../paper_sdg_backup/
 
-# OS artifacts
+# ==============================================================================
+# MS Office lock files & root temp duplicates
+# ==============================================================================
+~$*.docx
+~$*.xlsx
+/paper_sdg_vietnam_vi_updated.docx
+
+# ==============================================================================
+# OS & IDE artifacts
+# ==============================================================================
 .DS_Store
 Thumbs.db
+desktop.ini
+.vscode/
+.idea/
