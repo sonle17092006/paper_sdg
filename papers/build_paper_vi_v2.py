@@ -3,6 +3,8 @@ Chủ đề: Ứng dụng mô hình NLP của Kang & Kim (2022) phân tích Báo
 Bao gồm:
 - Tiêu đề, Tác giả độc lập (Lê Đan Sơn, Dương Thị Hoàn), Abstract song ngữ
 - 6 Phần nội dung đầy đủ (Giới thiệu, Tổng quan, Phương pháp, Kết quả, Thảo luận, Kết luận)
+- Phân tích chuyên sâu đặc thù ngành của từng công ty (VNM, VCS, PAN, PLX, BVH, SSI, PNJ)
+- Phân tích xu hướng công bố tại Việt Nam: Doanh nghiệp "Nói nhiều về gì" và "Ít nói về gì"
 - 6 Hình ảnh (Figures 1-6)
 - 5 Bảng số liệu (Tables 1-5)
 - 4 Công thức toán học OMML (Cosine similarity, Min-Max 0-100, CatScore, Pos/Neg Ratio)
@@ -86,16 +88,20 @@ def build_vietnamese_paper(doc: Document, tables_data: dict, is_endnote_ready: b
         f"với 17 Mục tiêu Phát triển Bền vững (SDGs) của Liên Hợp Quốc, quy nạp vào 6 nhóm nhu cầu con người (Đời sống, Kinh tế, Công bằng, Xã hội, "
         f"Tài nguyên, Môi trường) và phân tích cơ cấu sắc thái ngôn ngữ (Tích cực, Trung tính, Tiêu cực). Kết quả thực nghiệm cho thấy phương pháp của "
         f"Kang và Kim (2022) hoàn toàn có khả năng thích ứng hiệu quả với ngôn ngữ tiếng Việt và bối cảnh thị trường mới nổi, đồng thời làm sáng tỏ các đặc tính "
-        f"cốt lõi của báo cáo phát triển bền vững tại Việt Nam: (1) Doanh nghiệp thể hiện sự tập trung vượt trội vào nhóm Kinh tế (SDG 8, 9) và Đối tác (SDG 17), "
-        f"trong khi nhóm Công bằng xã hội (SDG 4, 5, 10) liên tục nhận mức điểm thấp nhất; (2) Tồn tại xu hướng thiên lệch lạc quan mang tính cấu trúc với 53,87% câu tích cực, "
-        f"32,87% câu trung tính và chỉ 13,26% câu tiêu cực (tỷ số Pos/Neg bình quân đạt trên 4 lần), phản ánh chiến lược quản trị ấn tượng định hướng thành tựu; "
-        f"và (3) Dung lượng văn bản cùng độ bao phủ các mục tiêu phát triển bền vững có xu hướng tăng trưởng rõ rệt qua chuỗi thời gian 2020–2025, đặc biệt sau khi "
-        f"Thông tư số 96/2020/TT-BTC có hiệu lực. Nghiên cứu cung cấp một trường hợp ứng dụng thực tế về năng lực của AI trong đánh giá báo cáo phi tài chính tại Việt Nam."
+        f"cốt lõi của báo cáo phát triển bền vững tại Việt Nam: (1) Điểm số SDG phản ánh sát sao mô hình kinh doanh cốt lõi của từng doanh nghiệp: các công ty chế tạo và chăn nuôi "
+        f"như Vicostone và Vinamilk đạt điểm vượt trội ở nhóm Tài nguyên và Môi trường, doanh nghiệp nông nghiệp như PAN gắn chặt với nhóm Đời sống, các định chế tài chính "
+        f"như Bảo Việt và SSI tập trung vào Kinh tế và Xã hội/Đối tác, trong khi doanh nghiệp bán lẻ thời trang PNJ chú trọng trụ cột bình đẳng giới DE&I; "
+        f"(2) Xu hướng công bố chung tại Việt Nam thể hiện sự phân hóa rõ rệt: doanh nghiệp có xu hướng nói rất nhiều về tăng trưởng kinh tế (SDG 8), đổi mới hạ tầng (SDG 9), "
+        f"từ thiện an sinh xã hội (SDG 1, 17) và các sáng kiến tiết kiệm chi phí nội bộ (SDG 6, 7, 12), nhưng lại rất ít khi công bố cụ thể về đa dạng sinh học (SDG 14, 15), "
+        f"bình đẳng giới cấp lãnh đạo thực chất và chênh lệch thu nhập (SDG 5, 10), phát thải gián tiếp chuỗi cung ứng Scope 3, hay các sự cố rủi ro tiêu cực; "
+        f"(3) Tồn tại xu hướng thiên lệch lạc quan mang tính cấu trúc với 53,87% câu tích cực, 32,87% câu trung tính và chỉ 13,26% câu tiêu cực (tỷ số Pos/Neg bình quân đạt 4,06 lần), "
+        f"phản ánh chiến lược quản trị ấn tượng định hướng thành tựu; và (4) Dung lượng văn bản cùng độ bao phủ các mục tiêu phát triển bền vững có xu hướng tăng trưởng rõ rệt qua chuỗi "
+        f"thời gian 2020–2025 sau khi Thông tư số 96/2020/TT-BTC có hiệu lực."
     )
     pb.add_p(
         doc,
         "Từ khóa: Báo cáo phát triển bền vững; Mục tiêu phát triển bền vững (SDGs); Xử lý ngôn ngữ tự nhiên (NLP); "
-        "Sentence-BERT; PhoBERT; Phân tích cảm xúc; Quản trị ấn tượng; Doanh nghiệp niêm yết Việt Nam.",
+        "Sentence-BERT; PhoBERT; Phân tích cảm xúc; Quản trị ấn tượng; Đặc thù ngành; Doanh nghiệp niêm yết Việt Nam.",
         bold=True
     )
 
@@ -112,16 +118,20 @@ def build_vietnamese_paper(doc: Document, tables_data: dict, is_endnote_ready: b
         f"we quantify corporate semantic alignment with the 17 UN Sustainable Development Goals (SDGs), aggregate alignments into six core human-needs "
         f"categories (Life, Economic, Equity, Social, Resources, Environments), and evaluate contextual narrative tone (Positive, Neutral, Negative). "
         f"Empirical findings demonstrate that Kang and Kim's (2022) methodology generalizes robustly to Vietnamese corporate texts and emerging market disclosures, "
-        f"revealing distinct reporting characteristics: (1) Disclosures exhibit an overwhelming thematic prioritization of Economic development (SDGs 8, 9) "
-        f"and Global Partnerships (SDG 17), alongside persistent under-representation in Equity disclosures (SDGs 4, 5, 10); (2) Disclosures display pronounced "
-        f"structural optimism bias (53.87% positive, 32.87% neutral, and only 13.26% negative sentences; mean Pos/Neg ratio exceeding 4.0), evidencing achievement-oriented "
-        f"impression management; and (3) Textual reporting volume and SDG thematic coverage have steadily expanded over the 2020–2025 observation window following the "
-        f"enactment of Circular 96/2020/TT-BTC. This study establishes a practical empirical use case demonstrating the viability of computational NLP for non-financial audit in Vietnam."
+        f"revealing distinct reporting characteristics: (1) Corporate SDG scores closely mirror sectoral business models: manufacturing and dairy leaders like Vicostone "
+        f"and Vinamilk achieve superior scores in Resources and Environments, agrifood giant PAN aligns prominently with Life, financial institutions like Bao Viet and SSI "
+        f"dominate in Economic and Social/Partnership pillars, while fashion retail leader PNJ emphasizes DE&I gender equity; (2) National disclosure tendencies reveal a pronounced dichotomy: "
+        f"enterprises extensively discuss economic growth (SDG 8), infrastructure innovation (SDG 9), philanthropic CSR (SDGs 1, 17), and internal eco-efficiency savings (SDGs 6, 7, 12), "
+        f"while systematically omitting substantive disclosures on terrestrial and marine biodiversity (SDGs 14, 15), executive gender representation and income disparity (SDGs 5, 10), "
+        f"Scope 3 value-chain greenhouse gas emissions, and negative operational violations; (3) Disclosures display pronounced structural optimism bias "
+        f"(53.87% positive, 32.87% neutral, and only 13.26% negative sentences; mean Pos/Neg ratio of 4.06), evidencing achievement-oriented impression management; and (4) Textual reporting "
+        f"volume and SDG thematic coverage have steadily expanded over the 2020–2025 observation window following the enactment of Circular 96/2020/TT-BTC. "
+        f"This study establishes a practical empirical use case demonstrating the viability of computational NLP for non-financial auditing in Vietnam."
     )
     pb.add_p(
         doc,
         "Keywords: Corporate sustainability reports; Sustainable Development Goals (SDGs); Natural language processing (NLP); "
-        "Sentence-BERT; PhoBERT; Sentiment analysis; Impression management; Vietnamese listed enterprises.",
+        "Sentence-BERT; PhoBERT; Sentiment analysis; Impression management; Industry-specific disclosures; Vietnamese listed enterprises.",
         bold=True
     )
 
@@ -456,11 +466,31 @@ def build_vietnamese_paper(doc: Document, tables_data: dict, is_endnote_ready: b
 
     pb.add_p(
         doc,
-        "Từ Bảng 4, nhóm Kinh tế luôn đạt mức điểm cao nhất trong mọi báo cáo, dao động từ 43,19 điểm đến trên 51,90 điểm. Điều này phản ánh rõ nét đặc thù của doanh nghiệp "
-        "tại Việt Nam: các mục tiêu về tăng trưởng kinh tế, tạo việc làm (SDG 8) và đổi mới công nghệ hạ tầng (SDG 9) luôn là ưu tiên hàng đầu gắn liền với chiến lược kinh doanh cốt lõi. "
-        "Ngược lại, nhóm Công bằng (Equity: giáo dục chất lượng, bình đẳng giới, giảm bất bình đẳng) liên tục có điểm số thấp nhất (chỉ đạt từ 38,36 đến 44,94 điểm). "
-        "Khoảng chênh lệch giữa nhóm Kinh tế và nhóm Công bằng duy trì từ 6 đến 8 điểm ở hầu hết các công ty, thể hiện sự chênh lệch có tính hệ thống trong mức độ quan tâm "
-        "giữa các mục tiêu phát triển bền vững."
+        "Đi sâu vào phân tích theo từng doanh nghiệp và lĩnh vực hoạt động cốt lõi từ Bảng 4, điểm số 6 nhóm SDG phản ánh rất chân thực mối liên hệ mật thiết giữa "
+        "mô hình kinh doanh với trọng tâm chiến lược phát triển bền vững của từng đơn vị:\\n"
+        "(1) Vinamilk (VNM - Chế biến Sữa và Chăn nuôi công nghiệp): Do đặc thù gắn liền với hệ sinh thái 15 trang trại bò sữa quy mô lớn và 13 nhà máy chế biến, VNM đối diện "
+        "trực tiếp với các bài toán về quản lý chất thải chăn nuôi, sử dụng tài nguyên nước và phát thải khí nhà kính nông nghiệp. Điều này lý giải vì sao điểm số nhóm Tài nguyên "
+        "(Resources: tăng từ 42,36 lên 47,33 điểm) và nhóm Môi trường (Environments: bứt phá mạnh nhất toàn mẫu từ 41,23 lên 47,29 điểm, tăng +6,06 điểm). Thành quả này xuất phát "
+        "từ việc VNM tiên phong triển khai chiến lược Net Zero 2050, đạt chứng nhận quốc tế PAS 2060 cho nhà máy và trang trại tại Nghệ An, đồng thời phát triển mô hình trang trại "
+        "sinh thái Green Farm tuần hoàn 100% tài nguyên nước và sử dụng năng lượng mặt trời áp mái.\\n"
+        "(2) Vicostone (VCS - Vật liệu xây dựng & Chế tạo công nghiệp): Là nhà sản xuất đá ốp lát thạch anh nhân tạo xuất khẩu hàng đầu thế giới, hoạt động của VCS đòi hỏi tiêu hao "
+        "nguyên liệu khoáng sản và hóa chất kết dính. Do đó, điểm số nhóm Kinh tế (Economic đạt đỉnh 51,90 điểm năm 2025) và nhóm Tài nguyên (Resources đạt 50,03 điểm) của VCS luôn "
+        "thuộc nhóm cao nhất toàn mẫu. Báo cáo của VCS tập trung sâu vào công nghệ sản xuất Breton (Ý), tỷ lệ tái chế 100% bùn thải đá thành phụ gia vật liệu và hệ thống xử lý nước "
+        "sản xuất tuần hoàn khép kín, cũng như việc kiểm soát dư lượng hóa chất hữu cơ bay hơi (VOC) để đạt chứng chỉ an toàn Greenguard Gold.\\n"
+        "(3) The PAN Group (PAN - Nông nghiệp công nghệ cao & Thủy sản): Với chuỗi giá trị tích hợp từ giống cây trồng, gạo đóng gói (Vinaseed), nuôi trồng và chế biến thủy sản "
+        "xuất khẩu (Fimex VN), PAN thể hiện thế mạnh rõ nét ở nhóm Đời sống (Life: SDG 2 An ninh lương thực; SDG 3 Sức khỏe) và Tài nguyên (Resources: SDG 12 Sản xuất tiêu dùng trách nhiệm) "
+        "luôn duy trì ổn định ở mức 45–47 điểm. Báo cáo của PAN nhấn mạnh vào mô hình canh tác lúa giảm phát thải, nuôi tôm an toàn sinh học không lạm dụng kháng sinh và truy xuất nguồn gốc nông sản.\\n"
+        "(4) Petrolimex (PLX - Năng lượng & Phân phối Xăng dầu): Là doanh nghiệp hạ nguồn năng lượng hóa thạch chủ lực chiếm hơn 50% thị phần nội địa, PLX chịu áp lực chuyển dịch xanh "
+        "rất lớn. Dữ liệu cho thấy nhóm Tài nguyên (SDG 7 Năng lượng sạch) và Môi trường (SDG 13 Hành động khí hậu) của PLX luôn chiếm tỷ trọng ưu tiên, đạt 46,86 điểm và 46,41 điểm vào năm 2025. "
+        "Nội dung báo cáo của PLX tập trung vào chiến lược phân phối nhiên liệu sạch tiêu chuẩn khí thải Euro 5 (DO 0,001S-V), phát triển mạng lưới xăng sinh học E5 RON 92, lắp đặt điện mặt trời "
+        "tại các trạm xăng dầu và thực hiện kiểm kê khí nhà kính toàn diện theo chuẩn ISO 14064-1.\\n"
+        "(5) Bảo Việt (BVH) và SSI (Tài chính - Bảo hiểm & Chứng khoán): Do mô hình kinh doanh là các định chế tài chính và dịch vụ đầu tư không vận hành nhà máy sản xuất vật lý, phát thải "
+        "môi trường trực tiếp là không đáng kể. Thay vào đó, điểm số của BVH và SSI tập trung áp đảo vào nhóm Kinh tế (SDG 8 Tăng trưởng, SDG 9 Đổi mới dịch vụ tài chính số đạt trên 50 điểm) "
+        "và nhóm Xã hội (SDG 16 Quản trị minh bạch, phòng chống rửa tiền; SDG 17 Tài chính xanh và Đối tác toàn cầu đạt trên 49 điểm). Cả hai doanh nghiệp đều định vị vai trò dẫn dắt dòng vốn xanh: "
+        "BVH mở rộng các gói bảo hiểm vi mô an sinh xã hội cho người có thu nhập thấp, trong khi SSI phát triển khung thẩm định tín dụng xanh và tư vấn phát hành trái phiếu xanh (Green Bonds).\\n"
+        "(6) PNJ (Bán lẻ & Chế tác Kim hoàn): Đặc thù của PNJ là mạng lưới bán lẻ trang sức thời trang với lực lượng lao động phần lớn là nữ giới (chiếm trên 60%) cùng đội ngũ nghệ nhân kim hoàn. "
+        "Do đó, PNJ có mức độ gắn kết nổi bật ở nhóm Xã hội (Social) và Đời sống (Life), đặc biệt là trụ cột Đa dạng, Bình đẳng và Hòa nhập (DE&I) cùng các chính sách phát triển lao động nữ (SDG 5) "
+        "được thể hiện đậm nét hơn so với các ngành sản xuất nặng."
     )
 
     pb.add_h2(doc, "4.3 Xu hướng Biến động 6 Nhóm SDG Giai đoạn 2020–2025")
@@ -557,16 +587,35 @@ def build_vietnamese_paper(doc: Document, tables_data: dict, is_endnote_ready: b
     # =========================================================================
     pb.add_h1(doc, "5. Thảo luận (Discussion)")
 
-    pb.add_h2(doc, "5.1 Các Đặc tính Nổi bật của Báo cáo Phát triển Bền vững tại Việt Nam")
+    pb.add_h2(doc, "5.1 Xu hướng Báo cáo PTBV tại Việt Nam: Doanh nghiệp \"Nói nhiều về gì\" và \"Ít nói về gì\"?")
     pb.add_p(
         doc,
-        "Thông qua việc ứng dụng mô hình NLP trên 42 báo cáo, nghiên cứu đã nhận diện ba đặc tính thực nghiệm nổi bật trong văn hóa công bố thông tin bền vững tại Việt Nam: "
-        "(1) Ưu tiên tăng trưởng kinh tế và liên kết đối tác: Nhóm Kinh tế (SDG 8, 9) và Đối tác (SDG 17) luôn nhận được mức độ tập trung cao nhất, phản ánh định hướng thực tế "
-        "của các doanh nghiệp tại một nền kinh tế đang phát triển, nơi tăng trưởng doanh thu, đổi mới hạ tầng và tạo việc làm là những yêu cầu trọng tâm của các bên liên quan; "
-        "(2) Khoảng trống công bố về nhóm Công bằng xã hội: Nhóm Công bằng (SDG 4, 5, 10) nhận điểm số thấp nhất trên toàn bộ mẫu khảo sát, cho thấy các vấn đề về bình đẳng giới, "
-        "hòa nhập xã hội và thu hẹp khoảng cách thu nhập vẫn chưa được các doanh nghiệp lồng ghép sâu rộng vào thông điệp chiến lược; "
-        "(3) Xu hướng quản trị ấn tượng tích cực: Tỷ lệ câu văn tích cực áp đảo (chiếm gần 54%) cùng tỷ số Pos/Neg vượt trội (4–8 lần) là bằng chứng rõ ràng cho thấy "
-        "báo cáo phát triển bền vững tại Việt Nam hiện nay chủ yếu được sử dụng như một công cụ truyền thông xây dựng hình ảnh thương hiệu hơn là một kênh giải trình rủi ro toàn diện."
+        "Kết quả phân tích văn bản tính toán trên 96.461 câu văn bản trong 42 báo cáo đã phác họa một bức tranh thực tế đầy tương phản về văn hóa công bố thông tin "
+        "phát triển bền vững tại Việt Nam. Doanh nghiệp thể hiện rõ sự phân hóa giữa những chủ đề được truyền thông rầm rộ và những khía cạnh nhạy cảm bị né tránh hoặc xem nhẹ:\\n\\n"
+        "A. CÁC NỘI DUNG DOANH NGHIỆP VIỆT NAM CÓ XU HƯỚNG \"NÓI NHIỀU VỀ\":\\n"
+        "(1) Tăng trưởng kinh tế, tạo việc làm và đóng góp ngân sách (SDG 8, 9): Doanh nghiệp dành dung lượng trang lớn nhất để báo cáo về doanh thu, nộp thuế nhà nước, "
+        "mở rộng quy mô kinh doanh, đầu tư máy móc tự động hóa hiện đại và các chế độ tiền lương, thưởng phúc lợi cho người lao động. Đây là các chỉ tiêu phản ánh trực tiếp "
+        "kết quả kinh doanh và thỏa mãn kỳ vọng của cổ đông ngắn hạn;\\n"
+        "(2) Hoạt động an sinh xã hội, từ thiện cộng đồng và tài trợ (SDG 1, 17): Đa số các báo cáo dành hàng chục trang hình ảnh để tường thuật chi tiết về các chương trình tài trợ "
+        "xây cầu nông thôn, trao nhà tình thương, cấp học bổng cho học sinh nghèo, và các đợt cứu trợ thiên tai bão lũ. Hoạt động trách nhiệm xã hội (CSR) tại Việt Nam vẫn mang đậm "
+        "tính thiện nguyện truyền thống bề nổi thay vì tích hợp vào chiến lược tạo giá trị chung (CSV);\\n"
+        "(3) Các sáng kiến tiết kiệm chi phí nội bộ (Eco-efficiency) (SDG 6, 7, 12): Doanh nghiệp rất hào hứng công bố các số liệu về tiết kiệm điện chiếu sáng văn phòng, "
+        "giảm sử dụng giấy in, thay thế hệ thống điều hòa tiết kiệm năng lượng, hoặc tái sử dụng nước làm mát. Đây là các sáng kiến môi trường mang lại 'lợi ích kép' rõ rệt: vừa giúp "
+        "doanh nghiệp xây dựng hình ảnh xanh trước công chúng, vừa giúp cắt giảm chi phí vận hành doanh nghiệp ngay lập tức.\\n\\n"
+        "B. CÁC NỘI DUNG DOANH NGHIỆP VIỆT NAM TRÁI LẠI \"ÍT NÓI VỀ\" (HOẶC NÉ TRÁNH, NÓI RẤT MỜ NHẠT):\\n"
+        "(1) Đa dạng sinh học và bảo tồn hệ sinh thái tự nhiên (SDG 14 - Biển, SDG 15 - Trên cạn): Đây là 'vùng trũng' lớn nhất trong toàn bộ 42 báo cáo khảo sát. Hầu hết các doanh nghiệp "
+        "hoàn toàn vắng bóng các số liệu đo lường cụ thể về tác động của hoạt động sản xuất và chuỗi cung ứng lên hệ sinh thái rừng, đất ngập nước hay nguồn lợi thủy sản, mà chỉ dừng ở "
+        "các cam kết mang tính khẩu hiệu chung chung về trồng cây xanh hoặc bảo vệ cảnh quan;\\n"
+        "(2) Bình đẳng giới thực chất ở cấp lãnh đạo và chênh lệch thu nhập (SDG 5, SDG 10): Doanh nghiệp thường công bố tỷ lệ phần trăm lao động nữ nói chung trong toàn công ty "
+        "(thường ở mức cao do lực lượng công nhân trực tiếp), nhưng rất hiếm khi công bố chi tiết tỷ lệ nữ giới tham gia trong Hội đồng Quản trị hoặc Ban Tổng Giám đốc. Đặc biệt, "
+        "các doanh nghiệp gần như tuyệt đối né tránh công bố tỷ lệ chênh lệch thu nhập giữa ban điều hành và người lao động bình thường (CEO-to-worker pay ratio) cũng như khoảng cách "
+        "tiền lương theo giới ở các cấp bậc quản lý tương đương;\\n"
+        "(3) Phát thải khí nhà kính Phạm vi 3 (Scope 3 GHG Emissions): Dù nhiều doanh nghiệp đã bắt đầu kiểm kê phát thải trực tiếp tại nhà máy (Scope 1) và tiêu thụ điện lưới (Scope 2), "
+        "nhưng phát thải gián tiếp phát sinh từ toàn bộ chuỗi cung ứng đầu vào và quá trình tiêu thụ sản phẩm đầu ra (Scope 3 — thường chiếm 70–80% tổng dấu chân carbon thực tế) "
+        "gần như chưa được lượng hóa do hạn chế về công cụ kỹ thuật và sự rời rạc của chuỗi cung ứng trong nước;\\n"
+        "(4) Các sự cố tiêu cực, tranh chấp lao động và biên bản xử phạt (SDG 16): Các báo cáo hầu như vắng bóng hoàn toàn các thông tin về tai nạn lao động nghiêm trọng, khiếu nại của "
+        "khách hàng về sản phẩm, hay các quyết định xử phạt vi phạm hành chính về môi trường và thuế. Hiện tượng 'gạn đục khơi trong' này biến các báo cáo phát triển bền vững thành tài liệu "
+        "quảng bá thành tích một chiều thay vì là một công cụ giải trình trách nhiệm và quản trị rủi ro toàn diện."
     )
 
     pb.add_h2(doc, "5.2 So sánh Đối chuẩn với Kết quả của Kang & Kim (2022)")
@@ -612,8 +661,9 @@ def build_vietnamese_paper(doc: Document, tables_data: dict, is_endnote_ready: b
         f"Nghiên cứu này đã thực hiện thành công một trường hợp ứng dụng thực nghiệm khung phương pháp luận NLP của {c_kang} trên ngữ liệu 42 báo cáo phát triển "
         f"bền vững của 7 tập đoàn niêm yết lớn tại Việt Nam giai đoạn 2020–2025. Kết quả chứng minh rằng quy trình kết hợp Sentence-BERT và PhoBERT hoàn toàn khả thi "
         f"và hiệu quả trong việc định lượng mức độ gắn kết với 17 mục tiêu SDG và phân tích cảm xúc văn bản tiếng Việt. Nghiên cứu đã làm sáng tỏ các đặc tính nổi bật "
-        f"của báo cáo phát triển bền vững tại Việt Nam, bao gồm sự ưu tiên vượt trội cho các mục tiêu kinh tế, khoảng trống công bố về nhóm công bằng xã hội, "
-        f"và xu hướng thiên lệch lạc quan trong văn phong truyền thông. Những phát hiện này khẳng định tiềm năng ứng dụng to lớn của Trí tuệ Nhân tạo trong việc tự động hóa "
+        f"của báo cáo phát triển bền vững tại Việt Nam, bao gồm sự gắn kết chặt chẽ giữa điểm số SDG với ngành nghề kinh doanh cốt lõi, sự đối lập sâu sắc giữa các chủ đề "
+        f"được nói nhiều (kinh tế, việc làm, từ thiện CSR, tiết kiệm chi phí) và các chủ đề bị xem nhẹ (đa dạng sinh học, bình đẳng giới lãnh đạo, phát thải Scope 3), "
+        f"cùng xu hướng thiên lệch lạc quan trong văn phong truyền thông. Những phát hiện này khẳng định tiềm năng ứng dụng to lớn của Trí tuệ Nhân tạo trong việc tự động hóa "
         f"đánh giá và giám sát tính minh bạch của thông tin phi tài chính tại thị trường chứng khoán Việt Nam."
     )
 
