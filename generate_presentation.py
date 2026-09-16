@@ -411,48 +411,24 @@ def build_slide_03_original_paper(prs):
 
 
 def build_slide_04_pipeline(prs):
-    """Slide 4: Quy trình Phương pháp luận (SƠ ĐỒ LUỒNG RỘNG RÃI + 5 VIÊN THUỐC BƯỚC)."""
+    """Slide 4: Quy trình Phương pháp luận (SƠ ĐỒ 16:9 TOÀN DIỆN CỰC KỲ RÕ RÀNG)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    add_slide_header(slide, "KHUNG PHƯƠNG PHÁP LUẬN NLP ĐA NGỮ 5 BƯỚC KHÉP KÍN", "PHƯƠNG PHÁP NGHIÊN CỨU", 4)
+    add_slide_header(slide, "KHUNG PHƯƠNG PHÁP LUẬN NLP ĐA TẦNG & THỰC NGHIỆM TÀI CHÍNH", "PHƯƠNG PHÁP NGHIÊN CỨU", 4)
     
-    # Sơ đồ luồng (AR = 2.85) -> Width 11.733, Height 4.0
-    flow_img = FIGURES_DIR / "rag_architecture_flow.png"
-    if flow_img.exists():
-        slide.shapes.add_picture(str(flow_img), Inches(0.8), Inches(1.30), Inches(11.733), Inches(3.95))
+    # Dùng sơ đồ 16:9 mới methodology_16_9.png (AR = 1.777)
+    # Kích thước 16:9 chuẩn: Width 10.133 in, Height 5.70 in, căn giữa slide (Left 1.60 in, Top 1.25 in)
+    meth_img = FIGURES_DIR / "methodology_16_9.png"
+    if not meth_img.exists():
+        meth_img = FIGURES_DIR / "rag_architecture_flow.png"
         
-    # 5 Hộp bước tóm gọn: Top 5.50, Height 1.35 (Khoảng cách 0.25 in rất sạch sẽ)
-    steps = [
-        ("B1. Thu thập PDF", "42 báo cáo từ 7 tập đoàn (2020–2025).", C_NAVY_PRIMARY),
-        ("B2. Tiền xử lý & OCR", "PyMuPDF + Tesseract phục hồi 100% scan.", C_BLUE_ACCENT),
-        ("B3. Nhúng SBERT", "vietnamese-sbert 768-d + 1.032 câu chuẩn.", C_GOLD_ACCENT),
-        ("B4. Min-Max 0-100", "Chuẩn hóa toàn cục + 6 nhóm Max-Neef.", C_PURPLE_ACCENT),
-        ("B5. PhoBERT 3 lớp", "Phân tích cảm xúc & Tỷ số Pos/Neg Ratio.", C_GREEN_EMERALD)
-    ]
-    
-    sw = 2.22
-    sgap = 0.16
-    for i, (stitle, sdesc, scol) in enumerate(steps):
-        sx = 0.8 + i * (sw + sgap)
-        add_card(slide, sx, 5.50, sw, 1.35, C_CARD_BG, scol)
-        
-        tb = slide.shapes.add_textbox(Inches(sx + 0.1), Inches(5.56), Inches(sw - 0.2), Inches(1.2))
-        tf = tb.text_frame
-        tf.word_wrap = True
-        p = tf.paragraphs[0]
-        r1 = p.add_run(stitle + "\n")
-        r1.font.size = Pt(9.5)
-        r1.font.bold = True
-        r1.font.color.rgb = scol
-        
-        r2 = p.add_run(sdesc)
-        r2.font.size = Pt(8.3)
-        r2.font.color.rgb = C_TEXT_DARK
+    if meth_img.exists():
+        slide.shapes.add_picture(str(meth_img), Inches(1.60), Inches(1.25), Inches(10.133), Inches(5.70))
 
     set_presenter_notes(slide, {
-        "goal": "Trực quan hóa quy trình 5 bước khép kín giúp Hội đồng nắm bắt luồng công nghệ xử lý trong 30 giây.",
-        "script": "Quy trình nghiên cứu gồm 5 bước khép kín thể hiện trong sơ đồ: Từ thu thập PDF và cứu hộ OCR, qua vector hóa Bi-Encoder SBERT 768 chiều, nhân ma trận NumPy BLAS siêu tốc dưới 3 giây, đến chuẩn hóa Min-Max toàn cục và phân loại cảm xúc 3 lớp PhoBERT.",
-        "highlights": "Quy trình tự động hóa 100%, có thể nhân rộng cho hàng trăm doanh nghiệp.",
-        "qa": "Tính nhân ma trận NumPy mất bao lâu: Chưa đầy 3 giây cho toàn bộ 96.461 câu x 1.032 câu chuẩn."
+        "goal": "Trình bày trực quan toàn bộ khung phương pháp nghiên cứu 5 giai đoạn khép kín theo chuẩn 16:9 độ nét cao.",
+        "script": "Kính thưa Hội đồng, trên slide là sơ đồ toàn diện 5 giai đoạn phương pháp luận của đề tài: Giai đoạn 1 thu thập 29 báo cáo PTBV, trích xuất text block và tích hợp OCR cứu hộ phục hồi 100% tệp scan; Giai đoạn 2 nhúng vector ngữ nghĩa qua Sentence-BERT 768 chiều và tối ưu phép nhân ma trận toàn cục dưới 3 giây; Giai đoạn 3 chuẩn hóa Min-Max 0-100 và gộp 6 nhóm nhu cầu Max-Neef; Giai đoạn 4 phân tích cảm xúc 3 lớp PhoBERT độc lập; và Giai đoạn 5 kết nối chuỗi giá cổ phiếu HOSE nhằm phát hiện chỉ số tẩy xanh Greenwashing.",
+        "highlights": "Sơ đồ 5 tầng khép kín: Tiền xử lý & OCR -> Vector hóa SBERT -> Chuẩn hóa 6 nhóm -> PhoBERT 3 lớp -> Kiểm định tài chính Greenwashing.",
+        "qa": "Tối ưu phép nhân ma trận thế nào: Chuẩn hóa vector L2 rồi dùng phép nhân R @ G.T trên NumPy BLAS, xử lý toàn bộ 96.461 câu x 1.032 câu chuẩn chỉ trong 2,8 giây."
     })
 
 
@@ -964,49 +940,109 @@ def build_slide_12_result6_sentiment_ratio(prs):
 
 
 def build_slide_13_discussion_talk_heavy(prs):
-    """Slide 13: Thảo luận - 'Nói nhiều về gì' (ẢNH 7 CTY BANNER TRÊN + 3 THẺ DƯỚI)."""
+    """Slide 13: Thảo luận - 'Nói nhiều về gì' (BẢNG TỔNG HỢP NATIVE TABLE 8 DÒNG + 3 THẺ PHÂN TÍCH SÂU)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    add_slide_header(slide, "THẢO LUẬN: DOANH NGHIỆP VIỆT NAM 'NÓI NHIỀU VỀ GÌ'?", "THẢO LUẬN CHUYÊN SÂU", 13)
+    add_slide_header(slide, "THẢO LUẬN: BẢNG TỔNG HỢP & PHÂN TÍCH 'NÓI NHIỀU VỀ GÌ' TẠI VIỆT NAM", "THẢO LUẬN CHUYÊN SÂU", 13)
     
-    # Dùng ảnh banner 2 panel slide_company_top_sdgs.png (AR = 2.58) -> Width 11.733, Height 3.8
-    comp_img = FIGURES_DIR / "slide_company_top_sdgs.png"
-    if comp_img.exists():
-        slide.shapes.add_picture(str(comp_img), Inches(0.8), Inches(1.30), Inches(11.733), Inches(3.80))
+    # Cột trái: Bảng Native Table tổng hợp 7 Cty + Toàn mẫu (Width 7.0 in, Height 5.45 in, Left 0.8 in, Top 1.35 in)
+    rows = 9
+    cols = 3
+    table_shape = slide.shapes.add_table(rows, cols, Inches(0.8), Inches(1.35), Inches(7.0), Inches(5.45))
+    tbl = table_shape.table
+    tbl.columns[0].width = Inches(1.7)   # DOANH NGHIỆP (NGÀNH)
+    tbl.columns[1].width = Inches(2.7)   # TOP 3 SDG CAO NHẤT (ĐIỂM TB)
+    tbl.columns[2].width = Inches(2.6)   # ĐẶC THÙ & ĐỘNG LỰC CHIẾN LƯỢC
+    
+    headers = ["DOANH NGHIỆP (NGÀNH)", "TOP 3 SDG CAO NHẤT (ĐIỂM TB)", "ĐỘNG LỰC CHIẾN LƯỢC ESG"]
+    for j, h in enumerate(headers):
+        cell = tbl.cell(0, j)
+        cell.fill.solid()
+        cell.fill.fore_color.rgb = C_NAVY_PRIMARY
+        p = cell.text_frame.paragraphs[0]
+        p.text = h
+        p.font.bold = True
+        p.font.size = Pt(8.8)
+        p.font.color.rgb = RGBColor(255, 255, 255)
+        p.alignment = PP_ALIGN.CENTER
         
-    # 3 Thẻ phân tích bên dưới: Top 5.35, Height 1.45 (Rất thoáng)
-    talk_insights = [
-        ("1. TĂNG TRƯỞNG & VIỆC LÀM (SDG 8, 9, 12)", C_NAVY_PRIMARY, 
-         "Chiếm dung lượng áp đảo toàn bộ 7 doanh nghiệp. Dễ định lượng số liệu doanh thu, lợi nhuận, quy mô nhân sự và công nghệ."),
-        ("2. HOẠT ĐỘNG THIỆN NGUYỆN (SDG 1, 2, 4)", C_GREEN_EMERALD, 
-         "Báo cáo nói rất nhiều về tài trợ học bổng, xây cầu, cứu trợ bão lũ. Bản chất: Dễ làm, hiệu ứng truyền thông tức thì."),
-        ("3. ĐỐI TÁC & THỂ CHẾ (SDG 16, 17)", C_BLUE_ACCENT, 
-         "BVH, SSI và Vinamilk đầu tư lớn cho Báo cáo Tích hợp, tuân thủ pháp lý nhằm thu hút vốn đầu tư và xếp hạng tín nhiệm.")
+    table_data = [
+        ("Vinamilk (Sữa & Chăn nuôi)", "SDG 17 (47.5) | SDG 12 (46.1) | SDG 07 (46.1)", "Trang trại Green Farm, Net Zero PAS 2060, kinh tế tuần hoàn."),
+        ("Vicostone (VLXD Thạch anh)", "SDG 17 (53.1) | SDG 09 (51.7) | SDG 12 (51.4)", "Xuất khẩu 100% thị trường Âu - Mỹ, chứng chỉ xanh khắt khe."),
+        ("PNJ (Bán lẻ & Chế tác vàng)", "SDG 17 (51.5) | SDG 07 (50.3) | SDG 09 (49.6)", "Tiết kiệm điện 400+ cửa hàng, chuỗi chế tác trang sức xanh."),
+        ("Bảo Việt (Bảo hiểm - Tài chính)", "SDG 17 (52.0) | SDG 09 (49.7) | SDG 12 (49.5)", "Tiên phong Báo cáo Tích hợp (IIRC/GRI), quản trị minh bạch."),
+        ("The PAN Group (Nông nghiệp)", "SDG 17 (49.3) | SDG 09 (47.8) | SDG 12 (47.5)", "Chuỗi Farm-Food-Family, an ninh lương thực (SDG 2: 45.3)."),
+        ("Petrolimex (Xăng dầu - Năng lượng)", "SDG 17 (47.8) | SDG 09 (46.5) | SDG 12 (46.0)", "Hạ tầng xăng dầu Euro 5, lộ trình chuyển dịch năng lượng xanh."),
+        ("SSI (Dịch vụ Tài chính)", "SDG 17 (50.3) | SDG 09 (48.1) | SDG 07 (47.1)", "Thu xếp vốn trái phiếu xanh, quản trị theo thẻ điểm ASEAN."),
+        ("★ TOÀN MẪU VIỆT NAM (TB)", "SDG 17 (50.2) > SDG 09 (48.4) > SDG 12 (47.9)", "Quy luật 'Tam giác ưu tiên' chi phối toàn bộ thị trường.")
     ]
     
-    tw = 3.75
-    tgap = 0.24
-    for i, (ttitle, tcol, tdesc) in enumerate(talk_insights):
-        tx = 0.8 + i * (tw + tgap)
-        add_card(slide, tx, 5.35, tw, 1.45, C_CARD_BG, tcol)
+    for i, row in enumerate(table_data):
+        is_highlight = (i == len(table_data) - 1)
+        for j, val in enumerate(row):
+            cell = tbl.cell(i + 1, j)
+            cell.fill.solid()
+            if is_highlight:
+                cell.fill.fore_color.rgb = RGBColor(234, 243, 255)  # Soft highlight blue
+            elif i % 2 == 0:
+                cell.fill.fore_color.rgb = RGBColor(248, 250, 252)
+            else:
+                cell.fill.fore_color.rgb = RGBColor(255, 255, 255)
+                
+            p = cell.text_frame.paragraphs[0]
+            p.text = val
+            p.font.size = Pt(7.6 if j == 2 else 8.0)
+            if is_highlight:
+                p.font.bold = True
+                p.font.color.rgb = C_BLUE_ACCENT if j == 0 else C_NAVY_PRIMARY
+            else:
+                p.font.bold = (j == 0)
+                p.font.color.rgb = C_NAVY_PRIMARY if j == 0 else C_TEXT_DARK
+            if j == 1:
+                p.alignment = PP_ALIGN.CENTER
+
+    # Cột phải: 3 Thẻ Phân tích Sâu sắc & Sắc bén (Width 4.4 in, Left 8.1 in, Top 1.35 in, Height 1.68 in mỗi thẻ)
+    rw = 4.4
+    rx = 8.1
+    card_insights = [
+        ("1. QUY LUẬT 'TAM GIÁC ƯU TIÊN' (SDG 17 - 09 - 12)", C_NAVY_PRIMARY, [
+            "• SDG 17 (Hợp tác đối tác) đứng Top 1 ở 100% doanh nghiệp (50,23 điểm).",
+            "• Doanh nghiệp VN phụ thuộc chuỗi cung ứng toàn cầu; bắt buộc phải chứng minh hợp tác với nhà cung ứng và đối tác kiểm định quốc tế để duy trì đơn hàng xuất khẩu và vốn ngoại."
+        ]),
+        ("2. PHÂN HÓA RÕ NÉT THEO MÔ HÌNH KINH DOANH", C_GREEN_EMERALD, [
+            "• Khối Sản xuất (VCS, VNM, PAN): Điểm SDG 12 & 07 vượt trội do áp lực trực tiếp từ rác thải bao bì, tiêu hao năng lượng và thuế carbon biên giới (CBAM).",
+            "• Khối Tài chính (BVH, SSI): Ưu tiên SDG 8, 9, 16 để đáp ứng chuẩn xếp hạng tín nhiệm và tiêu chí đầu tư bền vững VNSI của HOSE."
+        ]),
+        ("3. ĐỘNG CƠ 'CHERRY-PICKING' (HÁI QUẢ TIỆN TAY)", C_GOLD_ACCENT, [
+            "• Doanh nghiệp tập trung nói về Đầu tư công nghệ (SDG 9) và Đối tác (SDG 17) vì đây là các số liệu tài chính sẵn có từ Báo cáo Thường niên.",
+            "• Dễ định lượng, an toàn về mặt PR và không để lộ rủi ro vi phạm môi trường."
+        ])
+    ]
+    
+    for i, (ctitle, ccol, cbullets) in enumerate(card_insights):
+        cy = 1.35 + i * 1.85
+        add_card(slide, rx, cy, rw, 1.75, C_CARD_BG, ccol)
         
-        tb = slide.shapes.add_textbox(Inches(tx + 0.15), Inches(5.42), Inches(tw - 0.3), Inches(1.3))
+        tb = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(cy + 0.08), Inches(rw - 0.3), Inches(1.6))
         tf = tb.text_frame
         tf.word_wrap = True
         p = tf.paragraphs[0]
-        r1 = p.add_run(ttitle + "\n")
-        r1.font.size = Pt(9.5)
+        r1 = p.add_run(ctitle + "\n")
+        r1.font.size = Pt(9.0)
         r1.font.bold = True
-        r1.font.color.rgb = tcol
+        r1.font.color.rgb = ccol
         
-        r2 = p.add_run(tdesc)
-        r2.font.size = Pt(8.5)
-        r2.font.color.rgb = C_TEXT_DARK
+        for bullet in cbullets:
+            p2 = tf.add_paragraph()
+            p2.space_after = Pt(2)
+            r2 = p2.add_run(bullet)
+            r2.font.size = Pt(7.8)
+            r2.font.color.rgb = C_TEXT_DARK
 
     set_presenter_notes(slide, {
-        "goal": "Giải thích hiện tượng 'Nói nhiều về gì': Tăng trưởng kinh tế, CSR từ thiện bề nổi và Báo cáo tích hợp.",
-        "script": "Từ biểu đồ tổng hợp top SDGs của cả 7 doanh nghiệp, chúng ta thấy rõ hiện tượng Cherry-picking: Doanh nghiệp tập trung nói nhiều vào 3 mảng: Thứ nhất là Tăng trưởng kinh tế và việc làm (SDG 8, 9, 12); thứ hai là các hoạt động từ thiện CSR bề nổi như học bổng, cứu trợ (SDG 1, 2, 4); và thứ ba là quan hệ đối tác pháp lý (SDG 16, 17). Đây là những chủ đề mang lại lợi ích PR tức thì và phục vụ quan hệ nhà đầu tư.",
-        "highlights": "Nói nhiều: Kinh tế (SDG 8, 9, 12), Từ thiện CSR (SDG 1, 2, 4), Đối tác (SDG 16, 17).",
-        "qa": "Tại sao gọi đây là Cherry-picking: Vì doanh nghiệp có quyền chủ động chọn lọc những tiêu chí đẹp nhất để trình bày mà không bị chế tài bắt buộc."
+        "goal": "Phân tích bảng tổng hợp xếp hạng Top SDGs của 7 doanh nghiệp, làm rõ quy luật 'Tam giác ưu tiên' và bản chất Cherry-picking.",
+        "script": "Kính thưa Hội đồng, bảng bên trái là kết quả định lượng chính xác Top 3 mục tiêu SDG được nói nhiều nhất của từng doanh nghiệp và toàn thị trường. Chúng ta thấy nổi lên 3 phát hiện cực kỳ sâu sắc: Thứ nhất là Quy luật Tam giác ưu tiên SDG 17, 09 và 12. Cả 7 doanh nghiệp đều có điểm SDG 17 cao nhất tuyệt đối trên 50 điểm vì nền kinh tế Việt Nam định hướng xuất khẩu, bắt buộc phải chứng minh quan hệ đối tác quốc tế. Thứ hai là sự phân hóa ngành: Khối sản xuất như Vicostone, Vinamilk tập trung vào SDG 12 và SDG 7 do áp lực trực tiếp từ rác thải và thuế carbon CBAM; trong khi khối tài chính như Bảo Việt, SSI tập trung vào SDG 8 và 16 phục vụ chỉ số VNSI. Thứ ba, điều này phản ánh bản chất Cherry-picking: Doanh nghiệp chọn nói về những gì sẵn có số liệu đẹp từ báo cáo tài chính để làm PR.",
+        "highlights": "Toàn mẫu VN: SDG 17 (50.2) > SDG 09 (48.4) > SDG 12 (47.9); Phân hóa sản xuất vs tài chính; Bản chất Cherry-picking.",
+        "qa": "Tại sao SDG 17 luôn đứng đầu: Vì SDG 17 bao hàm các quan hệ đối tác công-tư, hợp tác nhà cung ứng và tuân thủ chuẩn mực báo cáo quốc tế - đây là nội dung bắt buộc trong mọi bản công bố thông tin."
     })
 
 
@@ -1407,7 +1443,7 @@ def main():
     print("[3/18] Slide 3: Bài báo gốc Kang & Kim (2022) vs Code mới (Biểu đồ 3 Panel chuẩn AR)...")
     build_slide_03_original_paper(prs)
     
-    print("[4/18] Slide 4: Khung Phương pháp luận (Sơ đồ luồng 4 tầng chuẩn AR)...")
+    print("[4/18] Slide 4: Khung Phương pháp luận (Sơ đồ 16:9 5 giai đoạn toàn diện)...")
     build_slide_04_pipeline(prs)
     
     print("[5/18] Slide 5: Mẫu Dữ liệu Thực nghiệm (Bảng 7 Doanh nghiệp + 4 Thẻ KPI)...")
@@ -1434,7 +1470,7 @@ def main():
     print("[12/18] Slide 12: Kết quả 6 - Tỷ số Cảm xúc Pos/Neg Ratio (sentiment_ratio.png AR 1.84)...")
     build_slide_12_result6_sentiment_ratio(prs)
     
-    print("[13/18] Slide 13: Thảo luận - 'Nói nhiều về gì' (slide_company_top_sdgs.png AR 2.58 banner)...")
+    print("[13/18] Slide 13: Thảo luận - 'Nói nhiều về gì' (Bảng tổng hợp Native Table + 3 Thẻ phân tích sâu)...")
     build_slide_13_discussion_talk_heavy(prs)
     
     print("[14/18] Slide 14: Thảo luận - 'Ít nói về gì' (4 Thẻ cảnh báo né tránh 2x2)...")
