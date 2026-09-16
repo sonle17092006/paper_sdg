@@ -1,20 +1,13 @@
-"""Cập nhật bộ slide chính của đề tài (C:\\Code\\paper_sdg\\bao_cao_nghien_cuu_sdg_vietnam.pptx).
-Yêu cầu của người dùng:
-- Ít chữ và nhiều ảnh hơn: Giảm bớt các đoạn văn dài, thay bằng sơ đồ luồng, biểu đồ trực quan, thẻ KPI và bullet ngắn.
-- Có thêm các bảng so sánh đối đầu chi tiết giữa Paper gốc (Kang & Kim 2022) và Code mới (Việt Nam 2026).
-- Nhúng các biểu đồ độ nét cao (200 DPI):
-  + Slide 3: Biểu đồ 3 panel đối chuẩn định lượng paper gốc vs code mới (rag_benchmark_paper_vs_code.png)
-  + Slide 4: Sơ đồ luồng phương pháp luận 4/5 tầng (rag_architecture_flow.png)
-  + Slide 6: Phân phối tương đồng (similarity_hist.png) + BẢNG ĐỐI CHUẨN THỐNG KÊ
-  + Slide 7: Heatmap 6 nhóm SDG (heatmap_6cat.png)
-  + Slide 8: Biểu đồ phân tích khối Sản xuất (slide_manuf_sdgs.png)
-  + Slide 9: Biểu đồ phân tích khối Tài chính (slide_finance_sdgs.png)
-  + Slide 10: Biểu đồ xu hướng chuỗi thời gian (trends_6categories.png)
-  + Slide 11: Biểu đồ phân phối & cơ cấu cảm xúc (sentiment_hist.png & sentiment_by_company.png)
-  + Slide 12: Biểu đồ tỷ số Pos/Neg theo năm (sentiment_ratio.png)
-  + Slide 13: Biểu đồ tổng hợp top SDGs 7 doanh nghiệp (slide_company_top_sdgs.png)
-  + Slide 15: BẢNG SO SÁNH ĐỐI ĐẦU TOÀN DIỆN 8 TIÊU CHÍ (Native Table)
-  + Slide 17: Sơ đồ tương lai Multi-Agent ESG Auditor (rag_agentic_flow.png)
+"""Xử lý triệt để hiện tượng cramped (chật chội, dồn cục) trong bộ slide chính:
+1. KHÔI PHỤC NGUYÊN BẢN TỶ LỆ ASPECT RATIO CỦA TOÀN BỘ ẢNH (Không còn méo mó, co kéo).
+2. TĂNG KHOẢNG THỞ (WHITESPACE & PADDING) GIỮA CÁC THÀNH PHẦN (Tối thiểu 0.25 - 0.35 inches gap).
+3. SỬ DỤNG ĐÚNG ẢNH LANDSCAPE CHO SLIDE WIDESCREEN 16:9:
+   - Slide 10: Dùng `slide_trends_grid.png` (AR 2.01) dạng lưới 2x2 thay cho dải dọc hẹp.
+   - Slide 11: Dùng `slide_sentiment_summary.png` (AR 2.36) panorama thay vì nhét 2 ảnh dọc.
+   - Slide 13: Dùng `slide_company_top_sdgs.png` (AR 2.58) dạng banner rộng trên + 3 thẻ thoáng bên dưới.
+   - Slide 7: Đặt `heatmap_6cat.png` (AR 0.65 portrait) đúng tỷ lệ dọc, giải phóng 7.7 inch bên phải cho 3 thẻ rộng.
+   - Slide 17: Dùng `rag_agentic_flow.png` (AR 2.85) banner trên + 3 thẻ hạn chế/tương lai bên dưới.
+4. BẢNG SO SÁNH ĐỐI ĐẦU ĐƯỢC GIÃN DÒNG RỘNG RÃI, DỄ ĐỌC.
 """
 
 from __future__ import annotations
@@ -81,13 +74,13 @@ def add_slide_header(slide, title_text: str, category_tag: str = "BÁO CÁO KHOA
     bg = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(13.333), Inches(7.5))
     set_shape_flat(bg, C_BG_LIGHT)
     
-    top_bar = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(13.333), Inches(1.1))
+    top_bar = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(13.333), Inches(1.05))
     set_shape_flat(top_bar, C_CARD_BG, C_BORDER_LIGHT, 0.75)
     
-    accent_strip = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(13.333), Inches(0.06))
+    accent_strip = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(13.333), Inches(0.05))
     set_shape_flat(accent_strip, C_GOLD_ACCENT)
     
-    tag_box = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(0.16), Inches(2.8), Inches(0.28))
+    tag_box = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(0.14), Inches(2.8), Inches(0.26))
     set_shape_flat(tag_box, C_NAVY_PRIMARY)
     tf_tag = tag_box.text_frame
     tf_tag.vertical_anchor = MSO_ANCHOR.MIDDLE
@@ -96,11 +89,11 @@ def add_slide_header(slide, title_text: str, category_tag: str = "BÁO CÁO KHOA
     r_tag = p_tag.add_run()
     r_tag.text = category_tag.upper()
     r_tag.font.name = FONT_MAIN
-    r_tag.font.size = Pt(9.0)
+    r_tag.font.size = Pt(8.5)
     r_tag.font.bold = True
     r_tag.font.color.rgb = C_WHITE
     
-    tx_box = slide.shapes.add_textbox(Inches(0.75), Inches(0.46), Inches(10.5), Inches(0.58))
+    tx_box = slide.shapes.add_textbox(Inches(0.75), Inches(0.42), Inches(10.5), Inches(0.55))
     tf = tx_box.text_frame
     tf.word_wrap = True
     tf.vertical_anchor = MSO_ANCHOR.MIDDLE
@@ -108,11 +101,11 @@ def add_slide_header(slide, title_text: str, category_tag: str = "BÁO CÁO KHOA
     run = p.add_run()
     run.text = title_text
     run.font.name = FONT_HEADING
-    run.font.size = Pt(17.0)
+    run.font.size = Pt(16.5)
     run.font.bold = True
     run.font.color.rgb = C_NAVY_PRIMARY
 
-    num_box = slide.shapes.add_textbox(Inches(11.8), Inches(0.35), Inches(1.0), Inches(0.5))
+    num_box = slide.shapes.add_textbox(Inches(11.8), Inches(0.32), Inches(1.0), Inches(0.5))
     tf_num = num_box.text_frame
     p_num = tf_num.paragraphs[0]
     p_num.alignment = PP_ALIGN.RIGHT
@@ -171,7 +164,7 @@ def set_presenter_notes(slide, notes_dict: dict):
 
 
 # ==============================================================================
-# XÂY DỰNG 18 SLIDE (PHIÊN BẢN TRỰC QUAN CAO CẤP, ÍT CHỮ, NHIỀU ẢNH & BẢNG SO SÁNH)
+# XÂY DỰNG 18 SLIDE (PHIÊN BẢN DE-CRAMPED THOÁNG ĐÃNG, CHUẨN TỶ LỆ)
 # ==============================================================================
 
 def build_slide_01_title(prs):
@@ -186,17 +179,17 @@ def build_slide_01_title(prs):
     card = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.8), Inches(0.7), Inches(11.733), Inches(6.1))
     set_shape_flat(card, RGBColor(18, 42, 74), RGBColor(40, 75, 120), 1.5)
     
-    badge = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(1.3), Inches(1.1), Inches(4.5), Inches(0.38))
+    badge = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(1.3), Inches(1.15), Inches(4.5), Inches(0.38))
     set_shape_flat(badge, C_GOLD_ACCENT)
     p_b = badge.text_frame.paragraphs[0]
     p_b.alignment = PP_ALIGN.CENTER
     r_b = p_b.add_run("BÁO CÁO KẾT QUẢ NGHIÊN CỨU KHOA HỌC")
     r_b.font.name = FONT_MAIN
-    r_b.font.size = Pt(11)
+    r_b.font.size = Pt(10.5)
     r_b.font.bold = True
     r_b.font.color.rgb = C_NAVY_DARK
     
-    tb_title = slide.shapes.add_textbox(Inches(1.3), Inches(1.6), Inches(10.7), Inches(1.8))
+    tb_title = slide.shapes.add_textbox(Inches(1.3), Inches(1.7), Inches(10.7), Inches(1.8))
     tf_t = tb_title.text_frame
     tf_t.word_wrap = True
     p_t = tf_t.paragraphs[0]
@@ -210,7 +203,7 @@ def build_slide_01_title(prs):
     r_t.font.bold = True
     r_t.font.color.rgb = C_WHITE
 
-    tb_en = slide.shapes.add_textbox(Inches(1.3), Inches(3.45), Inches(10.7), Inches(0.8))
+    tb_en = slide.shapes.add_textbox(Inches(1.3), Inches(3.5), Inches(10.7), Inches(0.8))
     tf_en = tb_en.text_frame
     tf_en.word_wrap = True
     p_en = tf_en.paragraphs[0]
@@ -219,14 +212,14 @@ def build_slide_01_title(prs):
         "Evidence from Vietnamese Enterprises"
     )
     r_en.font.name = FONT_MAIN
-    r_en.font.size = Pt(12.5)
+    r_en.font.size = Pt(12)
     r_en.font.italic = True
     r_en.font.color.rgb = RGBColor(190, 210, 235)
 
     line = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(1.3), Inches(4.35), Inches(10.7), Inches(0.03))
     set_shape_flat(line, C_GOLD_ACCENT)
 
-    tb_frame = slide.shapes.add_textbox(Inches(1.3), Inches(4.5), Inches(6.0), Inches(1.8))
+    tb_frame = slide.shapes.add_textbox(Inches(1.3), Inches(4.55), Inches(6.0), Inches(1.8))
     tf_f = tb_frame.text_frame
     tf_f.word_wrap = True
     p_f1 = tf_f.paragraphs[0]
@@ -239,10 +232,10 @@ def build_slide_01_title(prs):
         "Tạp chí Applied Sciences (MDPI), 12(11), 5614.\n"
         "Ứng dụng chuyển giao & mở rộng thực nghiệm trên thị trường Việt Nam."
     )
-    r_f2.font.size = Pt(10)
+    r_f2.font.size = Pt(9.5)
     r_f2.font.color.rgb = RGBColor(220, 230, 245)
 
-    tb_auth = slide.shapes.add_textbox(Inches(7.6), Inches(4.5), Inches(4.4), Inches(1.8))
+    tb_auth = slide.shapes.add_textbox(Inches(7.6), Inches(4.55), Inches(4.4), Inches(1.8))
     tf_a = tb_auth.text_frame
     tf_a.word_wrap = True
     p_a = tf_a.paragraphs[0]
@@ -251,7 +244,7 @@ def build_slide_01_title(prs):
     r_a1.font.size = Pt(10)
     r_a1.font.color.rgb = C_GOLD_ACCENT
     r_a2 = p_a.add_run("• Lê Đan Sơn\n• Dương Thị Hoàn\n\nNăm thực hiện: 2026")
-    r_a2.font.size = Pt(11.5)
+    r_a2.font.size = Pt(11)
     r_a2.font.bold = True
     r_a2.font.color.rgb = C_WHITE
 
@@ -264,33 +257,42 @@ def build_slide_01_title(prs):
 
 
 def build_slide_02_context(prs):
-    """Slide 2: Bối Cảnh Nghiên Cứu & Động Lực Thể Chế (Tinh gọn text, tăng thẻ KPI)."""
+    """Slide 2: Bối Cảnh Nghiên Cứu & Động Lực Thể Chế (Bố cục thoáng, khoảng đệm rộng)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "BỐI CẢNH NGHIÊN CỨU & ĐỘNG LỰC THỰC TIỄN", "TỔNG QUAN VẤN ĐỀ", 2)
     
-    # 3 Thẻ nội dung tinh gọn
+    # 3 Thẻ nội dung với khoảng đệm thoải mái
     cards_data = [
         ("1. ĐỘNG LỰC THỂ CHẾ ESG", C_NAVY_PRIMARY, [
-            "• Cam kết COP26 & Net Zero 2050: Định hình chiến lược chuyển dịch xanh quốc gia.",
-            "• Thông tư 96/2020/TT-BTC: Bắt buộc công bố thông tin môi trường & xã hội trên TTCK.",
-            "• Khung CSI & UBCKNN: Tiêu chuẩn hóa các chỉ số phát triển bền vững."
+            "• Cam kết COP26 Net Zero 2050:",
+            "  Định hình chiến lược chuyển dịch xanh quốc gia của Chính phủ.",
+            "• Thông tư 96/2020/TT-BTC:",
+            "  Bắt buộc công bố thông tin môi trường và xã hội trên TTCK.",
+            "• Khung CSI & UBCKNN:",
+            "  Tiêu chuẩn hóa bộ chỉ số thực hành bền vững."
         ]),
         ("2. NGHỊCH LÝ & THÁCH THỨC", C_RED_ACCENT, [
-            "• Bùng nổ văn bản: Trung bình 100–200 trang/báo cáo, ngôn ngữ tự do phi cấu trúc.",
-            "• Quá tải giám sát thủ công: Không đủ nguồn lực đọc và thẩm tra định tính từng câu.",
-            "• Rủi ro Quản trị Ấn tượng: Doanh nghiệp có xu hướng tô hồng thành tích, che giấu rủi ro."
+            "• Bùng nổ văn bản tự do:",
+            "  Trung bình 100–200 trang/báo cáo, ngôn ngữ tự do phi cấu trúc.",
+            "• Quá tải giám sát thủ công:",
+            "  Không đủ nguồn lực đọc và thẩm tra định tính từng câu chữ.",
+            "• Nguy cơ Quản trị Ấn tượng:",
+            "  Xu hướng tô hồng thành tích, giấu nhẹm rủi ro và sự cố vi phạm."
         ]),
         ("3. ĐỘT PHÁ CÔNG NGHỆ NLP", C_GREEN_EMERALD, [
-            "• Tự động hóa định lượng: Đọc hiểu 96.461 câu trong vài giây, loại bỏ cảm tính.",
-            "• Đo lường chuẩn hóa 17 SDGs: Ánh xạ ngữ nghĩa vector SBERT vào 169 mục tiêu LHQ.",
-            "• Nhận diện cảm xúc khách quan: PhoBERT 3 lớp nhận diện thiên lệch lạc quan."
+            "• Tự động hóa định lượng:",
+            "  Đọc hiểu 96.461 câu văn bản trong vài giây, loại bỏ cảm tính.",
+            "• Đo lường chuẩn hóa 17 SDGs:",
+            "  Ánh xạ ngữ nghĩa vector SBERT vào 169 mục tiêu của LHQ.",
+            "• Nhận diện cảm xúc khách quan:",
+            "  PhoBERT 3 lớp nhận diện thiên lệch lạc quan và quản trị ấn tượng."
         ])
     ]
     
     w = 3.75
     gap = 0.24
     top = 1.35
-    h = 4.2
+    h = 4.1
     
     for i, (ctitle, ccol, cbullets) in enumerate(cards_data):
         cx = 0.8 + i * (w + gap)
@@ -302,7 +304,7 @@ def build_slide_02_context(prs):
         p_st.alignment = PP_ALIGN.CENTER
         r_st = p_st.add_run(ctitle)
         r_st.font.name = FONT_MAIN
-        r_st.font.size = Pt(10.5)
+        r_st.font.size = Pt(10)
         r_st.font.bold = True
         r_st.font.color.rgb = C_WHITE
         
@@ -311,14 +313,19 @@ def build_slide_02_context(prs):
         tf.word_wrap = True
         for b_idx, bullet in enumerate(cbullets):
             p = tf.add_paragraph() if b_idx > 0 else tf.paragraphs[0]
-            p.space_after = Pt(6)
+            p.space_after = Pt(4)
             r = p.add_run(bullet)
             r.font.name = FONT_MAIN
-            r.font.size = Pt(9.5)
-            r.font.color.rgb = C_TEXT_DARK
+            if bullet.startswith("•"):
+                r.font.bold = True
+                r.font.size = Pt(9.5)
+                r.font.color.rgb = ccol
+            else:
+                r.font.size = Pt(9.0)
+                r.font.color.rgb = C_TEXT_DARK
 
-    # Bottom metric callout bar
-    bot_card = add_card(slide, 0.8, 5.75, 11.733, 1.25, RGBColor(238, 244, 252), C_BLUE_ACCENT)
+    # Dải KPI bên dưới: Đặt ở top 5.65, height 1.25, cách xa lề dưới 0.6 in
+    bot_card = add_card(slide, 0.8, 5.65, 11.733, 1.25, RGBColor(238, 244, 252), C_BLUE_ACCENT)
     kpis = [
         ("MỐC CAM KẾT QUỐC GIA", "Net Zero 2050", "(Hội nghị COP26)"),
         ("KHUNG PHÁP LÝ BẮT BUỘC", "TT 96/2020/TT-BTC", "(Bộ Tài chính ban hành)"),
@@ -327,7 +334,7 @@ def build_slide_02_context(prs):
     ]
     for i, (ktitle, kval, ksub) in enumerate(kpis):
         kx = 0.95 + i * 2.9
-        tb_k = slide.shapes.add_textbox(Inches(kx), Inches(5.82), Inches(2.8), Inches(1.1))
+        tb_k = slide.shapes.add_textbox(Inches(kx), Inches(5.72), Inches(2.8), Inches(1.1))
         tf_k = tb_k.text_frame
         tf_k.word_wrap = True
         p = tf_k.paragraphs[0]
@@ -354,30 +361,30 @@ def build_slide_02_context(prs):
 
 
 def build_slide_03_original_paper(prs):
-    """Slide 3: Bài Báo Gốc Kang & Kim (2022) vs Code Mới (NHIỀU ẢNH: BIỂU ĐỒ 3 PANEL)."""
+    """Slide 3: Bài Báo Gốc Kang & Kim (2022) vs Code Mới (CHUẨN TỶ LỆ 3 PANEL + THẺ GỌN)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "BÀI BÁO GỐC KANG & KIM (2022) & ĐỀ TÀI NÀY KHẮC PHỤC ĐIỀU GÌ?", "TỔNG QUAN HỌC THUẬT", 3)
     
-    # Nhúng biểu đồ đối chuẩn thực nghiệm 3 panel
+    # Ảnh biểu đồ 3 panel (AR = 3.16) -> Width 11.733, Height 3.71
     bench_img = FIGURES_DIR / "rag_benchmark_paper_vs_code.png"
     if bench_img.exists():
-        slide.shapes.add_picture(str(bench_img), Inches(0.8), Inches(1.25), Inches(11.733), Inches(3.95))
+        slide.shapes.add_picture(str(bench_img), Inches(0.8), Inches(1.30), Inches(11.733), Inches(3.70))
         
-    # 4 Hộp tóm tắt 4 điểm khắc phục bên dưới
+    # 4 Thẻ KPI tóm gọn bên dưới: Top 5.25, Height 1.55 (Khoảng hở 0.25 in rất thoáng)
     remedies = [
-        ("1. RÀO CẢN ĐƠN NGỮ TIẾNG ANH", "Paper gốc chỉ chạy tiếng Anh -> Đề tài xây dựng pipeline đa ngữ vietnamese-sbert (768-d) + Ngữ liệu 1.032 câu chuẩn.", C_NAVY_PRIMARY),
-        ("2. BỎ QUA TỆP SCAN HÌNH ẢNH", "Paper gốc loại bỏ PDF scan -> Đề tài tích hợp Tesseract OCR (vie+eng) phục hồi 100% dữ liệu (như PNJ 2022).", C_BLUE_ACCENT),
-        ("3. CẢM XÚC 2 LỚP GƯỢNG ÉP", "Paper gốc ép câu số liệu vào Pos/Neg -> Đề tài dùng PhoBERT 3 lớp, bổ sung lớp Trung tính (32,87%) bảo toàn số liệu.", C_GREEN_EMERALD),
-        ("4. KHẢO SÁT BỀ MẶT MẪU GỘP", "Paper gốc dừng ở thống kê chung -> Đề tài giải mã sâu sắc mô hình kinh doanh và hiện tượng 'Nói nhiều vs Né tránh'.", C_PURPLE_ACCENT)
+        ("1. RÀO CẢN ĐƠN NGỮ", "vietnamese-sbert (768-d)", "Khắc phục đơn ngữ tiếng Anh, mở rộng cho 96k câu tiếng Việt", C_NAVY_PRIMARY),
+        ("2. TỆP SCAN HÌNH ẢNH", "Tesseract OCR (vie+eng)", "Khôi phục 100% tài liệu scan phức tạp mà bài gốc bỏ qua", C_BLUE_ACCENT),
+        ("3. MÔ HÌNH CẢM XÚC", "PhoBERT 3 Lớp (Trung tính 32,9%)", "Bảo lưu câu số liệu kỹ thuật, loại bỏ gán nhãn 2 lớp gượng ép", C_GREEN_EMERALD),
+        ("4. CHIỀU SÂU PHÂN TÍCH", "Giải mã Đặc thù Ngành", "Vượt qua thống kê bề mặt, làm rõ hiện tượng 'Nói nhiều vs Né tránh'", C_PURPLE_ACCENT)
     ]
     
     rw = 2.8
     rgap = 0.18
-    for i, (rtitle, rdesc, rcol) in enumerate(remedies):
+    for i, (rtitle, rval, rsub, rcol) in enumerate(remedies):
         rx = 0.8 + i * (rw + rgap)
-        add_card(slide, rx, 5.35, rw, 1.65, C_CARD_BG, rcol)
+        add_card(slide, rx, 5.25, rw, 1.55, C_CARD_BG, rcol)
         
-        tb = slide.shapes.add_textbox(Inches(rx + 0.12), Inches(5.42), Inches(rw - 0.24), Inches(1.5))
+        tb = slide.shapes.add_textbox(Inches(rx + 0.12), Inches(5.32), Inches(rw - 0.24), Inches(1.4))
         tf = tb.text_frame
         tf.word_wrap = True
         p = tf.paragraphs[0]
@@ -386,9 +393,14 @@ def build_slide_03_original_paper(prs):
         r1.font.bold = True
         r1.font.color.rgb = rcol
         
-        r2 = p.add_run(rdesc)
-        r2.font.size = Pt(8.2)
-        r2.font.color.rgb = C_TEXT_DARK
+        r2 = p.add_run(rval + "\n")
+        r2.font.size = Pt(11)
+        r2.font.bold = True
+        r2.font.color.rgb = C_NAVY_PRIMARY
+        
+        r3 = p.add_run(rsub)
+        r3.font.size = Pt(8.0)
+        r3.font.color.rgb = C_TEXT_DARK
 
     set_presenter_notes(slide, {
         "goal": "Dùng biểu đồ 3 panel chứng minh đối chuẩn trực tiếp với Kang & Kim (2022) và giải thích 4 hạn chế đã khắc phục.",
@@ -399,31 +411,31 @@ def build_slide_03_original_paper(prs):
 
 
 def build_slide_04_pipeline(prs):
-    """Slide 4: Quy trình Phương pháp luận (NHIỀU ẢNH: SƠ ĐỒ LUỒNG KIẾN TRÚC)."""
+    """Slide 4: Quy trình Phương pháp luận (SƠ ĐỒ LUỒNG RỘNG RÃI + 5 VIÊN THUỐC BƯỚC)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "KHUNG PHƯƠNG PHÁP LUẬN NLP ĐA NGỮ 5 BƯỚC KHÉP KÍN", "PHƯƠNG PHÁP NGHIÊN CỨU", 4)
     
-    # Nhúng sơ đồ luồng kiến trúc RAG/NLP
+    # Sơ đồ luồng (AR = 2.85) -> Width 11.733, Height 4.0
     flow_img = FIGURES_DIR / "rag_architecture_flow.png"
     if flow_img.exists():
-        slide.shapes.add_picture(str(flow_img), Inches(0.8), Inches(1.25), Inches(11.733), Inches(4.15))
+        slide.shapes.add_picture(str(flow_img), Inches(0.8), Inches(1.30), Inches(11.733), Inches(3.95))
         
-    # 5 Hộp tóm tắt quy trình bên dưới
+    # 5 Hộp bước tóm gọn: Top 5.50, Height 1.35 (Khoảng cách 0.25 in rất sạch sẽ)
     steps = [
-        ("B1. Thu thập PDF", "42 báo cáo từ 7 tập đoàn lớn (2020–2025).", C_NAVY_PRIMARY),
-        ("B2. Tiền xử lý & OCR", "PyMuPDF + Tesseract OCR khôi phục 100% tệp scan.", C_BLUE_ACCENT),
-        ("B3. Nhúng SBERT", "vietnamese-sbert 768-d + Ngữ liệu 1.032 câu.", C_GOLD_ACCENT),
-        ("B4. Min-Max 0-100", "Chuẩn hóa toàn cục + Quy nạp 6 nhóm Max-Neef.", C_PURPLE_ACCENT),
-        ("B5. PhoBERT 3 lớp", "Phân loại cảm xúc & tính Tỷ số Pos/Neg Ratio.", C_GREEN_EMERALD)
+        ("B1. Thu thập PDF", "42 báo cáo từ 7 tập đoàn (2020–2025).", C_NAVY_PRIMARY),
+        ("B2. Tiền xử lý & OCR", "PyMuPDF + Tesseract phục hồi 100% scan.", C_BLUE_ACCENT),
+        ("B3. Nhúng SBERT", "vietnamese-sbert 768-d + 1.032 câu chuẩn.", C_GOLD_ACCENT),
+        ("B4. Min-Max 0-100", "Chuẩn hóa toàn cục + 6 nhóm Max-Neef.", C_PURPLE_ACCENT),
+        ("B5. PhoBERT 3 lớp", "Phân tích cảm xúc & Tỷ số Pos/Neg Ratio.", C_GREEN_EMERALD)
     ]
     
     sw = 2.22
     sgap = 0.16
     for i, (stitle, sdesc, scol) in enumerate(steps):
         sx = 0.8 + i * (sw + sgap)
-        add_card(slide, sx, 5.55, sw, 1.45, C_CARD_BG, scol)
+        add_card(slide, sx, 5.50, sw, 1.35, C_CARD_BG, scol)
         
-        tb = slide.shapes.add_textbox(Inches(sx + 0.1), Inches(5.62), Inches(sw - 0.2), Inches(1.3))
+        tb = slide.shapes.add_textbox(Inches(sx + 0.1), Inches(5.56), Inches(sw - 0.2), Inches(1.2))
         tf = tb.text_frame
         tf.word_wrap = True
         p = tf.paragraphs[0]
@@ -433,7 +445,7 @@ def build_slide_04_pipeline(prs):
         r1.font.color.rgb = scol
         
         r2 = p.add_run(sdesc)
-        r2.font.size = Pt(8.5)
+        r2.font.size = Pt(8.3)
         r2.font.color.rgb = C_TEXT_DARK
 
     set_presenter_notes(slide, {
@@ -445,20 +457,20 @@ def build_slide_04_pipeline(prs):
 
 
 def build_slide_05_sample(prs):
-    """Slide 5: Mẫu Dữ liệu Thực nghiệm (Bảng Native Table + Thẻ Metric)."""
+    """Slide 5: Mẫu Dữ liệu Thực nghiệm (Bảng 7 Tập đoàn + Thẻ KPI cân đối)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "MẪU DỮ LIỆU THỰC NGHIỆM: 7 TẬP ĐOÀN NIÊM YẾT (42 BÁO CÁO)", "DỮ LIỆU THỰC NGHIỆM", 5)
     
-    # Bảng Native Table bên trái
+    # Bảng Native Table bên trái (rộng 6.8 in, cao 5.4 in)
     rows = 8
     cols = 5
-    table_shape = slide.shapes.add_table(rows, cols, Inches(0.8), Inches(1.35), Inches(7.5), Inches(5.65))
+    table_shape = slide.shapes.add_table(rows, cols, Inches(0.8), Inches(1.35), Inches(6.8), Inches(5.4))
     tbl = table_shape.table
-    tbl.columns[0].width = Inches(1.0)
-    tbl.columns[1].width = Inches(2.3)
-    tbl.columns[2].width = Inches(1.8)
-    tbl.columns[3].width = Inches(1.2)
-    tbl.columns[4].width = Inches(1.2)
+    tbl.columns[0].width = Inches(0.9)
+    tbl.columns[1].width = Inches(2.1)
+    tbl.columns[2].width = Inches(1.6)
+    tbl.columns[3].width = Inches(1.1)
+    tbl.columns[4].width = Inches(1.1)
     
     tbl_headers = ["MÃ CK", "DOANH NGHIỆP", "NGÀNH NGHỀ", "SỐ BC", "SỐ CÂU"]
     for j, h in enumerate(tbl_headers):
@@ -469,17 +481,17 @@ def build_slide_05_sample(prs):
         p.alignment = PP_ALIGN.CENTER
         r = p.add_run(h)
         r.font.bold = True
-        r.font.size = Pt(9.5)
+        r.font.size = Pt(9.0)
         r.font.color.rgb = C_WHITE
         
     sample_data = [
-        ("VNM", "Vinamilk", "Chế biến Sữa & Thực phẩm", "6 BC", "18.420 câu"),
-        ("VCS", "Vicostone", "Vật liệu Đá thạch anh nhân tạo", "6 BC", "14.650 câu"),
+        ("VNM", "Vinamilk", "Sữa & Thực phẩm", "6 BC", "18.420 câu"),
+        ("VCS", "Vicostone", "Vật liệu Thạch anh", "6 BC", "14.650 câu"),
         ("PAN", "PAN Group", "Nông nghiệp & Thủy sản", "6 BC", "16.120 câu"),
         ("PLX", "Petrolimex", "Năng lượng & Xăng dầu", "6 BC", "11.380 câu"),
-        ("PNJ", "Vàng bạc Đá quý Phú Nhuận", "Bán lẻ Trang sức cao cấp", "6 BC", "12.890 câu"),
-        ("BVH", "Tập đoàn Bảo Việt", "Tài chính & Bảo hiểm tích hợp", "6 BC", "13.410 câu"),
-        ("SSI", "Chứng khoán SSI", "Dịch vụ Tài chính & Chứng khoán", "6 BC", "9.591 câu")
+        ("PNJ", "PNJ", "Bán lẻ Trang sức", "6 BC", "12.890 câu"),
+        ("BVH", "Bảo Việt", "Tài chính & Bảo hiểm", "6 BC", "13.410 câu"),
+        ("SSI", "Chứng khoán SSI", "Dịch vụ Chứng khoán", "6 BC", "9.591 câu")
     ]
     for i, row in enumerate(sample_data, start=1):
         bg = C_ROW_ALT if i % 2 == 1 else C_CARD_BG
@@ -490,42 +502,42 @@ def build_slide_05_sample(prs):
             p = cell.text_frame.paragraphs[0]
             p.alignment = PP_ALIGN.CENTER if j in (0, 3, 4) else PP_ALIGN.LEFT
             r = p.add_run(val)
-            r.font.size = Pt(9.0)
+            r.font.size = Pt(8.5)
             if j == 0:
                 r.font.bold = True
                 r.font.color.rgb = C_NAVY_PRIMARY
             else:
                 r.font.color.rgb = C_TEXT_DARK
 
-    # 4 Thẻ chỉ số tổng quan bên phải
-    right_x = 8.55
-    rw = 3.98
+    # 4 Thẻ KPI bên phải (Left 7.9 in, Rộng 4.63 in, khoảng cách rộng rãi)
+    right_x = 7.9
+    rw = 4.63
     kpis = [
-        ("TỔNG QUY MÔ NGỮ LIỆU", "96.461 CÂU", "Trích xuất và làm sạch từ 4.997 trang tài liệu PDF", C_NAVY_PRIMARY),
-        ("CHUỖI THỜI GIAN KHẢO SÁT", "2020 – 2025", "6 năm liên tục bao quát trước và sau Thông tư 96", C_BLUE_ACCENT),
-        ("CƠ CẤU KHỐI NGÀNH", "4 SX / 3 DỊCH VỤ", "Đại diện tiêu biểu cho Sản xuất, Năng lượng và Tài chính", C_GOLD_ACCENT),
-        ("TỶ LỆ KHÔI PHỤC SCAN", "100% BẰNG OCR", "Khôi phục thành công các trang ảnh phức tạp của PNJ", C_GREEN_EMERALD)
+        ("TỔNG QUY MÔ NGỮ LIỆU", "96.461 CÂU VĂN BẢN", "Trích xuất & làm sạch từ 4.997 trang tài liệu PDF", C_NAVY_PRIMARY),
+        ("CHUỖI THỜI GIAN KHẢO SÁT", "2020 – 2025 (6 NĂM)", "Bao quát toàn diện trước & sau mốc Thông tư 96", C_BLUE_ACCENT),
+        ("CƠ CẤU ĐẠI DIỆN KHỐI NGÀNH", "4 SẢN XUẤT / 3 TÀI CHÍNH", "Đại diện tiêu biểu cho cả khối thâm dụng tài nguyên & dịch vụ", C_GOLD_ACCENT),
+        ("TỶ LỆ KHÔI PHỤC SCAN", "100% BẰNG TESSERACT", "Khôi phục thành công các trang ảnh phức tạp của PNJ", C_GREEN_EMERALD)
     ]
     for i, (ktitle, kval, ksub, kcol) in enumerate(kpis):
-        ky = 1.35 + i * 1.45
-        add_card(slide, right_x, ky, rw, 1.3, C_CARD_BG, kcol)
+        ky = 1.35 + i * 1.40
+        add_card(slide, right_x, ky, rw, 1.22, C_CARD_BG, kcol)
         
-        tb_k = slide.shapes.add_textbox(Inches(right_x + 0.15), Inches(ky + 0.1), Inches(rw - 0.3), Inches(1.1))
+        tb_k = slide.shapes.add_textbox(Inches(right_x + 0.15), Inches(ky + 0.08), Inches(rw - 0.3), Inches(1.05))
         tf_k = tb_k.text_frame
         tf_k.word_wrap = True
         p = tf_k.paragraphs[0]
         r1 = p.add_run(ktitle + "\n")
-        r1.font.size = Pt(8.5)
+        r1.font.size = Pt(8.2)
         r1.font.bold = True
         r1.font.color.rgb = C_TEXT_MUTED
         
         r2 = p.add_run(kval + "\n")
-        r2.font.size = Pt(14)
+        r2.font.size = Pt(13)
         r2.font.bold = True
         r2.font.color.rgb = kcol
         
         r3 = p.add_run(ksub)
-        r3.font.size = Pt(8.5)
+        r3.font.size = Pt(8.0)
         r3.font.color.rgb = C_TEXT_DARK
 
     set_presenter_notes(slide, {
@@ -537,23 +549,43 @@ def build_slide_05_sample(prs):
 
 
 def build_slide_06_result1_similarity(prs):
-    """Slide 6: Kết quả 1 - Phân phối Tương đồng SDG & BẢNG ĐỐI CHUẨN THỐNG KÊ."""
+    """Slide 6: Kết quả 1 - Phân phối Tương đồng & BẢNG ĐỐI CHUẨN THỐNG KÊ (Đúng tỷ lệ 2.28)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "KẾT QUẢ 1: PHÂN PHỐI ĐIỂM TƯƠNG ĐỒNG SDG & ĐỐI CHUẨN PAPER GỐC", "KẾT QUẢ THỰC NGHIỆM", 6)
     
-    # Ảnh biểu đồ phân phối bên trái
+    # Cột trái: Ảnh phân phối (AR = 2.28) -> Width 5.4 in, Height 2.37 in.
     sim_img = FIGURES_DIR / "similarity_hist.png"
     if sim_img.exists():
-        slide.shapes.add_picture(str(sim_img), Inches(0.8), Inches(1.35), Inches(5.8), Inches(4.3))
+        slide.shapes.add_picture(str(sim_img), Inches(0.8), Inches(1.35), Inches(5.4), Inches(2.37))
         
-    # Bảng Native Table đối chuẩn thống kê bên phải
+    # Thẻ kết luận dưới ảnh phân phối (Top 3.90, Height 2.85)
+    card_l = add_card(slide, 0.8, 3.90, 5.4, 2.85, RGBColor(238, 244, 252), C_BLUE_ACCENT)
+    tb_l = slide.shapes.add_textbox(Inches(0.95), Inches(4.0), Inches(5.1), Inches(2.65))
+    tf_l = tb_l.text_frame
+    tf_l.word_wrap = True
+    p0 = tf_l.paragraphs[0]
+    r0 = p0.add_run("KẾT LUẬN TOÁN HỌC:\n")
+    r0.font.bold = True
+    r0.font.size = Pt(10)
+    r0.font.color.rgb = C_NAVY_PRIMARY
+    
+    p1 = tf_l.add_paragraph()
+    p1.text = (
+        "• Phân phối Gaussian chuẩn đối xứng dạng chuông với đỉnh tập trung quanh 45 điểm.\n\n"
+        "• Độ lệch điểm trung bình chỉ +0,63 điểm (~1,4%) so với nghiên cứu quốc tế Kang & Kim (2022).\n\n"
+        "• Khẳng định `vietnamese-sbert` có năng lực ánh xạ không gian ngữ nghĩa tương đương 100% tiếng Anh."
+    )
+    p1.font.size = Pt(8.8)
+    p1.font.color.rgb = C_TEXT_DARK
+
+    # Cột phải: Bảng đối chuẩn thống kê rộng rãi (Left 6.55 in, Rộng 5.98 in, Cao 5.4 in)
     rows = 6
     cols = 3
-    table_shape = slide.shapes.add_table(rows, cols, Inches(6.8), Inches(1.35), Inches(5.733), Inches(4.3))
+    table_shape = slide.shapes.add_table(rows, cols, Inches(6.55), Inches(1.35), Inches(5.98), Inches(5.4))
     tbl = table_shape.table
     tbl.columns[0].width = Inches(2.3)
-    tbl.columns[1].width = Inches(1.7)
-    tbl.columns[2].width = Inches(1.733)
+    tbl.columns[1].width = Inches(1.8)
+    tbl.columns[2].width = Inches(1.88)
     
     headers = ["CHỈ SỐ THỐNG KÊ", "PAPER GỐC (KANG 2022)", "VIỆT NAM (2026)"]
     for j, h in enumerate(headers):
@@ -583,7 +615,7 @@ def build_slide_06_result1_similarity(prs):
             p = cell.text_frame.paragraphs[0]
             p.alignment = PP_ALIGN.LEFT if j == 0 else PP_ALIGN.CENTER
             r = p.add_run(val)
-            r.font.size = Pt(8.5)
+            r.font.size = Pt(8.8)
             if j == 0:
                 r.font.bold = True
                 r.font.color.rgb = C_NAVY_PRIMARY
@@ -592,24 +624,6 @@ def build_slide_06_result1_similarity(prs):
                 r.font.color.rgb = C_GREEN_EMERALD
             else:
                 r.font.color.rgb = C_TEXT_DARK
-
-    # Bottom takeaway card
-    bot_card = add_card(slide, 0.8, 5.75, 11.733, 1.25, RGBColor(238, 244, 252), C_BLUE_ACCENT)
-    tb_b = slide.shapes.add_textbox(Inches(1.0), Inches(5.82), Inches(11.333), Inches(1.1))
-    tf_b = tb_b.text_frame
-    tf_b.word_wrap = True
-    p_b1 = tf_b.paragraphs[0]
-    r_b1 = p_b1.add_run("KẾT LUẬN KHOA HỌC: ")
-    r_b1.font.bold = True
-    r_b1.font.size = Pt(10)
-    r_b1.font.color.rgb = C_NAVY_PRIMARY
-    r_b2 = p_b1.add_run(
-        "Sự tương đồng gần như tuyệt đối giữa phân phối điểm của Việt Nam (μ = 45,43, σ = 11,87) và nghiên cứu quốc tế của Kang & Kim (μ ≈ 44,80, σ ≈ 11,50) "
-        "chứng minh rằng quy trình xử lý bằng `vietnamese-sbert` đạt độ chuẩn hóa toán học hoàn hảo, "
-        "xóa bỏ hoàn toàn định kiến cho rằng các mô hình nhúng tiếng Việt có độ phân tán kém hơn tiếng Anh."
-    )
-    r_b2.font.size = Pt(9.0)
-    r_b2.font.color.rgb = C_TEXT_DARK
 
     set_presenter_notes(slide, {
         "goal": "Dẫn chứng phân phối hình chuông và bảng đối chuẩn thống kê chứng minh mô hình đạt chuẩn quốc tế.",
@@ -620,38 +634,39 @@ def build_slide_06_result1_similarity(prs):
 
 
 def build_slide_07_result2_heatmap(prs):
-    """Slide 7: Kết quả 2 - Cấu trúc 6 Nhóm SDG qua Heatmap."""
+    """Slide 7: Kết quả 2 - Cấu trúc 6 Nhóm SDG qua Heatmap (CHUẨN TỶ LỆ DỌC 0.65)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "KẾT QUẢ 2: CẤU TRÚC 6 NHÓM SDG QUA HEATMAP & QUY LUẬT TOÀN CẦU", "KẾT QUẢ THỰC NGHIỆM", 7)
     
+    # Heatmap portrait (AR = 0.65) -> Height 5.4 in, Width 3.55 in. (Không bị bẹp ngang!)
     hm_img = FIGURES_DIR / "heatmap_6cat.png"
     if hm_img.exists():
-        slide.shapes.add_picture(str(hm_img), Inches(0.8), Inches(1.35), Inches(6.5), Inches(5.65))
+        slide.shapes.add_picture(str(hm_img), Inches(0.8), Inches(1.35), Inches(3.55), Inches(5.4))
         
-    # 3 Thẻ nhận xét bên phải
-    rw = 5.0
-    rx = 7.533
+    # Cột phải: Rộng tới 7.78 in! (Left 4.75 in, khoảng thở mênh mông)
+    rw = 7.78
+    rx = 4.75
     insights = [
         ("TRẬT TỰ BẤT BIẾN TOÀN CẦU", C_NAVY_PRIMARY, [
-            "• Thứ tự ưu tiên phản ánh đúng lý thuyết Manfred Max-Neef:",
+            "• Thứ tự ưu tiên phản ánh chuẩn xác lý thuyết phát triển con người của Manfred Max-Neef:",
             "  Economic (49,85đ) > Social > Resources ≈ Life > Environments > Equity (43,45đ).",
-            "• Khớp 100% với trật tự thực nghiệm quốc tế của Kang & Kim (2022)."
+            "• Hoàn toàn đồng nhất với quy luật thực nghiệm quốc tế của Kang & Kim (2022)."
         ]),
-        ("XU HƯỚNG TĂNG TRƯỞNG THEO NĂM", C_GREEN_EMERALD, [
+        ("XU HƯỚNG TĂNG TRƯỞNG RÕ NÉT THEO NĂM", C_GREEN_EMERALD, [
             "• Mức độ công bố tăng dần từ 2020 (vàng nhạt) sang 2025 (đỏ đậm).",
             "• Điểm trung bình toàn mẫu tăng từ 42,1 (2020) lên 49,8 (2025).",
-            "• Minh chứng rõ nét cho tác động thúc đẩy của Thông tư 96/2020."
+            "• Minh chứng định lượng cho tác động thúc đẩy quyết định của Thông tư 96/2020."
         ]),
-        ("VÙNG TRŨNG CÔNG BẰNG (EQUITY)", C_RED_ACCENT, [
-            "• Nhóm Công bằng (SDG 4, 5, 10) luôn có điểm số thấp nhất toàn mẫu.",
-            "• Doanh nghiệp Việt Nam ưu tiên các chỉ tiêu tăng trưởng tài chính và việc làm hơn là các cam kết bình đẳng giới và thu hẹp khoảng cách."
+        ("VÙNG TRŨNG CÔNG BẰNG (EQUITY) LUÔN Ở ĐÁY", C_RED_ACCENT, [
+            "• Nhóm Công bằng (SDG 4, 5, 10) luôn có điểm số thấp nhất trong toàn bộ 6 năm.",
+            "• Doanh nghiệp ưu tiên các chỉ tiêu tăng trưởng tài chính và việc làm hơn là các cam kết bình đẳng giới thực chất."
         ])
     ]
     for i, (ititle, icol, ibullets) in enumerate(insights):
-        iy = 1.35 + i * 1.9
-        add_card(slide, rx, iy, rw, 1.75, C_CARD_BG, icol)
+        iy = 1.35 + i * 1.85
+        add_card(slide, rx, iy, rw, 1.65, C_CARD_BG, icol)
         
-        tb = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(iy + 0.1), Inches(rw - 0.3), Inches(1.55))
+        tb = slide.shapes.add_textbox(Inches(rx + 0.2), Inches(iy + 0.1), Inches(rw - 0.4), Inches(1.45))
         tf = tb.text_frame
         tf.word_wrap = True
         p = tf.paragraphs[0]
@@ -676,35 +691,36 @@ def build_slide_07_result2_heatmap(prs):
 
 
 def build_slide_08_result3_companies_p1(prs):
-    """Slide 8: Đặc thù Ngành - Khối Sản xuất & Năng lượng (VNM, VCS, PAN, PLX)."""
+    """Slide 8: Đặc thù Ngành - Khối Sản xuất & Năng lượng (CHUẨN TỶ LỆ 1.30)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "ĐẶC THÙ NGÀNH: KHỐI SẢN XUẤT & NĂNG LƯỢNG (VNM, VCS, PAN, PLX)", "ĐẶC THÙ NGÀNH DOANH NGHIỆP", 8)
     
+    # Ảnh (AR = 1.30) -> Height 5.4 in, Width 6.8 in. (Không bị ép bẹp)
     img_p1 = FIGURES_DIR / "slide_manuf_sdgs.png"
     if img_p1.exists():
-        slide.shapes.add_picture(str(img_p1), Inches(0.8), Inches(1.35), Inches(6.5), Inches(5.65))
+        slide.shapes.add_picture(str(img_p1), Inches(0.8), Inches(1.35), Inches(6.8), Inches(5.25))
         
-    rw = 5.0
-    rx = 7.533
+    rw = 4.6
+    rx = 7.95
     co_insights = [
-        ("VICOSTONE (VCS) — DẪN ĐẦU SDG 9 & 12", C_NAVY_PRIMARY, 
-         "• SDG 9 (52,96đ) & SDG 12 (53,18đ) cao nhất toàn khối sản xuất.\n"
-         "• Lý do kinh doanh: Công nghệ rung ép Breton, tự chủ >95% nguyên liệu thạch anh, tái chế 100% bùn thải đá và nước tuần hoàn."),
-        ("VINAMILK (VNM) — BỨT PHÁ SDG 13 KHÍ HẬU", C_GREEN_EMERALD, 
-         "• SDG 13 (45,36đ) & Nhóm Môi trường tăng vọt (+6,06đ qua 6 năm).\n"
-         "• Lý do kinh doanh: Tiên phong lộ trình Net Zero 2050, 3 đơn vị đạt chứng nhận PAS 2060, nông nghiệp tái sinh Green Farm."),
-        ("PAN GROUP (PAN) — TRỤ CỘT SDG 2 NÔNG NGHIỆP", C_GOLD_ACCENT, 
-         "• SDG 2 (47,47đ) & SDG 12 (49,01đ) dẫn đầu mẫu nghiên cứu.\n"
-         "• Lý do kinh doanh: Chuỗi giá trị nông nghiệp khép kín từ giống cây trồng (Vinaseed), tôm sạch sinh thái (Fimex) đến chế biến hạt."),
-        ("PETROLIMEX (PLX) — CHUYỂN ĐỔI SDG 7 & 13", C_RED_ACCENT, 
-         "• Trọng tâm SDG 7 Năng lượng (48,04đ) và SDG 13 Khí hậu (46,19đ).\n"
-         "• Lý do kinh doanh: Nhiên liệu sạch Euro 5, điện mặt trời áp mái cây xăng, kiểm kê khí nhà kính Scope 1-2 theo ISO 14064-1.")
+        ("VICOSTONE (VCS) — ĐỈNH SDG 9 & 12", C_NAVY_PRIMARY, 
+         "• SDG 9 (52,96đ) & SDG 12 (53,18đ) cao nhất toàn khối.\n"
+         "• Lý do: Công nghệ rung ép Breton, tự chủ >95% nguyên liệu, tuần hoàn 100% bùn đá."),
+        ("VINAMILK (VNM) — BỨT PHÁ SDG 13", C_GREEN_EMERALD, 
+         "• SDG 13 (45,36đ) & Nhóm Môi trường tăng mạnh (+6,06đ).\n"
+         "• Lý do: Lộ trình Net Zero 2050, 3 đơn vị PAS 2060, nông nghiệp tái sinh Green Farm."),
+        ("PAN GROUP (PAN) — TRỤ CỘT SDG 2", C_GOLD_ACCENT, 
+         "• SDG 2 (47,47đ) & SDG 12 (49,01đ) dẫn đầu mẫu.\n"
+         "• Lý do: Chuỗi nông nghiệp khép kín từ giống cây trồng (Vinaseed) đến tôm sạch (Fimex)."),
+        ("PETROLIMEX (PLX) — CHUYỂN ĐỔI SDG 7", C_RED_ACCENT, 
+         "• Trọng tâm SDG 7 Năng lượng (48,04đ) và SDG 13 (46,19đ).\n"
+         "• Lý do: Nhiên liệu Euro 5, điện mặt trời cây xăng, kiểm kê khí nhà kính ISO 14064-1.")
     ]
     for i, (ctitle, ccol, ctext) in enumerate(co_insights):
-        cy = 1.35 + i * 1.42
-        add_card(slide, rx, cy, rw, 1.32, C_CARD_BG, ccol)
+        cy = 1.35 + i * 1.38
+        add_card(slide, rx, cy, rw, 1.25, C_CARD_BG, ccol)
         
-        tb = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(cy + 0.08), Inches(rw - 0.3), Inches(1.16))
+        tb = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(cy + 0.06), Inches(rw - 0.3), Inches(1.13))
         tf = tb.text_frame
         tf.word_wrap = True
         p = tf.paragraphs[0]
@@ -727,43 +743,43 @@ def build_slide_08_result3_companies_p1(prs):
 
 
 def build_slide_09_result3_companies_p2(prs):
-    """Slide 9: Đặc thù Ngành - Khối Tài chính & Bán lẻ (PNJ, BVH, SSI)."""
+    """Slide 9: Đặc thù Ngành - Khối Tài chính & Bán lẻ (CHUẨN TỶ LỆ 1.29)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "ĐẶC THÙ NGÀNH: KHỐI TÀI CHÍNH & BÁN LẺ (PNJ, BVH, SSI)", "ĐẶC THÙ NGÀNH DOANH NGHIỆP", 9)
     
     img_p2 = FIGURES_DIR / "slide_finance_sdgs.png"
     if img_p2.exists():
-        slide.shapes.add_picture(str(img_p2), Inches(0.8), Inches(1.35), Inches(6.5), Inches(5.65))
+        slide.shapes.add_picture(str(img_p2), Inches(0.8), Inches(1.35), Inches(6.8), Inches(5.25))
         
-    rw = 5.0
-    rx = 7.533
+    rw = 4.6
+    rx = 7.95
     fin_insights = [
         ("PNJ — ĐIỂM SÁNG SDG 5 BÌNH ĐẲNG GIỚI (40,70đ)", C_PURPLE_ACCENT, 
          "• Dẫn đầu tuyệt đối toàn bộ 7 doanh nghiệp ở SDG 5 Bình đẳng giới.\n"
-         "• Lý do kinh doanh: Lao động nữ chiếm >60%, tỷ lệ lãnh đạo nữ vượt trội, tôn chỉ kinh doanh tôn vinh vẻ đẹp phụ nữ và chiến lược hòa nhập DE&I."),
+         "• Lý do: Lao động nữ chiếm >60%, tỷ lệ lãnh đạo nữ vượt trội, tôn chỉ kinh doanh tôn vinh phụ nữ và chiến lược hòa nhập DE&I."),
         ("BẢO VIỆT (BVH) — DẪN ĐẦU SDG 17 HỢP TÁC (53,32đ)", C_NAVY_PRIMARY, 
          "• Dẫn đầu toàn mẫu ở SDG 17 Đối tác phát triển & SDG 8 Tăng trưởng.\n"
-         "• Lý do kinh doanh: Tiên phong áp dụng Khung Báo cáo Tích hợp Quốc tế <IIRC> từ 2015, triển khai bảo hiểm vi mô nông nghiệp bảo vệ nông dân."),
+         "• Lý do: Tiên phong áp dụng Khung Báo cáo Tích hợp Quốc tế <IIRC> từ 2015, triển khai bảo hiểm vi mô bảo vệ nông dân trước thiên tai."),
         ("CHỨNG KHOÁN SSI (SSI) — TÀI CHÍNH XANH SDG 8 & 9", C_BLUE_ACCENT, 
          "• Đạt đỉnh ở SDG 8 Việc làm (50,91đ) & SDG 9 Đổi mới hạ tầng (48,93đ).\n"
-         "• Lý do kinh doanh: Thu xếp các gói vốn trái phiếu xanh quốc tế (IFC), số hóa 100% giao dịch iBoard và tài trợ giáo dục tài chính cộng đồng.")
+         "• Lý do: Thu xếp các gói vốn trái phiếu xanh quốc tế (IFC), số hóa 100% giao dịch iBoard và tài trợ giáo dục tài chính.")
     ]
     for i, (ctitle, ccol, ctext) in enumerate(fin_insights):
-        cy = 1.35 + i * 1.9
-        add_card(slide, rx, cy, rw, 1.75, C_CARD_BG, ccol)
+        cy = 1.35 + i * 1.85
+        add_card(slide, rx, cy, rw, 1.65, C_CARD_BG, ccol)
         
-        tb = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(cy + 0.1), Inches(rw - 0.3), Inches(1.55))
+        tb = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(cy + 0.08), Inches(rw - 0.3), Inches(1.48))
         tf = tb.text_frame
         tf.word_wrap = True
         p = tf.paragraphs[0]
         r1 = p.add_run(ctitle + "\n")
-        r1.font.size = Pt(10)
+        r1.font.size = Pt(9.5)
         r1.font.bold = True
         r1.font.color.rgb = ccol
         
         p2 = tf.add_paragraph()
         r2 = p2.add_run(ctext)
-        r2.font.size = Pt(8.8)
+        r2.font.size = Pt(8.6)
         r2.font.color.rgb = C_TEXT_DARK
 
     set_presenter_notes(slide, {
@@ -775,49 +791,46 @@ def build_slide_09_result3_companies_p2(prs):
 
 
 def build_slide_10_result4_trends(prs):
-    """Slide 10: Kết quả 4 - Xu hướng Dịch chuyển Chuỗi Thời gian (2020–2025)."""
+    """Slide 10: Kết quả 4 - Xu hướng Chuỗi Thời gian (ẢNH LANDSCAPE GRID 2x2 + 3 THẺ)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "KẾT QUẢ 4: XU HƯỚNG DỊCH CHUYỂN CHUỖI THỜI GIAN (2020–2025)", "KẾT QUẢ THỰC NGHIỆM", 10)
     
-    tr_img = FIGURES_DIR / "trends_6categories.png"
+    # Dùng ảnh lưới landscape 2x2 slide_trends_grid.png (AR = 2.01) -> Width 11.733, Height 3.8
+    tr_img = FIGURES_DIR / "slide_trends_grid.png"
     if tr_img.exists():
-        slide.shapes.add_picture(str(tr_img), Inches(0.8), Inches(1.35), Inches(6.5), Inches(5.65))
+        slide.shapes.add_picture(str(tr_img), Inches(0.8), Inches(1.30), Inches(11.733), Inches(3.80))
+    else:
+        tr_alt = FIGURES_DIR / "trends_6categories.png"
+        slide.shapes.add_picture(str(tr_alt), Inches(0.8), Inches(1.30), Inches(5.5), Inches(5.4))
         
-    rw = 5.0
-    rx = 7.533
+    # 3 Thẻ xu hướng bên dưới: Top 5.35, Height 1.45 (Rất thoáng)
     phases = [
-        ("GIAI ĐOẠN 2020–2021: ĐỐI PHÓ ĐẠI DỊCH", C_NAVY_PRIMARY, [
-            "• Điểm số phân hóa mạnh, nhóm Life và Social tăng đột biến.",
-            "• Doanh nghiệp tập trung duy trì chuỗi cung ứng, an toàn lao động và chế độ lương thưởng ứng phó Covid-19."
-        ]),
-        ("MỐC 2022: CHUYỂN HƯỚNG THEO THÔNG TƯ 96", C_BLUE_ACCENT, [
-            "• Số lượng báo cáo phát hành tăng vọt sau khi Thông tư 96 có hiệu lực.",
-            "• Điểm số các nhóm bắt đầu hội tụ theo cấu trúc tiêu chuẩn GRI."
-        ]),
-        ("GIAI ĐOẠN 2024–2025: BÙNG NỔ NET ZERO", C_GREEN_EMERALD, [
-            "• Tất cả 7 doanh nghiệp đều đạt điểm số cao nhất trong lịch sử.",
-            "• Nhóm Môi trường (+6,06đ) và Tài nguyên (+5,42đ) tăng tốc mạnh mẽ nhờ các cam kết trung hòa carbon cụ thể."
-        ])
+        ("GIAI ĐOẠN 2020–2021: ỨNG PHÓ COVID", C_NAVY_PRIMARY, 
+         "Điểm số phân hóa mạnh, nhóm Life & Social tăng đột biến nhằm đảm bảo an toàn lao động và lương thưởng mùa dịch."),
+        ("MỐC 2022: TÁI CƠ CẤU THEO THÔNG TƯ 96", C_BLUE_ACCENT, 
+         "Số lượng báo cáo tăng vọt; điểm số 6 nhóm bắt đầu hội tụ theo cấu trúc tiêu chuẩn báo cáo bền vững GRI."),
+        ("GIAI ĐOẠN 2024–2025: BÙNG NỔ NET ZERO", C_GREEN_EMERALD, 
+         "Cả 7 tập đoàn đều đạt điểm số cao nhất lịch sử; nhóm Môi trường (+6,06đ) và Tài nguyên (+5,42đ) tăng tốc vượt bậc.")
     ]
-    for i, (ptitle, pcol, pbullets) in enumerate(phases):
-        py = 1.35 + i * 1.9
-        add_card(slide, rx, py, rw, 1.75, C_CARD_BG, pcol)
+    
+    pw = 3.75
+    pgap = 0.24
+    for i, (ptitle, pcol, pdesc) in enumerate(phases):
+        px = 0.8 + i * (pw + pgap)
+        add_card(slide, px, 5.35, pw, 1.45, C_CARD_BG, pcol)
         
-        tb = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(py + 0.1), Inches(rw - 0.3), Inches(1.55))
+        tb = slide.shapes.add_textbox(Inches(px + 0.15), Inches(5.42), Inches(pw - 0.3), Inches(1.3))
         tf = tb.text_frame
         tf.word_wrap = True
         p = tf.paragraphs[0]
         r1 = p.add_run(ptitle + "\n")
-        r1.font.size = Pt(10)
+        r1.font.size = Pt(9.5)
         r1.font.bold = True
         r1.font.color.rgb = pcol
         
-        for bullet in pbullets:
-            p2 = tf.add_paragraph()
-            p2.space_after = Pt(2)
-            r2 = p2.add_run(bullet)
-            r2.font.size = Pt(8.8)
-            r2.font.color.rgb = C_TEXT_DARK
+        r2 = p.add_run(pdesc)
+        r2.font.size = Pt(8.5)
+        r2.font.color.rgb = C_TEXT_DARK
 
     set_presenter_notes(slide, {
         "goal": "Phân tích xu hướng chuyển dịch 6 nhóm SDG qua 3 giai đoạn: Covid (2020-2021), Thể chế hóa (2022), Bùng nổ Net Zero (2024-2025).",
@@ -828,48 +841,46 @@ def build_slide_10_result4_trends(prs):
 
 
 def build_slide_11_result5_sentiment(prs):
-    """Slide 11: Kết quả 5 - Sắc thái Cảm xúc PhoBERT & Đối chuẩn Paper Gốc."""
+    """Slide 11: Kết quả 5 - Sắc thái Cảm xúc PhoBERT (ẢNH SUMMARY PANORAMA + 3 THẺ)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    add_slide_header(slide, "KẾT QUẢ 5: SẮC THÁI CẢM XÚC & ĐỐI CHUẨN PAPER GỐC", "KẾT QUẢ THỰC NGHIỆM", 11)
+    add_slide_header(slide, "KẾT QUẢ 5: SẮC THÁI CẢM XÚC PHOBERT & ĐỐI CHUẨN PAPER GỐC", "KẾT QUẢ THỰC NGHIỆM", 11)
     
-    img_s1 = FIGURES_DIR / "sentiment_hist.png"
-    img_s2 = FIGURES_DIR / "sentiment_by_company.png"
-    if img_s1.exists():
-        slide.shapes.add_picture(str(img_s1), Inches(0.8), Inches(1.35), Inches(5.8), Inches(2.75))
-    if img_s2.exists():
-        slide.shapes.add_picture(str(img_s2), Inches(0.8), Inches(4.2), Inches(5.8), Inches(2.8))
+    # Dùng ảnh tổng hợp cảm xúc panorama slide_sentiment_summary.png (AR = 2.36) -> Width 11.733, Height 3.75
+    senti_img = FIGURES_DIR / "slide_sentiment_summary.png"
+    if senti_img.exists():
+        slide.shapes.add_picture(str(senti_img), Inches(0.8), Inches(1.30), Inches(11.733), Inches(3.75))
+    else:
+        s_alt = FIGURES_DIR / "sentiment_hist.png"
+        slide.shapes.add_picture(str(s_alt), Inches(0.8), Inches(1.30), Inches(6.0), Inches(3.5))
         
-    rw = 5.0
-    rx = 6.8
-    card_r = add_card(slide, rx, 1.35, rw, 5.65)
-    tb_r = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(1.5), Inches(rw - 0.3), Inches(5.35))
-    tf_r = tb_r.text_frame
-    tf_r.word_wrap = True
-    
-    p0 = tf_r.paragraphs[0]
-    r0 = p0.add_run("SO SÁNH CƠ CẤU CẢM XÚC VỚI KANG & KIM (2022)\n")
-    r0.font.bold = True
-    r0.font.size = Pt(11)
-    r0.font.color.rgb = C_NAVY_PRIMARY
-    
-    points = [
-        ("• Paper gốc (DistilBERT 2 lớp):", True, C_NAVY_PRIMARY),
-        ("  Tích cực chiếm ~78%, Tiêu cực chiếm ~15%. Không có lớp Trung tính, ép câu số liệu vào cảm xúc.", False, C_TEXT_DARK),
-        ("• Nghiên cứu tại Việt Nam (PhoBERT 3 lớp):", True, C_GREEN_EMERALD),
-        ("  - Tích cực (Positive): 53,87%\n  - Trung tính (Neutral): 32,87%\n  - Tiêu cực (Negative): 13,26%", False, C_TEXT_DARK),
-        ("• Ý nghĩa học thuật của Lớp Trung tính (32,87%):", True, C_BLUE_ACCENT),
-        ("  Chiếm gần 1/3 dung lượng báo cáo, bảo toàn các câu số liệu kỹ thuật khách quan (ví dụ: lượng điện kWh, nước m3, khí phát thải tCO2e).", False, C_TEXT_DARK),
-        ("• Tính thận trọng trong văn phong tiếng Việt:", True, C_PURPLE_ACCENT),
-        ("  Doanh nghiệp Việt Nam công bố nhiều dữ liệu đo lường theo chuẩn mực GRI chứ không chỉ đơn thuần quảng cáo PR.", False, C_TEXT_DARK)
+    # 3 Thẻ đối chuẩn cảm xúc bên dưới: Top 5.30, Height 1.50
+    s_points = [
+        ("PAPER GỐC (DISTILBERT 2 LỚP)", C_NAVY_PRIMARY,
+         "Tích cực ~78%, Tiêu cực ~15%. Bỏ qua lớp Trung tính, ép câu số liệu kiểm toán kỹ thuật vào nhãn cảm xúc sai lệch."),
+        ("VIỆT NAM (PHOBERT 3 LỚP)", C_GREEN_EMERALD,
+         "Tích cực: 53,87% | Trung tính: 32,87% | Tiêu cực: 13,26%. Đột phá bảo lưu 1/3 câu số liệu kỹ thuật khách quan."),
+        ("KẾT LUẬN VĂN PHONG DOANH NGHIỆP", C_PURPLE_ACCENT,
+         "Báo cáo Việt Nam dành gần 1/3 dung lượng cho các số liệu đo lường kỹ thuật GRI chứ không chỉ đơn thuần quảng cáo PR.")
     ]
-    for head, is_h, col in points:
-        p = tf_r.add_paragraph()
-        p.space_after = Pt(3)
-        r = p.add_run(head)
-        r.font.name = FONT_MAIN
-        r.font.size = Pt(9.5 if is_h else 8.8)
-        r.font.bold = is_h
-        r.font.color.rgb = col
+    
+    sw = 3.75
+    sgap = 0.24
+    for i, (stitle, scol, sdesc) in enumerate(s_points):
+        sx = 0.8 + i * (sw + sgap)
+        add_card(slide, sx, 5.30, sw, 1.50, C_CARD_BG, scol)
+        
+        tb = slide.shapes.add_textbox(Inches(sx + 0.15), Inches(5.38), Inches(sw - 0.3), Inches(1.35))
+        tf = tb.text_frame
+        tf.word_wrap = True
+        p = tf.paragraphs[0]
+        r1 = p.add_run(stitle + "\n")
+        r1.font.size = Pt(9.5)
+        r1.font.bold = True
+        r1.font.color.rgb = scol
+        
+        r2 = p.add_run(sdesc)
+        r2.font.size = Pt(8.5)
+        r2.font.color.rgb = C_TEXT_DARK
 
     set_presenter_notes(slide, {
         "goal": "Làm nổi bật đóng góp của mô hình PhoBERT 3 lớp, đặc biệt là 32,87% câu Trung tính.",
@@ -880,36 +891,51 @@ def build_slide_11_result5_sentiment(prs):
 
 
 def build_slide_12_result6_sentiment_ratio(prs):
-    """Slide 12: Kết quả 6 - Tỷ số Cảm xúc Pos/Neg Ratio (Đối chuẩn Tỷ số)."""
+    """Slide 12: Kết quả 6 - Tỷ số Cảm xúc Pos/Neg Ratio (CHUẨN TỶ LỆ 1.84)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "KẾT QUẢ 6: TỶ SỐ CẢM XÚC POS/NEG RATIO & ĐỐI CHUẨN TỶ LỆ", "KẾT QUẢ THỰC NGHIỆM", 12)
     
+    # Biểu đồ tỷ số (AR = 1.84) -> Width 6.8 in, Height 3.7 in
     img_r = FIGURES_DIR / "sentiment_ratio.png"
     if img_r.exists():
-        slide.shapes.add_picture(str(img_r), Inches(0.8), Inches(1.35), Inches(6.5), Inches(5.65))
+        slide.shapes.add_picture(str(img_r), Inches(0.8), Inches(1.35), Inches(6.8), Inches(3.70))
         
-    rw = 5.0
-    rx = 7.533
+    # Thẻ takeaway dưới biểu đồ (Top 5.25, Height 1.55)
+    card_b = add_card(slide, 0.8, 5.25, 6.8, 1.55, RGBColor(238, 244, 252), C_BLUE_ACCENT)
+    tb_b = slide.shapes.add_textbox(Inches(0.95), Inches(5.32), Inches(6.5), Inches(1.4))
+    tf_b = tb_b.text_frame
+    tf_b.word_wrap = True
+    p_b0 = tf_b.paragraphs[0]
+    r_b0 = p_b0.add_run("KẾT LUẬN THIÊN LỆCH LẠC QUAN CẤU TRÚC:\n")
+    r_b0.font.bold = True
+    r_b0.font.size = Pt(9.5)
+    r_b0.font.color.rgb = C_NAVY_PRIMARY
+    p_b1 = tf_b.add_paragraph()
+    p_b1.text = "Tỷ số Pos/Neg trung bình đạt 4,06 lần khẳng định doanh nghiệp Việt Nam luôn có xu hướng dùng ngôn từ tích cực gấp hơn 4 lần so với tiêu cực nhằm làm đẹp hình ảnh quản trị (Hiệu ứng Pollyanna)."
+    p_b1.font.size = Pt(8.5)
+    p_b1.font.color.rgb = C_TEXT_DARK
+
+    # Cột phải: 2 Thẻ đối chuẩn lớn (Left 7.95 in, Rộng 4.6 in, Cao 5.45 in tổng cộng)
+    rw = 4.6
+    rx = 7.95
     r_insights = [
-        ("ĐỐI CHUẨN TỶ SỐ VỚI KANG & KIM (2022)", C_NAVY_PRIMARY, [
-            "• Paper gốc: Pos/Neg Ratio bình quân đạt ≈ 5,20 lần.",
-            "• Việt Nam: Pos/Neg Ratio trung bình đạt 4,06 lần (dao động 3,0 – 6,7 lần tùy năm).",
-            "• Cả hai đều khẳng định sự tồn tại của Thiên lệch Lạc quan (Optimism Bias) mang tính phổ quát."
+        ("ĐỐI CHUẨN QUỐC TẾ: KANG & KIM (2022)", C_NAVY_PRIMARY, [
+            "• Kang & Kim (2022): Pos/Neg toàn cầu đạt ≈ 5,20 lần.",
+            "• Việt Nam: Pos/Neg trung bình đạt 4,06 lần (3,0 – 6,7x).",
+            "• Cả 2 đều xác nhận Lý thuyết Quản trị Ấn tượng mang tính phổ quát toàn cầu."
         ]),
-        ("QUY LUẬT QUẢN TRỊ ẤN TƯỢNG (IMPRESSION MANAGEMENT)", C_RED_ACCENT, [
-            "• Tỷ số 4,06 lần xác nhận Doanh nghiệp Việt Nam có xu hướng khuếch đại thành tựu và giảm thiểu thông tin rủi ro.",
-            "• Báo cáo thường lồng ghép các từ ngữ mang tính ca ngợi thành tích thay vì giải trình khách quan."
-        ]),
-        ("CASE STUDY NGOẠI LỆ: PNJ 2022 & VNM 2025", C_BLUE_ACCENT, [
-            "• PNJ 2022 giảm còn 1,21 lần: Do phản ánh trung thực khó khăn giãn cách Covid đóng cửa chuỗi cửa hàng.",
-            "• VNM 2025 đạt 6,71 lần: Bùng nổ công bố thành tựu Net Zero và giải thưởng quốc tế."
+        ("CASE STUDY NGOẠI LỆ ĐIỂN HÌNH", C_RED_ACCENT, [
+            "• PNJ 2022 tụt xuống 1,21 lần:",
+            "  Phản ánh trung thực khó khăn đóng cửa mạng lưới mùa Covid.",
+            "• VNM 2025 tăng vọt lên 6,71 lần:",
+            "  Bùng nổ công bố chứng nhận Net Zero PAS 2060 và giải thưởng."
         ])
     ]
     for i, (rtitle, rcol, rbullets) in enumerate(r_insights):
-        ry = 1.35 + i * 1.9
-        add_card(slide, rx, ry, rw, 1.75, C_CARD_BG, rcol)
+        ry = 1.35 + i * 2.8
+        add_card(slide, rx, ry, rw, 2.65, C_CARD_BG, rcol)
         
-        tb = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(ry + 0.1), Inches(rw - 0.3), Inches(1.55))
+        tb = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(ry + 0.12), Inches(rw - 0.3), Inches(2.4))
         tf = tb.text_frame
         tf.word_wrap = True
         p = tf.paragraphs[0]
@@ -920,7 +946,7 @@ def build_slide_12_result6_sentiment_ratio(prs):
         
         for bullet in rbullets:
             p2 = tf.add_paragraph()
-            p2.space_after = Pt(2)
+            p2.space_after = Pt(4)
             r2 = p2.add_run(bullet)
             r2.font.size = Pt(8.8)
             r2.font.color.rgb = C_TEXT_DARK
@@ -934,50 +960,43 @@ def build_slide_12_result6_sentiment_ratio(prs):
 
 
 def build_slide_13_discussion_talk_heavy(prs):
-    """Slide 13: Thảo luận - Doanh nghiệp 'Nói nhiều về gì' (NHIỀU ẢNH: BIỂU ĐỒ TỔNG HỢP 7 CTY)."""
+    """Slide 13: Thảo luận - 'Nói nhiều về gì' (ẢNH 7 CTY BANNER TRÊN + 3 THẺ DƯỚI)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "THẢO LUẬN: DOANH NGHIỆP VIỆT NAM 'NÓI NHIỀU VỀ GÌ'?", "THẢO LUẬN CHUYÊN SÂU", 13)
     
-    # Nhúng ảnh tổng hợp top SDGs của 7 doanh nghiệp
+    # Dùng ảnh banner 2 panel slide_company_top_sdgs.png (AR = 2.58) -> Width 11.733, Height 3.8
     comp_img = FIGURES_DIR / "slide_company_top_sdgs.png"
     if comp_img.exists():
-        slide.shapes.add_picture(str(comp_img), Inches(0.8), Inches(1.35), Inches(6.5), Inches(5.65))
+        slide.shapes.add_picture(str(comp_img), Inches(0.8), Inches(1.30), Inches(11.733), Inches(3.80))
         
-    rw = 5.0
-    rx = 7.533
+    # 3 Thẻ phân tích bên dưới: Top 5.35, Height 1.45 (Rất thoáng)
     talk_insights = [
-        ("1. TĂNG TRƯỞNG & VIỆC LÀM (SDG 8, 9, 12)", C_NAVY_PRIMARY, [
-            "• Chiếm dung lượng áp đảo trong báo cáo của toàn bộ 7 doanh nghiệp.",
-            "• Doanh nghiệp tập trung mô tả doanh thu, lợi nhuận, quy mô nhân sự và ứng dụng công nghệ vì đây là các số liệu dễ định lượng và phục vụ quan hệ cổ đông."
-        ]),
-        ("2. HOẠT ĐỘNG THIỆN NGUYỆN CSR (SDG 1, 2, 4)", C_GREEN_EMERALD, [
-            "• Doanh nghiệp nói rất nhiều về các gói tài trợ học bổng, xây cầu từ thiện, cứu trợ bão lũ.",
-            "• Bản chất: Dễ thực hiện, hiệu quả truyền thông tức thì, giúp củng cố tính chính danh xã hội."
-        ]),
-        ("3. ĐỐI TÁC & BÁO CÁO TÍCH HỢP (SDG 16, 17)", C_BLUE_ACCENT, [
-            "• BVH, SSI và Vinamilk đầu tư dung lượng lớn cho việc tuân thủ pháp lý, đối tác chuỗi cung ứng và Báo cáo Tích hợp.",
-            "• Phục vụ việc thu hút dòng vốn đầu tư ngoại và xếp hạng tín nhiệm."
-        ])
+        ("1. TĂNG TRƯỞNG & VIỆC LÀM (SDG 8, 9, 12)", C_NAVY_PRIMARY, 
+         "Chiếm dung lượng áp đảo toàn bộ 7 doanh nghiệp. Dễ định lượng số liệu doanh thu, lợi nhuận, quy mô nhân sự và công nghệ."),
+        ("2. HOẠT ĐỘNG THIỆN NGUYỆN (SDG 1, 2, 4)", C_GREEN_EMERALD, 
+         "Báo cáo nói rất nhiều về tài trợ học bổng, xây cầu, cứu trợ bão lũ. Bản chất: Dễ làm, hiệu ứng truyền thông tức thì."),
+        ("3. ĐỐI TÁC & THỂ CHẾ (SDG 16, 17)", C_BLUE_ACCENT, 
+         "BVH, SSI và Vinamilk đầu tư lớn cho Báo cáo Tích hợp, tuân thủ pháp lý nhằm thu hút vốn đầu tư và xếp hạng tín nhiệm.")
     ]
-    for i, (ttitle, tcol, tbullets) in enumerate(talk_insights):
-        ty = 1.35 + i * 1.9
-        add_card(slide, rx, ty, rw, 1.75, C_CARD_BG, tcol)
+    
+    tw = 3.75
+    tgap = 0.24
+    for i, (ttitle, tcol, tdesc) in enumerate(talk_insights):
+        tx = 0.8 + i * (tw + tgap)
+        add_card(slide, tx, 5.35, tw, 1.45, C_CARD_BG, tcol)
         
-        tb = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(ty + 0.1), Inches(rw - 0.3), Inches(1.55))
+        tb = slide.shapes.add_textbox(Inches(tx + 0.15), Inches(5.42), Inches(tw - 0.3), Inches(1.3))
         tf = tb.text_frame
         tf.word_wrap = True
         p = tf.paragraphs[0]
         r1 = p.add_run(ttitle + "\n")
-        r1.font.size = Pt(10)
+        r1.font.size = Pt(9.5)
         r1.font.bold = True
         r1.font.color.rgb = tcol
         
-        for bullet in tbullets:
-            p2 = tf.add_paragraph()
-            p2.space_after = Pt(2)
-            r2 = p2.add_run(bullet)
-            r2.font.size = Pt(8.8)
-            r2.font.color.rgb = C_TEXT_DARK
+        r2 = p.add_run(tdesc)
+        r2.font.size = Pt(8.5)
+        r2.font.color.rgb = C_TEXT_DARK
 
     set_presenter_notes(slide, {
         "goal": "Giải thích hiện tượng 'Nói nhiều về gì': Tăng trưởng kinh tế, CSR từ thiện bề nổi và Báo cáo tích hợp.",
@@ -988,44 +1007,44 @@ def build_slide_13_discussion_talk_heavy(prs):
 
 
 def build_slide_14_discussion_rarely_talk(prs):
-    """Slide 14: Thảo luận - Doanh nghiệp 'Ít nói về gì' (4 Vùng Né Tránh Trọng Tâm)."""
+    """Slide 14: Thảo luận - 'Ít nói về gì' (4 THẺ CẢNH BÁO THOÁNG ĐÃNG 2x2)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "THẢO LUẬN: DOANH NGHIỆP 'ÍT NÓI VỀ GÌ' (VÙNG TRŨNG NÉ TRÁNH)?", "THẢO LUẬN CHUYÊN SÂU", 14)
     
     avoid_data = [
         ("1. ĐA DẠNG SINH HỌC & BẢO TỒN (SDG 14, 15)", C_RED_ACCENT, [
             "• Điểm số luôn ở mức đáy toàn mẫu (< 38 điểm).",
-            "• Báo cáo chỉ nêu khẩu hiệu chung chung, thiếu hoàn toàn số liệu kiểm kê tác động sinh thái đất liền và tài nguyên nước.",
-            "• Nguyên nhân: Chi phí đo lường đa dạng sinh học phức tạp và chưa có chế tài bắt buộc."
+            "• Chỉ nêu khẩu hiệu chung chung, thiếu số liệu kiểm kê tác động sinh thái đất liền và biển.",
+            "• Chi phí đo lường đa dạng sinh học phức tạp và chưa có chế tài bắt buộc."
         ]),
         ("2. BÌNH ĐẲNG LƯƠNG & CHÊNH LỆCH THU NHẬP (SDG 5, 10)", C_RED_ACCENT, [
-            "• Tuyệt đối né tránh công bố Tỷ số chênh lệch lương CEO với công nhân (CEO-to-worker pay ratio).",
+            "• Tuyệt đối né tránh công bố Tỷ số chênh lệch lương CEO với công nhân.",
             "• Không có thống kê khoảng cách thu nhập theo giới tính ở cùng cấp bậc chuyên môn.",
-            "• Báo cáo chỉ dừng lại ở tỷ lệ % lao động nữ chung chung."
+            "• Chỉ dừng lại ở tỷ lệ % nhân sự nữ chung chung."
         ]),
         ("3. PHÁT THẢI CHUỖI CUNG ỨNG SCOPE 3", C_RED_ACCENT, [
-            "• Mới chỉ đo lường phát thải trực tiếp Scope 1 và điện Scope 2.",
-            "• Phát thải gián tiếp chuỗi cung ứng Scope 3 (chiếm 70–80% tổng lượng phát thải thực tế) gần như bị bỏ ngỏ.",
+            "• Mới chỉ đo lường phát thải trực tiếp Scope 1 và điện lưới Scope 2.",
+            "• Phát thải gián tiếp chuỗi cung ứng Scope 3 (chiếm 70–80% thực tế) gần như bị bỏ ngỏ.",
             "• Do chuỗi cung ứng phân tán và thiếu công cụ đo lường chuyên sâu."
         ]),
         ("4. SỰ CỐ TIÊU CỰC, TRANH CHẤP & XỬ PHẠT (SDG 16)", C_RED_ACCENT, [
-            "• 'Gạn đục khơi trong' điển hình: Không có báo cáo nào ghi nhận tai nạn lao động nghiêm trọng hay khiếu nại khách hàng.",
+            "• 'Gạn đục khơi trong' điển hình: Không ghi nhận tai nạn lao động hay khiếu nại khách hàng.",
             "• Các quyết định xử phạt vi phạm hành chính về môi trường hoặc thuế bị che giấu hoàn toàn.",
-            "• Báo cáo trở thành tài liệu tiếp thị thay vì công cụ quản trị rủi ro."
+            "• Báo cáo trở thành tài liệu tiếp thị thay vì công cụ giải trình rủi ro."
         ])
     ]
     
-    w = 5.75
-    h = 2.6
+    w = 5.70
+    h = 2.55
     top1 = 1.35
-    top2 = 4.15
+    top2 = 4.20
     l1 = 0.8
-    l2 = 6.78
+    l2 = 6.83
     coords = [(l1, top1), (l2, top1), (l1, top2), (l2, top2)]
     
     for i, (atitle, acol, abullets) in enumerate(avoid_data):
         cx, cy = coords[i]
-        card = add_card(slide, cx, cy, w, h, C_CARD_BG, acol)
+        add_card(slide, cx, cy, w, h, C_CARD_BG, acol)
         
         strip = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(cx), Inches(cy), Inches(w), Inches(0.4))
         set_shape_flat(strip, acol)
@@ -1057,16 +1076,16 @@ def build_slide_14_discussion_rarely_talk(prs):
 
 
 def build_slide_15_comparison(prs):
-    """Slide 15: BẢNG SO SÁNH ĐỐI ĐẦU TOÀN DIỆN: PAPER GỐC VS CODE MỚI (YÊU CẦU TRỌNG TÂM)."""
+    """Slide 15: BẢNG SO SÁNH ĐỐI ĐẦU TOÀN DIỆN PAPER GỐC VS CODE MỚI (NATIVE TABLE RỘNG RÃI)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "BẢNG SO SÁNH ĐỐI ĐẦU: PAPER GỐC (KANG & KIM 2022) VS CODE MỚI", "ĐỐI CHUẨN TOÀN DIỆN", 15)
     
     rows = 9
     cols = 4
     left = Inches(0.8)
-    top = Inches(1.28)
+    top = Inches(1.30)
     width = Inches(11.733)
-    height = Inches(5.65)
+    height = Inches(5.60)
     
     table_shape = slide.shapes.add_table(rows, cols, left, top, width, height)
     tbl = table_shape.table
@@ -1156,7 +1175,7 @@ def build_slide_15_comparison(prs):
 
 
 def build_slide_16_implications(prs):
-    """Slide 16: Hàm Ý Thực Tiễn & Đề Xuất Chính Sách (Tinh gọn text)."""
+    """Slide 16: Hàm Ý Thực Tiễn & Đề Xuất Chính Sách (3 THẺ RỘNG RÃI)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "HÀM Ý THỰC TIỄN & ĐỀ XUẤT CHO CÁC BÊN LIÊN QUAN", "HÀM Ý QUẢN TRỊ", 16)
     
@@ -1190,7 +1209,7 @@ def build_slide_16_implications(prs):
     w = 3.75
     gap = 0.24
     top = 1.35
-    h = 5.65
+    h = 5.5
     
     for i, (atitle, acol, abullets) in enumerate(actions):
         ax = 0.8 + i * (w + gap)
@@ -1211,7 +1230,7 @@ def build_slide_16_implications(prs):
         tf.word_wrap = True
         for b_idx, bullet in enumerate(abullets):
             p = tf.add_paragraph() if b_idx > 0 else tf.paragraphs[0]
-            p.space_after = Pt(4)
+            p.space_after = Pt(6)
             r = p.add_run(bullet)
             r.font.name = FONT_MAIN
             if bullet.startswith("•"):
@@ -1231,60 +1250,43 @@ def build_slide_16_implications(prs):
 
 
 def build_slide_17_limitations_future(prs):
-    """Slide 17: Hạn Chế & Tương Lai (NHIỀU ẢNH: SƠ ĐỒ MULTI-AGENT ESG AUDITOR)."""
+    """Slide 17: Hạn Chế & Tương Lai (ẢNH SƠ ĐỒ MULTI-AGENT BANNER TRÊN + 3 THẺ)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     add_slide_header(slide, "HẠN CHẾ ĐỀ TÀI & HƯỚNG PHÁT TRIỂN AGENTIC ESG AUDITOR", "HƯỚNG PHÁT TRIỂN", 17)
     
-    # Bên trái: 3 Hạn chế hiện tại (Card ngắn)
-    card_l = add_card(slide, 0.8, 1.35, 5.0, 5.65)
-    tb_l = slide.shapes.add_textbox(Inches(0.95), Inches(1.5), Inches(4.7), Inches(5.35))
-    tf_l = tb_l.text_frame
-    tf_l.word_wrap = True
-    
-    p0 = tf_l.paragraphs[0]
-    r0 = p0.add_run("HẠN CHẾ HIỆN TẠI CỦA NGHIÊN CỨU\n")
-    r0.font.bold = True
-    r0.font.size = Pt(11)
-    r0.font.color.rgb = C_NAVY_PRIMARY
-    
-    lims = [
-        ("• Giới hạn quy mô mẫu:", True, C_NAVY_PRIMARY),
-        ("  Mẫu 7 tập đoàn lớn hàng đầu có báo cáo liên tục; chưa bao phủ toàn bộ 300+ doanh nghiệp niêm yết trên HOSE/HNX.", False, C_TEXT_DARK),
-        ("• Chưa Fact-Checking số liệu bảng biểu:", True, C_RED_ACCENT),
-        ("  SBERT đo lường mức độ tương đồng ngữ nghĩa văn bản, nhưng chưa thể tự động kiểm chứng chéo các số liệu định lượng trong Table.", False, C_TEXT_DARK),
-        ("• Chưa bóc tách ngữ cảnh đoạn văn rộng:", True, C_PURPLE_ACCENT),
-        ("  Chunking theo câu đơn đôi khi làm mất ngữ cảnh của đoạn văn cha.", False, C_TEXT_DARK)
-    ]
-    for head, is_h, col in lims:
-        p = tf_l.add_paragraph()
-        p.space_after = Pt(3)
-        r = p.add_run(head)
-        r.font.name = FONT_MAIN
-        r.font.size = Pt(9.5 if is_h else 8.8)
-        r.font.bold = is_h
-        r.font.color.rgb = col
-        
-    # Bên phải: Nhúng Sơ đồ Multi-Agent ESG Auditor
+    # Sơ đồ Multi-Agent ESG Auditor (AR = 2.85) -> Width 11.733, Height 3.95
     agent_img = FIGURES_DIR / "rag_agentic_flow.png"
     if agent_img.exists():
-        slide.shapes.add_picture(str(agent_img), Inches(6.0), Inches(1.35), Inches(6.533), Inches(4.3))
+        slide.shapes.add_picture(str(agent_img), Inches(0.8), Inches(1.30), Inches(11.733), Inches(3.95))
         
-    # Hộp tóm tắt tầm nhìn tương lai
-    bot_r = add_card(slide, 6.0, 5.75, 6.533, 1.25, RGBColor(238, 244, 252), C_GREEN_EMERALD)
-    tb_br = slide.shapes.add_textbox(Inches(6.15), Inches(5.82), Inches(6.233), Inches(1.1))
-    tf_br = tb_br.text_frame
-    tf_br.word_wrap = True
-    p_br = tf_br.paragraphs[0]
-    r_br1 = p_br.add_run("TẦM NHÌN: HỆ THỐNG TRỢ LÝ KIỂM TOÁN AI (AGENTIC ESG AUDITOR)\n")
-    r_br1.font.bold = True
-    r_br1.font.size = Pt(10)
-    r_br1.font.color.rgb = C_GREEN_EMERALD
-    r_br2 = p_br.add_run(
-        "Kế thừa pipeline Retrieval hiện tại làm nền móng sạch để tích hợp Multi-Agent: "
-        "Agent đọc bảng biểu, Agent kiểm tra chéo cam kết và LLM (GPT-4o/Gemini) xuất báo cáo thẩm định độc lập 3 trang trong 30 giây."
-    )
-    r_br2.font.size = Pt(8.8)
-    r_br2.font.color.rgb = C_TEXT_DARK
+    # 3 Thẻ hạn chế & tương lai bên dưới: Top 5.45, Height 1.40 (Rất thoáng)
+    agent_cards = [
+        ("HẠN CHẾ HIỆN TẠI", C_RED_ACCENT,
+         "Mẫu 7 tập đoàn; mô hình đo lường tương đồng ngữ nghĩa chứ chưa tự động Fact-checking chéo số liệu định lượng trong Table."),
+        ("ĐỘT PHÁ MULTI-AGENT", C_PURPLE_ACCENT,
+         "Kế thừa pipeline Retrieval hiện tại làm nền móng sạch để tích hợp Agent bóc tách bảng số và Agent kiểm tra chéo cam kết."),
+        ("TẦM NHÌN SẢN PHẨM SAAS", C_GREEN_EMERALD,
+         "Tích hợp LLM (GPT-4o/Gemini) tự động xuất Báo cáo Thẩm định ESG Độc lập trong 30 giây phục vụ ngân hàng và quỹ đầu tư.")
+    ]
+    
+    aw = 3.75
+    agap = 0.24
+    for i, (atitle, acol, adesc) in enumerate(agent_cards):
+        ax = 0.8 + i * (aw + agap)
+        add_card(slide, ax, 5.45, aw, 1.40, C_CARD_BG, acol)
+        
+        tb = slide.shapes.add_textbox(Inches(ax + 0.15), Inches(5.52), Inches(aw - 0.3), Inches(1.25))
+        tf = tb.text_frame
+        tf.word_wrap = True
+        p = tf.paragraphs[0]
+        r1 = p.add_run(atitle + "\n")
+        r1.font.size = Pt(9.5)
+        r1.font.bold = True
+        r1.font.color.rgb = acol
+        
+        r2 = p.add_run(adesc)
+        r2.font.size = Pt(8.5)
+        r2.font.color.rgb = C_TEXT_DARK
 
     set_presenter_notes(slide, {
         "goal": "Thẳng thắn nhìn nhận hạn chế và vạch ra lộ trình tích hợp Multi-Agent AI trong tương lai.",
@@ -1295,7 +1297,7 @@ def build_slide_17_limitations_future(prs):
 
 
 def build_slide_18_conclusion(prs):
-    """Slide 18: Kết Luận & Phiên Hỏi Đáp (Q&A)."""
+    """Slide 18: Kết Luận & Phiên Hỏi Đáp (Q&A) (THOÁNG ĐÃNG, CÂN ĐỐI)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     bg = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(13.333), Inches(7.5))
     set_shape_flat(bg, C_NAVY_DARK)
@@ -1303,7 +1305,7 @@ def build_slide_18_conclusion(prs):
     accent_top = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(13.333), Inches(0.12))
     set_shape_flat(accent_top, C_GOLD_ACCENT)
 
-    tb_title = slide.shapes.add_textbox(Inches(0.8), Inches(0.5), Inches(11.733), Inches(0.8))
+    tb_title = slide.shapes.add_textbox(Inches(0.8), Inches(0.45), Inches(11.733), Inches(0.75))
     p_t = tb_title.text_frame.paragraphs[0]
     r_t = p_t.add_run("TỔNG KẾT 4 THÔNG ĐIỆP CỐT LÕI CỦA ĐỀ TÀI")
     r_t.font.name = FONT_HEADING
@@ -1323,9 +1325,9 @@ def build_slide_18_conclusion(prs):
     ]
 
     w_c = 5.7
-    h_c = 1.95
-    top1 = 1.4
-    top2 = 3.55
+    h_c = 1.85
+    top1 = 1.35
+    top2 = 3.45
     l1 = 0.8
     l2 = 6.83
     coords = [(l1, top1), (l2, top1), (l1, top2), (l2, top2)]
@@ -1345,17 +1347,17 @@ def build_slide_18_conclusion(prs):
         r0 = p0.add_run(c_head + "\n")
         r0.font.bold = True
         r0.font.color.rgb = C_GOLD_ACCENT
-        r0.font.size = Pt(11)
+        r0.font.size = Pt(10.5)
         
         p1 = tf.add_paragraph()
         p1.text = c_body
-        p1.font.size = Pt(9.8)
+        p1.font.size = Pt(9.2)
         p1.font.color.rgb = RGBColor(225, 235, 250)
 
-    qa_card = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.8), Inches(5.7), Inches(11.733), Inches(1.3))
+    qa_card = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.8), Inches(5.55), Inches(11.733), Inches(1.35))
     set_shape_flat(qa_card, RGBColor(15, 35, 65), C_GOLD_ACCENT, 1.5)
     
-    tb_qa = slide.shapes.add_textbox(Inches(1.0), Inches(5.75), Inches(11.333), Inches(1.2))
+    tb_qa = slide.shapes.add_textbox(Inches(1.0), Inches(5.62), Inches(11.333), Inches(1.2))
     tf_qa = tb_qa.text_frame
     tf_qa.word_wrap = True
     
@@ -1363,7 +1365,7 @@ def build_slide_18_conclusion(prs):
     p_qa1.alignment = PP_ALIGN.CENTER
     r_qa1 = p_qa1.add_run("TRÂN TRỌNG CẢM ƠN QUÝ THẦY CÔ TRONG HỘI ĐỒNG KHOA HỌC!\n")
     r_qa1.font.name = FONT_HEADING
-    r_qa1.font.size = Pt(15)
+    r_qa1.font.size = Pt(14.5)
     r_qa1.font.bold = True
     r_qa1.font.color.rgb = C_GOLD_ACCENT
     
@@ -1371,7 +1373,7 @@ def build_slide_18_conclusion(prs):
     p_qa2.alignment = PP_ALIGN.CENTER
     r_qa2 = p_qa2.add_run("Nhóm nghiên cứu rất mong nhận được các câu hỏi và ý kiến đóng góp quý báu từ Quý Thầy Cô.\n(Tác giả: Lê Đan Sơn, Dương Thị Hoàn — 2026)")
     r_qa2.font.name = FONT_MAIN
-    r_qa2.font.size = Pt(11)
+    r_qa2.font.size = Pt(10.5)
     r_qa2.font.italic = True
     r_qa2.font.color.rgb = C_WHITE
 
@@ -1385,7 +1387,7 @@ def build_slide_18_conclusion(prs):
 
 def main():
     print("=" * 80)
-    print("BẮT ĐẦU CẬP NHẬT BỘ SLIDE CHÍNH (Ít chữ, nhiều ảnh & bảng so sánh đối đầu)...")
+    print("BẮT ĐẦU CẬP NHẬT BỘ SLIDE CHÍNH (PHIÊN BẢN DE-CRAMPED THOÁNG ĐÃNG)...")
     print("=" * 80)
     
     prs = Presentation()
@@ -1395,52 +1397,52 @@ def main():
     print("[1/18] Slide 1: Trang Tiêu đề & Thông tin Tác giả...")
     build_slide_01_title(prs)
     
-    print("[2/18] Slide 2: Đặt vấn đề & Bối cảnh Thể chế Việt Nam (Thẻ KPI)...")
+    print("[2/18] Slide 2: Đặt vấn đề & Bối cảnh Thể chế Việt Nam (Thẻ KPI thoáng)...")
     build_slide_02_context(prs)
     
-    print("[3/18] Slide 3: Bài báo gốc Kang & Kim (2022) vs Code mới (NHIỀU ẢNH: Biểu đồ 3 Panel)...")
+    print("[3/18] Slide 3: Bài báo gốc Kang & Kim (2022) vs Code mới (Biểu đồ 3 Panel chuẩn AR)...")
     build_slide_03_original_paper(prs)
     
-    print("[4/18] Slide 4: Khung Phương pháp luận (NHIỀU ẢNH: Sơ đồ luồng 4 tầng)...")
+    print("[4/18] Slide 4: Khung Phương pháp luận (Sơ đồ luồng 4 tầng chuẩn AR)...")
     build_slide_04_pipeline(prs)
     
-    print("[5/18] Slide 5: Mẫu Dữ liệu Thực nghiệm (BẢNG NATIVE TABLE 7 Doanh nghiệp)...")
+    print("[5/18] Slide 5: Mẫu Dữ liệu Thực nghiệm (Bảng 7 Doanh nghiệp + 4 Thẻ KPI)...")
     build_slide_05_sample(prs)
     
-    print("[6/18] Slide 6: Kết quả 1 - Phân phối Tương đồng & BẢNG ĐỐI CHUẨN THỐNG KÊ...")
+    print("[6/18] Slide 6: Kết quả 1 - Phân phối Tương đồng (AR 2.28) & BẢNG ĐỐI CHUẨN THỐNG KÊ...")
     build_slide_06_result1_similarity(prs)
     
-    print("[7/18] Slide 7: Kết quả 2 - Cấu trúc 6 Nhóm SDG qua Heatmap (heatmap_6cat.png)...")
+    print("[7/18] Slide 7: Kết quả 2 - Cấu trúc 6 Nhóm SDG (Heatmap AR 0.65 portrait + 3 Thẻ rộng)...")
     build_slide_07_result2_heatmap(prs)
     
-    print("[8/18] Slide 8: Đặc thù Ngành Sản xuất & Năng lượng (slide_manuf_sdgs.png)...")
+    print("[8/18] Slide 8: Đặc thù Ngành Sản xuất & Năng lượng (slide_manuf_sdgs.png AR 1.30)...")
     build_slide_08_result3_companies_p1(prs)
     
-    print("[9/18] Slide 9: Đặc thù Ngành Tài chính & Bán lẻ (slide_finance_sdgs.png)...")
+    print("[9/18] Slide 9: Đặc thù Ngành Tài chính & Bán lẻ (slide_finance_sdgs.png AR 1.29)...")
     build_slide_09_result3_companies_p2(prs)
     
-    print("[10/18] Slide 10: Kết quả 4 - Xu hướng Dịch chuyển Chuỗi Thời gian (trends_6categories.png)...")
+    print("[10/18] Slide 10: Kết quả 4 - Xu hướng Chuỗi Thời gian (slide_trends_grid.png AR 2.01 landscape)...")
     build_slide_10_result4_trends(prs)
     
-    print("[11/18] Slide 11: Kết quả 5 - Sắc thái Cảm xúc PhoBERT & Đối chuẩn (2 Ảnh)...")
+    print("[11/18] Slide 11: Kết quả 5 - Sắc thái Cảm xúc (slide_sentiment_summary.png AR 2.36 panorama)...")
     build_slide_11_result5_sentiment(prs)
     
-    print("[12/18] Slide 12: Kết quả 6 - Tỷ số Cảm xúc Pos/Neg Ratio (sentiment_ratio.png)...")
+    print("[12/18] Slide 12: Kết quả 6 - Tỷ số Cảm xúc Pos/Neg Ratio (sentiment_ratio.png AR 1.84)...")
     build_slide_12_result6_sentiment_ratio(prs)
     
-    print("[13/18] Slide 13: Thảo luận - 'Nói nhiều về gì' (NHIỀU ẢNH: slide_company_top_sdgs.png)...")
+    print("[13/18] Slide 13: Thảo luận - 'Nói nhiều về gì' (slide_company_top_sdgs.png AR 2.58 banner)...")
     build_slide_13_discussion_talk_heavy(prs)
     
-    print("[14/18] Slide 14: Thảo luận - 'Ít nói về gì' (4 Thẻ cảnh báo né tránh)...")
+    print("[14/18] Slide 14: Thảo luận - 'Ít nói về gì' (4 Thẻ cảnh báo né tránh 2x2)...")
     build_slide_14_discussion_rarely_talk(prs)
     
-    print("[15/18] Slide 15: BẢNG SO SÁNH ĐỐI ĐẦU TOÀN DIỆN PAPER GỐC VS CODE MỚI (Native Table)...")
+    print("[15/18] Slide 15: BẢNG SO SÁNH ĐỐI ĐẦU TOÀN DIỆN PAPER GỐC VS CODE MỚI (Native Table rộng)...")
     build_slide_15_comparison(prs)
     
     print("[16/18] Slide 16: Hàm ý Thực tiễn & Đề xuất Chính sách (3 Thẻ hành động)...")
     build_slide_16_implications(prs)
     
-    print("[17/18] Slide 17: Hạn chế Đề tài & Tương lai (NHIỀU ẢNH: rag_agentic_flow.png)...")
+    print("[17/18] Slide 17: Hạn chế Đề tài & Tương lai (rag_agentic_flow.png AR 2.85 banner)...")
     build_slide_17_limitations_future(prs)
     
     print("[18/18] Slide 18: Tổng kết 4 Thông điệp Cốt lõi & Phiên Hỏi đáp (Q&A)...")
@@ -1457,7 +1459,7 @@ def main():
     file_size_mb = OUTPUT_PPTX.stat().st_size / (1024 * 1024)
     print(f"=> Kích thước tệp: {file_size_mb:.2f} MB")
     print("=" * 80)
-    print("HOÀN TẤT THÀNH CÔNG BỘ SLIDE CHÍNH!")
+    print("HOÀN TẤT THÀNH CÔNG BỘ SLIDE DE-CRAMPED!")
     print("=" * 80)
 
 
