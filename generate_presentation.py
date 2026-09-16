@@ -921,41 +921,45 @@ def build_slide_12_result6_sentiment_ratio(prs):
     r_insights = [
         ("ĐỐI CHUẨN QUỐC TẾ: KANG & KIM (2022)", C_NAVY_PRIMARY, [
             "• Kang & Kim (2022): Pos/Neg toàn cầu đạt ≈ 5,20 lần.",
-            "• Việt Nam: Pos/Neg trung bình đạt 4,06 lần (3,0 – 6,7x).",
-            "• Cả 2 đều xác nhận Lý thuyết Quản trị Ấn tượng mang tính phổ quát toàn cầu."
+            "• Việt Nam: Pos/Neg trung bình đạt 4,06 lần (dao động 3,0 – 6,7x).",
+            "• Cả 2 đều xác nhận Lý thuyết Quản trị Ấn tượng & Hiệu ứng Pollyanna."
         ]),
-        ("CASE STUDY NGOẠI LỆ ĐIỂN HÌNH", C_RED_ACCENT, [
-            "• PNJ 2022 tụt xuống 1,21 lần:",
-            "  Phản ánh trung thực khó khăn đóng cửa mạng lưới mùa Covid.",
-            "• VNM 2025 tăng vọt lên 6,71 lần:",
-            "  Bùng nổ công bố chứng nhận Net Zero PAS 2060 và giải thưởng."
+        ("CASE STUDY ĐẶC BIỆT: HIỆN TƯỢNG PNJ 2022", C_RED_ACCENT, [
+            "• Tỷ số Pos/Neg chạm đáy 1,21x (Năm 2021: 4,48x -> 2023: 4,23x).",
+            "• Căn nguyên Kỹ thuật NLP (Yếu tố quyết định):",
+            "  Bản PDF scan ảnh khiến OCR bị vỡ từ, đứt gãy cú pháp câu;",
+            "  PhoBERT nhạy cảm với nhiễu nên gán nhầm 39,0% câu thành Tiêu cực.",
+            "• Căn nguyên Thực tế Doanh nghiệp:",
+            "  PNJ đối mặt khó khăn hậu Covid-19 và tăng cường công bố rủi ro bán lẻ."
         ])
     ]
     for i, (rtitle, rcol, rbullets) in enumerate(r_insights):
         ry = 1.35 + i * 2.8
         add_card(slide, rx, ry, rw, 2.65, C_CARD_BG, rcol)
         
-        tb = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(ry + 0.12), Inches(rw - 0.3), Inches(2.4))
+        tb = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(ry + 0.10), Inches(rw - 0.3), Inches(2.45))
         tf = tb.text_frame
         tf.word_wrap = True
         p = tf.paragraphs[0]
         r1 = p.add_run(rtitle + "\n")
-        r1.font.size = Pt(10)
+        r1.font.size = Pt(9.5)
         r1.font.bold = True
         r1.font.color.rgb = rcol
         
         for bullet in rbullets:
             p2 = tf.add_paragraph()
-            p2.space_after = Pt(4)
+            p2.space_after = Pt(2.5)
             r2 = p2.add_run(bullet)
-            r2.font.size = Pt(8.8)
+            if "Căn nguyên" in bullet or "Tỷ số Pos/Neg" in bullet:
+                r2.font.bold = True
+            r2.font.size = Pt(8.2)
             r2.font.color.rgb = C_TEXT_DARK
 
     set_presenter_notes(slide, {
-        "goal": "Phân tích Tỷ số Pos/Neg Ratio, đối chuẩn 4,06x của VN với 5,20x của Kang & Kim, khẳng định hiệu ứng Pollyanna.",
-        "script": "Đồ thị bên trái biểu diễn Tỷ số Cảm xúc Pos/Neg theo từng năm. Nghiên cứu của Kang & Kim cho tỷ số toàn cầu khoảng 5,2 lần, còn tại Việt Nam tỷ số đạt 4,06 lần. Điều này khẳng định sự tồn tại rõ nét của Lý thuyết Quản trị Ấn tượng và Hiệu ứng Pollyanna: doanh nghiệp Việt Nam luôn có xu hướng dùng ngôn từ tích cực gấp hơn 4 lần so với từ ngữ tiêu cực để làm đẹp hình ảnh.",
-        "highlights": "Pos/Neg trung bình = 4,06 lần; Kang & Kim = 5,20 lần; Khẳng định Quản trị Ấn tượng.",
-        "qa": "Tỷ số 4,06 lần có phải là tẩy xanh không: Tỷ số cao cho thấy thiên lệch lạc quan, nhưng để kết luận tẩy xanh thì cần đối chiếu chéo với số liệu kiểm toán thực tế."
+        "goal": "Phân tích Tỷ số Pos/Neg Ratio, đối chuẩn 4,06x của VN với 5,20x của Kang & Kim, bóc tách Case Study PNJ 2022 sụt giảm xuống 1,21x.",
+        "script": "Đồ thị bên trái biểu diễn Tỷ số Cảm xúc Pos/Neg theo từng năm. Nghiên cứu của Kang & Kim cho tỷ số toàn cầu khoảng 5,2 lần, còn tại Việt Nam tỷ số đạt 4,06 lần. Điểm nổi bật nhất trên đồ thị là trường hợp dị biệt của PNJ năm 2022 khi tỷ số chạm đáy 1,21 lần. Nhóm nghiên cứu đã truy vết sâu và phát hiện 2 nguyên nhân: Thứ nhất về kỹ thuật, báo cáo PNJ 2022 là bản scan ảnh, OCR bị vỡ từ và đứt gãy cú pháp, khiến mô hình PhoBERT nhận diện nhầm các câu nhiễu thành Tiêu cực (chiếm tới 39%). Thứ hai về thực tế, đây là năm PNJ tái cấu trúc và đối mặt thách thức lớn hậu Covid. Đến năm 2023 khi dùng PDF số chuẩn, tỷ số lập tức hồi phục về 4,23 lần. Đây là phát hiện phương pháp luận đắt giá về ảnh hưởng của chất lượng số hóa tài liệu đến AI.",
+        "highlights": "Pos/Neg trung bình = 4,06 lần; PNJ 2022 rơi xuống 1,21 lần do lỗi nhiễu OCR scan ảnh kết hợp thách thức hậu Covid; 2023 bật lại 4,23 lần.",
+        "qa": "Tại sao PNJ 2022 lại thấp tịt 1,21: Do báo cáo là bản scan ảnh khiến OCR bị nhiễu và đứt câu, PhoBERT nhầm câu vỡ cấu trúc là Tiêu cực (39%), cộng hưởng cùng các khó khăn đóng cửa mạng lưới sau dịch."
     })
 
 
