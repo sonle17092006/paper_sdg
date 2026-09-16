@@ -666,77 +666,21 @@ def build_slide_07_result2_heatmap(prs):
     })
 
 
-def build_slide_08_company_6cat_table(prs):
-    """Slide 8: Kết quả 3 - Bảng Tổng hợp So sánh 7 Doanh nghiệp theo 6 Nhóm SDG (BẢNG LỚN + 3 THẺ SÂU)."""
+def build_slide_08_company_6cat_bar(prs):
+    """Slide 8: Kết quả 3 - Biểu đồ Cột So sánh 7 Doanh nghiệp theo 6 Nhóm SDG (BAR GRAPH + 3 THẺ SÂU)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    add_slide_header(slide, "KẾT QUẢ 3: BẢNG SO SÁNH ĐẶC THÙ 7 DOANH NGHIỆP THEO 6 NHÓM SDG", "KẾT QUẢ THỰC NGHIỆM", 8, 17)
+    add_slide_header(slide, "KẾT QUẢ 3: ĐẶC THÙ 7 DOANH NGHIỆP THEO 6 NHÓM CHỦ ĐỀ SDG", "KẾT QUẢ THỰC NGHIỆM", 8, 17)
     
-    # Bảng Native Table 9 hàng x 8 cột (Width 11.733 in, Height 3.80 in, Left 0.8 in, Top 1.30 in)
-    rows = 9
-    cols = 8
-    table_shape = slide.shapes.add_table(rows, cols, Inches(0.8), Inches(1.30), Inches(11.733), Inches(3.80))
-    tbl = table_shape.table
-    tbl.columns[0].width = Inches(2.233)  # DOANH NGHIỆP (NGÀNH)
-    tbl.columns[1].width = Inches(1.15)   # LIFE
-    tbl.columns[2].width = Inches(1.25)   # ECONOMIC
-    tbl.columns[3].width = Inches(1.15)   # EQUITY
-    tbl.columns[4].width = Inches(1.15)   # SOCIAL
-    tbl.columns[5].width = Inches(1.25)   # RESOURCES
-    tbl.columns[6].width = Inches(1.15)   # ENVIRONS
-    tbl.columns[7].width = Inches(2.40)   # ĐẶC TRƯNG CHIẾN LƯỢC
+    # Biểu đồ cột Bar Chart slide_company_6cat_bar.png (AR = 2.82) -> Width 11.733 in, Height 4.10 in, Left 0.8 in, Top 1.22 in
+    bar_img = FIGURES_DIR / "slide_company_6cat_bar.png"
+    if bar_img.exists():
+        slide.shapes.add_picture(str(bar_img), Inches(0.8), Inches(1.22), Inches(11.733), Inches(4.10))
     
-    headers = ["DOANH NGHIỆP (NGÀNH)", "LIFE\n(1, 2, 3)", "ECONOMIC\n(8, 9)", "EQUITY\n(4, 5, 10)", "SOCIAL\n(11, 16, 17)", "RESOURCES\n(6, 7, 12, 14)", "ENVIRONS\n(13, 15)", "ĐẶC TRƯNG CHIẾN LƯỢC CỐT LÕI"]
-    for j, h in enumerate(headers):
-        cell = tbl.cell(0, j)
-        cell.fill.solid()
-        cell.fill.fore_color.rgb = C_NAVY_PRIMARY
-        p = cell.text_frame.paragraphs[0]
-        p.text = h
-        p.font.bold = True
-        p.font.size = Pt(8.2)
-        p.font.color.rgb = RGBColor(255, 255, 255)
-        p.alignment = PP_ALIGN.CENTER
-        
-    table_data = [
-        ("Vinamilk (VNM - Sữa & Chăn nuôi)", "42.26", "45.09", "40.28", "43.94", "44.08", "43.38", "Net Zero 2050, 3 đơn vị PAS 2060, Green Farm."),
-        ("Vicostone (VCS - Đá thạch anh)", "46.19", "50.71", "44.20", "49.08", "48.63", "47.31", "Đỉnh toàn mẫu Economic & Resources nhờ xuất khẩu Âu-Mỹ."),
-        ("PNJ (PNJ - Bán lẻ & Chế tác vàng)", "44.58", "48.67", "43.18", "47.32", "46.93", "45.97", "Dẫn đầu Equity (43,18đ) nhờ >60% nhân sự nữ & DE&I."),
-        ("Bảo Việt (BVH - Bảo hiểm & Tài chính)", "46.34", "49.36", "43.05", "48.13", "46.40", "46.08", "Tiên phong Báo cáo Tích hợp IIRC, bảo hiểm vi mô."),
-        ("The PAN Group (PAN - Nông nghiệp)", "44.81", "47.29", "41.91", "45.51", "45.07", "44.67", "Chuỗi Farm-Food-Family, lúa gạo giảm phát thải (SDG 2)."),
-        ("Petrolimex (PLX - Xăng dầu & Năng lượng)", "42.14", "45.55", "39.98", "44.42", "44.22", "43.72", "Hạ tầng xăng dầu Euro 5, kiểm kê phát thải ISO 14064."),
-        ("Chứng khoán SSI (SSI - Dịch vụ Tài chính)", "43.52", "47.20", "41.99", "46.33", "44.10", "43.71", "Thu xếp vốn trái phiếu xanh, quản trị thẻ điểm ASEAN."),
-        ("★ TOÀN MẪU VIỆT NAM (TRUNG BÌNH)", "44.26", "47.69", "42.08", "46.39", "45.63", "44.98", "Quy luật toàn diện: Economic cao nhất, Equity thấp nhất.")
-    ]
-    
-    for i, row in enumerate(table_data):
-        is_highlight = (i == len(table_data) - 1)
-        for j, val in enumerate(row):
-            cell = tbl.cell(i + 1, j)
-            cell.fill.solid()
-            if is_highlight:
-                cell.fill.fore_color.rgb = RGBColor(234, 243, 255)
-            elif i % 2 == 0:
-                cell.fill.fore_color.rgb = RGBColor(248, 250, 252)
-            else:
-                cell.fill.fore_color.rgb = RGBColor(255, 255, 255)
-                
-            p = cell.text_frame.paragraphs[0]
-            p.text = val
-            p.font.size = Pt(7.4 if j == 7 else 7.8)
-            if is_highlight:
-                p.font.bold = True
-                p.font.color.rgb = C_BLUE_ACCENT if j == 0 else C_NAVY_PRIMARY
-            else:
-                p.font.bold = (j == 0 or j == 2)  # In đậm tên cty và cột Economic
-                p.font.color.rgb = C_NAVY_PRIMARY if (j == 0 or j == 2) else (C_GOLD_ACCENT if j == 3 else C_TEXT_DARK)
-            if 1 <= j <= 6:
-                p.alignment = PP_ALIGN.CENTER
-
-    # 3 Thẻ Phân tích sâu bên dưới (Top 5.30 in, Height 1.65 in, Width 3.75 in, Gap 0.24 in)
+    # 3 Thẻ Phân tích sâu bên dưới (Top 5.42 in, Height 1.55 in, Width 3.75 in, Gap 0.24 in)
     card_insights = [
         ("1. QUY LUẬT 'ECONOMIC ĐỈNH - EQUITY ĐÁY'", C_NAVY_PRIMARY, [
-            "• Nhóm Economic (47,69đ) luôn cao nhất ở 100% doanh nghiệp (đỉnh tại VCS 50,71đ và BVH 49,36đ) vì việc làm và tăng trưởng là lẽ sống còn.",
-            "• Nhóm Equity (42,08đ) luôn thấp nhất toàn mẫu do doanh nghiệp né tránh công bố chênh lệch thu nhập và bình đẳng giới."
+            "• Cột Economic (Xanh dương, 47,69đ) luôn cao nhất ở 100% doanh nghiệp (đỉnh tại VCS 50,71đ và BVH 49,36đ) vì tăng trưởng kinh tế là mục tiêu sống còn.",
+            "• Cột Equity (Tím, 42,08đ) luôn thấp nhất toàn mẫu do doanh nghiệp né tránh công bố chênh lệch thu nhập và bình đẳng giới cấp cao."
         ]),
         ("2. PHÂN HÓA RÕ NÉT THEO THỊ TRƯỜNG & SỞ HỮU", C_GREEN_EMERALD, [
             "• Khối Tư nhân & Xuất khẩu (VCS, VNM, PNJ): Điểm Resources & Environments vượt trội nhằm vượt rào cản xanh khắt khe của Âu - Mỹ (CBAM, Declare).",
@@ -753,9 +697,9 @@ def build_slide_08_company_6cat_table(prs):
     cgap = 0.24
     for i, (ctitle, ccol, cbullets) in enumerate(card_insights):
         cx = 0.8 + i * (cw + cgap)
-        add_card(slide, cx, 5.30, cw, 1.65, C_CARD_BG, ccol)
+        add_card(slide, cx, 5.42, cw, 1.55, C_CARD_BG, ccol)
         
-        tb = slide.shapes.add_textbox(Inches(cx + 0.12), Inches(5.36), Inches(cw - 0.24), Inches(1.5))
+        tb = slide.shapes.add_textbox(Inches(cx + 0.12), Inches(5.48), Inches(cw - 0.24), Inches(1.4))
         tf = tb.text_frame
         tf.word_wrap = True
         p = tf.paragraphs[0]
@@ -772,10 +716,10 @@ def build_slide_08_company_6cat_table(prs):
             r2.font.color.rgb = C_TEXT_DARK
 
     set_presenter_notes(slide, {
-        "goal": "Tổng hợp đối chiếu cả 7 doanh nghiệp trên cùng 1 bảng 6 nhóm chủ đề SDG, làm bật quy luật thị trường và phân hóa đặc thù ngành.",
-        "script": "Kính thưa Hội đồng, bảng tổng hợp trên slide là bức tranh toàn cảnh so sánh đồng thời 7 doanh nghiệp qua 6 nhóm chủ đề SDG theo phân loại quốc tế của Kang & Kim (2022). Kết quả định lượng chỉ ra 3 quy luật thực nghiệm: Thứ nhất, quy luật 'Economic cao nhất - Equity thấp nhất' mang tính phổ quát ở tất cả các doanh nghiệp; thứ hai là sự phân hóa rõ nét giữa nhóm xuất khẩu tư nhân (chú trọng Tài nguyên & Môi trường để vượt rào cản CBAM) và nhóm tài chính/nhà nước (chú trọng Xã hội & Thể chế); thứ ba là từng doanh nghiệp đều có điểm bứt phá tương ứng với mô hình kinh doanh, như VCS dẫn đầu nhờ đá thạch anh, PNJ dẫn đầu Bình đẳng giới và Bảo Việt dẫn đầu Xã hội.",
-        "highlights": "Toàn mẫu: Economic (47,69đ) > Social (46,39đ) > Resources (45,63đ) > Environs (44,98đ) > Life (44,26đ) > Equity (42,08đ); Phân hóa sản xuất vs tài chính.",
-        "qa": "Tại sao lại gom 17 SDG thành 6 nhóm: Vì 17 SDG có sự giao thoa, gom thành 6 nhóm theo lý thuyết Max-Neef giúp phát hiện xu hướng chiến lược vĩ mô rõ ràng hơn."
+        "goal": "Chỉ vào biểu đồ cột Bar Chart đối chuẩn 7 doanh nghiệp qua 6 nhóm chủ đề SDG, làm bật quy luật thị trường và phân hóa đặc thù ngành.",
+        "script": "Kính thưa Hội đồng, biểu đồ cột trên slide trực quan hóa mức độ gắn kết của 7 doanh nghiệp với 6 nhóm chủ đề SDG. Kết quả định lượng chỉ ra 3 phát hiện lớn: Thứ nhất, quy luật 'Economic cao nhất - Equity thấp nhất' thể hiện trực quan qua việc thanh màu xanh dương luôn cao nhất và thanh màu tím luôn thấp nhất ở toàn bộ các doanh nghiệp; thứ hai là sự phân hóa rõ nét giữa nhóm xuất khẩu tư nhân (chú trọng Tài nguyên & Môi trường để vượt rào cản CBAM) và nhóm tài chính/nhà nước (chú trọng Xã hội & Thể chế); thứ ba là từng doanh nghiệp đều có điểm bứt phá tương ứng với mô hình kinh doanh, như VCS dẫn đầu nhờ đá thạch anh, PNJ dẫn đầu Bình đẳng giới và Bảo Việt dẫn đầu Xã hội.",
+        "highlights": "Toàn mẫu: Economic (47,69đ) > Social (46,39đ) > Resources (45,63đ) > Environs (44,98đ) > Life (44,26đ) > Equity (42,08đ); Thanh màu trực quan phân hóa theo ngành.",
+        "qa": "Tại sao lại dùng biểu đồ cột thay cho bảng số liệu: Biểu đồ cột trực quan hóa tức thì sự chênh lệch giữa các nhóm chủ đề, giúp hội đồng thấy ngay cột Economic luôn vọt lên cao nhất và cột Equity luôn tụt sâu nhất ở 100% doanh nghiệp."
     })
 
 
@@ -1468,8 +1412,8 @@ def main():
     print("[7/17] Slide 7: Kết quả 2 - Cấu trúc 6 Nhóm SDG (Heatmap AR 0.65 portrait + 3 Thẻ rộng)...")
     build_slide_07_result2_heatmap(prs)
     
-    print("[8/17] Slide 8: Kết quả 3 - Bảng Tổng hợp So sánh 7 Doanh nghiệp theo 6 Nhóm SDG...")
-    build_slide_08_company_6cat_table(prs)
+    print("[8/17] Slide 8: Kết quả 3 - Biểu đồ Cột So sánh 7 Doanh nghiệp theo 6 Nhóm SDG (slide_company_6cat_bar.png)...")
+    build_slide_08_company_6cat_bar(prs)
     
     print("[9/17] Slide 9: Kết quả 4 - Xu hướng Chuỗi Thời gian (slide_trends_grid.png AR 2.01 landscape)...")
     build_slide_09_result4_trends(prs)
