@@ -70,7 +70,7 @@ def set_shape_flat(shape, fill_color: RGBColor, line_color: RGBColor | None = No
         shape.line.fill.background()
 
 
-def add_slide_header(slide, title_text: str, category_tag: str = "BÁO CÁO KHOA HỌC", slide_num: int = 1, total_slides: int = 18):
+def add_slide_header(slide, title_text: str, category_tag: str = "BÁO CÁO KHOA HỌC", slide_num: int = 1, total_slides: int = 17):
     bg = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(13.333), Inches(7.5))
     set_shape_flat(bg, C_BG_LIGHT)
     
@@ -666,110 +666,123 @@ def build_slide_07_result2_heatmap(prs):
     })
 
 
-def build_slide_08_result3_companies_p1(prs):
-    """Slide 8: Đặc thù Ngành - Khối Sản xuất & Năng lượng (CHUẨN TỶ LỆ 1.30)."""
+def build_slide_08_company_6cat_table(prs):
+    """Slide 8: Kết quả 3 - Bảng Tổng hợp So sánh 7 Doanh nghiệp theo 6 Nhóm SDG (BẢNG LỚN + 3 THẺ SÂU)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    add_slide_header(slide, "ĐẶC THÙ NGÀNH: KHỐI SẢN XUẤT & NĂNG LƯỢNG (VNM, VCS, PAN, PLX)", "ĐẶC THÙ NGÀNH DOANH NGHIỆP", 8)
+    add_slide_header(slide, "KẾT QUẢ 3: BẢNG SO SÁNH ĐẶC THÙ 7 DOANH NGHIỆP THEO 6 NHÓM SDG", "KẾT QUẢ THỰC NGHIỆM", 8, 17)
     
-    # Ảnh (AR = 1.30) -> Height 5.4 in, Width 6.8 in. (Không bị ép bẹp)
-    img_p1 = FIGURES_DIR / "slide_manuf_sdgs.png"
-    if img_p1.exists():
-        slide.shapes.add_picture(str(img_p1), Inches(0.8), Inches(1.35), Inches(6.8), Inches(5.25))
+    # Bảng Native Table 9 hàng x 8 cột (Width 11.733 in, Height 3.80 in, Left 0.8 in, Top 1.30 in)
+    rows = 9
+    cols = 8
+    table_shape = slide.shapes.add_table(rows, cols, Inches(0.8), Inches(1.30), Inches(11.733), Inches(3.80))
+    tbl = table_shape.table
+    tbl.columns[0].width = Inches(2.233)  # DOANH NGHIỆP (NGÀNH)
+    tbl.columns[1].width = Inches(1.15)   # LIFE
+    tbl.columns[2].width = Inches(1.25)   # ECONOMIC
+    tbl.columns[3].width = Inches(1.15)   # EQUITY
+    tbl.columns[4].width = Inches(1.15)   # SOCIAL
+    tbl.columns[5].width = Inches(1.25)   # RESOURCES
+    tbl.columns[6].width = Inches(1.15)   # ENVIRONS
+    tbl.columns[7].width = Inches(2.40)   # ĐẶC TRƯNG CHIẾN LƯỢC
+    
+    headers = ["DOANH NGHIỆP (NGÀNH)", "LIFE\n(1, 2, 3)", "ECONOMIC\n(8, 9)", "EQUITY\n(4, 5, 10)", "SOCIAL\n(11, 16, 17)", "RESOURCES\n(6, 7, 12, 14)", "ENVIRONS\n(13, 15)", "ĐẶC TRƯNG CHIẾN LƯỢC CỐT LÕI"]
+    for j, h in enumerate(headers):
+        cell = tbl.cell(0, j)
+        cell.fill.solid()
+        cell.fill.fore_color.rgb = C_NAVY_PRIMARY
+        p = cell.text_frame.paragraphs[0]
+        p.text = h
+        p.font.bold = True
+        p.font.size = Pt(8.2)
+        p.font.color.rgb = RGBColor(255, 255, 255)
+        p.alignment = PP_ALIGN.CENTER
         
-    rw = 4.6
-    rx = 7.95
-    co_insights = [
-        ("VICOSTONE (VCS) — ĐỈNH SDG 9 & 12", C_NAVY_PRIMARY, 
-         "• SDG 9 (52,96đ) & SDG 12 (53,18đ) cao nhất toàn khối.\n"
-         "• Lý do: Công nghệ rung ép Breton, tự chủ >95% nguyên liệu, tuần hoàn 100% bùn đá."),
-        ("VINAMILK (VNM) — BỨT PHÁ SDG 13", C_GREEN_EMERALD, 
-         "• SDG 13 (45,36đ) & Nhóm Môi trường tăng mạnh (+6,06đ).\n"
-         "• Lý do: Lộ trình Net Zero 2050, 3 đơn vị PAS 2060, nông nghiệp tái sinh Green Farm."),
-        ("PAN GROUP (PAN) — TRỤ CỘT SDG 2", C_GOLD_ACCENT, 
-         "• SDG 2 (47,47đ) & SDG 12 (49,01đ) dẫn đầu mẫu.\n"
-         "• Lý do: Chuỗi nông nghiệp khép kín từ giống cây trồng (Vinaseed) đến tôm sạch (Fimex)."),
-        ("PETROLIMEX (PLX) — CHUYỂN ĐỔI SDG 7", C_RED_ACCENT, 
-         "• Trọng tâm SDG 7 Năng lượng (48,04đ) và SDG 13 (46,19đ).\n"
-         "• Lý do: Nhiên liệu Euro 5, điện mặt trời cây xăng, kiểm kê khí nhà kính ISO 14064-1.")
+    table_data = [
+        ("Vinamilk (VNM - Sữa & Chăn nuôi)", "42.26", "45.09", "40.28", "43.94", "44.08", "43.38", "Net Zero 2050, 3 đơn vị PAS 2060, Green Farm."),
+        ("Vicostone (VCS - Đá thạch anh)", "46.19", "50.71", "44.20", "49.08", "48.63", "47.31", "Đỉnh toàn mẫu Economic & Resources nhờ xuất khẩu Âu-Mỹ."),
+        ("PNJ (PNJ - Bán lẻ & Chế tác vàng)", "44.58", "48.67", "43.18", "47.32", "46.93", "45.97", "Dẫn đầu Equity (43,18đ) nhờ >60% nhân sự nữ & DE&I."),
+        ("Bảo Việt (BVH - Bảo hiểm & Tài chính)", "46.34", "49.36", "43.05", "48.13", "46.40", "46.08", "Tiên phong Báo cáo Tích hợp IIRC, bảo hiểm vi mô."),
+        ("The PAN Group (PAN - Nông nghiệp)", "44.81", "47.29", "41.91", "45.51", "45.07", "44.67", "Chuỗi Farm-Food-Family, lúa gạo giảm phát thải (SDG 2)."),
+        ("Petrolimex (PLX - Xăng dầu & Năng lượng)", "42.14", "45.55", "39.98", "44.42", "44.22", "43.72", "Hạ tầng xăng dầu Euro 5, kiểm kê phát thải ISO 14064."),
+        ("Chứng khoán SSI (SSI - Dịch vụ Tài chính)", "43.52", "47.20", "41.99", "46.33", "44.10", "43.71", "Thu xếp vốn trái phiếu xanh, quản trị thẻ điểm ASEAN."),
+        ("★ TOÀN MẪU VIỆT NAM (TRUNG BÌNH)", "44.26", "47.69", "42.08", "46.39", "45.63", "44.98", "Quy luật toàn diện: Economic cao nhất, Equity thấp nhất.")
     ]
-    for i, (ctitle, ccol, ctext) in enumerate(co_insights):
-        cy = 1.35 + i * 1.38
-        add_card(slide, rx, cy, rw, 1.25, C_CARD_BG, ccol)
+    
+    for i, row in enumerate(table_data):
+        is_highlight = (i == len(table_data) - 1)
+        for j, val in enumerate(row):
+            cell = tbl.cell(i + 1, j)
+            cell.fill.solid()
+            if is_highlight:
+                cell.fill.fore_color.rgb = RGBColor(234, 243, 255)
+            elif i % 2 == 0:
+                cell.fill.fore_color.rgb = RGBColor(248, 250, 252)
+            else:
+                cell.fill.fore_color.rgb = RGBColor(255, 255, 255)
+                
+            p = cell.text_frame.paragraphs[0]
+            p.text = val
+            p.font.size = Pt(7.4 if j == 7 else 7.8)
+            if is_highlight:
+                p.font.bold = True
+                p.font.color.rgb = C_BLUE_ACCENT if j == 0 else C_NAVY_PRIMARY
+            else:
+                p.font.bold = (j == 0 or j == 2)  # In đậm tên cty và cột Economic
+                p.font.color.rgb = C_NAVY_PRIMARY if (j == 0 or j == 2) else (C_GOLD_ACCENT if j == 3 else C_TEXT_DARK)
+            if 1 <= j <= 6:
+                p.alignment = PP_ALIGN.CENTER
+
+    # 3 Thẻ Phân tích sâu bên dưới (Top 5.30 in, Height 1.65 in, Width 3.75 in, Gap 0.24 in)
+    card_insights = [
+        ("1. QUY LUẬT 'ECONOMIC ĐỈNH - EQUITY ĐÁY'", C_NAVY_PRIMARY, [
+            "• Nhóm Economic (47,69đ) luôn cao nhất ở 100% doanh nghiệp (đỉnh tại VCS 50,71đ và BVH 49,36đ) vì việc làm và tăng trưởng là lẽ sống còn.",
+            "• Nhóm Equity (42,08đ) luôn thấp nhất toàn mẫu do doanh nghiệp né tránh công bố chênh lệch thu nhập và bình đẳng giới."
+        ]),
+        ("2. PHÂN HÓA RÕ NÉT THEO THỊ TRƯỜNG & SỞ HỮU", C_GREEN_EMERALD, [
+            "• Khối Tư nhân & Xuất khẩu (VCS, VNM, PNJ): Điểm Resources & Environments vượt trội nhằm vượt rào cản xanh khắt khe của Âu - Mỹ (CBAM, Declare).",
+            "• Khối Nhà nước & Tài chính (PLX, BVH): Tập trung Social & Economic nhằm phục vụ mục tiêu vĩ mô và bộ chỉ số VNSI của HOSE."
+        ]),
+        ("3. ĐỘNG LỰC CÁ BIỆT ĐỘT PHÁ CỦA TỪNG DOANH NGHIỆP", C_GOLD_ACCENT, [
+            "• VCS dẫn đầu toàn diện (TB 47,68đ) nhờ công nghệ Breton và tuần hoàn bùn thải.",
+            "• PNJ dẫn đầu nhóm Equity (43,18đ) nhờ >60% nhân sự nữ và văn hóa tôn vinh phụ nữ.",
+            "• BVH dẫn đầu Social (48,13đ) nhờ áp dụng Báo cáo Tích hợp IIRC sớm nhất Việt Nam."
+        ])
+    ]
+    
+    cw = 3.75
+    cgap = 0.24
+    for i, (ctitle, ccol, cbullets) in enumerate(card_insights):
+        cx = 0.8 + i * (cw + cgap)
+        add_card(slide, cx, 5.30, cw, 1.65, C_CARD_BG, ccol)
         
-        tb = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(cy + 0.06), Inches(rw - 0.3), Inches(1.13))
+        tb = slide.shapes.add_textbox(Inches(cx + 0.12), Inches(5.36), Inches(cw - 0.24), Inches(1.5))
         tf = tb.text_frame
         tf.word_wrap = True
         p = tf.paragraphs[0]
         r1 = p.add_run(ctitle + "\n")
-        r1.font.size = Pt(9.5)
+        r1.font.size = Pt(8.8)
         r1.font.bold = True
         r1.font.color.rgb = ccol
         
-        p2 = tf.add_paragraph()
-        r2 = p2.add_run(ctext)
-        r2.font.size = Pt(8.5)
-        r2.font.color.rgb = C_TEXT_DARK
+        for bullet in cbullets:
+            p2 = tf.add_paragraph()
+            p2.space_after = Pt(2)
+            r2 = p2.add_run(bullet)
+            r2.font.size = Pt(7.6)
+            r2.font.color.rgb = C_TEXT_DARK
 
     set_presenter_notes(slide, {
-        "goal": "Chứng minh mô hình NLP bắt đúng bản chất kinh doanh: giải thích tại sao doanh nghiệp này lại có goal này cao vượt trội.",
-        "script": "Biểu đồ bên trái minh họa điểm số các SDG cốt lõi của khối Sản xuất & Năng lượng năm 2025. Mô hình NLP phản ánh cực kỳ nhạy bén bản chất kinh doanh: Vicostone dẫn đầu SDG 9 và 12 nhờ công nghệ Breton và tuần hoàn bùn thải; Vinamilk bứt phá SDG 13 nhờ chứng nhận PAS 2060 trung hòa carbon; PAN dẫn đầu SDG 2 nhờ chuỗi lúa gạo tôm sạch; và Petrolimex tập trung SDG 7 và 13 nhờ nhiên liệu Euro 5.",
-        "highlights": "VCS cao nhất SDG 9 & 12; VNM bứt phá SDG 13; PAN dẫn đầu SDG 2; PLX trọng tâm SDG 7 & 13.",
-        "qa": "Tại sao PLX điểm SDG 13 lại cao: Vì Petrolimex chịu áp lực chuyển đổi năng lượng hóa thạch lớn nhất, bắt buộc phải kiểm kê phát thải ISO 14064-1."
+        "goal": "Tổng hợp đối chiếu cả 7 doanh nghiệp trên cùng 1 bảng 6 nhóm chủ đề SDG, làm bật quy luật thị trường và phân hóa đặc thù ngành.",
+        "script": "Kính thưa Hội đồng, bảng tổng hợp trên slide là bức tranh toàn cảnh so sánh đồng thời 7 doanh nghiệp qua 6 nhóm chủ đề SDG theo phân loại quốc tế của Kang & Kim (2022). Kết quả định lượng chỉ ra 3 quy luật thực nghiệm: Thứ nhất, quy luật 'Economic cao nhất - Equity thấp nhất' mang tính phổ quát ở tất cả các doanh nghiệp; thứ hai là sự phân hóa rõ nét giữa nhóm xuất khẩu tư nhân (chú trọng Tài nguyên & Môi trường để vượt rào cản CBAM) và nhóm tài chính/nhà nước (chú trọng Xã hội & Thể chế); thứ ba là từng doanh nghiệp đều có điểm bứt phá tương ứng với mô hình kinh doanh, như VCS dẫn đầu nhờ đá thạch anh, PNJ dẫn đầu Bình đẳng giới và Bảo Việt dẫn đầu Xã hội.",
+        "highlights": "Toàn mẫu: Economic (47,69đ) > Social (46,39đ) > Resources (45,63đ) > Environs (44,98đ) > Life (44,26đ) > Equity (42,08đ); Phân hóa sản xuất vs tài chính.",
+        "qa": "Tại sao lại gom 17 SDG thành 6 nhóm: Vì 17 SDG có sự giao thoa, gom thành 6 nhóm theo lý thuyết Max-Neef giúp phát hiện xu hướng chiến lược vĩ mô rõ ràng hơn."
     })
 
 
-def build_slide_09_result3_companies_p2(prs):
-    """Slide 9: Đặc thù Ngành - Khối Tài chính & Bán lẻ (CHUẨN TỶ LỆ 1.29)."""
+def build_slide_09_result4_trends(prs):
+    """Slide 9: Kết quả 4 - Xu hướng Chuỗi Thời gian (ẢNH LANDSCAPE GRID 2x2 + 3 THẺ)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    add_slide_header(slide, "ĐẶC THÙ NGÀNH: KHỐI TÀI CHÍNH & BÁN LẺ (PNJ, BVH, SSI)", "ĐẶC THÙ NGÀNH DOANH NGHIỆP", 9)
-    
-    img_p2 = FIGURES_DIR / "slide_finance_sdgs.png"
-    if img_p2.exists():
-        slide.shapes.add_picture(str(img_p2), Inches(0.8), Inches(1.35), Inches(6.8), Inches(5.25))
-        
-    rw = 4.6
-    rx = 7.95
-    fin_insights = [
-        ("PNJ — ĐIỂM SÁNG SDG 5 BÌNH ĐẲNG GIỚI (40,70đ)", C_PURPLE_ACCENT, 
-         "• Dẫn đầu tuyệt đối toàn bộ 7 doanh nghiệp ở SDG 5 Bình đẳng giới.\n"
-         "• Lý do: Lao động nữ chiếm >60%, tỷ lệ lãnh đạo nữ vượt trội, tôn chỉ kinh doanh tôn vinh phụ nữ và chiến lược hòa nhập DE&I."),
-        ("BẢO VIỆT (BVH) — DẪN ĐẦU SDG 17 HỢP TÁC (53,32đ)", C_NAVY_PRIMARY, 
-         "• Dẫn đầu toàn mẫu ở SDG 17 Đối tác phát triển & SDG 8 Tăng trưởng.\n"
-         "• Lý do: Tiên phong áp dụng Khung Báo cáo Tích hợp Quốc tế <IIRC> từ 2015, triển khai bảo hiểm vi mô bảo vệ nông dân trước thiên tai."),
-        ("CHỨNG KHOÁN SSI (SSI) — TÀI CHÍNH XANH SDG 8 & 9", C_BLUE_ACCENT, 
-         "• Đạt đỉnh ở SDG 8 Việc làm (50,91đ) & SDG 9 Đổi mới hạ tầng (48,93đ).\n"
-         "• Lý do: Thu xếp các gói vốn trái phiếu xanh quốc tế (IFC), số hóa 100% giao dịch iBoard và tài trợ giáo dục tài chính.")
-    ]
-    for i, (ctitle, ccol, ctext) in enumerate(fin_insights):
-        cy = 1.35 + i * 1.85
-        add_card(slide, rx, cy, rw, 1.65, C_CARD_BG, ccol)
-        
-        tb = slide.shapes.add_textbox(Inches(rx + 0.15), Inches(cy + 0.08), Inches(rw - 0.3), Inches(1.48))
-        tf = tb.text_frame
-        tf.word_wrap = True
-        p = tf.paragraphs[0]
-        r1 = p.add_run(ctitle + "\n")
-        r1.font.size = Pt(9.5)
-        r1.font.bold = True
-        r1.font.color.rgb = ccol
-        
-        p2 = tf.add_paragraph()
-        r2 = p2.add_run(ctext)
-        r2.font.size = Pt(8.6)
-        r2.font.color.rgb = C_TEXT_DARK
-
-    set_presenter_notes(slide, {
-        "goal": "Làm nổi bật nét đặc thù của khối Tài chính và Bán lẻ, giải thích tại sao PNJ dẫn đầu SDG 5 và BVH dẫn đầu SDG 17.",
-        "script": "Khối Dịch vụ Tài chính và Bán lẻ thể hiện bản đồ SDG hoàn toàn khác biệt: PNJ là doanh nghiệp duy nhất trong toàn bộ mẫu đạt điểm cao vượt trội ở SDG 5 Bình đẳng giới (40,70 điểm) nhờ đặc thù bán lẻ trang sức và nhân sự nữ chiếm đa số. Bảo Việt đạt điểm kỷ lục ở SDG 17 (53,32 điểm) nhờ áp dụng Báo cáo Tích hợp IIRC. SSI bứt phá ở SDG 8 và 9 qua các thương vụ thu xếp trái phiếu xanh.",
-        "highlights": "PNJ dẫn đầu toàn mẫu ở SDG 5 (40,70đ); BVH dẫn đầu SDG 17 (53,32đ); SSI mạnh về tài chính xanh.",
-        "qa": "Tại sao điểm bình đẳng giới của PNJ lại cao hơn các công ty khác: Tỷ lệ nữ nhân sự PNJ trên 60% và công ty lồng ghép yếu tố phụ nữ vào chiến lược thương hiệu."
-    })
-
-
-def build_slide_10_result4_trends(prs):
-    """Slide 10: Kết quả 4 - Xu hướng Chuỗi Thời gian (ẢNH LANDSCAPE GRID 2x2 + 3 THẺ)."""
-    slide = prs.slides.add_slide(prs.slide_layouts[6])
-    add_slide_header(slide, "KẾT QUẢ 4: XU HƯỚNG DỊCH CHUYỂN CHUỖI THỜI GIAN (2020–2025)", "KẾT QUẢ THỰC NGHIỆM", 10)
+    add_slide_header(slide, "KẾT QUẢ 4: XU HƯỚNG DỊCH CHUYỂN CHUỖI THỜI GIAN (2020–2025)", "KẾT QUẢ THỰC NGHIỆM", 9, 17)
     
     # Dùng ảnh lưới landscape 2x2 slide_trends_grid.png (AR = 2.01) -> Width 11.733, Height 3.8
     tr_img = FIGURES_DIR / "slide_trends_grid.png"
@@ -816,10 +829,10 @@ def build_slide_10_result4_trends(prs):
     })
 
 
-def build_slide_11_result5_sentiment(prs):
-    """Slide 11: Kết quả 5 - Sắc thái Cảm xúc PhoBERT (ẢNH SUMMARY PANORAMA + 3 THẺ)."""
+def build_slide_10_result5_sentiment(prs):
+    """Slide 10: Kết quả 5 - Sắc thái Cảm xúc PhoBERT (ẢNH SUMMARY PANORAMA + 3 THẺ)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    add_slide_header(slide, "KẾT QUẢ 5: SẮC THÁI CẢM XÚC PHOBERT & ĐỐI CHUẨN PAPER GỐC", "KẾT QUẢ THỰC NGHIỆM", 11)
+    add_slide_header(slide, "KẾT QUẢ 5: SẮC THÁI CẢM XÚC PHOBERT & ĐỐI CHUẨN PAPER GỐC", "KẾT QUẢ THỰC NGHIỆM", 10, 17)
     
     # Dùng ảnh tổng hợp cảm xúc panorama slide_sentiment_summary.png (AR = 2.36) -> Width 11.733, Height 3.75
     senti_img = FIGURES_DIR / "slide_sentiment_summary.png"
@@ -866,10 +879,10 @@ def build_slide_11_result5_sentiment(prs):
     })
 
 
-def build_slide_12_result6_sentiment_ratio(prs):
-    """Slide 12: Kết quả 6 - Tỷ số Cảm xúc Pos/Neg Ratio (CHUẨN TỶ LỆ 1.84)."""
+def build_slide_11_result6_sentiment_ratio(prs):
+    """Slide 11: Kết quả 6 - Tỷ số Cảm xúc Pos/Neg Ratio (CHUẨN TỶ LỆ 1.84)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    add_slide_header(slide, "KẾT QUẢ 6: TỶ SỐ CẢM XÚC POS/NEG RATIO & ĐỐI CHUẨN TỶ LỆ", "KẾT QUẢ THỰC NGHIỆM", 12)
+    add_slide_header(slide, "KẾT QUẢ 6: TỶ SỐ CẢM XÚC POS/NEG RATIO & ĐỐI CHUẨN TỶ LỆ", "KẾT QUẢ THỰC NGHIỆM", 11, 17)
     
     # Biểu đồ tỷ số (AR = 1.84) -> Width 6.8 in, Height 3.7 in
     img_r = FIGURES_DIR / "sentiment_ratio.png"
@@ -939,10 +952,10 @@ def build_slide_12_result6_sentiment_ratio(prs):
     })
 
 
-def build_slide_13_discussion_talk_heavy(prs):
-    """Slide 13: Thảo luận - 'Nói nhiều về gì' (BẢNG TỔNG HỢP NATIVE TABLE 8 DÒNG + 3 THẺ PHÂN TÍCH SÂU)."""
+def build_slide_12_discussion_talk_heavy(prs):
+    """Slide 12: Thảo luận - 'Nói nhiều về gì' (BẢNG TỔNG HỢP NATIVE TABLE 8 DÒNG + 3 THẺ PHÂN TÍCH SÂU)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    add_slide_header(slide, "THẢO LUẬN: BẢNG TỔNG HỢP & PHÂN TÍCH 'NÓI NHIỀU VỀ GÌ' TẠI VIỆT NAM", "THẢO LUẬN CHUYÊN SÂU", 13)
+    add_slide_header(slide, "THẢO LUẬN: BẢNG TỔNG HỢP & PHÂN TÍCH 'NÓI NHIỀU VỀ GÌ' TẠI VIỆT NAM", "THẢO LUẬN CHUYÊN SÂU", 12, 17)
     
     # Cột trái: Bảng Native Table tổng hợp 7 Cty + Toàn mẫu (Width 7.0 in, Height 5.45 in, Left 0.8 in, Top 1.35 in)
     rows = 9
@@ -1046,10 +1059,10 @@ def build_slide_13_discussion_talk_heavy(prs):
     })
 
 
-def build_slide_14_discussion_rarely_talk(prs):
-    """Slide 14: Thảo luận - 'Ít nói về gì' (4 THẺ CẢNH BÁO THOÁNG ĐÃNG 2x2)."""
+def build_slide_13_discussion_rarely_talk(prs):
+    """Slide 13: Thảo luận - 'Ít nói về gì' (4 THẺ CẢNH BÁO THOÁNG ĐÃNG 2x2)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    add_slide_header(slide, "THẢO LUẬN: DOANH NGHIỆP 'ÍT NÓI VỀ GÌ' (VÙNG TRŨNG NÉ TRÁNH)?", "THẢO LUẬN CHUYÊN SÂU", 14)
+    add_slide_header(slide, "THẢO LUẬN: DOANH NGHIỆP 'ÍT NÓI VỀ GÌ' (VÙNG TRŨNG NÉ TRÁNH)?", "THẢO LUẬN CHUYÊN SÂU", 13, 17)
     
     avoid_data = [
         ("1. ĐA DẠNG SINH HỌC & BẢO TỒN (SDG 14, 15)", C_RED_ACCENT, [
@@ -1115,10 +1128,10 @@ def build_slide_14_discussion_rarely_talk(prs):
     })
 
 
-def build_slide_15_comparison(prs):
-    """Slide 15: BẢNG SO SÁNH ĐỐI ĐẦU TOÀN DIỆN PAPER GỐC VS CODE MỚI (NATIVE TABLE RỘNG RÃI)."""
+def build_slide_14_comparison(prs):
+    """Slide 14: BẢNG SO SÁNH ĐỐI ĐẦU TOÀN DIỆN PAPER GỐC VS CODE MỚI (NATIVE TABLE RỘNG RÃI)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    add_slide_header(slide, "BẢNG SO SÁNH ĐỐI ĐẦU: PAPER GỐC (KANG & KIM 2022) VS CODE MỚI", "ĐỐI CHUẨN TOÀN DIỆN", 15)
+    add_slide_header(slide, "BẢNG SO SÁNH ĐỐI ĐẦU: PAPER GỐC (KANG & KIM 2022) VS CODE MỚI", "ĐỐI CHUẨN TOÀN DIỆN", 14, 17)
     
     rows = 9
     cols = 4
@@ -1214,10 +1227,10 @@ def build_slide_15_comparison(prs):
     })
 
 
-def build_slide_16_implications(prs):
-    """Slide 16: Hàm Ý Thực Tiễn & Đề Xuất Chính Sách (3 THẺ RỘNG RÃI)."""
+def build_slide_15_implications(prs):
+    """Slide 15: Hàm Ý Thực Tiễn & Đề Xuất Chính Sách (3 THẺ RỘNG RÃI)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    add_slide_header(slide, "HÀM Ý THỰC TIỄN & ĐỀ XUẤT CHO CÁC BÊN LIÊN QUAN", "HÀM Ý QUẢN TRỊ", 16)
+    add_slide_header(slide, "HÀM Ý THỰC TIỄN & ĐỀ XUẤT CHO CÁC BÊN LIÊN QUAN", "HÀM Ý QUẢN TRỊ", 15, 17)
     
     actions = [
         ("CƠ QUAN QUẢN LÝ (UBCKNN)", C_NAVY_PRIMARY, [
@@ -1289,10 +1302,10 @@ def build_slide_16_implications(prs):
     })
 
 
-def build_slide_17_limitations_future(prs):
-    """Slide 17: Hạn Chế & Tương Lai (ẢNH SƠ ĐỒ MULTI-AGENT BANNER TRÊN + 3 THẺ)."""
+def build_slide_16_limitations_future(prs):
+    """Slide 16: Hạn Chế & Tương Lai (ẢNH SƠ ĐỒ MULTI-AGENT BANNER TRÊN + 3 THẺ)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    add_slide_header(slide, "HẠN CHẾ ĐỀ TÀI & HƯỚNG PHÁT TRIỂN AGENTIC ESG AUDITOR", "HƯỚNG PHÁT TRIỂN", 17)
+    add_slide_header(slide, "HẠN CHẾ ĐỀ TÀI & HƯỚNG PHÁT TRIỂN AGENTIC ESG AUDITOR", "HƯỚNG PHÁT TRIỂN", 16, 17)
     
     # Sơ đồ Multi-Agent ESG Auditor (AR = 2.85) -> Width 11.733, Height 3.95
     agent_img = FIGURES_DIR / "rag_agentic_flow.png"
@@ -1336,8 +1349,8 @@ def build_slide_17_limitations_future(prs):
     })
 
 
-def build_slide_18_conclusion(prs):
-    """Slide 18: Kết Luận & Phiên Hỏi Đáp (Q&A) (THOÁNG ĐÃNG, CÂN ĐỐI)."""
+def build_slide_17_conclusion(prs):
+    """Slide 17: Kết Luận & Phiên Hỏi Đáp (Q&A) (THOÁNG ĐÃNG, CÂN ĐỐI)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     bg = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(13.333), Inches(7.5))
     set_shape_flat(bg, C_NAVY_DARK)
@@ -1434,59 +1447,56 @@ def main():
     prs.slide_width = Inches(13.333)
     prs.slide_height = Inches(7.5)
     
-    print("[1/18] Slide 1: Trang Tiêu đề & Thông tin Tác giả...")
+    print("[1/17] Slide 1: Trang Tiêu đề & Thông tin Tác giả...")
     build_slide_01_title(prs)
     
-    print("[2/18] Slide 2: Đặt vấn đề & Bối cảnh Thể chế Việt Nam (Thẻ KPI thoáng)...")
+    print("[2/17] Slide 2: Đặt vấn đề & Bối cảnh Thể chế Việt Nam (Thẻ KPI thoáng)...")
     build_slide_02_context(prs)
     
-    print("[3/18] Slide 3: Bài báo gốc Kang & Kim (2022) vs Code mới (Biểu đồ 3 Panel chuẩn AR)...")
+    print("[3/17] Slide 3: Bài báo gốc Kang & Kim (2022) vs Code mới (Biểu đồ 3 Panel chuẩn AR)...")
     build_slide_03_original_paper(prs)
     
-    print("[4/18] Slide 4: Khung Phương pháp luận (Sơ đồ 16:9 5 giai đoạn toàn diện)...")
+    print("[4/17] Slide 4: Khung Phương pháp luận (Sơ đồ 16:9 5 giai đoạn toàn diện)...")
     build_slide_04_pipeline(prs)
     
-    print("[5/18] Slide 5: Mẫu Dữ liệu Thực nghiệm (Bảng 7 Doanh nghiệp + 4 Thẻ KPI)...")
+    print("[5/17] Slide 5: Mẫu Dữ liệu Thực nghiệm (Bảng 7 Doanh nghiệp + 4 Thẻ KPI)...")
     build_slide_05_sample(prs)
     
-    print("[6/18] Slide 6: Kết quả 1 - Phân phối Tương đồng (AR 2.28) & BẢNG ĐỐI CHUẨN THỐNG KÊ...")
+    print("[6/17] Slide 6: Kết quả 1 - Phân phối Tương đồng (AR 2.28) & BẢNG ĐỐI CHUẨN THỐNG KÊ...")
     build_slide_06_result1_similarity(prs)
     
-    print("[7/18] Slide 7: Kết quả 2 - Cấu trúc 6 Nhóm SDG (Heatmap AR 0.65 portrait + 3 Thẻ rộng)...")
+    print("[7/17] Slide 7: Kết quả 2 - Cấu trúc 6 Nhóm SDG (Heatmap AR 0.65 portrait + 3 Thẻ rộng)...")
     build_slide_07_result2_heatmap(prs)
     
-    print("[8/18] Slide 8: Đặc thù Ngành Sản xuất & Năng lượng (slide_manuf_sdgs.png AR 1.30)...")
-    build_slide_08_result3_companies_p1(prs)
+    print("[8/17] Slide 8: Kết quả 3 - Bảng Tổng hợp So sánh 7 Doanh nghiệp theo 6 Nhóm SDG...")
+    build_slide_08_company_6cat_table(prs)
     
-    print("[9/18] Slide 9: Đặc thù Ngành Tài chính & Bán lẻ (slide_finance_sdgs.png AR 1.29)...")
-    build_slide_09_result3_companies_p2(prs)
+    print("[9/17] Slide 9: Kết quả 4 - Xu hướng Chuỗi Thời gian (slide_trends_grid.png AR 2.01 landscape)...")
+    build_slide_09_result4_trends(prs)
     
-    print("[10/18] Slide 10: Kết quả 4 - Xu hướng Chuỗi Thời gian (slide_trends_grid.png AR 2.01 landscape)...")
-    build_slide_10_result4_trends(prs)
+    print("[10/17] Slide 10: Kết quả 5 - Sắc thái Cảm xúc (slide_sentiment_summary.png AR 2.36 panorama)...")
+    build_slide_10_result5_sentiment(prs)
     
-    print("[11/18] Slide 11: Kết quả 5 - Sắc thái Cảm xúc (slide_sentiment_summary.png AR 2.36 panorama)...")
-    build_slide_11_result5_sentiment(prs)
+    print("[11/17] Slide 11: Kết quả 6 - Tỷ số Cảm xúc Pos/Neg Ratio & Case PNJ 2022...")
+    build_slide_11_result6_sentiment_ratio(prs)
     
-    print("[12/18] Slide 12: Kết quả 6 - Tỷ số Cảm xúc Pos/Neg Ratio (sentiment_ratio.png AR 1.84)...")
-    build_slide_12_result6_sentiment_ratio(prs)
+    print("[12/17] Slide 12: Thảo luận - 'Nói nhiều về gì' (Bảng tổng hợp Native Table + 3 Thẻ phân tích sâu)...")
+    build_slide_12_discussion_talk_heavy(prs)
     
-    print("[13/18] Slide 13: Thảo luận - 'Nói nhiều về gì' (Bảng tổng hợp Native Table + 3 Thẻ phân tích sâu)...")
-    build_slide_13_discussion_talk_heavy(prs)
+    print("[13/17] Slide 13: Thảo luận - 'Ít nói về gì' (4 Thẻ cảnh báo né tránh 2x2)...")
+    build_slide_13_discussion_rarely_talk(prs)
     
-    print("[14/18] Slide 14: Thảo luận - 'Ít nói về gì' (4 Thẻ cảnh báo né tránh 2x2)...")
-    build_slide_14_discussion_rarely_talk(prs)
+    print("[14/17] Slide 14: BẢNG SO SÁNH ĐỐI ĐẦU TOÀN DIỆN PAPER GỐC VS CODE MỚI (Native Table rộng)...")
+    build_slide_14_comparison(prs)
     
-    print("[15/18] Slide 15: BẢNG SO SÁNH ĐỐI ĐẦU TOÀN DIỆN PAPER GỐC VS CODE MỚI (Native Table rộng)...")
-    build_slide_15_comparison(prs)
+    print("[15/17] Slide 15: Hàm ý Thực tiễn & Đề xuất Chính sách (3 Thẻ hành động)...")
+    build_slide_15_implications(prs)
     
-    print("[16/18] Slide 16: Hàm ý Thực tiễn & Đề xuất Chính sách (3 Thẻ hành động)...")
-    build_slide_16_implications(prs)
+    print("[16/17] Slide 16: Hạn chế Đề tài & Tương lai (rag_agentic_flow.png AR 2.85 banner)...")
+    build_slide_16_limitations_future(prs)
     
-    print("[17/18] Slide 17: Hạn chế Đề tài & Tương lai (rag_agentic_flow.png AR 2.85 banner)...")
-    build_slide_17_limitations_future(prs)
-    
-    print("[18/18] Slide 18: Tổng kết 4 Thông điệp Cốt lõi & Phiên Hỏi đáp (Q&A)...")
-    build_slide_18_conclusion(prs)
+    print("[17/17] Slide 17: Tổng kết 4 Thông điệp Cốt lõi & Phiên Hỏi đáp (Q&A)...")
+    build_slide_17_conclusion(prs)
     
     prs.save(str(OUTPUT_PPTX))
     print(f"\n=> Đã lưu thành công bộ slide chính tại: {OUTPUT_PPTX}")
