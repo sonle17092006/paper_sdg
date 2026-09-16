@@ -82,3 +82,13 @@ Thumbs.db
 desktop.ini
 .vscode/
 .idea/
+
+# ==============================================================================
+# Internal Technical Docs (Personal reading only - do not push to Git)
+# ==============================================================================
+DOCS_RAG_KNOWLEDGE_CORRELATION.md
+tai_lieu_ky_thuat_rag_knowledge_correlation.docx
+papers/DOCS_RAG_KNOWLEDGE_CORRELATION.md
+papers/tai_lieu_ky_thuat_rag_knowledge_correlation.docx
+generate_technical_docs.py
+~$*.pptx
